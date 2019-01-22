@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on Linro</title>
+    <link>/posts/</link>
+    <description>Recent content in Articles on Linro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 22 Jan 2019 19:47:50 +0800</lastBuildDate>
+    
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello Hugo!</title>
+      <link>/posts/helloworld/</link>
+      <pubDate>Tue, 22 Jan 2019 19:49:58 +0800</pubDate>
+      
+      <guid>/posts/helloworld/</guid>
+      <description> Here is Hugo! Heading 1 Heading 2 Heading 2.1  list list2 list3  #include &amp;lt;iostream&amp;gt;using namespace std; int main() { cout &amp;lt;&amp;lt; &amp;#34;Hello world!&amp;#34; &amp;lt;&amp;lt; endl; return 0; } </description>
+    </item>
+    
+  </channel>
+</rss>
