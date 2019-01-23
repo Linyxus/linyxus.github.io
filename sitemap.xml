@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/helloworld/</loc>
-    <lastmod>2019-01-22T19:49:58+08:00</lastmod>
+    <loc>/posts/hello/</loc>
+    <lastmod>2019-01-23T19:44:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -29,29 +29,21 @@
   </url>
   
   <url>
-    <loc>/tags/hello/</loc>
-    <lastmod>2019-01-22T19:49:58+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/</loc>
-    <lastmod>2019-01-22T19:49:58+08:00</lastmod>
+    <lastmod>2019-01-23T19:44:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-01-22T19:49:58+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/testpage/</loc>
-    <lastmod>2019-01-22T19:49:58+08:00</lastmod>
+    <loc>/tags/words/</loc>
+    <lastmod>2019-01-23T19:44:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
