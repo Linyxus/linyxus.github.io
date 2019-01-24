@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Articles on Linro</title>
+    <title>writings on Linro</title>
     <link>https://linyxus.github.io/posts/</link>
-    <description>Recent content in Articles on Linro</description>
+    <description>Recent content in writings on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 22 Jan 2019 19:47:50 +0800</lastBuildDate>

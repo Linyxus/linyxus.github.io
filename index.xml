@@ -6,10 +6,22 @@
     <description>Recent content in Linro :: blog on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 23 Jan 2019 19:44:21 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jan 2019 16:18:08 +0800</lastBuildDate>
     
 	<atom:link href="https://linyxus.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>me</title>
+      <link>https://linyxus.github.io/me/</link>
+      <pubDate>Thu, 24 Jan 2019 16:18:08 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/me/</guid>
+      <description>Linyxus / BUPT
+Programming :: Python / Clojure / C++ / React.js / Algorithm / Machine Learning
+Reading / Writing
+Github / QQ / Wechat</description>
+    </item>
     
     <item>
       <title>Hello, Hugo</title>
