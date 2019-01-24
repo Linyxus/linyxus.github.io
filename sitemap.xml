@@ -3,46 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/hello/</loc>
+    <loc>https://linyxus.github.io/posts/hello/</loc>
     <lastmod>2019-01-23T19:44:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/posts/</loc>
+    <loc>https://linyxus.github.io/posts/</loc>
     <lastmod>2019-01-22T19:47:50+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://linyxus.github.io/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://linyxus.github.io/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://linyxus.github.io/</loc>
     <lastmod>2019-01-23T19:44:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://linyxus.github.io/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/words/</loc>
+    <loc>https://linyxus.github.io/tags/words/</loc>
     <lastmod>2019-01-23T19:44:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
