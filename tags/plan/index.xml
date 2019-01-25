@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linro :: blog on Linro</title>
-    <link>https://linyxus.github.io/</link>
-    <description>Recent content in Linro :: blog on Linro</description>
+    <title>Plan on Linro</title>
+    <link>https://linyxus.github.io/tags/plan/</link>
+    <description>Recent content in Plan on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 25 Jan 2019 19:38:20 +0800</lastBuildDate>
     
-	<atom:link href="https://linyxus.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linyxus.github.io/tags/plan/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,27 +18,6 @@
       
       <guid>https://linyxus.github.io/posts/algorithm-roadmap/</guid>
       <description> 基础  排序  插入排序 归并排序 桶排序 希尔排序 快速排序  搜索  BFS DFS 回溯 迭代加深搜索 A*  暴力枚举 图  DFS BFS 拓扑排序 欧拉回路  二叉树 分而治之 贪心 动态规划  高级  数论 图论 线段树 组合数学  训练路线  重温紫书及配套练习。配合luogu刷题。 进军黑书。 进军训练指南。  </description>
-    </item>
-    
-    <item>
-      <title>me</title>
-      <link>https://linyxus.github.io/me/</link>
-      <pubDate>Thu, 24 Jan 2019 16:18:08 +0800</pubDate>
-      
-      <guid>https://linyxus.github.io/me/</guid>
-      <description>Linyxus / BUPT
-Programming :: Python / Clojure / C++ / React.js / Algorithm / Machine Learning
-Reading / Writing
-Github / QQ / Wechat</description>
-    </item>
-    
-    <item>
-      <title>Hello, Hugo</title>
-      <link>https://linyxus.github.io/posts/hello/</link>
-      <pubDate>Wed, 23 Jan 2019 19:44:21 +0800</pubDate>
-      
-      <guid>https://linyxus.github.io/posts/hello/</guid>
-      <description>&lt;p&gt;2019年1月，我重拾博客。&lt;/p&gt;</description>
     </item>
     
   </channel>
