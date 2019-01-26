@@ -17,7 +17,11 @@
       <pubDate>Sat, 26 Jan 2019 22:19:46 +0800</pubDate>
       
       <guid>https://linyxus.github.io/posts/sorting-algorithms/</guid>
-      <description>插入排序 插入排序算不上高效的排序算法，从时间复杂度来说，和冒泡排序是相抵的。其实本质上，插入排序和冒泡排序相似甚至相同，只是“冒泡”的方向不同。
+      <description>这是这个冬天算法学习留下的第一篇笔记。
+排序算法，是最基础的算法之一了吧。两年前或是三年前，我大概也是这样慢慢熟悉了他们。
+算法是不会变的。
+那么，就从这里开始吧。
+插入排序 插入排序算不上高效的排序算法，从时间复杂度来说，和冒泡排序是相抵的。其实本质上，插入排序和冒泡排序相似甚至相同，只是“冒泡”的方向不同。
 void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp;gt; 0; j--) { if (arr[j] &amp;lt; arr[j-1]) { int temp = arr[j]; arr[j] = arr[j-1]; arr[j-1] = temp; } } } return; }  在算法实现insert_sort执行的过程中，有这件事情得以保证：0..i-1这些元素已经排好序。
 而关于变量j的那个循环，所做的事情就是“冒泡”，而这里的冒泡本质上也就是插入。
 时间复杂度为$O(n^2)​$。
