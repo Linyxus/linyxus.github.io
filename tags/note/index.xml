@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>writings on Linro</title>
-    <link>https://linyxus.github.io/posts/</link>
-    <description>Recent content in writings on Linro</description>
+    <title>Note on Linro</title>
+    <link>https://linyxus.github.io/tags/note/</link>
+    <description>Recent content in Note on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 22 Jan 2019 19:47:50 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 26 Jan 2019 22:19:46 +0800</lastBuildDate>
     
-	<atom:link href="https://linyxus.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linyxus.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,24 +23,6 @@ void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp
 时间复杂度为$O(n^2)​$。
 归并排序 归并排序是利用了分治思想的排序算法。
  分解问题：将要排序的数组分成两部分，将两部分分别排序。 合并：将两部分合并。  void merge_sort(int *begin, int *end) { int l = end - begin; if (l == 0 || l == 1) { return; } int m = l / 2; merge_sort(begin, begin+m); merge_sort(begin+m, end); int p = 0; int q = m; int cnt = 0; while (p &amp;lt; m || q &amp;lt; l) { if (q &amp;gt;= l || (p &amp;lt; m &amp;amp;&amp;amp; *(begin+p) &amp;lt;= *(begin+q))) { tmp[cnt++] = *(begin+p); p++; } else { tmp[cnt++] = *(begin+q); q++; } } for (int i = 0; i &amp;lt; l; i++) { *(begin+i) = tmp[i]; } }  分解问题无甚好说，重要的在于合并。</description>
-    </item>
-    
-    <item>
-      <title>Algorithm Learning Roadmap</title>
-      <link>https://linyxus.github.io/posts/algorithm-roadmap/</link>
-      <pubDate>Fri, 25 Jan 2019 19:38:20 +0800</pubDate>
-      
-      <guid>https://linyxus.github.io/posts/algorithm-roadmap/</guid>
-      <description> 基础  排序  插入排序 归并排序 桶排序 希尔排序 快速排序  搜索  BFS DFS 回溯 迭代加深搜索 A*  暴力枚举 图  DFS BFS 拓扑排序 欧拉回路  二叉树 分而治之 贪心 动态规划  高级  数论 图论 线段树 组合数学  训练路线  重温紫书及配套练习。配合luogu刷题。 进军黑书。 进军训练指南。  </description>
-    </item>
-    
-    <item>
-      <title>Hello, Hugo</title>
-      <link>https://linyxus.github.io/posts/hello/</link>
-      <pubDate>Wed, 23 Jan 2019 19:44:21 +0800</pubDate>
-      
-      <guid>https://linyxus.github.io/posts/hello/</guid>
-      <description>&lt;p&gt;2019年1月，我重拾博客。&lt;/p&gt;</description>
     </item>
     
   </channel>
