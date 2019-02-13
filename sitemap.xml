@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://linyxus.github.io/posts/introducing-org-templetes/</loc>
+    <lastmod>2019-02-13T12:05:39+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linyxus.github.io/posts/introduction-to-dozer/</loc>
     <lastmod>2019-02-11T13:20:02+08:00</lastmod>
   </url>
@@ -54,8 +59,14 @@
   </url>
   
   <url>
+    <loc>https://linyxus.github.io/tags/emacs/</loc>
+    <lastmod>2019-02-13T12:05:39+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linyxus.github.io/</loc>
-    <lastmod>2019-02-11T13:20:02+08:00</lastmod>
+    <lastmod>2019-02-13T12:05:39+08:00</lastmod>
   </url>
   
   <url>
@@ -66,7 +77,7 @@
   
   <url>
     <loc>https://linyxus.github.io/tags/note/</loc>
-    <lastmod>2019-01-30T19:29:20+08:00</lastmod>
+    <lastmod>2019-02-13T12:05:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
