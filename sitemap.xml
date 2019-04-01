@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://linyxus.github.io/posts/caculas-1/</loc>
+    <lastmod>2019-04-01T16:28:15+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linyxus.github.io/posts/sync-org-files/</loc>
     <lastmod>2019-02-26T22:58:41+08:00</lastmod>
   </url>
@@ -59,6 +64,12 @@
   </url>
   
   <url>
+    <loc>https://linyxus.github.io/tags/caculus/</loc>
+    <lastmod>2019-04-01T16:28:15+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linyxus.github.io/categories/</loc>
     <priority>0</priority>
   </url>
@@ -71,7 +82,7 @@
   
   <url>
     <loc>https://linyxus.github.io/</loc>
-    <lastmod>2019-02-26T22:58:41+08:00</lastmod>
+    <lastmod>2019-04-01T16:28:15+08:00</lastmod>
   </url>
   
   <url>
@@ -82,7 +93,7 @@
   
   <url>
     <loc>https://linyxus.github.io/tags/note/</loc>
-    <lastmod>2019-02-26T22:58:41+08:00</lastmod>
+    <lastmod>2019-04-01T16:28:15+08:00</lastmod>
     <priority>0</priority>
   </url>
   

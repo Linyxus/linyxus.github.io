@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="Linro :: blog of Linyxus">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://linyxus.github.io">
+
+<meta name="twitter:image" content="https://linyxus.github.io/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://linyxus.github.io">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://linyxus.github.io/tn.png">
+
+<link rel="shortcut icon" href="https://linyxus.github.io/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://linyxus.github.io/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        微积分笔记 #1 :: 多元微积分初步
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">微积分笔记 #1 :: 多元微积分初步</div>
+
+        
+<div class="section" id="content">
+    Mon Apr 01, 2019 &#183; 429 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/caculus">
+                caculus
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/note">
+                note
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    
+
+<h2 id="n-dimension-euclid-space-r-n">n-dimension Euclid Space $R^n$</h2>
+
+<h3 id="邻域">邻域</h3>
+
+<p>$$
+X_0点的\delta邻域：B(X_0, \delta) = {X \in R^n : ||X-X_0&lt;\delta||}
+$$</p>
+
+<p>$$
+X_0点的去心\delta邻域：B(X_0, \delta) = {X \in R^n : 0 &lt; ||X-X_0|| &lt; \delta}
+$$</p>
+
+<h3 id="点与集">点与集</h3>
+
+<p><strong>内点：</strong>
+$$
+I(x) : x为\Omega的内点
+$$</p>
+
+<p>$$
+I(x) \Leftrightarrow \exists \delta &gt; 0, B(x,\delta) \subset \Omega
+$$</p>
+
+<p><strong>边界点：</strong>
+$$
+S(x) \Leftrightarrow \forall \delta &gt; 0 (B(x,\delta) \cap \Omega \neq \emptyset \wedge B(x,\delta) \cap R^n /\Omega \neq \emptyset)
+$$
+说明点$x$的任意一个邻域都横跨了集合$\Omega$的边界，很漂亮的定义。</p>
+
+<p><strong>开集</strong>：所有点都为内点</p>
+
+<p><strong>闭集</strong>：余集为开集</p>
+
+<p><strong>内部</strong>：集合所有内点构成的集合，$\dot{\Omega}$</p>
+
+<p><strong>边界</strong>：所有边界点，$\partial \Omega$</p>
+
+<p><strong>闭包</strong>：$\bar\Omega = \Omega \cup \partial \Omega$</p>
+
+<h3 id="点列的收敛性">点列的收敛性</h3>
+
+<h3 id="定理">定理</h3>
+
+<p>$$
+\lim_{k \to +\infin} X<em>k = A \Leftrightarrow \lim</em>{k \to +\infin} x_k^{(i)} = a(i), i=1,2,&hellip;,n.
+$$</p>
+
+<h4 id="证明">证明：</h4>
+
+<p>基于不等式：
+$$
+\max{|x_k^{(1)}-a^{(1)}|, &hellip;,|x_k^{(n)}-a^{(n)}|} \leq ||X<em>k -A|| \leq \sum</em>{i=1}^k |x_k^{(i)}-a^{(i)}|
+$$
+再结合定义即可证明。</p>
+
+<h3 id="cauchy序列">Cauchy序列</h3>
+
+<p>$$
+{X_k}为R^n中的Cauchy数列 \Leftrightarrow \forall \epsilon &gt; 0, \exists N \in N^+, \forall l, m &gt; N, ||X_l - X_m|| &lt; \epsilon
+$$</p>
+
+<h2 id="n元函数与n元向量值函数">n元函数与n元向量值函数</h2>
+
+<h3 id="n元函数">n元函数</h3>
+
+<p>$$
+f: \Omega \subset R^n \rightarrow R^1 <br />
+X \mapsto y
+$$</p>
+
+<p>从向量映射到标量。</p>
+
+<h3 id="向量值函数">向量值函数</h3>
+
+<p>$$
+f: \Omega \subset \R^n \to \R^m <br />
+X \mapsto Y
+$$</p>
+
+<p>从向量映射到向量。</p>
+
+<p>两个空间之间的变换。</p>
+
+<h2 id="多元函数的极限与连续">多元函数的极限与连续</h2>
+
+<h3 id="极限">极限</h3>
+
+<p>先定义向量值函数极限：</p>
+
+<p>若有
+$$
+f: \Omega \subset R^n \to R^m
+$$</p>
+
+<p>$$
+\lim_{X \to X_0} f(X) = A \Leftrightarrow \forall \epsilon &gt; 0, \exists \delta &gt; 0, \forall X \in \Omega: 0 &lt; ||X-X_0|| &lt; \delta, ||f(X) - A||_m &lt; \epsilon
+$$</p>
+
+<p>当$m=1$时，即为多元函数情况。</p>
+
+<h4 id="多元函数极限的复杂性">多元函数极限的复杂性</h4>
+
+<p>极限路径：</p>
+
+<ul>
+<li><p>一元函数：左右极限都存在 -&gt; 存在</p></li>
+
+<li><p>多元函数：无数条趋向路径</p></li>
+</ul>
+
+<h4 id="边界点极限">边界点极限</h4>
+
+<p>$X_0$为边界点时的特殊情况。</p>
+
+<p>称为当$X$在$\Omega$内趋近于$X_0$时的极限。</p>
+
+<h4 id="运算法则">运算法则</h4>
+
+<p>满足：加减乘除。</p>
+
+<h4 id="cauchy准则">Cauchy准则</h4>
+
+<p>$$
+\forall \epsilon &gt; 0, \exists \delta &gt; 0, \forall X&rsquo;, X&rdquo; \in B^{o}(X_0, \delta), ||f(X&rsquo;)-f(X&rdquo;)|| &lt; \epsilon
+$$</p>
+
+<h4 id="定理-1">定理</h4>
+
+<p>海涅定理。
+$$
+\lim_{X \to X_0}f(X) = A \Leftrightarrow \forall {X<em>k}: \lim</em>{k \to \infin} X_k = X<em>0,\lim</em>{k \to \infin} f(X_k) = A
+$$</p>
+
+<h4 id="累次极限">累次极限</h4>
+
+<p>上述极限被称为重极限。</p>
+
+<p>累次极限即为先后求极限：
+$$
+\lim_{x \to x<em>0} \lim</em>{y \to y<em>0} f(x, y) = \lim</em>{x \to x<em>0} (\lim</em>{y \to y_0} f(x,y))
+$$
+先$y$后$x$也一样。</p>
+
+<h4 id="二重极限与累次极限的关系">二重极限与累次极限的关系</h4>
+
+<ol>
+<li>二重极限与累次极限都存在，则三者相等。</li>
+<li>累次极限两个都存在但不等，则二重极限不存在。</li>
+</ol>
+
+<h3 id="连续">连续</h3>
+
+<h4 id="定义">定义</h4>
+
+<p>$$
+\lim_{X \to X_0} f(X) = f(X_0)
+$$</p>
+
+<p>称$f(X)$在点$X_0$处连续。</p>
+
+<p>对于边界点，使用边界极限的定义。</p>
+
+<h4 id="性质">性质</h4>
+
+<p>与一元连续函数完全类似。</p>
+
+<ol>
+<li>最值定理</li>
+<li>介值定理</li>
+</ol>
+
+<h2 id="多元函数的全微分">多元函数的全微分</h2>
+
+<h3 id="定义-1">定义</h3>
+
+<p>类似于一元函数。
+$$
+设有X_0为\Omega内点，则\exist\Delta X:X+\Delta X \in \Omega，若\exist a_1 \Delta x_1 + a_2 \Delta x_2 + \cdots + a_n \Delta x_n :<br />
+\Delta u = f(X+\Delta x)-f(X) = a_1 \Delta x_1 + \cdots a_n \Delta x_n + o(\Delta X) (\Delta X \to 0) <br />
+则称f在X_0点可微。
+$$</p>
+
+<p>$$
+du = a_1 dx_1 + a_2dx_2 + \cdots + a_ndx_n
+$$</p>
+
+<h3 id="性质-1">性质</h3>
+
+<ol>
+<li>在$X_0$处可微的函数必在$X_0$处连续。</li>
+<li>可微函数的微分是唯一的。</li>
+</ol>
+
+<p>证明2：</p>
+
+<p>用反证法。</p>
+
+<p>假设有：
+$$
+du = a_1dx_1 + a_2dx_2 + \cdots + a_ndx_n = b_1dx_1 + b_2dx_2 + \cdots + b_ndx_n
+$$</p>
+
+<p>$$
+\Leftrightarrow (a_1, a_2, \cdots, a_n)\Delta{X} + o_1(\rho) = (b_1, b_2, \cdots, b_n)\Delta{X} + o_2(\rho)
+$$</p>
+
+<p>其中
+$$
+\rho = ||X||
+$$
+记：
+$$
+o_1(\rho) = \varphi(\Delta{X})||\Delta{X}||
+$$</p>
+
+<p>$$
+o_2(\rho) = \psi(\Delta{X})||\Delta{X}||
+$$</p>
+
+<p>令$\Delta{X} = t\vec{e}，\vec{e}$为任意单位向量，代入即可得：
+$$
+(a_1-b_1, a_2-b_2, \cdots, a_n-b_n) = \vec{0}
+$$
+则得证。</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                writings
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/me">
+                me
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                about
+            </a>
+        
+    
+    &#183; 
+    <a href="https://linyxus.github.io">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script></div>
+    </div>
+</body>
+
+</html>

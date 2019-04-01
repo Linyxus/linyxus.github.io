@@ -6,10 +6,23 @@
     <description>Recent content in Linro :: blog on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 26 Feb 2019 22:58:41 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2019 16:28:15 +0800</lastBuildDate>
     
 	<atom:link href="https://linyxus.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>微积分笔记 #1 :: 多元微积分初步</title>
+      <link>https://linyxus.github.io/posts/caculas-1/</link>
+      <pubDate>Mon, 01 Apr 2019 16:28:15 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/caculas-1/</guid>
+      <description>n-dimension Euclid Space $R^n$ 邻域 $$ X_0点的\delta邻域：B(X_0, \delta) = {X \in R^n : ||X-X_0&amp;lt;\delta||} $$
+$$ X_0点的去心\delta邻域：B(X_0, \delta) = {X \in R^n : 0 &amp;lt; ||X-X_0|| &amp;lt; \delta} $$
+点与集 内点： $$ I(x) : x为\Omega的内点 $$
+$$ I(x) \Leftrightarrow \exists \delta &amp;gt; 0, B(x,\delta) \subset \Omega $$
+边界点： $$ S(x) \Leftrightarrow \forall \delta &amp;gt; 0 (B(x,\delta) \cap \Omega \neq \emptyset \wedge B(x,\delta) \cap R^n /\Omega \neq \emptyset) $$ 说明点$x$的任意一个邻域都横跨了集合$\Omega$的边界，很漂亮的定义。</description>
+    </item>
     
     <item>
       <title>利用cron自动同步org到Github</title>
