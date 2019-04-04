@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Hugo Loves Rst</title>
+      <link>https://linyxus.github.io/posts/hugo-loves-rst/</link>
+      <pubDate>Thu, 04 Apr 2019 12:54:40 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/hugo-loves-rst/</guid>
+      <description>Main Title This is a title. This is a subtitle, and some math. \begin{equation*} dz = \frac{\partial z}{\partial x}dx + \frac{\partial z}{\partial y}dy \end{equation*}  \begin{equation*} \begin{bmatrix} x_{11} &amp;amp; x_{12} &amp;amp; x_{13} &amp;amp; \dots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; x_{23} &amp;amp; \dots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\ x_{d1} &amp;amp; x_{d2} &amp;amp; x_{d3} &amp;amp; \dots &amp;amp; x_{dn} \end{bmatrix} \end{equation*}  \begin{equation*} \max{|x_k^{(1)}-a^{(1)}|, \ldots ,|x_k^{(n)}-a^{(n)}|} \leq ||Xk -A|| \leq \sum{i=1}^k |x_k^{(i)}-a^{(i)}| \end{equation*}    Some lists but some text first Some text.</description>
+    </item>
+    
+    <item>
       <title>微积分笔记 #1 :: 多元微积分初步</title>
       <link>https://linyxus.github.io/posts/caculas-1/</link>
       <pubDate>Mon, 01 Apr 2019 16:28:15 +0800</pubDate>
