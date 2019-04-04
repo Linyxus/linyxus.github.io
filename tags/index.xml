@@ -39,15 +39,6 @@
     </item>
     
     <item>
-      <title>Hello</title>
-      <link>https://linyxus.github.io/tags/hello/</link>
-      <pubDate>Thu, 04 Apr 2019 12:54:40 +0800</pubDate>
-      
-      <guid>https://linyxus.github.io/tags/hello/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Macos</title>
       <link>https://linyxus.github.io/tags/macos/</link>
       <pubDate>Mon, 11 Feb 2019 13:20:02 +0800</pubDate>
@@ -84,11 +75,29 @@
     </item>
     
     <item>
+      <title>Rst</title>
+      <link>https://linyxus.github.io/tags/rst/</link>
+      <pubDate>Thu, 04 Apr 2019 20:37:33 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/tags/rst/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Text</title>
       <link>https://linyxus.github.io/tags/text/</link>
       <pubDate>Tue, 29 Jan 2019 22:07:57 +0800</pubDate>
       
       <guid>https://linyxus.github.io/tags/text/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://linyxus.github.io/tags/tutorial/</link>
+      <pubDate>Thu, 04 Apr 2019 20:37:33 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/tags/tutorial/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="Linro :: blog of Linyxus">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://linyxus.github.io">
+
+<meta name="twitter:image" content="https://linyxus.github.io/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://linyxus.github.io">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://linyxus.github.io/tn.png">
+
+<link rel="shortcut icon" href="https://linyxus.github.io/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://linyxus.github.io/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        让Hugo和reStucturedText和睦相处
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">让Hugo和reStucturedText和睦相处</div>
+
+        
+<div class="section" id="content">
+    Thu Apr 04, 2019 &#183; 128 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/rst">
+                rst
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/tutorial">
+                tutorial
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <div class="document">
+
+
+<div class="section" id="id1">
+<h2>起因</h2>
+<div class="line-block">
+<div class="line">在写完 <a class="reference external" href="https://linyxus.github.io/posts/caculas-1">这一篇博客</a> 之后，我对Markdown彻底失望了，
+尽管它有可爱的Typora和GFM，尽管我已用它写下了无数篇博客。</div>
+</div>
+<div class="line-block">
+<div class="line">没错，还是数学公式渲染问题。</div>
+</div>
+<div class="line-block">
+<div class="line">Markdown和LaTeX似乎总是两对冤家，因为Markdown滥用的 <tt class="docutils literal">_</tt> 语法，并且并没有原生的数学公式支持，大部分
+Markdown编译器永远无法完善的解决下标和斜体的恩怨情仇。</div>
+</div>
+<div class="line-block">
+<div class="line">Hugo家的BlackFriday，也不例外。</div>
+</div>
+<div class="line-block">
+<div class="line">我曾在 <a class="reference external" href="https://linyxus.github.io/posts/hugo-and-mathjax/">这篇博客</a> 中自信的以为Hugo官方给出
+的Workaround并无必要，天真的以为Hugo的Markdown编译器不存在这样的问题。现在，我知道我错了。</div>
+</div>
+<div class="line-block">
+<div class="line">在之前提到的，一篇数学笔记博客中，下面的LaTeX代码在渲染时还是中了 <tt class="docutils literal">&lt;em&gt;</tt> 的枪。</div>
+</div>
+<pre class="code latex literal-block">
+<span class="ln">1 </span><span class="sb">$$</span><span class="nb">
+</span><span class="ln">2 </span><span class="nb">  </span><span class="nv">\lim</span><span class="nb">_{k </span><span class="nv">\to</span><span class="nb"> </span><span class="o">+</span><span class="nv">\infty</span><span class="nb">} X_k </span><span class="o">=</span><span class="nb"> A </span><span class="nv">\Leftrightarrow</span><span class="nb"> </span><span class="nv">\lim</span><span class="nb">_{k </span><span class="nv">\to</span><span class="nb"> </span><span class="o">+</span><span class="nv">\infty</span><span class="nb">} x_k^{</span><span class="o">(</span><span class="nb">i</span><span class="o">)</span><span class="nb">} </span><span class="o">=</span><span class="nb"> a</span><span class="o">(</span><span class="nb">i</span><span class="o">)</span><span class="nb">, i</span><span class="o">=</span><span class="m">1</span><span class="nb">,</span><span class="m">2</span><span class="nb">,…,n.
+</span><span class="ln">3 </span><span class="nb"></span><span class="s">$$</span>
+</pre>
+<div class="line-block">
+<div class="line">所以，我打算转移到更健全的rST。至少rST有专门的Math模块，比如上面出错的LaTeX代码在rST中可以毫无问题的展现：</div>
+</div>
+<div class="math">
+\begin{equation*}
+\lim_{k \to +\infty} X_k = A \Leftrightarrow \lim_{k \to +\infty} x_k^{(i)} = a(i), i=1,2,\ldots ,n.
+\end{equation*}
+</div>
+<div class="line-block">
+<div class="line">和Markdown相比，rST几乎没有什么弱点。Markdown能做到的事情，rST也无所不能。而很多能力，例如完备无冲突的公式
+显示，是过于单薄的Markdown无法企及的。</div>
+</div>
+<div class="line-block">
+<div class="line">很幸运的，虽然Hugo内置支持的是Markdown， <a class="reference external" href="https://gohugo.io/content-management/formats/#additional-formats-through-external-helpers">但是也能通过调用外部程序支持rST</a> 。
+但毕竟rST不是亲儿子，一开始还是会有些小问题：</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>小问题</h2>
+<div class="section" id="latex">
+<h3>LaTeX显示</h3>
+<div class="line-block">
+<div class="line">因为 <tt class="docutils literal">rst2html</tt> 对于数学文本块默认是会进行编译的，转成pdf倒还好，但如果转成HTML，显示的效果就非常难看
+（众所周知，HTML对公式的支持非常差）。所以这种任务还是交给MathJax为好，需要修改docutils的配置文件：</div>
+</div>
+<pre class="code ini literal-block">
+<span class="ln">1 </span><span class="k">[html4css1 writer]</span>
+<span class="ln">2 </span><span class="na">math-output: mathjax</span>
+<span class="ln">3 </span>             <span class="na">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js</span>
+</pre>
+<div class="line-block">
+<div class="line">值得一提的是，虽然配置里会需要写上MathJax的URL，但是从最终生成出来的HTML来看，<strong>并没有任何的JS引用。</strong>
+所以，还是自己添加为好，具体办法在官方文档里说的很清楚。</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>代码高亮</h3>
+<div class="line-block">
+<div class="line">rST是原生支持代码高亮的（当然Markdown也有），具体语法也和Markdown差不多，给出代码内容和语言类型就可以。
+但是用rST生成的博客文章里的代码块竟然是 <strong>没有颜色</strong> 的。</div>
+</div>
+<div class="line-block">
+<div class="line">可是没有颜色的代码块又有何用。</div>
+</div>
+<div class="line-block">
+<div class="line">原因是因为 <tt class="docutils literal">rst2html</tt> 默认采用了Pygments来高亮代码，而暂时没有在文档里寻觅到可以修改的方法。Hugo原来用
+的也是Pygments，但现在已经换成了Chroma。而且默认采用的是 inline style。可rST使用的Pygments还停留在使用
+classes的阶段。</div>
+</div>
+<div class="line-block">
+<div class="line">查看生成的HTML发现class都解析正确，只是并没有引入相应的CSS文件。我们需要做的只是把CSS添加到我们的网页中即可。</div>
+</div>
+<div class="line-block">
+<div class="line">首先用下面的代码配置一下rST中的Pygments，采用短classname。（由于使用的CSS中是short classname）</div>
+</div>
+<pre class="code ini literal-block">
+<span class="ln">1 </span><span class="k">[restructuredtext parser]</span>
+<span class="ln">2 </span>   <span class="na">syntax_highlight: short</span>
+</pre>
+<div class="line-block">
+<div class="line">Hugo的官方文档中也有关于生成 pygments <tt class="docutils literal">style.css</tt> 的 <a class="reference external" href="https://gohugo.io/content-management/syntax-highlighting/#generate-syntax-highlighter-css">叙述</a> 。
+但是，不要使用，不要使用，不要使用。因为这样生成的CSS文件中会多出一个选择器 <tt class="docutils literal">.chroma</tt> ，可是rST解析出的
+代码块中并不使用这个类名。</div>
+</div>
+<div class="line-block">
+<div class="line">还是需要自己用 <tt class="docutils literal">pygments</tt> 生成一下：</div>
+</div>
+<pre class="code bash literal-block">
+<span class="ln">1 </span>pygmentize -f html -S monokai &gt; syntax.css
+</pre>
+<div class="line-block">
+<div class="line">然后把生成的 <tt class="docutils literal">syntax.css</tt> 放入static文件夹，并在模板中引用即可。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>小缺陷</h2>
+<div class="line-block">
+<div class="line">有一个缺陷无法弥补，那就是</div>
+</div>
+<div class="line-block">
+<div class="line"><tt class="docutils literal">rst2html</tt> 实在是太慢了！</div>
+</div>
+<div class="line-block">
+<div class="line">在使用rST文件之前，网站的编译速度大概是20ms，在使用之后，直接上涨到了200+ms，是之前的十倍之多。所幸花费时间理应
+不是随着博客篇数线性增长的。</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>写在最后</h2>
+<p>rst示例： <a class="reference external" href="https://linyxus.github.io/posts/hugo-loves-rst/">Hugo Loves rST</a></p>
+</div>
+</div>
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                writings
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/me">
+                me
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                about
+            </a>
+        
+    
+    &#183; 
+    <a href="https://linyxus.github.io">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script>
+<link rel="stylesheet" href="https://linyxus.github.io/css/syntax.css">
+</div>
+    </div>
+</body>
+
+</html>
