@@ -50,9 +50,18 @@
     <item>
       <title>Note</title>
       <link>https://linyxus.github.io/tags/note/</link>
-      <pubDate>Mon, 01 Apr 2019 16:28:15 +0800</pubDate>
+      <pubDate>Thu, 04 Apr 2019 22:59:05 +0800</pubDate>
       
       <guid>https://linyxus.github.io/tags/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>https://linyxus.github.io/tags/notes/</link>
+      <pubDate>Mon, 08 Apr 2019 19:46:14 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/tags/notes/</guid>
       <description></description>
     </item>
     
@@ -66,11 +75,29 @@
     </item>
     
     <item>
+      <title>Physics</title>
+      <link>https://linyxus.github.io/tags/physics/</link>
+      <pubDate>Mon, 08 Apr 2019 19:46:14 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/tags/physics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Plan</title>
       <link>https://linyxus.github.io/tags/plan/</link>
       <pubDate>Fri, 25 Jan 2019 19:38:20 +0800</pubDate>
       
       <guid>https://linyxus.github.io/tags/plan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>https://linyxus.github.io/tags/pytorch/</link>
+      <pubDate>Thu, 04 Apr 2019 22:59:05 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/tags/pytorch/</guid>
       <description></description>
     </item>
     

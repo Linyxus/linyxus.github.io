@@ -6,10 +6,19 @@
     <description>Recent content in Note on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Apr 2019 16:28:15 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2019 22:59:05 +0800</lastBuildDate>
     
 	<atom:link href="https://linyxus.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Note on Pytorch 60-min Blitz</title>
+      <link>https://linyxus.github.io/posts/note-on-pytorch-60min-blitz/</link>
+      <pubDate>Thu, 04 Apr 2019 22:59:05 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/note-on-pytorch-60min-blitz/</guid>
+      <description>Tensor Create a tensor via torch.empty  x = torch.empty(5, 3)  This will create a tensor with a size of (5, 3). It is not initialized.  via torch.zero  </description>
+    </item>
     
     <item>
       <title>微积分笔记 #1 :: 多元微积分初步</title>
