@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Linro</title>
+    <link>https://linyxus.github.io/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on Linro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 09 Apr 2019 15:40:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://linyxus.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>雏雁计划神经网络训练记录</title>
+      <link>https://linyxus.github.io/posts/mental-health-nn-training/</link>
+      <pubDate>Tue, 09 Apr 2019 15:40:08 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/mental-health-nn-training/</guid>
+      <description>思路 使用前20个问题预测剩下11个问题的答案。将经常、有时、很少、从不规范化为[1, 0.33, -0.33, -1]。   训练笔记 Small ReLU 20 -&amp;gt; 18 -&amp;gt; 11
+Result:
+acc \(65.22 \%\) test_acc \(45.45\%\)   Mid Relu 20 -&amp;gt; 30 -&amp;gt; 11
+Result:
+acc: 0.7521 test_acc: 0.4727 test_acc_l: 0.6636   Tiny Relu 20 -&amp;gt; 10 -&amp;gt; 11
+Result:
+acc: 0.5513 test_acc: 0.5091 test_acc_l: 0.5509   Smaller Relu 20 -&amp;gt; 15 -&amp;gt; 11
+Result:
+acc: 0.5853 test_acc: 0.5236 test_acc_l: 0.7909   Smaller Relu V2 Difference: change batch_size to 32, shuffle data.</description>
+    </item>
+    
+  </channel>
+</rss>
