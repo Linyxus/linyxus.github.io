@@ -46,7 +46,7 @@
 
         
 <div class="section" id="content">
-    Mon Apr 08, 2019 &#183; 157 words
+    Mon Apr 08, 2019 &#183; 280 words
     
     <div class="tag-container">
         
@@ -65,11 +65,13 @@
     </div>
     
     <hr/>
-    <div class="document" id="id1">
-<h1 class="title">静电平衡</h1>
+    <div class="document">
 
+
+<div class="section" id="id1">
+<h2>静电平衡</h2>
 <div class="section" id="id2">
-<h2>导体的定义</h2>
+<h3>导体的定义</h3>
 <ol class="arabic simple">
 <li>具有大量能够自由移动的电子</li>
 <li>在外电场的作用下，能够很好的传导电流</li>
@@ -77,7 +79,7 @@
 <p>的物质。</p>
 </div>
 <div class="section" id="id3">
-<h2>静电平衡的条件与特征</h2>
+<h3>静电平衡的条件与特征</h3>
 <div class="line-block">
 <div class="line">条件：</div>
 </div>
@@ -98,16 +100,16 @@ E = - \frac{\partial V}{\partial l}
 </div>
 </div>
 <div class="section" id="id4">
-<h2>静电平衡的理解</h2>
+<h3>静电平衡的理解</h3>
 <div class="line-block">
 <div class="line">与 <em>霍尔效应</em> 有几分类似。导体内部的自由电荷会均衡它收到的电场，内部电荷产生的电场与外加电场抵消，
 内部电场处处为0，导体达到静电平衡。</div>
 </div>
 </div>
 <div class="section" id="id5">
-<h2>静电平衡时的电荷分布</h2>
+<h3>静电平衡时的电荷分布</h3>
 <div class="section" id="id6">
-<h3>电荷分布</h3>
+<h4>电荷分布</h4>
 <div class="line-block">
 <div class="line">处于静电平衡状态的导体，内部处处没有净电荷存在，电荷只分布在导体表面上。</div>
 </div>
@@ -124,7 +126,7 @@ E = - \frac{\partial V}{\partial l}
 </div>
 </div>
 <div class="section" id="id7">
-<h3>贴近表面处的电场强度</h3>
+<h4>贴近表面处的电场强度</h4>
 <div class="math">
 \begin{equation*}
 E = \frac{\sigma}{\epsilon_0}
@@ -169,9 +171,9 @@ E^{'} = E_2 = \frac{\sigma}{2\epsilon_0}
 </div>
 </div>
 <div class="section" id="id8">
-<h2>静电感应与静电屏蔽</h2>
+<h3>静电感应与静电屏蔽</h3>
 <div class="section" id="id9">
-<h3>静电感应</h3>
+<h4>静电感应</h4>
 <div class="line-block">
 <div class="line">导体在外加电场 <span class="math">\(E_0\)</span> 的影响下，被感应出感应电荷，达到静电平衡状态。</div>
 </div>
@@ -185,7 +187,7 @@ E^{'} = E_2 = \frac{\sigma}{2\epsilon_0}
 </div>
 </div>
 <div class="section" id="id10">
-<h3>静电屏蔽</h3>
+<h4>静电屏蔽</h4>
 <div class="line-block">
 <div class="line">因此空腔导体具有静电屏蔽作用。</div>
 </div>
@@ -215,6 +217,7 @@ E^{'} = E_2 = \frac{\sigma}{2\epsilon_0}
 </dl>
 </div>
 </div>
+</div>
 <div class="section" id="id11">
 <h2>静电场中的电介质</h2>
 <div class="section" id="id12">
@@ -231,6 +234,86 @@ U = \frac {U_0} {\varepsilon_r}
 \end{equation*}
 </div>
 <p>其中 <span class="math">\(\varepsilon_r\)</span> 即为相对电容率，为大于 <span class="math">\(1\)</span> 的纯数。</p>
+<p>而又由于平行板之间的电场为匀强电场，故：</p>
+<div class="math">
+\begin{align*}
+U_0 = E_0 d \\
+U = E d
+\end{align*}
+</div>
+<p>于是有：</p>
+<div class="math">
+\begin{equation*}
+E = \frac {E_0} {\varepsilon_r}
+\end{equation*}
+</div>
+<p>定义极化电荷面密度为：</p>
+<div class="math">
+\begin{equation*}
+\sigma^{'} = \frac{E^{'}}{S}
+\end{equation*}
+</div>
+<p>可以推出：</p>
+<div class="math">
+\begin{equation*}
+\sigma^{'} = (1-\frac{1}{\varepsilon_r}) \sigma_0
+\end{equation*}
+</div>
+<p>可以看到，<span class="math">\(\varepsilon_r\)</span> 越大，极化电荷面密度越接近原电荷密度，对原电场的抵消就越大。</p>
+</div>
+<div class="section" id="id14">
+<h3>电位移</h3>
+<div class="math">
+\begin{equation*}
+\oint_S E \cdot dS = \frac{q_0}{\varepsilon_0 \varepsilon_r}
+\end{equation*}
+</div>
+<p>故而定义：</p>
+<div class="math">
+\begin{equation*}
+D = \varepsilon_0 \varepsilon_r E
+\end{equation*}
+</div>
+<p>为 <strong>电位移</strong> 。</p>
+<p>这个矢量没有很多的实际意义，只是为了方便计算，如此定义之后，高斯定理即可写成：</p>
+<div class="math">
+\begin{equation*}
+\oint_S D \cdot S = q_0
+\end{equation*}
+</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>电容</h2>
+<div class="section" id="id16">
+<h3>定义</h3>
+<div class="math">
+\begin{equation*}
+C = \frac {q} {V}
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id17">
+<h3>常见形式的电容</h3>
+<ol class="arabic simple">
+<li>导体球</li>
+</ol>
+<div class="math">
+\begin{align*}
+V &amp; = \frac{q} {4 \pi \varepsilon_0 R} \\
+C &amp; = \frac{q} {V} = 4 \pi \varepsilon_0 R
+\end{align*}
+</div>
+<ol class="arabic simple" start="2">
+<li>电容器</li>
+</ol>
+<div class="math">
+\begin{align*}
+E &amp;= \frac {\sigma}{\varepsilon_0 \varepsilon_r} \\
+U &amp;= Ed = \frac {\sigma d} {\varepsilon_0 \varepsilon_r} \\
+C &amp;= \frac{q}{U} = \frac{\varepsilon_0 \varepsilon_r S}{d}
+\end{align*}
+</div>
 </div>
 </div>
 </div>
