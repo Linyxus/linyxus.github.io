@@ -46,7 +46,7 @@
 
         
 <div class="section" id="content">
-    Mon Apr 08, 2019 &#183; 280 words
+    Mon Apr 08, 2019 &#183; 514 words
     
     <div class="tag-container">
         
@@ -314,6 +314,122 @@ U &amp;= Ed = \frac {\sigma d} {\varepsilon_0 \varepsilon_r} \\
 C &amp;= \frac{q}{U} = \frac{\varepsilon_0 \varepsilon_r S}{d}
 \end{align*}
 </div>
+<ol class="arabic simple" start="3">
+<li>球形电容器</li>
+</ol>
+<p>由两个半径分别为 <span class="math">\(R_1\)</span> 与 <span class="math">\(R_2\)</span> 的同心金属球壳组成。带电量分别为 <span class="math">\(+q\)</span> 与 <span class="math">\(-q\)</span> 。</p>
+<p>可知两球面间的电场强度为</p>
+<div class="math">
+\begin{equation*}
+E = \frac {q} {4 \pi \varepsilon_0 \varepsilon_r r^2}
+\end{equation*}
+</div>
+<p>积分，可得电势差</p>
+<div class="math">
+\begin{equation*}
+U = \int_{R_1}^{R_2} E \cdot dr = \frac {q} {4 \pi \varepsilon_0 \varepsilon_r}
+\frac {R_2 - R_1} {R_1 R_2}
+\end{equation*}
+</div>
+<p>故而</p>
+<div class="math">
+\begin{equation*}
+C = \frac{q}{U} = \frac {4 \pi \varepsilon_0 \varepsilon_r R_1 R_2} {R_2 - R_1}
+\end{equation*}
+</div>
+<p>讨论两个情况：</p>
+<ol class="arabic">
+<li><p class="first">假设 <span class="math">\(R_1\)</span> 和 <span class="math">\(R_2\)</span> 都非常大，而 <span class="math">\(d=R_2-R_1\)</span> 很小，则：</p>
+<div class="math">
+\begin{align*}
+R_1 R_2 = R_1^2 \\
+S = 4 \pi R_1^2
+\end{align*}
+</div>
+<p>得到：</p>
+<div class="math">
+\begin{equation*}
+C = \frac {\varepsilon_0 \varepsilon_r S} {d}
+\end{equation*}
+</div>
+<p>也即平行板电容器的表达式。</p>
+</li>
+<li><p class="first">若 <span class="math">\(R_2 \gg R_1\)</span></p>
+<div class="math">
+\begin{equation*}
+C = 4 \pi \varepsilon_0 \varepsilon_r R_1
+\end{equation*}
+</div>
+<p>即为孤立导体球电容表达式。</p>
+</li>
+</ol>
+<ol class="arabic simple" start="4">
+<li>同轴电缆</li>
+</ol>
+<p>应用高斯定理，积分求电势差，类似可得</p>
+<div class="math">
+\begin{equation*}
+C = \frac {2 \pi \varepsilon_0 \varepsilon_r L} {\ln \frac {R_b} {R_a}}
+\end{equation*}
+</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>电场能量</h2>
+<p>平行板电容器之间的电压为</p>
+<div class="math">
+\begin{equation*}
+U = \frac {q}{C}
+\end{equation*}
+</div>
+<p>将元电荷 <span class="math">\(d q\)</span> 从一极移动到另一极，需要做功</p>
+<div class="math">
+\begin{equation*}
+dA = U \cdot dq = \frac{q}{C} dq
+\end{equation*}
+</div>
+<p>故</p>
+<div class="math">
+\begin{equation*}
+A = \int_q \frac {q}{C} dq = \frac {Q^2}{2C}
+\end{equation*}
+</div>
+<p>故电场储能</p>
+<div class="math">
+\begin{equation*}
+W_e = \frac {Q^2}{2C} = \frac{1}{2} C U^2 = \frac{1}{2} QU
+\end{equation*}
+</div>
+<p>又有</p>
+<div class="math">
+\begin{equation*}
+U = Ed, C = \frac{\varepsilon S} {d}
+\end{equation*}
+</div>
+<p>可以推出</p>
+<div class="math">
+\begin{equation*}
+W_e = \frac{1}{2} \varepsilon E^2 \cdot Sd = \frac{1}{2} \varepsilon E^2 \cdot V
+\end{equation*}
+</div>
+<p>其中 <span class="math">\(V\)</span> 为电容器中电场遍及的空间体积。</p>
+<p>于是可以定义 <strong>电场能量密度</strong></p>
+<div class="math">
+\begin{equation*}
+w_e = \frac {W_e} {V} = \frac{1}{2} \varepsilon E^2
+\end{equation*}
+</div>
+<p>在引入电场强度密度之后，在不均匀电场中，可有：</p>
+<div class="math">
+\begin{equation*}
+dW_e = w_e dV
+\end{equation*}
+</div>
+<p>于是</p>
+<div class="math">
+\begin{equation*}
+W_e = \int_V dW_e = \int_V \frac{1}{2} \varepsilon E^2 dV .
+\end{equation*}
 </div>
 </div>
 </div>
