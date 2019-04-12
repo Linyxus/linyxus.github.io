@@ -12,6 +12,22 @@
     
     
     <item>
+      <title>电路分析笔记 :: 电路分析基础模型</title>
+      <link>https://linyxus.github.io/posts/circuit-analysis-notes-1/</link>
+      <pubDate>Fri, 12 Apr 2019 20:17:12 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/circuit-analysis-notes-1/</guid>
+      <description>电路模型基本概念 电路模型:从实际电路中抽象出的模型  激励:输入电路的信号  响应:经过电路加工处理后得到的信号  集总参数元件:当实际电路的尺寸远小于其使用时最高工作频率所对应的波长时而抽象出的理想元件  集总电路模型:又集总参数元件组成的电路  分布参数电路:当实际电路的尺寸大于其最高工作频率所对应的波长或两者属于同一数量级时     电路模型基本变量 电流、电压、功率。
+电压与电流的参考方向 由于电路分析中，电压与电流的实际方向很难确定，故可以假设这两个变量的方向，以电流为例。
+假设 \(I\) 从a流向b，若实际电流方向与参考方向相同
+\begin{equation*} I &amp;gt; 0 \end{equation*}  否则
+\begin{equation*} I &amp;lt; 0 \end{equation*}   电压与电流的关联参考方向 若在假定的关联参考方向下，电流 \(I\) 从高电势流向低电势，则是关联参考方向。
+否则为非关联参考方向。
+ 电压 \begin{equation*} p = \frac {dW} {dt} = \frac {dW}{dq} \cdot \frac {dq}{dt} = u \cdot i \end{equation*}  若在非关联参考方向下
+\begin{equation*} p = - u \cdot i \end{equation*}  p &amp;gt; 0:吸收功率  p &amp;lt; 0:供出功率      电路模型基本原件 电阻 如果一个元件的端电压u和通过的电流i是关联参考方向，其伏安关系是通过原点的曲线，这个元件就是电阻元件。</description>
+    </item>
+    
+    <item>
       <title>雏雁计划神经网络训练记录</title>
       <link>https://linyxus.github.io/posts/mental-health-nn-training/</link>
       <pubDate>Tue, 09 Apr 2019 15:40:08 +0800</pubDate>
