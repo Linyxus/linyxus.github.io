@@ -6,10 +6,28 @@
     <description>Recent content in Circuit Analysis on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 12 Apr 2019 20:17:12 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Apr 2019 21:42:06 +0800</lastBuildDate>
     
 	<atom:link href="https://linyxus.github.io/tags/circuit-analysis/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>电路分析笔记 :: 基本分析方法</title>
+      <link>https://linyxus.github.io/posts/circuit-analysis-notes-2/</link>
+      <pubDate>Sun, 14 Apr 2019 21:42:06 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/circuit-analysis-notes-2/</guid>
+      <description>变量分析 基尔霍夫定律 KCL 基尔霍夫电流定律
+对任意电路的任意节点，在任意时刻流入该节点的电流代数和为0。
+\begin{equation*} \sum_{k=1}^{b} i_k(t) = 0 \end{equation*}  若规定流入为正，流出即为负。
+推广 广义节点（封闭面）同样成立。
+  KVL 对任意集总电路的任意回路，在任意时刻，沿该回路的所有支路的电压降 代数和为0。
+\begin{equation*} \sum_{k=1}^{b} u_k(t) = 0 \end{equation*}  可以从电路中任意一点的电势为一确定值理解。
+  2b法 假设电阻有 \(n\) 个节点， \(b\) 条支路。根据拓扑约束列出 \((n-1)\) 个独立电流方程， \((b-n+1)\) 个独立电压方程。 根据元件约束列出 \((b)\) 个VCR方程。
+共计 \(2b\) 个方程，求解 \(b\) 条支路的 \(2b\) 个未知量。
+ 支路电流法 也即代入VCR元件约束，将电压量代换为电流量。
+ 节点电压法 形式 \begin{equation*} \begin{cases} G_{11} u_1 + G_{12} u_2 + \cdots + G_{1n} u_n = i_{s11} \\ G_{21} u_1 + G_{22} u_2 + \cdots + G_{2n} u_n = i_{s22} \\ \cdots \\ G_{n1} u_1 + G_{n2} u_2 + \cdots + G_{nn} u_n = i_{snn} \end{cases} \end{equation*}  其中：</description>
+    </item>
     
     <item>
       <title>电路分析笔记 :: 电路分析基础模型</title>

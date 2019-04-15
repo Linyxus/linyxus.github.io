@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="Linro :: blog of Linyxus">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://linyxus.github.io">
+
+<meta name="twitter:image" content="https://linyxus.github.io/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://linyxus.github.io">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://linyxus.github.io/tn.png">
+
+<link rel="shortcut icon" href="https://linyxus.github.io/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://linyxus.github.io/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        电路分析笔记 :: 基本分析方法
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">电路分析笔记 :: 基本分析方法</div>
+
+        
+<div class="section" id="content">
+    Sun Apr 14, 2019 &#183; 273 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/note">
+                note
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/circuit-analysis">
+                circuit-analysis
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <div class="document">
+
+
+<div class="section" id="id1">
+<h2>变量分析</h2>
+<div class="section" id="id2">
+<h3>基尔霍夫定律</h3>
+<div class="section" id="kcl">
+<h4>KCL</h4>
+<p>基尔霍夫电流定律</p>
+<p>对任意电路的任意节点，在任意时刻流入该节点的电流代数和为0。</p>
+<div class="math">
+\begin{equation*}
+\sum_{k=1}^{b} i_k(t) = 0
+\end{equation*}
+</div>
+<p>若规定流入为正，流出即为负。</p>
+<div class="section" id="id3">
+<h5>推广</h5>
+<p>广义节点（封闭面）同样成立。</p>
+</div>
+</div>
+<div class="section" id="kvl">
+<h4>KVL</h4>
+<p>对任意集总电路的任意回路，在任意时刻，沿该回路的所有支路的电压降
+代数和为0。</p>
+<div class="math">
+\begin{equation*}
+\sum_{k=1}^{b} u_k(t) = 0
+\end{equation*}
+</div>
+<p>可以从电路中任意一点的电势为一确定值理解。</p>
+</div>
+</div>
+<div class="section" id="b">
+<h3>2b法</h3>
+<p>假设电阻有 <span class="math">\(n\)</span> 个节点， <span class="math">\(b\)</span> 条支路。根据拓扑约束列出
+<span class="math">\((n-1)\)</span> 个独立电流方程， <span class="math">\((b-n+1)\)</span> 个独立电压方程。
+根据元件约束列出 <span class="math">\((b)\)</span> 个VCR方程。</p>
+<p>共计 <span class="math">\(2b\)</span> 个方程，求解 <span class="math">\(b\)</span> 条支路的 <span class="math">\(2b\)</span> 个未知量。</p>
+</div>
+<div class="section" id="id4">
+<h3>支路电流法</h3>
+<p>也即代入VCR元件约束，将电压量代换为电流量。</p>
+</div>
+<div class="section" id="id5">
+<h3>节点电压法</h3>
+<div class="section" id="id6">
+<h4>形式</h4>
+<div class="math">
+\begin{equation*}
+\begin{cases}
+  G_{11} u_1 + G_{12} u_2 + \cdots + G_{1n} u_n = i_{s11} \\
+  G_{21} u_1 + G_{22} u_2 + \cdots + G_{2n} u_n = i_{s22} \\
+  \cdots \\
+  G_{n1} u_1 + G_{n2} u_2 + \cdots + G_{nn} u_n = i_{snn}
+\end{cases}
+\end{equation*}
+</div>
+<p>其中：</p>
+<ul class="simple">
+<li><span class="math">\(G_{ii}\)</span> 为自电导。为连接该节点所有支路的电导之和。</li>
+<li><span class="math">\(G_{ij}\)</span> 为互电导。为 <span class="math">\(i, j\)</span> 两节点间所有公共支路电导之和。
+<strong>恒为负</strong> 。</li>
+<li><span class="math">\(i_{sii}\)</span> 为注入该节点的电流代数和。也即注入为正，流出为负。</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h4>特殊情况</h4>
+<ol class="arabic simple">
+<li>含有电压源与电阻串联的支路，转化为电流源与电阻并联。</li>
+<li>含有电流源与电阻串联的支路，忽略电阻。</li>
+<li>含有理想电压源的支路。设支路电流 <span class="math">\(i\)</span> 为未知量，并增加一个方程。
+假设理想电流源位于节点 <span class="math">\(i, j\)</span> 之间，则增加的方程为</li>
+</ol>
+<div class="math">
+\begin{equation*}
+u_i - u_j = u_s
+\end{equation*}
+</div>
+<ol class="arabic simple" start="4">
+<li>电路中含有受控源。用节点电压表示控制量。</li>
+</ol>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>叠加定理</h3>
+<p>叠加定理基于一个基本事实：对于一个线性网络，响应与激励存在线性关系。</p>
+<p>假设激励为 <span class="math">\(x\)</span> ， 响应为 <span class="math">\(f(x)\)</span> ，则线性网络满足</p>
+<div class="math">
+\begin{equation*}
+f(\alpha x_1 + \beta x_2) = \alpha f(x_1) + \beta f(x_2)
+\end{equation*}
+</div>
+<p>故有叠加定理：</p>
+<p>在线性电路中，任意元件的电流和电压可视为电路中每一个激励单独作用与电路时，在该元件产生的电压与电流的
+代数和。</p>
+<p>独立作用也即将除该电源以外的所有电源置零。</p>
+<p>置零也即</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">电压源:</th><td class="field-body">短路</td>
+</tr>
+<tr class="field"><th class="field-name">电流源:</th><td class="field-body">开路</td>
+</tr>
+</tbody>
+</table>
+<p><em>Notes: 功率不可叠加。</em></p>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>等效分析</h2>
+<div class="section" id="id10">
+<h3>电阻等效</h3>
+<ol class="arabic simple">
+<li>等效电阻关系</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">电阻串联:</th><td class="field-body"><span class="math">\(R_{eq} = R_1 + R_2 + \cdots + R_n\)</span></td>
+</tr>
+<tr class="field"><th class="field-name">电阻并联:</th><td class="field-body"><span class="math">\(\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n}\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>分压与分流关系</li>
+</ol>
+<p>电阻串联电压与电阻成正比。</p>
+<p>电阻并联电流与电导成正比。</p>
+</div>
+<div class="section" id="id11">
+<h3>电源等效</h3>
+<ol class="arabic simple">
+<li>电压源串联</li>
+</ol>
+<div class="math">
+\begin{equation*}
+u = u_1 + u_2 + \cdots + u_n
+\end{equation*}
+</div>
+<p>等效电压源电压为串联电压源电压代数和。</p>
+<p>只有大小方向相同的电压源才能并联，否则会产生无限大的电流。</p>
+<ol class="arabic simple" start="2">
+<li>电流源并联</li>
+</ol>
+<div class="math">
+\begin{equation*}
+i = i_1 + i_2 + \cdots + i_n
+\end{equation*}
+</div>
+<p>只有大小方向相同的电流源才能串联，否则会产生无穷大的电压。</p>
+<ol class="arabic simple" start="3">
+<li>电压源与二端网络并联</li>
+</ol>
+<p>只要二端网络 <span class="math">\(N\)</span> 不是与电压源大小方向不同的电压源，对外等效。</p>
+<ol class="arabic simple" start="4">
+<li>电流源与二段网络串联</li>
+</ol>
+<p>只要二端网络 <span class="math">\(N\)</span> 不是与电流源大小方向不同的电流源，对外等效。</p>
+<ol class="arabic simple" start="5">
+<li>电流源与电压源的等效转化</li>
+</ol>
+<div class="math">
+\begin{equation*}
+U_s, R_s \Leftrightarrow \frac {U_s} {R_s}, R_s
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id12">
+<h3>替代定理</h3>
+<p>在有唯一解的任意线性或者非线性网络中，若某一支路的电压为 <span class="math">\(u_k\)</span> ，电流为 <span class="math">\(i_k\)</span> ，
+则该支路用电压为 <span class="math">\(u_k\)</span> 的独立电压源或是电流为 <span class="math">\(i_k\)</span> 的独立电流源替代，替代后
+电路其他支路的电压、电流保持不变。</p>
+<ol class="arabic simple">
+<li>被替代电路必须有唯一解</li>
+<li>其他部分与被替代部分无耦合关系。也即受控源与控制量不可被分开。</li>
+</ol>
+</div>
+<div class="section" id="id13">
+<h3>戴维南定理</h3>
+<p>任意线性二端网络 <span class="math">\(N\)</span> 都可被等效为一个独立电压源 <span class="math">\(U_s\)</span> 与电阻 <span class="math">\(R\)</span> 的串联。</p>
+<p>其中，电压 <span class="math">\(U_s\)</span> 即为网络 <span class="math">\(N\)</span> 的开路电压 <span class="math">\(U_oc\)</span>。</p>
+<p>电阻 <span class="math">\(R\)</span> 为该网络除源后所得网络的等效输出电阻 <span class="math">\(R_{eq}\)</span> 。</p>
+<div class="section" id="r-eq">
+<h4>含受控源时 <span class="math">\(R_{eq}\)</span> 的计算方法</h4>
+<ol class="arabic simple">
+<li>外加电压法</li>
+<li>短路电流法</li>
+</ol>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>最大功率传输定理</h3>
+<p>对于二端网络 <span class="math">\(N\)</span> ，当负载电阻 <span class="math">\(R=R_{eq}\)</span> 时，负载电阻功率达到最大值</p>
+<div class="math">
+\begin{equation*}
+P_{max} = \frac {u_{oc}^2} {4R_{eq}}
+\end{equation*}
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                writings
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/me">
+                me
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                about
+            </a>
+        
+    
+    &#183; 
+    <a href="https://linyxus.github.io">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script>
+<link rel="stylesheet" href="https://linyxus.github.io/css/syntax.css">
+</div>
+    </div>
+</body>
+
+</html>
