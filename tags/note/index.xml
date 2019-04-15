@@ -6,10 +6,21 @@
     <description>Recent content in Note on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 14 Apr 2019 21:42:06 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2019 20:34:15 +0800</lastBuildDate>
     
 	<atom:link href="https://linyxus.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>电路分析笔记 :: 动态电路分析</title>
+      <link>https://linyxus.github.io/posts/circuit-analysis-notes-3/</link>
+      <pubDate>Mon, 15 Apr 2019 20:34:15 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/circuit-analysis-notes-3/</guid>
+      <description>基本元件 电容 动态特性 \begin{equation*} i = \frac {dq} {dt} = C \frac {dU} {dt} \end{equation*}   记忆特性 \begin{equation*} u_c = \frac {1} {C} \int_{-\infty}^{t_0} i_c dt \end{equation*}  也即电压反映了电流的累积效果。
+ 储能特性 \begin{equation*} W = \frac{1}{2} C U^2 \end{equation*}    电感 动态特性 \begin{equation*} u_L = \frac {d \phi} {dt} = L \frac {di}{dt} \end{equation*}   记忆特性 \begin{equation*} i_L = \frac{1}{L} \int_{\infty}^{t_0} u_L dt \end{equation*}  也即电流反映了电压的累积效果。
+ 储能特性 \begin{equation*} W = \frac{1}{2} Li^2 \end{equation*}    电容、电感的串并联 电容等同于电导。</description>
+    </item>
     
     <item>
       <title>电路分析笔记 :: 基本分析方法</title>

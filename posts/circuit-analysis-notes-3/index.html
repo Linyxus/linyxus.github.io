@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="Linro :: blog of Linyxus">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://linyxus.github.io">
+
+<meta name="twitter:image" content="https://linyxus.github.io/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://linyxus.github.io">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://linyxus.github.io/tn.png">
+
+<link rel="shortcut icon" href="https://linyxus.github.io/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://linyxus.github.io/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        电路分析笔记 :: 动态电路分析
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">电路分析笔记 :: 动态电路分析</div>
+
+        
+<div class="section" id="content">
+    Mon Apr 15, 2019 &#183; 97 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/note">
+                note
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/circuit-analysis">
+                circuit analysis
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <div class="document">
+
+
+<div class="section" id="id1">
+<h2>基本元件</h2>
+<div class="section" id="id2">
+<h3>电容</h3>
+<div class="section" id="id3">
+<h4>动态特性</h4>
+<div class="math">
+\begin{equation*}
+i = \frac {dq} {dt} = C \frac {dU} {dt}
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id4">
+<h4>记忆特性</h4>
+<div class="math">
+\begin{equation*}
+u_c = \frac {1} {C} \int_{-\infty}^{t_0} i_c dt
+\end{equation*}
+</div>
+<p>也即电压反映了电流的累积效果。</p>
+</div>
+<div class="section" id="id5">
+<h4>储能特性</h4>
+<div class="math">
+\begin{equation*}
+W = \frac{1}{2} C U^2
+\end{equation*}
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>电感</h3>
+<div class="section" id="id7">
+<h4>动态特性</h4>
+<div class="math">
+\begin{equation*}
+u_L = \frac {d \phi} {dt} = L \frac {di}{dt}
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id8">
+<h4>记忆特性</h4>
+<div class="math">
+\begin{equation*}
+i_L = \frac{1}{L} \int_{\infty}^{t_0} u_L dt
+\end{equation*}
+</div>
+<p>也即电流反映了电压的累积效果。</p>
+</div>
+<div class="section" id="id9">
+<h4>储能特性</h4>
+<div class="math">
+\begin{equation*}
+W = \frac{1}{2} Li^2
+\end{equation*}
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>电容、电感的串并联</h3>
+<p>电容等同于电导。</p>
+<p>电感等同于电阻。</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>动态响应分析</h2>
+<div class="section" id="id12">
+<h3>一阶零输入响应</h3>
+<div class="math">
+\begin{equation*}
+y(t) = y(0^{+}) e^{-\frac{1}{\tau}}
+\end{equation*}
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">一阶RC电路:</th><td class="field-body"><span class="math">\(\tau = RC\)</span></td>
+</tr>
+<tr class="field"><th class="field-name">一阶RL电路:</th><td class="field-body"><span class="math">\(\tau = \frac {L} {R}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h3>一阶零状态响应</h3>
+<div class="math">
+\begin{equation*}
+y(t) = y(\infty)(1 - e^{-\frac{1}{\tau}}) \ (t \ge 0)
+\end{equation*}
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                writings
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/me">
+                me
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                about
+            </a>
+        
+    
+    &#183; 
+    <a href="https://linyxus.github.io">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script>
+<link rel="stylesheet" href="https://linyxus.github.io/css/syntax.css">
+</div>
+    </div>
+</body>
+
+</html>
