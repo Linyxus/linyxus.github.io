@@ -6,10 +6,22 @@
     <description>Recent content in Linro :: blog on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 15 Apr 2019 20:34:15 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 18 Apr 2019 20:37:30 +0800</lastBuildDate>
     
 	<atom:link href="https://linyxus.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Physics Lifesaving Notes :: 质点运动学基础</title>
+      <link>https://linyxus.github.io/posts/physics-lifesaving-notes-1/</link>
+      <pubDate>Thu, 18 Apr 2019 20:37:30 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/physics-lifesaving-notes-1/</guid>
+      <description>基本概念 质点:大小、形状可以忽略的物体  质点系:多个质点的组合     基本参数 位置矢量 \begin{equation*} \vec{r} = x \vec{i} + y \vec{j} + z \vec{k} \end{equation*}   运动方程 \begin{equation*} \vec{r} = \vec{r}(t) \end{equation*}   轨迹方程 将运动方程中的 \(t\) 消去即得到轨迹方程。
+ 位移与路程 位移为始末位置矢量的改变量。
+\begin{equation*} \Delta \vec{r} = \vec{r}_2 - \vec{r}_1 \end{equation*}  路程为运动轨迹的长度。
+位移与路程的关系 位移不等于路程：位移是矢量，路程是标量 \(\lim_{\Delta{t} \rightarrow 0} |\vec{\Delta r}| = \Delta s\) ，也即 \(|dr| = ds\)    速度 \begin{equation*} \vec{v} = \frac{d \vec{r}}{dt} \end{equation*}   加速度 \begin{equation*} \vec{a} = \frac{d \vec{v}} {dt} \end{equation*}    自然坐标系 已知质点运动的轨迹：</description>
+    </item>
     
     <item>
       <title>电路分析笔记 :: 动态电路分析</title>

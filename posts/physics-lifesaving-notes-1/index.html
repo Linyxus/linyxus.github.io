@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="Linro :: blog of Linyxus">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://linyxus.github.io">
+
+<meta name="twitter:image" content="https://linyxus.github.io/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://linyxus.github.io">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://linyxus.github.io/tn.png">
+
+<link rel="shortcut icon" href="https://linyxus.github.io/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://linyxus.github.io/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Physics Lifesaving Notes :: 质点运动学基础
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Physics Lifesaving Notes :: 质点运动学基础</div>
+
+        
+<div class="section" id="content">
+    Thu Apr 18, 2019 &#183; 157 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/note">
+                note
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/physics">
+                physics
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <div class="document">
+
+
+<div class="section" id="id1">
+<h2>基本概念</h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">质点:</th><td class="field-body">大小、形状可以忽略的物体</td>
+</tr>
+<tr class="field"><th class="field-name">质点系:</th><td class="field-body">多个质点的组合</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h2>基本参数</h2>
+<div class="section" id="id3">
+<h3>位置矢量</h3>
+<div class="math">
+\begin{equation*}
+\vec{r} = x \vec{i} + y \vec{j} + z \vec{k}
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id4">
+<h3>运动方程</h3>
+<div class="math">
+\begin{equation*}
+\vec{r} = \vec{r}(t)
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id5">
+<h3>轨迹方程</h3>
+<p>将运动方程中的 <span class="math">\(t\)</span> 消去即得到轨迹方程。</p>
+</div>
+<div class="section" id="id6">
+<h3>位移与路程</h3>
+<p>位移为始末位置矢量的改变量。</p>
+<div class="math">
+\begin{equation*}
+\Delta \vec{r} = \vec{r}_2 - \vec{r}_1
+\end{equation*}
+</div>
+<p>路程为运动轨迹的长度。</p>
+<div class="section" id="id7">
+<h4>位移与路程的关系</h4>
+<ol class="arabic simple">
+<li>位移不等于路程：位移是矢量，路程是标量</li>
+<li><span class="math">\(\lim_{\Delta{t} \rightarrow 0} |\vec{\Delta r}| = \Delta s\)</span> ，也即 <span class="math">\(|dr| = ds\)</span></li>
+</ol>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>速度</h3>
+<div class="math">
+\begin{equation*}
+\vec{v} = \frac{d \vec{r}}{dt}
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id9">
+<h3>加速度</h3>
+<div class="math">
+\begin{equation*}
+\vec{a} = \frac{d \vec{v}} {dt}
+\end{equation*}
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>自然坐标系</h2>
+<p>已知质点运动的轨迹：</p>
+<p><span class="math">\(\vec{e_n}\)</span> 法向单位矢量，指向轨迹曲线 <strong>内侧</strong></p>
+<p><span class="math">\(\vec{e_{\tau}}\)</span> 切向单位矢量，指向自然坐标正向</p>
+<p>不是恒矢量，会随着质点的位置改变方向。</p>
+<p>故有</p>
+<div class="math">
+\begin{equation*}
+\vec{v} = v \vec{e_{\tau}}
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id11">
+<h2>圆周运动的角量参数</h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">角位置:</th><td class="field-body"><div class="first math">
+\begin{equation*}
+\theta = \theta(t)
+\end{equation*}
+</div>
+</td>
+</tr>
+<tr class="field"><th class="field-name">角速度:</th><td class="field-body"><div class="first math">
+\begin{equation*}
+\omega = \frac{d \theta} {dt}
+\end{equation*}
+</div>
+</td>
+</tr>
+<tr class="field"><th class="field-name">角加速度:</th><td class="field-body"><div class="first last math">
+\begin{equation*}
+\beta = \frac {d \omega} {dt}
+\end{equation*}
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>角量与线量之间的关系如下</p>
+<div class="math">
+\begin{equation*}
+ds = R d\theta
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+v = R \omega
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+a_{\tau} = R \beta
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+a_{t} = R \omega^2
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id12">
+<h2>参考系与相对运动</h2>
+<div class="section" id="id13">
+<h3>惯性参考系</h3>
+<p>做匀速运动的参考系为惯性参考系。</p>
+<p>伽利略速度变换公式</p>
+<div class="math">
+\begin{equation*}
+\vec{v} = \vec{v}_0 + \vec{v}^{'}
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id14">
+<h3>非惯性参考系</h3>
+<p>伽利略速度变换公式仍然适用，但物体将受到惯性力</p>
+<div class="math">
+\begin{equation*}
+\vec{F} = - m \vec{a}_0
+\end{equation*}
+</div>
+<p>在转动非惯性参考系中，形式改变为惯性离心力</p>
+<div class="math">
+\begin{equation*}
+\vec{F} = - m \omega^2 \vec{R}
+\end{equation*}
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                writings
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/me">
+                me
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                about
+            </a>
+        
+    
+    &#183; 
+    <a href="https://linyxus.github.io">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script>
+<link rel="stylesheet" href="https://linyxus.github.io/css/syntax.css">
+</div>
+    </div>
+</body>
+
+</html>
