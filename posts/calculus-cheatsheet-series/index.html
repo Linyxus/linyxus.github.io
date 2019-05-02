@@ -35,142 +35,77 @@
     
     <title>
         
-        Tags
+        Calculus Cheatsheets :: 级数
         
     </title>
 </head>
 
 <body>
     <div class="wrap">
-        <div class="section" id="title">Tags</div>
+        <div class="section" id="title">Calculus Cheatsheets :: 级数</div>
 
         
 <div class="section" id="content">
+    Thu May 02, 2019 &#183; 73 words
     
-    <ul>
+    <div class="tag-container">
         
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/algorithm/">
-                Algorithm
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/note">
+                note
             </a>
-        </li>
+        </span>
         
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/caculus/">
-                Caculus
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/calculus">
+                calculus
             </a>
-        </li>
+        </span>
         
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/calculus/">
-                Calculus
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/circuit-analysis/">
-                Circuit Analysis
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/discrete-math/">
-                Discrete Math
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/emacs/">
-                Emacs
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/machine-learning/">
-                Machine Learning
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/macos/">
-                Macos
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/note/">
-                Note
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/org/">
-                Org
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/physics/">
-                Physics
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/plan/">
-                Plan
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/pytorch/">
-                Pytorch
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/rst/">
-                Rst
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/text/">
-                Text
-            </a>
-        </li>
-        
-        <li>
-            
-            <a href="https://linyxus.github.io/tags/tutorial/">
-                Tutorial
-            </a>
-        </li>
-        
-    </ul>
+    </div>
+    
+    <hr/>
+    <div class="document" id="id1">
+<h1 class="title">函数项级数</h1>
+<h2 class="subtitle" id="id2">傅里叶级数</h2>
+
+<p>对于周期 <span class="math">\(T = 2l\)</span> 的函数 <span class="math">\(f(x)\)</span> ，其傅里叶级数为：</p>
+<div class="math">
+\begin{equation*}
+f(x) = a_0 + \sum_{n=1}^{\infty} a_n cos(\frac{n \pi x}{l}) + \sum_{n=1}^{\infty} b_n sin(\frac{n \pi x}{l})
+\end{equation*}
+</div>
+<p>其中，</p>
+<div class="math">
+\begin{align*}
+a_0 &amp;= \frac {1} {2l} \int_{-l}^{l} f(x) dx \\
+a_n &amp;= \frac {1} {l} \int_{-l}^{l} f(x) cos \frac {n \pi x} {l} dx \\
+b_n &amp;= \frac {1} {l} \int_{-l}^{l} f(x) sin \frac {n \pi x} {l} dx
+\end{align*}
+</div>
+<div class="section" id="f-x">
+<h2><span class="math">\(f(x)\)</span> 的奇偶性简化运算</h2>
+<ol class="arabic simple">
+<li><span class="math">\(f(x)\)</span> 为奇函数，则 <span class="math">\(b_n=0\)</span></li>
+<li>偶函数相应同样成立</li>
+</ol>
+</div>
+</div>
 </div>
 
 
         
-        <div class="section bottom-menu">
+<div class="section bottom-menu">
+    
 <hr />
 <p>
 
 
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
     
 
     
@@ -198,8 +133,9 @@
         main
     </a>
 
-</p></div>
-        
+</p>
+</div>
+
 
         <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>

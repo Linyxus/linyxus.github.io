@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discrete Math on Linro</title>
+    <link>https://linyxus.github.io/tags/discrete-math/</link>
+    <description>Recent content in Discrete Math on Linro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 22 Apr 2019 19:09:35 +0800</lastBuildDate>
+    
+	<atom:link href="https://linyxus.github.io/tags/discrete-math/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>离散数学复习笔记 :: 逻辑学</title>
+      <link>https://linyxus.github.io/posts/discrete-math-notes-logic/</link>
+      <pubDate>Mon, 22 Apr 2019 19:09:35 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/discrete-math-notes-logic/</guid>
+      <description>Proposition Logic Basics What is a proposition A statement of proposition is a declarative sentence that is either true or false, but not both.
+The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a proposition  What time is it?: &amp;nbsp;not a proposition     Build up a proposition propostional variables logical connectives   Kinds of logical connectives Negation &#39;NOT&#39; :: \(\neg\)
+ Conjunction &#39;AND&#39; :: \(\wedge\)</description>
+    </item>
+    
+  </channel>
+</rss>

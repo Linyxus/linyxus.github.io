@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="Linro :: blog of Linyxus">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://linyxus.github.io">
+
+<meta name="twitter:image" content="https://linyxus.github.io/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://linyxus.github.io">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://linyxus.github.io/tn.png">
+
+<link rel="shortcut icon" href="https://linyxus.github.io/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://linyxus.github.io/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        离散数学复习笔记 :: 逻辑学
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">离散数学复习笔记 :: 逻辑学</div>
+
+        
+<div class="section" id="content">
+    Mon Apr 22, 2019 &#183; 233 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/discrete-math">
+                discrete math
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/note">
+                note
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <div class="document">
+
+
+<div class="section" id="proposition-logic-basics">
+<h2>Proposition Logic Basics</h2>
+<div class="section" id="what-is-a-proposition">
+<h3>What is a proposition</h3>
+<p>A statement of proposition is a declarative sentence that is
+either true or false, but not both.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name" colspan="2">The moon is made of green cheese:</th></tr>
+<tr class="field"><td>&nbsp;</td><td class="field-body">a proposition</td>
+</tr>
+<tr class="field"><th class="field-name">Go to town!:</th><td class="field-body">not a proposition</td>
+</tr>
+<tr class="field"><th class="field-name" colspan="2">What time is it?:</th></tr>
+<tr class="field"><td>&nbsp;</td><td class="field-body">not a proposition</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="build-up-a-proposition">
+<h3>Build up a proposition</h3>
+<ol class="arabic simple">
+<li>propostional variables</li>
+<li>logical connectives</li>
+</ol>
+</div>
+<div class="section" id="kinds-of-logical-connectives">
+<h3>Kinds of logical connectives</h3>
+<ol class="arabic">
+<li><p class="first">Negation 'NOT' :: <span class="math">\(\neg\)</span></p>
+</li>
+<li><p class="first">Conjunction 'AND' :: <span class="math">\(\wedge\)</span></p>
+</li>
+<li><p class="first">Disjunction</p>
+<ul class="simple">
+<li>Inclusive 'OR' :: <span class="math">\(\vee\)</span> (or)</li>
+<li>Exclusive 'OR' :: <span class="math">\(\oplus\)</span> (xor)</li>
+</ul>
+</li>
+<li><p class="first">Implication :: <span class="math">\(\rightarrow\)</span></p>
+<p>Equivalent forms:</p>
+<ul class="simple">
+<li>if p then q</li>
+<li>if p, q</li>
+<li>p implies q</li>
+<li>p only if q</li>
+<li>p is a sufficient condition for q</li>
+<li>q when p</li>
+<li>q follows from p</li>
+<li>q whenever p</li>
+<li>q unless not p</li>
+<li>q is a necessary condition for p</li>
+</ul>
+<p>Transformations:</p>
+<ul class="simple">
+<li>inverse: <span class="math">\(\neg p \rightarrow \neg q\)</span></li>
+<li>converse: <span class="math">\(q \rightarrow p\)</span></li>
+<li>contrapositive: <span class="math">\(\neg q \rightarrow \neg p\)</span></li>
+</ul>
+</li>
+<li><p class="first">Biconditional or equivalence :: <span class="math">\(\leftrightarrow\)</span></p>
+<p>if and only if.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="precedence-of-logical-connectives">
+<h3>Precedence of logical connectives</h3>
+<div class="math">
+\begin{equation*}
+\neg \gt (\vee, \wedge) \gt (\rightarrow, \leftrightarrow)
+\end{equation*}
+</div>
+</div>
+</div>
+<div class="section" id="proposition-equivalence">
+<h2>Proposition Equivalence</h2>
+<div class="section" id="truth-table">
+<h3>Truth table</h3>
+<p>Example:</p>
+<p>The truth table of <span class="math">\(\vee\)</span>:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="19%" />
+<col width="62%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">p</th>
+<th class="head">q</th>
+<th class="head">p <span class="math">\(\vee\)</span> q</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr><td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr><td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr><td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="logical-equivalence">
+<h4>Logical equivalence</h4>
+<p>The two propositions whose truth tables are the same are called equivalent.</p>
+</div>
+<div class="section" id="variant-and-truth-tables">
+<h4>Variant and truth tables</h4>
+<p>If we have <span class="math">\(n\)</span> variables.</p>
+<p><span class="math">\(2^n\)</span> rows</p>
+<p><span class="math">\(2^{2^n}\)</span> different tables</p>
+</div>
+<div class="section" id="different-kinds-of-propositions">
+<h4>Different kinds of propositions</h4>
+<ol class="arabic simple">
+<li>Tautology : always true</li>
+<li>Contradiction : always false</li>
+<li>Contingency</li>
+</ol>
+</div>
+</div>
+<div class="section" id="common-logical-equivalence">
+<h3>Common logical equivalence</h3>
+</div>
+</div>
+</div>
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                writings
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/me">
+                me
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                about
+            </a>
+        
+    
+    &#183; 
+    <a href="https://linyxus.github.io">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script>
+<link rel="stylesheet" href="https://linyxus.github.io/css/syntax.css">
+</div>
+    </div>
+</body>
+
+</html>

@@ -6,10 +6,32 @@
     <description>Recent content in Linro :: blog on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 Apr 2019 20:37:30 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 19:09:04 +0800</lastBuildDate>
     
 	<atom:link href="https://linyxus.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Calculus Cheatsheets :: 级数</title>
+      <link>https://linyxus.github.io/posts/calculus-cheatsheet-series/</link>
+      <pubDate>Thu, 02 May 2019 19:09:04 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/calculus-cheatsheet-series/</guid>
+      <description>函数项级数 傅里叶级数 对于周期 \(T = 2l\) 的函数 \(f(x)\) ，其傅里叶级数为：
+\begin{equation*} f(x) = a_0 + \sum_{n=1}^{\infty} a_n cos(\frac{n \pi x}{l}) + \sum_{n=1}^{\infty} b_n sin(\frac{n \pi x}{l}) \end{equation*}  其中，
+\begin{align*} a_0 &amp;amp;= \frac {1} {2l} \int_{-l}^{l} f(x) dx \\ a_n &amp;amp;= \frac {1} {l} \int_{-l}^{l} f(x) cos \frac {n \pi x} {l} dx \\ b_n &amp;amp;= \frac {1} {l} \int_{-l}^{l} f(x) sin \frac {n \pi x} {l} dx \end{align*}  \(f(x)\) 的奇偶性简化运算 \(f(x)\) 为奇函数，则 \(b_n=0\) 偶函数相应同样成立   </description>
+    </item>
+    
+    <item>
+      <title>离散数学复习笔记 :: 逻辑学</title>
+      <link>https://linyxus.github.io/posts/discrete-math-notes-logic/</link>
+      <pubDate>Mon, 22 Apr 2019 19:09:35 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/discrete-math-notes-logic/</guid>
+      <description>Proposition Logic Basics What is a proposition A statement of proposition is a declarative sentence that is either true or false, but not both.
+The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a proposition  What time is it?: &amp;nbsp;not a proposition     Build up a proposition propostional variables logical connectives   Kinds of logical connectives Negation &#39;NOT&#39; :: \(\neg\)
+ Conjunction &#39;AND&#39; :: \(\wedge\)</description>
+    </item>
     
     <item>
       <title>Physics Lifesaving Notes :: 质点运动学基础</title>
