@@ -17,9 +17,12 @@
       <pubDate>Thu, 02 May 2019 19:09:04 +0800</pubDate>
       
       <guid>https://linyxus.github.io/posts/calculus-cheatsheet-series/</guid>
-      <description>函数项级数 傅里叶级数 对于周期 \(T = 2l\) 的函数 \(f(x)\) ，其傅里叶级数为：
-\begin{equation*} f(x) = a_0 + \sum_{n=1}^{\infty} a_n cos(\frac{n \pi x}{l}) + \sum_{n=1}^{\infty} b_n sin(\frac{n \pi x}{l}) \end{equation*}  其中，
-\begin{align*} a_0 &amp;amp;= \frac {1} {2l} \int_{-l}^{l} f(x) dx \\ a_n &amp;amp;= \frac {1} {l} \int_{-l}^{l} f(x) cos \frac {n \pi x} {l} dx \\ b_n &amp;amp;= \frac {1} {l} \int_{-l}^{l} f(x) sin \frac {n \pi x} {l} dx \end{align*}  \(f(x)\) 的奇偶性简化运算 \(f(x)\) 为奇函数，则 \(b_n=0\) 偶函数相应同样成立   </description>
+      <description>常数项级数 概念 定义 各项均为常数的级数
+ 部分和 \begin{equation*} \sigma (n) = \sum_{k=0}^{n} a_k \end{equation*}   敛散性 若
+\begin{equation*} lim_{n \rightarrow \infty} \sigma (n) = A 存在 \end{equation*}  则称级数收敛于 \(A\) 。
+否则称级数发散。
+  收敛级数性质 线性性质 归并性质   正项级数审敛法 比较审敛法 \begin{align*} y_n \le x_n \wedge x_n收敛 \Rightarrow y_n 收敛 \\ y_n \ge x_n \wedge x_n发散 \Rightarrow y_n 发散 \end{align*}  极限形式：
+\begin{align*} \lim_{n \rightarrow \infty} \frac {a_n} {b_n} = +\infty \Rightarrow b_n 发散则 a_n 发散 \\ \lim_{n \rightarrow \infty} \frac {a_n} {b_n} = 0 \Rightarrow a_n 收敛则 b_n 收敛 \\ \lim_{n \rightarrow \infty} \frac {a_n} {b_n} = k (k &amp;gt; 0) \Rightarrow a_n, b_n 同时敛散 \end{align*}   比值审敛法 \begin{equation*} \lim_{n \rightarrow \infty} \frac {a_{n+1}} {a_n} = K \end{equation*}  若 \(K &amp;lt; 1\) 则 \(a_n\) 收敛 若 \(K &amp;gt; 1\) 则 \(a_n\) 发散 若 \(K = 1\) 则 \(a_n\) 敛散性未知   根式审敛法 \begin{equation*} \lim_{n \rightarrow \infty} \sqrt[n]{a_n} = \lambda \end{equation*}  情况可类比比值审敛法。</description>
     </item>
     
   </channel>

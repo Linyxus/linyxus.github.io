@@ -46,7 +46,7 @@
 
         
 <div class="section" id="content">
-    Thu May 02, 2019 &#183; 73 words
+    Thu May 02, 2019 &#183; 236 words
     
     <div class="tag-container">
         
@@ -65,10 +65,124 @@
     </div>
     
     <hr/>
-    <div class="document" id="id1">
-<h1 class="title">函数项级数</h1>
-<h2 class="subtitle" id="id2">傅里叶级数</h2>
+    <div class="document">
 
+
+<div class="section" id="id1">
+<h2>常数项级数</h2>
+<div class="section" id="id2">
+<h3>概念</h3>
+<div class="section" id="id3">
+<h4>定义</h4>
+<p>各项均为常数的级数</p>
+</div>
+<div class="section" id="id4">
+<h4>部分和</h4>
+<div class="math">
+\begin{equation*}
+\sigma (n) = \sum_{k=0}^{n} a_k
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id5">
+<h4>敛散性</h4>
+<p>若</p>
+<div class="math">
+\begin{equation*}
+lim_{n \rightarrow \infty} \sigma (n) = A 存在
+\end{equation*}
+</div>
+<p>则称级数收敛于 <span class="math">\(A\)</span> 。</p>
+<p>否则称级数发散。</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>收敛级数性质</h3>
+<ol class="arabic simple">
+<li>线性性质</li>
+<li>归并性质</li>
+</ol>
+</div>
+<div class="section" id="id7">
+<h3>正项级数审敛法</h3>
+<div class="section" id="id8">
+<h4>比较审敛法</h4>
+<div class="math">
+\begin{align*}
+y_n \le x_n \wedge x_n收敛 \Rightarrow y_n 收敛 \\
+y_n \ge x_n \wedge x_n发散 \Rightarrow y_n 发散
+\end{align*}
+</div>
+<p>极限形式：</p>
+<div class="math">
+\begin{align*}
+\lim_{n \rightarrow \infty} \frac {a_n} {b_n} = +\infty \Rightarrow b_n 发散则 a_n 发散 \\
+\lim_{n \rightarrow \infty} \frac {a_n} {b_n} = 0 \Rightarrow a_n 收敛则 b_n 收敛 \\
+\lim_{n \rightarrow \infty} \frac {a_n} {b_n} = k (k &gt; 0) \Rightarrow a_n, b_n 同时敛散
+\end{align*}
+</div>
+</div>
+<div class="section" id="id9">
+<h4>比值审敛法</h4>
+<div class="math">
+\begin{equation*}
+\lim_{n \rightarrow \infty} \frac {a_{n+1}} {a_n} = K
+\end{equation*}
+</div>
+<ul class="simple">
+<li>若 <span class="math">\(K &lt; 1\)</span> 则 <span class="math">\(a_n\)</span> 收敛</li>
+<li>若 <span class="math">\(K &gt; 1\)</span> 则 <span class="math">\(a_n\)</span> 发散</li>
+<li>若 <span class="math">\(K = 1\)</span> 则 <span class="math">\(a_n\)</span> 敛散性未知</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h4>根式审敛法</h4>
+<div class="math">
+\begin{equation*}
+\lim_{n \rightarrow \infty} \sqrt[n]{a_n} = \lambda
+\end{equation*}
+</div>
+<p>情况可类比比值审敛法。</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>任意项级数审敛法</h3>
+<p>思想是转化为正项级数，然后利用正项级数审敛法。</p>
+<div class="section" id="id12">
+<h4>交错级数判别法</h4>
+<p>若级数 <span class="math">\(\sum{n=1}{\infty} (-1)^n a_n\)</span> 满足：</p>
+<ul class="simple">
+<li><span class="math">\(\lim_{n \to \infty} a_n = 0\)</span></li>
+<li><span class="math">\(a_n\)</span> 单调递减</li>
+</ul>
+<p>则级数收敛。</p>
+</div>
+<div class="section" id="id13">
+<h4>绝对收敛与条件收敛</h4>
+<div class="section" id="id14">
+<h5>定义</h5>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">绝对收敛:</th><td class="field-body">每一项取绝对值后仍然收敛</td>
+</tr>
+<tr class="field"><th class="field-name">条件收敛:</th><td class="field-body">每一项取绝对值后发散，原级数收敛</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id15">
+<h5>绝对收敛级数的性质</h5>
+<p>重排后仍然收敛到同一个值。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>函数项级数</h2>
+<div class="section" id="id17">
+<h3>傅里叶级数</h3>
 <p>对于周期 <span class="math">\(T = 2l\)</span> 的函数 <span class="math">\(f(x)\)</span> ，其傅里叶级数为：</p>
 <div class="math">
 \begin{equation*}
@@ -83,12 +197,14 @@ a_n &amp;= \frac {1} {l} \int_{-l}^{l} f(x) cos \frac {n \pi x} {l} dx \\
 b_n &amp;= \frac {1} {l} \int_{-l}^{l} f(x) sin \frac {n \pi x} {l} dx
 \end{align*}
 </div>
+</div>
 <div class="section" id="f-x">
-<h2><span class="math">\(f(x)\)</span> 的奇偶性简化运算</h2>
+<h3><span class="math">\(f(x)\)</span> 的奇偶性简化运算</h3>
 <ol class="arabic simple">
 <li><span class="math">\(f(x)\)</span> 为奇函数，则 <span class="math">\(b_n=0\)</span></li>
 <li>偶函数相应同样成立</li>
 </ol>
+</div>
 </div>
 </div>
 </div>
