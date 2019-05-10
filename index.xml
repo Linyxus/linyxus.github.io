@@ -6,10 +6,22 @@
     <description>Recent content in Linro :: blog on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 02 May 2019 19:09:04 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2019 13:12:24 +0800</lastBuildDate>
     
 	<atom:link href="https://linyxus.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>物理实验数据处理公式总结</title>
+      <link>https://linyxus.github.io/posts/physics-experiements-formula/</link>
+      <pubDate>Fri, 10 May 2019 13:12:24 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/physics-experiements-formula/</guid>
+      <description>贝塞尔公式 \begin{equation*} s(x) = \sqrt {\frac{\sum (x_i - \bar{x})^2} {n-1}} \end{equation*}  \begin{equation*} s(\bar{x}) = \frac {s(x)} {\sqrt{n}} = \sqrt {\frac{\sum (x_i - \bar{x})^2} {n(n-1)}} \end{equation*}   直接测量量不确定度 当 \(n=6\) 时，
+\begin{equation*} u_a(x) = t_ps(\bar{x}) = s(x) \end{equation*}  且有
+\begin{equation*} u_b(x) = \Delta_{仪} \end{equation*}  合成不确定度：
+\begin{equation*} u(x) = \sqrt{u_a^2(x) + u_b^2(x)} \end{equation*}   间接测量量不确定度 全微分 -&amp;gt; 绝对 取对数后全微分 -&amp;gt; 相对   误差等分配原则 也即合成不确定度中各平方项相等。</description>
+    </item>
     
     <item>
       <title>Calculus Cheatsheets :: 级数</title>

@@ -35,63 +35,126 @@
     
     <title>
         
-        Physics
+        物理实验数据处理公式总结
         
     </title>
 </head>
 
 <body>
     <div class="wrap">
-        <div class="section" id="title">Physics</div>
+        <div class="section" id="title">物理实验数据处理公式总结</div>
 
         
 <div class="section" id="content">
+    Fri May 10, 2019 &#183; 107 words
     
-    <ul>
+    <div class="tag-container">
         
-        <li>
-            
-
-            Fri May 10, 2019 --
-
-            
-            <a href="https://linyxus.github.io/posts/physics-experiements-formula/">
-                物理实验数据处理公式总结
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/note">
+                note
             </a>
-        </li>
+        </span>
         
-        <li>
-            
-
-            Thu Apr 18, 2019 --
-
-            
-            <a href="https://linyxus.github.io/posts/physics-lifesaving-notes-1/">
-                Physics Lifesaving Notes :: 质点运动学基础
+        <span class="tag">
+            <a href="https://linyxus.github.io/tags/physics">
+                physics
             </a>
-        </li>
+        </span>
         
-        <li>
-            
+    </div>
+    
+    <hr/>
+    <div class="document">
 
-            Mon Apr 08, 2019 --
 
-            
-            <a href="https://linyxus.github.io/posts/physics-lifesaving-notes-0/">
-                Physics Lifesaving Notes :: 静电场中的导体与电介质
-            </a>
-        </li>
-        
-    </ul>
+<figure>
+    <img src="mindmap.png"/> 
+</figure>
+
+<div class="section" id="id1">
+<h2>贝塞尔公式</h2>
+<div class="math">
+\begin{equation*}
+s(x) = \sqrt {\frac{\sum (x_i - \bar{x})^2} {n-1}}
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+s(\bar{x}) = \frac {s(x)} {\sqrt{n}} = \sqrt {\frac{\sum (x_i - \bar{x})^2} {n(n-1)}}
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id2">
+<h2>直接测量量不确定度</h2>
+<p>当 <span class="math">\(n=6\)</span> 时，</p>
+<div class="math">
+\begin{equation*}
+u_a(x) = t_ps(\bar{x}) = s(x)
+\end{equation*}
+</div>
+<p>且有</p>
+<div class="math">
+\begin{equation*}
+u_b(x) = \Delta_{仪}
+\end{equation*}
+</div>
+<p>合成不确定度：</p>
+<div class="math">
+\begin{equation*}
+u(x) = \sqrt{u_a^2(x) + u_b^2(x)}
+\end{equation*}
+</div>
+</div>
+<div class="section" id="id3">
+<h2>间接测量量不确定度</h2>
+<ol class="arabic simple">
+<li>全微分 -&gt; 绝对</li>
+<li>取对数后全微分 -&gt; 相对</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h2>误差等分配原则</h2>
+<p>也即合成不确定度中各平方项相等。</p>
+</div>
+<div class="section" id="id5">
+<h2>最小二乘法</h2>
+<p>如果设：</p>
+<div class="math">
+\begin{equation*}
+y = kx + b
+\end{equation*}
+</div>
+<p>可以求解出：</p>
+<div class="math">
+\begin{align*}
+k &amp;= \frac {\bar{xy} - \bar{x} \bar{y}}{\bar{x^2} - \bar{x}^2} \\
+b &amp;= \bar{y} - k \bar{x}
+\end{align*}
+</div>
+<p>相关系数：</p>
+<div class="math">
+\begin{equation*}
+r = \frac {\bar{xy} - \bar x \bar y} {\sqrt {(\bar{x}^2 - \bar {x^2}) (\bar{y}^2 - \bar{y^2})}}
+\end{equation*}
+</div>
+</div>
+</div>
 </div>
 
 
         
-        <div class="section bottom-menu">
+<div class="section bottom-menu">
+    
 <hr />
 <p>
 
 
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
     
 
     
@@ -119,8 +182,9 @@
         main
     </a>
 
-</p></div>
-        
+</p>
+</div>
+
 
         <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
