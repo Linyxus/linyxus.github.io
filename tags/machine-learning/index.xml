@@ -6,10 +6,22 @@
     <description>Recent content in Machine Learning on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 09 Apr 2019 15:40:08 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 06 Jun 2019 12:09:41 +0800</lastBuildDate>
     
 	<atom:link href="https://linyxus.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Graph Networks 学习笔记 :: [GAT, GraphSAGE, H-GCN]</title>
+      <link>https://linyxus.github.io/posts/gat-graphsage-hgcn/</link>
+      <pubDate>Thu, 06 Jun 2019 12:09:41 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/gat-graphsage-hgcn/</guid>
+      <description>概述 在自动化所科创项目选拔中阅读的论文，留下了一些笔记。
+三篇论文分别是：
+Graph Attention Networks Inductive Representation Learning on Large Graphs Hierarchical Graph Convolutional Networks for Semi-supervised Node Classification  分别对应了GAT，GraphSAGE和H-GCN。最后一篇，也就是H-GCN，就是组里师兄做的工作。
+ 阅读笔记 GAT GraphSAGE H-GCN   </description>
+    </item>
     
     <item>
       <title>雏雁计划神经网络训练记录</title>
