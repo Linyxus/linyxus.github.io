@@ -35,30 +35,30 @@
     
     <title>
         
-        利用cron自动同步org到Github
+        在博客中启用Utterances评论系统
         
     </title>
 </head>
 
 <body>
     <div class="wrap">
-        <div class="section" id="title">利用cron自动同步org到Github</div>
+        <div class="section" id="title">在博客中启用Utterances评论系统</div>
 
         
 <div class="section" id="content">
-    Tue Feb 26, 2019 &#183; 60 words
+    Fri Aug 09, 2019 &#183; 19 words
     
     <div class="tag-container">
         
         <span class="tag">
-            <a href="https://linyxus.github.io/tags/note">
-                note
+            <a href="https://linyxus.github.io/tags/blog">
+                blog
             </a>
         </span>
         
         <span class="tag">
-            <a href="https://linyxus.github.io/tags/org">
-                org
+            <a href="https://linyxus.github.io/tags/tutorial">
+                tutorial
             </a>
         </span>
         
@@ -67,53 +67,24 @@
     <hr/>
     
 
-<h2 id="效果">效果</h2>
+<h2 id="what-s-utterance">What&rsquo;s Utterance?</h2>
 
-<figure>
-    <img src="p1.png"/> 
-</figure>
+<p><a href="https://utteranc.es/">Utteranc.es</a>是一个基于Github Issues的评论系统。</p>
 
+<p>先前一直苦于为博客找一个合适的评论系统，Disqus很好，但因为众所周知的原因，国内用起来颇多不便。也想过要自己造一个轮子，但迟迟没有开始。</p>
 
-<p>每天在固定的时间，只要电脑开着，自动commit发生在org文件夹内的改动，并且push到Github上。</p>
+<p>Utterances几乎是无可挑剔的一个选择：基于Github Issues，便捷无阻。长得也看得过去。</p>
 
-<p>如图，设定的是在所有的整点都会自动更新。</p>
+<h2 id="部署到hugo中">部署到Hugo中</h2>
 
-<h2 id="步骤">步骤</h2>
-
-<h3 id="1-编写自动同步shell">#1 编写自动同步shell</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>
-echo -e <span style="color:#e6db74">&#34;\033[0;32mPulling from GitHub...\033[0m&#34;</span>
-
-git pull
-
-git add .
-
-git commit -m <span style="color:#e6db74">&#34;Auto update : `date`&#34;</span>
-
-echo -e <span style="color:#e6db74">&#34;\033[0;32mPushing to GitHub...\033[0m&#34;</span>
-
-git push origin master</code></pre></div>
-<p>在<code>echo</code>的文本里奇奇怪怪的内容都是<code>escape character</code>s，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）</p>
-
-<h3 id="2-增加cron-task">#2 增加cron task</h3>
-
-<p>在命令行中输入：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ EDITOR<span style="color:#f92672">=</span>nano cron -e</code></pre></div>
-<p>增加这一行：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cron" data-lang="cron">0 * * * * cd ~/org &amp;&amp; ./update.sh</code></pre></div>
-<p>保存退出即可。</p>
-
-<blockquote>
-<p><em>注意！注意！注意！</em></p>
-
-<p>macOS下由于一些奇怪的权限原因，只能使用Terminal.app进行编辑。</p>
-
-<p>iTerm2是不行的。</p>
-</blockquote>
-
-<h3 id="3-enjoy-it">#3 Enjoy it!</h3>
-
+<p>部署方法很简单，可能也就是几分钟的事情，把官网上的HTML复制到模板中就行啦。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://utteranc.es/client.js&#34;</span>
+        <span style="color:#a6e22e">repo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[ENTER REPO HERE]&#34;</span>
+        <span style="color:#a6e22e">issue-term</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pathname&#34;</span>
+        <span style="color:#a6e22e">theme</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;github-light&#34;</span>
+        <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>
+        <span style="color:#a6e22e">async</span>&gt;
+&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
 </div>
 
 <script src="https://utteranc.es/client.js"

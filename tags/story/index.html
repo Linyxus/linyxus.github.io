@@ -35,128 +35,41 @@
     
     <title>
         
-        雏雁计划神经网络训练记录
+        Story
         
     </title>
 </head>
 
 <body>
     <div class="wrap">
-        <div class="section" id="title">雏雁计划神经网络训练记录</div>
+        <div class="section" id="title">Story</div>
 
         
 <div class="section" id="content">
-    Tue Apr 09, 2019 &#183; 92 words
     
-    <div class="tag-container">
+    <ul>
         
-        <span class="tag">
-            <a href="https://linyxus.github.io/tags/machine-learning">
-                machine learning
+        <li>
+            
+
+            Fri Aug 09, 2019 --
+
+            
+            <a href="https://linyxus.github.io/posts/enable-utterances/">
+                在博客中启用Utterance评论系统
             </a>
-        </span>
+        </li>
         
-        <span class="tag">
-            <a href="https://linyxus.github.io/tags/note">
-                note
-            </a>
-        </span>
-        
-    </div>
-    
-    <hr/>
-    <div class="document">
-
-
-<div class="section" id="id1">
-<h2>思路</h2>
-<div class="line-block">
-<div class="line">使用前20个问题预测剩下11个问题的答案。将经常、有时、很少、从不规范化为[1, 0.33, -0.33, -1]。</div>
+    </ul>
 </div>
-</div>
-<div class="section" id="id2">
-<h2>训练笔记</h2>
-<div class="section" id="small-relu">
-<h3>Small ReLU</h3>
-<p>20 -&gt; 18 -&gt; 11</p>
-<p><em>Result:</em></p>
-<ul class="simple">
-<li>acc <span class="math">\(65.22 \%\)</span></li>
-<li>test_acc <span class="math">\(45.45\%\)</span></li>
-</ul>
-</div>
-<div class="section" id="mid-relu">
-<h3>Mid Relu</h3>
-<p>20 -&gt; 30 -&gt; 11</p>
-<p><em>Result:</em></p>
-<ul class="simple">
-<li>acc: 0.7521</li>
-<li>test_acc: 0.4727</li>
-<li>test_acc_l: 0.6636</li>
-</ul>
-</div>
-<div class="section" id="tiny-relu">
-<h3>Tiny Relu</h3>
-<p>20 -&gt; 10 -&gt; 11</p>
-<p><em>Result:</em></p>
-<ul class="simple">
-<li>acc: 0.5513</li>
-<li>test_acc: 0.5091</li>
-<li>test_acc_l: 0.5509</li>
-</ul>
-</div>
-<div class="section" id="smaller-relu">
-<h3>Smaller Relu</h3>
-<p>20 -&gt; 15 -&gt; 11</p>
-<p><em>Result:</em></p>
-<ul class="simple">
-<li>acc: 0.5853</li>
-<li>test_acc: 0.5236</li>
-<li>test_acc_l: 0.7909</li>
-</ul>
-</div>
-<div class="section" id="smaller-relu-v2">
-<h3>Smaller Relu V2</h3>
-<p>Difference: change batch_size to 32, shuffle data.</p>
-<p>20 -&gt; 15 -&gt; 11</p>
-<p><em>Result:</em></p>
-<ul class="simple">
-<li>acc: 0.5712</li>
-<li>test_acc: 0.5109</li>
-<li>test_acc_l: 0.76</li>
-</ul>
-</div>
-<div class="section" id="mid-relu-v2">
-<h3>Mid Relu V2</h3>
-<p>20 -&gt; 28 -&gt; 11</p>
-<p><em>Result:</em></p>
-</div>
-</div>
-</div>
-</div>
-
-<script src="https://utteranc.es/client.js"
-        repo="linyxus/linro-hugo"
-        issue-term="pathname"
-        theme="dark-blue"
-        crossorigin="anonymous"
-        async>
-</script>
-
 
 
         
-<div class="section bottom-menu">
-    
+        <div class="section bottom-menu">
 <hr />
 <p>
 
 
-    
-        <a href="/posts">back</a>
-        
-            &#183;
-        
     
 
     
@@ -184,9 +97,8 @@
         main
     </a>
 
-</p>
-</div>
-
+</p></div>
+        
 
         <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>

@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>在博客中启用Utterances评论系统</title>
+      <link>https://linyxus.github.io/posts/enable-utterances/</link>
+      <pubDate>Fri, 09 Aug 2019 20:19:22 +0800</pubDate>
+      
+      <guid>https://linyxus.github.io/posts/enable-utterances/</guid>
+      <description> What&amp;rsquo;s Utterance? Utteranc.es是一个基于Github Issues的评论系统。
+先前一直苦于为博客找一个合适的评论系统，Disqus很好，但因为众所周知的原因，国内用起来颇多不便。也想过要自己造一个轮子，但迟迟没有开始。
+Utterances几乎是无可挑剔的一个选择：基于Github Issues，便捷无阻。长得也看得过去。
+部署到Hugo中 部署方法很简单，可能也就是几分钟的事情，把官网上的HTML复制到模板中就行啦。
+&amp;lt;script src=&amp;#34;https://utteranc.es/client.js&amp;#34; repo=&amp;#34;[ENTER REPO HERE]&amp;#34; issue-term=&amp;#34;pathname&amp;#34; theme=&amp;#34;github-light&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; async&amp;gt; &amp;lt;/script&amp;gt;</description>
+    </item>
+    
+    <item>
       <title>Graph Networks 学习笔记 :: [GAT, GraphSAGE, H-GCN]</title>
       <link>https://linyxus.github.io/posts/gat-graphsage-hgcn/</link>
       <pubDate>Thu, 06 Jun 2019 12:09:41 +0800</pubDate>

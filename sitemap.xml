@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://linyxus.github.io/posts/enable-utterances/</loc>
+    <lastmod>2019-08-09T20:19:22+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linyxus.github.io/posts/gat-graphsage-hgcn/</loc>
     <lastmod>2019-06-06T12:09:41+08:00</lastmod>
   </url>
@@ -124,6 +129,12 @@
   </url>
   
   <url>
+    <loc>https://linyxus.github.io/tags/blog/</loc>
+    <lastmod>2019-08-09T20:19:22+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linyxus.github.io/tags/caculus/</loc>
     <lastmod>2019-04-01T16:28:15+08:00</lastmod>
     <priority>0</priority>
@@ -160,7 +171,7 @@
   
   <url>
     <loc>https://linyxus.github.io/</loc>
-    <lastmod>2019-06-06T12:09:41+08:00</lastmod>
+    <lastmod>2019-08-09T20:19:22+08:00</lastmod>
   </url>
   
   <url>
@@ -231,7 +242,7 @@
   
   <url>
     <loc>https://linyxus.github.io/tags/tutorial/</loc>
-    <lastmod>2019-04-04T20:37:33+08:00</lastmod>
+    <lastmod>2019-08-09T20:19:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
