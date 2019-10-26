@@ -3,251 +3,267 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://linyxus.github.io/posts/enable-utterances/</loc>
+    <loc>https://blog.linyxus.xyz/posts/using-gdb/</loc>
+    <lastmod>2019-10-24T12:00:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/posts/state-monad/</loc>
+    <lastmod>2019-09-16T20:47:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/posts/enable-utterances/</loc>
     <lastmod>2019-08-09T20:19:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/gat-graphsage-hgcn/</loc>
+    <loc>https://blog.linyxus.xyz/posts/gat-graphsage-hgcn/</loc>
     <lastmod>2019-06-06T12:09:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/physics-experiements-formula/</loc>
+    <loc>https://blog.linyxus.xyz/posts/physics-experiements-formula/</loc>
     <lastmod>2019-05-10T13:12:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/calculus-cheatsheet-series/</loc>
+    <loc>https://blog.linyxus.xyz/posts/calculus-cheatsheet-series/</loc>
     <lastmod>2019-05-02T19:09:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/discrete-math-notes-logic/</loc>
+    <loc>https://blog.linyxus.xyz/posts/discrete-math-notes-logic/</loc>
     <lastmod>2019-04-22T19:09:35+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/physics-lifesaving-notes-1/</loc>
+    <loc>https://blog.linyxus.xyz/posts/physics-lifesaving-notes-1/</loc>
     <lastmod>2019-04-18T20:37:30+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/circuit-analysis-notes-3/</loc>
+    <loc>https://blog.linyxus.xyz/posts/circuit-analysis-notes-3/</loc>
     <lastmod>2019-04-15T20:34:15+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/circuit-analysis-notes-2/</loc>
+    <loc>https://blog.linyxus.xyz/posts/circuit-analysis-notes-2/</loc>
     <lastmod>2019-04-14T21:42:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/circuit-analysis-notes-1/</loc>
+    <loc>https://blog.linyxus.xyz/posts/circuit-analysis-notes-1/</loc>
     <lastmod>2019-04-12T20:17:12+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/mental-health-nn-training/</loc>
+    <loc>https://blog.linyxus.xyz/posts/mental-health-nn-training/</loc>
     <lastmod>2019-04-09T15:40:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/physics-lifesaving-notes-0/</loc>
+    <loc>https://blog.linyxus.xyz/posts/physics-lifesaving-notes-0/</loc>
     <lastmod>2019-04-08T19:46:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/note-on-pytorch-60min-blitz/</loc>
+    <loc>https://blog.linyxus.xyz/posts/note-on-pytorch-60min-blitz/</loc>
     <lastmod>2019-04-04T22:59:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/use-rst-with-hugo/</loc>
+    <loc>https://blog.linyxus.xyz/posts/use-rst-with-hugo/</loc>
     <lastmod>2019-04-04T20:37:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/caculas-1/</loc>
+    <loc>https://blog.linyxus.xyz/posts/caculas-1/</loc>
     <lastmod>2019-04-01T16:28:15+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/sync-org-files/</loc>
+    <loc>https://blog.linyxus.xyz/posts/sync-org-files/</loc>
     <lastmod>2019-02-26T22:58:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/introducing-org-templetes/</loc>
+    <loc>https://blog.linyxus.xyz/posts/introducing-org-templetes/</loc>
     <lastmod>2019-02-13T12:05:39+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/introduction-to-dozer/</loc>
+    <loc>https://blog.linyxus.xyz/posts/introduction-to-dozer/</loc>
     <lastmod>2019-02-11T13:20:02+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/eular-formula/</loc>
+    <loc>https://blog.linyxus.xyz/posts/eular-formula/</loc>
     <lastmod>2019-01-30T19:29:20+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/hugo-and-mathjax/</loc>
+    <loc>https://blog.linyxus.xyz/posts/hugo-and-mathjax/</loc>
     <lastmod>2019-01-29T22:07:57+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/sorting-algorithms/</loc>
+    <loc>https://blog.linyxus.xyz/posts/sorting-algorithms/</loc>
     <lastmod>2019-01-26T22:19:46+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/algorithm-roadmap/</loc>
+    <loc>https://blog.linyxus.xyz/posts/algorithm-roadmap/</loc>
     <lastmod>2019-01-25T19:38:20+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/me/</loc>
+    <loc>https://blog.linyxus.xyz/me/</loc>
     <lastmod>2019-01-24T16:18:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/hello/</loc>
+    <loc>https://blog.linyxus.xyz/posts/hello/</loc>
     <lastmod>2019-01-23T19:44:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/posts/</loc>
+    <loc>https://blog.linyxus.xyz/posts/</loc>
     <lastmod>2019-01-22T19:47:50+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/algorithm/</loc>
+    <loc>https://blog.linyxus.xyz/tags/algorithm/</loc>
     <lastmod>2019-01-30T19:29:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/blog/</loc>
+    <loc>https://blog.linyxus.xyz/tags/blog/</loc>
     <lastmod>2019-08-09T20:19:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/caculus/</loc>
+    <loc>https://blog.linyxus.xyz/tags/caculus/</loc>
     <lastmod>2019-04-01T16:28:15+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/calculus/</loc>
+    <loc>https://blog.linyxus.xyz/tags/calculus/</loc>
     <lastmod>2019-05-02T19:09:04+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/categories/</loc>
+    <loc>https://blog.linyxus.xyz/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/circuit-analysis/</loc>
+    <loc>https://blog.linyxus.xyz/tags/circuit-analysis/</loc>
     <lastmod>2019-04-15T20:34:15+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/discrete-math/</loc>
+    <loc>https://blog.linyxus.xyz/tags/discrete-math/</loc>
     <lastmod>2019-04-22T19:09:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/emacs/</loc>
+    <loc>https://blog.linyxus.xyz/tags/emacs/</loc>
     <lastmod>2019-02-13T12:05:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/</loc>
-    <lastmod>2019-08-09T20:19:22+08:00</lastmod>
+    <loc>https://blog.linyxus.xyz/tags/haskell/</loc>
+    <lastmod>2019-09-16T20:47:35+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/machine-learning/</loc>
+    <loc>https://blog.linyxus.xyz/</loc>
+    <lastmod>2019-10-24T12:00:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/tags/machine-learning/</loc>
     <lastmod>2019-06-06T12:09:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/macos/</loc>
+    <loc>https://blog.linyxus.xyz/tags/macos/</loc>
     <lastmod>2019-02-11T13:20:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/note/</loc>
+    <loc>https://blog.linyxus.xyz/tags/note/</loc>
     <lastmod>2019-05-10T13:12:24+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/notes/</loc>
-    <lastmod>2019-06-06T12:09:41+08:00</lastmod>
+    <loc>https://blog.linyxus.xyz/tags/notes/</loc>
+    <lastmod>2019-10-24T12:00:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/org/</loc>
+    <loc>https://blog.linyxus.xyz/tags/org/</loc>
     <lastmod>2019-02-26T22:58:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/physics/</loc>
+    <loc>https://blog.linyxus.xyz/tags/physics/</loc>
     <lastmod>2019-05-10T13:12:24+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/plan/</loc>
+    <loc>https://blog.linyxus.xyz/tags/plan/</loc>
     <lastmod>2019-01-25T19:38:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/pytorch/</loc>
+    <loc>https://blog.linyxus.xyz/tags/pytorch/</loc>
     <lastmod>2019-04-04T22:59:05+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/rst/</loc>
+    <loc>https://blog.linyxus.xyz/tags/rst/</loc>
     <lastmod>2019-04-04T20:37:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/</loc>
+    <loc>https://blog.linyxus.xyz/tags/</loc>
     <lastmod>2019-01-30T19:29:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/text/</loc>
+    <loc>https://blog.linyxus.xyz/tags/text/</loc>
     <lastmod>2019-01-29T22:07:57+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/tags/tutorial/</loc>
-    <lastmod>2019-08-09T20:19:22+08:00</lastmod>
+    <loc>https://blog.linyxus.xyz/tags/tutorial/</loc>
+    <lastmod>2019-09-16T20:47:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linyxus.github.io/about/</loc>
+    <loc>https://blog.linyxus.xyz/about/</loc>
   </url>
   
 </urlset>

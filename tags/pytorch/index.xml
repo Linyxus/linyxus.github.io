@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pytorch on Linro</title>
-    <link>https://linyxus.github.io/tags/pytorch/</link>
+    <link>https://blog.linyxus.xyz/tags/pytorch/</link>
     <description>Recent content in Pytorch on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 04 Apr 2019 22:59:05 +0800</lastBuildDate>
     
-	<atom:link href="https://linyxus.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.linyxus.xyz/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Note on Pytorch 60-min Blitz</title>
-      <link>https://linyxus.github.io/posts/note-on-pytorch-60min-blitz/</link>
+      <link>https://blog.linyxus.xyz/posts/note-on-pytorch-60min-blitz/</link>
       <pubDate>Thu, 04 Apr 2019 22:59:05 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/note-on-pytorch-60min-blitz/</guid>
+      <guid>https://blog.linyxus.xyz/posts/note-on-pytorch-60min-blitz/</guid>
       <description>Tensor Create a tensor via torch.empty  x = torch.empty(5, 3)  This will create a tensor with a size of (5, 3). It is not initialized.  via torch.zero  </description>
     </item>
     

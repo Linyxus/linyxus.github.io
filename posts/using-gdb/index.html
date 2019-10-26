@@ -35,63 +35,70 @@
     
     <title>
         
-        Physics
+        简短的gdb使用手册
         
     </title>
 </head>
 
 <body>
     <div class="wrap">
-        <div class="section" id="title">Physics</div>
+        <div class="section" id="title">简短的gdb使用手册</div>
 
         
 <div class="section" id="content">
+    Thu Oct 24, 2019 &#183; 14 words
     
-    <ul>
+    <div class="tag-container">
         
-        <li>
-            
-
-            Fri May 10, 2019 --
-
-            
-            <a href="https://blog.linyxus.xyz/posts/physics-experiements-formula/">
-                物理实验数据处理公式总结
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/notes">
+                notes
             </a>
-        </li>
+        </span>
         
-        <li>
-            
+    </div>
+    
+    <hr/>
+    
 
-            Thu Apr 18, 2019 --
+<h2 id="编译">编译</h2>
 
-            
-            <a href="https://blog.linyxus.xyz/posts/physics-lifesaving-notes-1/">
-                Physics Lifesaving Notes :: 质点运动学基础
-            </a>
-        </li>
-        
-        <li>
-            
+<p>为了使代码能够被gdb调试，需要在编译时加入<code>-g</code>选项，也即</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gcc -g main.c -o main</code></pre></div>
+<p>使用<code>-g</code>选项后，gcc会为生成的程序加载调试符号，供给gdb载入。</p>
 
-            Mon Apr 08, 2019 --
+<p>对编译完成的文件，使用gdb载入：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gdb main</code></pre></div>
+<h2 id="基本执行控制指令">基本执行控制指令</h2>
 
-            
-            <a href="https://blog.linyxus.xyz/posts/physics-lifesaving-notes-0/">
-                Physics Lifesaving Notes :: 静电场中的导体与电介质
-            </a>
-        </li>
-        
-    </ul>
+<h3 id="run-break-print"><code>run</code>，<code>break</code>，<code>print</code></h3>
+
+<p>三个指令的使用示例：</p>
+
 </div>
 
+<script src="https://utteranc.es/client.js"
+        repo="linyxus/linro-hugo"
+        issue-term="pathname"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
 
         
-        <div class="section bottom-menu">
+<div class="section bottom-menu">
+    
 <hr />
 <p>
 
 
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
     
 
     
@@ -119,8 +126,9 @@
         main
     </a>
 
-</p></div>
-        
+</p>
+</div>
+
 
         <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>

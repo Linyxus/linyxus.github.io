@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Caculus on Linro</title>
-    <link>https://linyxus.github.io/tags/caculus/</link>
+    <link>https://blog.linyxus.xyz/tags/caculus/</link>
     <description>Recent content in Caculus on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 01 Apr 2019 16:28:15 +0800</lastBuildDate>
     
-	<atom:link href="https://linyxus.github.io/tags/caculus/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.linyxus.xyz/tags/caculus/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>微积分笔记 #1 :: 多元微积分初步</title>
-      <link>https://linyxus.github.io/posts/caculas-1/</link>
+      <link>https://blog.linyxus.xyz/posts/caculas-1/</link>
       <pubDate>Mon, 01 Apr 2019 16:28:15 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/caculas-1/</guid>
+      <guid>https://blog.linyxus.xyz/posts/caculas-1/</guid>
       <description>n-dimension Euclid Space $R^n$ 邻域 $$ X_0点的\delta邻域：B(X_0, \delta) = {X \in R^n : ||X-X_0&amp;lt;\delta||} $$
 $$ X_0点的去心\delta邻域：B(X_0, \delta) = {X \in R^n : 0 &amp;lt; ||X-X_0|| &amp;lt; \delta} $$
 点与集 内点： $$ I(x) : x为\Omega的内点 $$

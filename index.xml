@@ -2,21 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linro :: blog on Linro</title>
-    <link>https://linyxus.github.io/</link>
+    <link>https://blog.linyxus.xyz/</link>
     <description>Recent content in Linro :: blog on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Aug 2019 20:19:22 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Oct 2019 12:00:42 +0800</lastBuildDate>
     
-	<atom:link href="https://linyxus.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.linyxus.xyz/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>简短的gdb使用手册</title>
+      <link>https://blog.linyxus.xyz/posts/using-gdb/</link>
+      <pubDate>Thu, 24 Oct 2019 12:00:42 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/posts/using-gdb/</guid>
+      <description>编译 为了使代码能够被gdb调试，需要在编译时加入-g选项，也即
+gcc -g main.c -o main 使用-g选项后，gcc会为生成的程序加载调试符号，供给gdb载入。
+对编译完成的文件，使用gdb载入：
+gdb main 基本执行控制指令 run，break，print 三个指令的使用示例：</description>
+    </item>
+    
+    <item>
+      <title>A Tasteful Tutorial on State Monads</title>
+      <link>https://blog.linyxus.xyz/posts/state-monad/</link>
+      <pubDate>Mon, 16 Sep 2019 20:47:35 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/posts/state-monad/</guid>
+      <description> 什么是State Monad？ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
+一个很经典的例子是在Haskell中获取随机数，如果不使用State Monad，就可能需要写出这样的代码：
+getThreeRandInt :: (Int, Int, Int) getThreeRandInt = (x1, x2, x3) where gen = mkStdGen (x1, gen&amp;#39;) = random gen (x2, gen&amp;#39;&amp;#39;) = random gen&amp;#39; (x3, _) = random gen&amp;#39;&amp;#39; 这样的代码很丑。
+但借助State Monad，我们可以写出这样的代码。
+getThreeRandInt :: (Int, Int, Int) getThreeRandInt = evalState $ liftA3 (,,) getRandom getRandom getRandom where getRandom = state random</description>
+    </item>
+    
+    <item>
       <title>在博客中启用Utterances评论系统</title>
-      <link>https://linyxus.github.io/posts/enable-utterances/</link>
+      <link>https://blog.linyxus.xyz/posts/enable-utterances/</link>
       <pubDate>Fri, 09 Aug 2019 20:19:22 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/enable-utterances/</guid>
+      <guid>https://blog.linyxus.xyz/posts/enable-utterances/</guid>
       <description>What&amp;rsquo;s Utterance? Utteranc.es是一个基于Github Issues的评论系统。
 先前一直苦于为博客找一个合适的评论系统，Disqus很好，但因为众所周知的原因，国内用起来颇多不便。也想过要自己造一个轮子，但迟迟没有开始。
 Utterances几乎是无可挑剔的一个选择：基于Github Issues，便捷无阻。长得也看得过去。
@@ -26,10 +51,10 @@ Utterances几乎是无可挑剔的一个选择：基于Github Issues，便捷无
     
     <item>
       <title>Graph Networks 学习笔记 :: [GAT, GraphSAGE, H-GCN]</title>
-      <link>https://linyxus.github.io/posts/gat-graphsage-hgcn/</link>
+      <link>https://blog.linyxus.xyz/posts/gat-graphsage-hgcn/</link>
       <pubDate>Thu, 06 Jun 2019 12:09:41 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/gat-graphsage-hgcn/</guid>
+      <guid>https://blog.linyxus.xyz/posts/gat-graphsage-hgcn/</guid>
       <description>概述 在自动化所科创项目选拔中阅读的论文，留下了一些笔记。
 三篇论文分别是：
 Graph Attention Networks Inductive Representation Learning on Large Graphs Hierarchical Graph Convolutional Networks for Semi-supervised Node Classification  分别对应了GAT，GraphSAGE和H-GCN。最后一篇，也就是H-GCN，就是组里师兄做的工作。
@@ -38,10 +63,10 @@ Graph Attention Networks Inductive Representation Learning on Large Graphs Hiera
     
     <item>
       <title>物理实验数据处理公式总结</title>
-      <link>https://linyxus.github.io/posts/physics-experiements-formula/</link>
+      <link>https://blog.linyxus.xyz/posts/physics-experiements-formula/</link>
       <pubDate>Fri, 10 May 2019 13:12:24 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/physics-experiements-formula/</guid>
+      <guid>https://blog.linyxus.xyz/posts/physics-experiements-formula/</guid>
       <description>贝塞尔公式 \begin{equation*} s(x) = \sqrt {\frac{\sum (x_i - \bar{x})^2} {n-1}} \end{equation*}  \begin{equation*} s(\bar{x}) = \frac {s(x)} {\sqrt{n}} = \sqrt {\frac{\sum (x_i - \bar{x})^2} {n(n-1)}} \end{equation*}   直接测量量不确定度 当 \(n=6\) 时，
 \begin{equation*} u_a(x) = t_ps(\bar{x}) = s(x) \end{equation*}  且有
 \begin{equation*} u_b(x) = \Delta_{仪} \end{equation*}  合成不确定度：
@@ -50,10 +75,10 @@ Graph Attention Networks Inductive Representation Learning on Large Graphs Hiera
     
     <item>
       <title>Calculus Cheatsheets :: 级数</title>
-      <link>https://linyxus.github.io/posts/calculus-cheatsheet-series/</link>
+      <link>https://blog.linyxus.xyz/posts/calculus-cheatsheet-series/</link>
       <pubDate>Thu, 02 May 2019 19:09:04 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/calculus-cheatsheet-series/</guid>
+      <guid>https://blog.linyxus.xyz/posts/calculus-cheatsheet-series/</guid>
       <description>常数项级数 概念 定义 各项均为常数的级数
  部分和 \begin{equation*} \sigma (n) = \sum_{k=0}^{n} a_k \end{equation*}   敛散性 若
 \begin{equation*} lim_{n \rightarrow \infty} \sigma (n) = A 存在 \end{equation*}  则称级数收敛于 \(A\) 。
@@ -64,10 +89,10 @@ Graph Attention Networks Inductive Representation Learning on Large Graphs Hiera
     
     <item>
       <title>离散数学复习笔记 :: 逻辑学</title>
-      <link>https://linyxus.github.io/posts/discrete-math-notes-logic/</link>
+      <link>https://blog.linyxus.xyz/posts/discrete-math-notes-logic/</link>
       <pubDate>Mon, 22 Apr 2019 19:09:35 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/discrete-math-notes-logic/</guid>
+      <guid>https://blog.linyxus.xyz/posts/discrete-math-notes-logic/</guid>
       <description>Proposition Logic Basics What is a proposition A statement of proposition is a declarative sentence that is either true or false, but not both.
 The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a proposition  What time is it?: &amp;nbsp;not a proposition     Build up a proposition propostional variables logical connectives   Kinds of logical connectives Negation &#39;NOT&#39; :: \(\neg\)
  Conjunction &#39;AND&#39; :: \(\wedge\)</description>
@@ -75,10 +100,10 @@ The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a pro
     
     <item>
       <title>Physics Lifesaving Notes :: 质点运动学基础</title>
-      <link>https://linyxus.github.io/posts/physics-lifesaving-notes-1/</link>
+      <link>https://blog.linyxus.xyz/posts/physics-lifesaving-notes-1/</link>
       <pubDate>Thu, 18 Apr 2019 20:37:30 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/physics-lifesaving-notes-1/</guid>
+      <guid>https://blog.linyxus.xyz/posts/physics-lifesaving-notes-1/</guid>
       <description>基本概念 质点:大小、形状可以忽略的物体  质点系:多个质点的组合     基本参数 位置矢量 \begin{equation*} \vec{r} = x \vec{i} + y \vec{j} + z \vec{k} \end{equation*}   运动方程 \begin{equation*} \vec{r} = \vec{r}(t) \end{equation*}   轨迹方程 将运动方程中的 \(t\) 消去即得到轨迹方程。
  位移与路程 位移为始末位置矢量的改变量。
 \begin{equation*} \Delta \vec{r} = \vec{r}_2 - \vec{r}_1 \end{equation*}  路程为运动轨迹的长度。
@@ -87,10 +112,10 @@ The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a pro
     
     <item>
       <title>电路分析笔记 :: 动态电路分析</title>
-      <link>https://linyxus.github.io/posts/circuit-analysis-notes-3/</link>
+      <link>https://blog.linyxus.xyz/posts/circuit-analysis-notes-3/</link>
       <pubDate>Mon, 15 Apr 2019 20:34:15 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/circuit-analysis-notes-3/</guid>
+      <guid>https://blog.linyxus.xyz/posts/circuit-analysis-notes-3/</guid>
       <description>基本元件 电容 动态特性 \begin{equation*} i = \frac {dq} {dt} = C \frac {dU} {dt} \end{equation*}   记忆特性 \begin{equation*} u_c = \frac {1} {C} \int_{-\infty}^{t_0} i_c dt \end{equation*}  也即电压反映了电流的累积效果。
  储能特性 \begin{equation*} W = \frac{1}{2} C U^2 \end{equation*}    电感 动态特性 \begin{equation*} u_L = \frac {d \phi} {dt} = L \frac {di}{dt} \end{equation*}   记忆特性 \begin{equation*} i_L = \frac{1}{L} \int_{\infty}^{t_0} u_L dt \end{equation*}  也即电流反映了电压的累积效果。
  储能特性 \begin{equation*} W = \frac{1}{2} Li^2 \end{equation*}    电容、电感的串并联 电容等同于电导。</description>
@@ -98,10 +123,10 @@ The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a pro
     
     <item>
       <title>电路分析笔记 :: 基本分析方法</title>
-      <link>https://linyxus.github.io/posts/circuit-analysis-notes-2/</link>
+      <link>https://blog.linyxus.xyz/posts/circuit-analysis-notes-2/</link>
       <pubDate>Sun, 14 Apr 2019 21:42:06 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/circuit-analysis-notes-2/</guid>
+      <guid>https://blog.linyxus.xyz/posts/circuit-analysis-notes-2/</guid>
       <description>变量分析 基尔霍夫定律 KCL 基尔霍夫电流定律
 对任意电路的任意节点，在任意时刻流入该节点的电流代数和为0。
 \begin{equation*} \sum_{k=1}^{b} i_k(t) = 0 \end{equation*}  若规定流入为正，流出即为负。
@@ -116,10 +141,10 @@ The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a pro
     
     <item>
       <title>电路分析笔记 :: 电路分析基础模型</title>
-      <link>https://linyxus.github.io/posts/circuit-analysis-notes-1/</link>
+      <link>https://blog.linyxus.xyz/posts/circuit-analysis-notes-1/</link>
       <pubDate>Fri, 12 Apr 2019 20:17:12 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/circuit-analysis-notes-1/</guid>
+      <guid>https://blog.linyxus.xyz/posts/circuit-analysis-notes-1/</guid>
       <description>电路模型基本概念 电路模型:从实际电路中抽象出的模型  激励:输入电路的信号  响应:经过电路加工处理后得到的信号  集总参数元件:当实际电路的尺寸远小于其使用时最高工作频率所对应的波长时而抽象出的理想元件  集总电路模型:又集总参数元件组成的电路  分布参数电路:当实际电路的尺寸大于其最高工作频率所对应的波长或两者属于同一数量级时     电路模型基本变量 电流、电压、功率。
 电压与电流的参考方向 由于电路分析中，电压与电流的实际方向很难确定，故可以假设这两个变量的方向，以电流为例。
 假设 \(I\) 从a流向b，若实际电流方向与参考方向相同
@@ -132,10 +157,10 @@ The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a pro
     
     <item>
       <title>雏雁计划神经网络训练记录</title>
-      <link>https://linyxus.github.io/posts/mental-health-nn-training/</link>
+      <link>https://blog.linyxus.xyz/posts/mental-health-nn-training/</link>
       <pubDate>Tue, 09 Apr 2019 15:40:08 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/mental-health-nn-training/</guid>
+      <guid>https://blog.linyxus.xyz/posts/mental-health-nn-training/</guid>
       <description>思路 使用前20个问题预测剩下11个问题的答案。将经常、有时、很少、从不规范化为[1, 0.33, -0.33, -1]。   训练笔记 Small ReLU 20 -&amp;gt; 18 -&amp;gt; 11
 Result:
 acc \(65.22 \%\) test_acc \(45.45\%\)   Mid Relu 20 -&amp;gt; 30 -&amp;gt; 11
@@ -149,38 +174,38 @@ acc: 0.5853 test_acc: 0.5236 test_acc_l: 0.7909   Smaller Relu V2 Difference: ch
     
     <item>
       <title>Physics Lifesaving Notes :: 静电场中的导体与电介质</title>
-      <link>https://linyxus.github.io/posts/physics-lifesaving-notes-0/</link>
+      <link>https://blog.linyxus.xyz/posts/physics-lifesaving-notes-0/</link>
       <pubDate>Mon, 08 Apr 2019 19:46:14 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/physics-lifesaving-notes-0/</guid>
+      <guid>https://blog.linyxus.xyz/posts/physics-lifesaving-notes-0/</guid>
       <description>静电平衡 导体的定义 具有大量能够自由移动的电子 在外电场的作用下，能够很好的传导电流  的物质。
  静电平衡的条件与特征 条件：  导体内部任意一点的电场强度都为0 导体表面上任意一点的电场强度方向垂直于该出导体表面  除此以外，由于导体内部电场处处为0，由于  \begin{equation*} E = - \frac{\partial V}{\partial l} \end{equation*}  因而电势处处相等，导体成为等势体。   静电平衡的理解 与 霍尔效应 有几分类似。导体内部的自由电荷会均衡它收到的电场，内部电荷产生的电场与外加电场抵消， 内部电场处处为0，导体达到静电平衡。   静电平衡时的电荷分布 电荷分布 处于静电平衡状态的导体，内部处处没有净电荷存在，电荷只分布在导体表面上。  证明方法很简单，用高斯定理。  当到体内有空腔时，空腔表面也无电荷。证明如下：  取包围空腔的高斯面，由于电场强度 \(E\) 处处为 \(0\)，故空腔表面净电荷也为零。假设空腔表面一部分 正电荷，一部分带负电荷，则空腔内存在电场。故而电势沿电场线方向有上升或降落，而静电场为保守场切导体内部处处 等电势，故而矛盾。故不存在电荷。   贴近表面处的电场强度 \begin{equation*} E = \frac{\sigma}{\epsilon_0} \end{equation*}  使用高斯定理证明即可。  值得一提的是，面积元 \(\Delta S\) 事实上可以等效为无限大带点平面，它对靠近表面的点 \(P\) 产生的 场强事实上为  \begin{equation*} E_1 = \frac{\sigma}{2\epsilon_0} \end{equation*}  而余下所有电荷在此处产生的场强和为  \begin{equation*} E_2 = \frac{\sigma}{2\epsilon_0} \end{equation*}  才有  \begin{equation*} E = E_1 + E_2 = \frac{\sigma}{\epsilon_0} \end{equation*}  因而导体表面场强事实上为  \begin{equation*} E^{&#39;} = E_2 = \frac{\sigma}{2\epsilon_0} \end{equation*}    静电感应与静电屏蔽 静电感应 导体在外加电场 \(E_0\) 的影响下，被感应出感应电荷，达到静电平衡状态。  原理为：在电场 \(E_0\) 的作用下，导体内的电子产生移动，在导体的一面积累而呈现带负电荷，另一面由于 缺少电子而呈现正电荷。  于是导体内产生感应电场 \(E^{&#39;}\) ，当感应电场与外加电场抵消也即 \(E_0 + E^{&#39;} = 0\) 时，达到 静电平衡。   静电屏蔽 因此空腔导体具有静电屏蔽作用。  空腔导体内无电荷。 空腔导体内有电荷。  空腔内壁上会被感应出等量异号电荷，因此表面也会产生等量同号电荷。这时将导体外壁接地，则被导体包裹的电荷将不能 对外界产生任何影响。  例题 两块等面积金属板，分别带电荷 \(q_A\) 和 \(q_B\) ，平板面积为 \(S\) ，两板间距为 \(d\) 。且面积线度远大于间距。试求静电平衡时两板各表面上的电荷面密度。 解析 根据电荷守恒与板内电场强度为0列出方程即可求解。</description>
     </item>
     
     <item>
       <title>Note on Pytorch 60-min Blitz</title>
-      <link>https://linyxus.github.io/posts/note-on-pytorch-60min-blitz/</link>
+      <link>https://blog.linyxus.xyz/posts/note-on-pytorch-60min-blitz/</link>
       <pubDate>Thu, 04 Apr 2019 22:59:05 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/note-on-pytorch-60min-blitz/</guid>
+      <guid>https://blog.linyxus.xyz/posts/note-on-pytorch-60min-blitz/</guid>
       <description>Tensor Create a tensor via torch.empty  x = torch.empty(5, 3)  This will create a tensor with a size of (5, 3). It is not initialized.  via torch.zero  </description>
     </item>
     
     <item>
       <title>让Hugo和reStucturedText和睦相处</title>
-      <link>https://linyxus.github.io/posts/use-rst-with-hugo/</link>
+      <link>https://blog.linyxus.xyz/posts/use-rst-with-hugo/</link>
       <pubDate>Thu, 04 Apr 2019 20:37:33 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/use-rst-with-hugo/</guid>
+      <guid>https://blog.linyxus.xyz/posts/use-rst-with-hugo/</guid>
       <description>起因 在写完 这一篇博客 之后，我对Markdown彻底失望了， 尽管它有可爱的Typora和GFM，尽管我已用它写下了无数篇博客。  没错，还是数学公式渲染问题。  Markdown和LaTeX似乎总是两对冤家，因为Markdown滥用的 _ 语法，并且并没有原生的数学公式支持，大部分 Markdown编译器永远无法完善的解决下标和斜体的恩怨情仇。  Hugo家的BlackFriday，也不例外。  我曾在 这篇博客 中自信的以为Hugo官方给出 的Workaround并无必要，天真的以为Hugo的Markdown编译器不存在这样的问题。现在，我知道我错了。  在之前提到的，一篇数学笔记博客中，下面的LaTeX代码在渲染时还是中了 &amp;lt;em&amp;gt; 的枪。  1 $$2 \lim_{k \to+\infty} X_k =A \Leftrightarrow\lim_{k \to+\infty} x_k^{(i)} =a(i), i=1,2,…,n. 3 $$  所以，我打算转移到更健全的rST。至少rST有专门的Math模块，比如上面出错的LaTeX代码在rST中可以毫无问题的展现：  \begin{equation*} \lim_{k \to +\infty} X_k = A \Leftrightarrow \lim_{k \to +\infty} x_k^{(i)} = a(i), i=1,2,\ldots ,n. \end{equation*}  和Markdown相比，rST几乎没有什么弱点。Markdown能做到的事情，rST也无所不能。而很多能力，例如完备无冲突的公式 显示，是过于单薄的Markdown无法企及的。  很幸运的，虽然Hugo内置支持的是Markdown， 但是也能通过调用外部程序支持rST 。 但毕竟rST不是亲儿子，一开始还是会有些小问题：   小问题 LaTeX显示 因为 rst2html 对于数学文本块默认是会进行编译的，转成pdf倒还好，但如果转成HTML，显示的效果就非常难看 （众所周知，HTML对公式的支持非常差）。所以这种任务还是交给MathJax为好，需要修改docutils的配置文件：  1 [html4css1 writer] 2 math-output: mathjax 3  https://cdnjs.</description>
     </item>
     
     <item>
       <title>微积分笔记 #1 :: 多元微积分初步</title>
-      <link>https://linyxus.github.io/posts/caculas-1/</link>
+      <link>https://blog.linyxus.xyz/posts/caculas-1/</link>
       <pubDate>Mon, 01 Apr 2019 16:28:15 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/caculas-1/</guid>
+      <guid>https://blog.linyxus.xyz/posts/caculas-1/</guid>
       <description>n-dimension Euclid Space $R^n$ 邻域 $$ X_0点的\delta邻域：B(X_0, \delta) = {X \in R^n : ||X-X_0&amp;lt;\delta||} $$
 $$ X_0点的去心\delta邻域：B(X_0, \delta) = {X \in R^n : 0 &amp;lt; ||X-X_0|| &amp;lt; \delta} $$
 点与集 内点： $$ I(x) : x为\Omega的内点 $$
@@ -190,10 +215,10 @@ $$ I(x) \Leftrightarrow \exists \delta &amp;gt; 0, B(x,\delta) \subset \Omega $$
     
     <item>
       <title>利用cron自动同步org到Github</title>
-      <link>https://linyxus.github.io/posts/sync-org-files/</link>
+      <link>https://blog.linyxus.xyz/posts/sync-org-files/</link>
       <pubDate>Tue, 26 Feb 2019 22:58:41 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/sync-org-files/</guid>
+      <guid>https://blog.linyxus.xyz/posts/sync-org-files/</guid>
       <description> 效果   每天在固定的时间，只要电脑开着，自动commit发生在org文件夹内的改动，并且push到Github上。
 如图，设定的是在所有的整点都会自动更新。
 步骤 #1 编写自动同步shell #!/bin/bash  echo -e &amp;#34;\033[0;32mPulling from GitHub...\033[0m&amp;#34; git pull git add . git commit -m &amp;#34;Auto update : `date`&amp;#34; echo -e &amp;#34;\033[0;32mPushing to GitHub...\033[0m&amp;#34; git push origin master 在echo的文本里奇奇怪怪的内容都是escape characters，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）
@@ -208,10 +233,10 @@ iTerm2是不行的。
     
     <item>
       <title>org-mode规划笔记</title>
-      <link>https://linyxus.github.io/posts/introducing-org-templetes/</link>
+      <link>https://blog.linyxus.xyz/posts/introducing-org-templetes/</link>
       <pubDate>Wed, 13 Feb 2019 12:05:39 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/introducing-org-templetes/</guid>
+      <guid>https://blog.linyxus.xyz/posts/introducing-org-templetes/</guid>
       <description>org-mode可能是Emacs最有名的一部分。作为一个瑞士军刀般的笔记系统，org-mode真的可以渗入你生活的每个角落。
 之前我也在学校社团里做过一个有关org-mode的讲座。关于org-mode，记忆深刻的是某知乎用户的一句话：
  我的生活就是在org-mode掌控之下的好吗
@@ -234,10 +259,10 @@ Source code 列一下org template配置的elisp代码：
     
     <item>
       <title>Dozer: 用两个小点管理你的macOS状态栏</title>
-      <link>https://linyxus.github.io/posts/introduction-to-dozer/</link>
+      <link>https://blog.linyxus.xyz/posts/introduction-to-dozer/</link>
       <pubDate>Mon, 11 Feb 2019 13:20:02 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/introduction-to-dozer/</guid>
+      <guid>https://blog.linyxus.xyz/posts/introduction-to-dozer/</guid>
       <description>macOS的状态栏设计是个饱受诟病的地方。因为从系统层面上，并不存在管理状态栏的功能（除了排序）。
   由于没有隐藏图标的功能，所以很多从来用不着也不想看的图标总是占着位置。比如Spotlight的放大镜，比如Siri的圆圈。
 对于这个问题有不少流行的解决方案，Bartender是主流，也有Vanilla之流紧随其后。
@@ -253,10 +278,10 @@ Github上的演示：</description>
     
     <item>
       <title>「算法笔记」欧拉函数、欧拉定理与欧拉降幂公式</title>
-      <link>https://linyxus.github.io/posts/eular-formula/</link>
+      <link>https://blog.linyxus.xyz/posts/eular-formula/</link>
       <pubDate>Wed, 30 Jan 2019 19:29:20 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/eular-formula/</guid>
+      <guid>https://blog.linyxus.xyz/posts/eular-formula/</guid>
       <description>一些算法题里要求一个数的幂次，一般来说可以大整数+快速幂解决。但有时候数据真的很大，纵是快速幂也奈何不了这道题的。比如某道题要求$2^n$，$n \leq 10^{100000} $，十有八九会TLE。
 大多数情况下，这么大的数据都会要求在某个数（通常是$10^9+7$）的模意义下输出答案。事实上，在这样的条件下，题目的用意是使用欧拉降幂公式先降低指数，然后再快速幂求解。
 欧拉降幂公式 定理 $$ a^p \equiv a^{p \bmod \phi(m) + \phi(m)} \pmod m $$
@@ -273,19 +298,19 @@ Github上的演示：</description>
     
     <item>
       <title>Hugo &amp; Mathjax</title>
-      <link>https://linyxus.github.io/posts/hugo-and-mathjax/</link>
+      <link>https://blog.linyxus.xyz/posts/hugo-and-mathjax/</link>
       <pubDate>Tue, 29 Jan 2019 22:07:57 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/hugo-and-mathjax/</guid>
+      <guid>https://blog.linyxus.xyz/posts/hugo-and-mathjax/</guid>
       <description>&lt;p&gt;Mathjax是什么就不多说了，$\LaTeX$公式网页渲染最常用的lib。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>「算法笔记」基础排序算法</title>
-      <link>https://linyxus.github.io/posts/sorting-algorithms/</link>
+      <link>https://blog.linyxus.xyz/posts/sorting-algorithms/</link>
       <pubDate>Sat, 26 Jan 2019 22:19:46 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/sorting-algorithms/</guid>
+      <guid>https://blog.linyxus.xyz/posts/sorting-algorithms/</guid>
       <description>这是这个冬天算法学习留下的第一篇笔记。
 排序算法，是最基础的算法之一了吧。两年前或是三年前，我大概也是这样慢慢熟悉了他们。
 算法是不会变的。
@@ -300,19 +325,19 @@ void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp
     
     <item>
       <title>Algorithm Learning Roadmap</title>
-      <link>https://linyxus.github.io/posts/algorithm-roadmap/</link>
+      <link>https://blog.linyxus.xyz/posts/algorithm-roadmap/</link>
       <pubDate>Fri, 25 Jan 2019 19:38:20 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/algorithm-roadmap/</guid>
+      <guid>https://blog.linyxus.xyz/posts/algorithm-roadmap/</guid>
       <description> 基础  排序  插入排序 归并排序 桶排序 希尔排序 快速排序  搜索  BFS DFS 回溯 迭代加深搜索 A*  暴力枚举 图  DFS BFS 拓扑排序 欧拉回路  二叉树 分而治之 贪心 动态规划  高级  数论 图论 线段树 组合数学  训练路线  重温紫书及配套练习。配合luogu刷题。 进军黑书。 进军训练指南。  </description>
     </item>
     
     <item>
       <title>me</title>
-      <link>https://linyxus.github.io/me/</link>
+      <link>https://blog.linyxus.xyz/me/</link>
       <pubDate>Thu, 24 Jan 2019 16:18:08 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/me/</guid>
+      <guid>https://blog.linyxus.xyz/me/</guid>
       <description>Linyxus / BUPT
 Programming :: Python / Clojure / C++ / React.js / Algorithm / Machine Learning
 Reading / Writing
@@ -321,10 +346,10 @@ Github / QQ / Wechat</description>
     
     <item>
       <title>Hello, Hugo</title>
-      <link>https://linyxus.github.io/posts/hello/</link>
+      <link>https://blog.linyxus.xyz/posts/hello/</link>
       <pubDate>Wed, 23 Jan 2019 19:44:21 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/hello/</guid>
+      <guid>https://blog.linyxus.xyz/posts/hello/</guid>
       <description>&lt;p&gt;2019年1月，我重拾博客。&lt;/p&gt;</description>
     </item>
     

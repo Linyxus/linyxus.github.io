@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Calculus on Linro</title>
-    <link>https://linyxus.github.io/tags/calculus/</link>
+    <link>https://blog.linyxus.xyz/tags/calculus/</link>
     <description>Recent content in Calculus on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 02 May 2019 19:09:04 +0800</lastBuildDate>
     
-	<atom:link href="https://linyxus.github.io/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.linyxus.xyz/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Calculus Cheatsheets :: 级数</title>
-      <link>https://linyxus.github.io/posts/calculus-cheatsheet-series/</link>
+      <link>https://blog.linyxus.xyz/posts/calculus-cheatsheet-series/</link>
       <pubDate>Thu, 02 May 2019 19:09:04 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/calculus-cheatsheet-series/</guid>
+      <guid>https://blog.linyxus.xyz/posts/calculus-cheatsheet-series/</guid>
       <description>常数项级数 概念 定义 各项均为常数的级数
  部分和 \begin{equation*} \sigma (n) = \sum_{k=0}^{n} a_k \end{equation*}   敛散性 若
 \begin{equation*} lim_{n \rightarrow \infty} \sigma (n) = A 存在 \end{equation*}  则称级数收敛于 \(A\) 。

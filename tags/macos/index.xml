@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Macos on Linro</title>
-    <link>https://linyxus.github.io/tags/macos/</link>
+    <link>https://blog.linyxus.xyz/tags/macos/</link>
     <description>Recent content in Macos on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 11 Feb 2019 13:20:02 +0800</lastBuildDate>
     
-	<atom:link href="https://linyxus.github.io/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.linyxus.xyz/tags/macos/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dozer: 用两个小点管理你的macOS状态栏</title>
-      <link>https://linyxus.github.io/posts/introduction-to-dozer/</link>
+      <link>https://blog.linyxus.xyz/posts/introduction-to-dozer/</link>
       <pubDate>Mon, 11 Feb 2019 13:20:02 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/introduction-to-dozer/</guid>
+      <guid>https://blog.linyxus.xyz/posts/introduction-to-dozer/</guid>
       <description>macOS的状态栏设计是个饱受诟病的地方。因为从系统层面上，并不存在管理状态栏的功能（除了排序）。
   由于没有隐藏图标的功能，所以很多从来用不着也不想看的图标总是占着位置。比如Spotlight的放大镜，比如Siri的圆圈。
 对于这个问题有不少流行的解决方案，Bartender是主流，也有Vanilla之流紧随其后。

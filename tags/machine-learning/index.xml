@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Machine Learning on Linro</title>
-    <link>https://linyxus.github.io/tags/machine-learning/</link>
+    <link>https://blog.linyxus.xyz/tags/machine-learning/</link>
     <description>Recent content in Machine Learning on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 06 Jun 2019 12:09:41 +0800</lastBuildDate>
     
-	<atom:link href="https://linyxus.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.linyxus.xyz/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Graph Networks 学习笔记 :: [GAT, GraphSAGE, H-GCN]</title>
-      <link>https://linyxus.github.io/posts/gat-graphsage-hgcn/</link>
+      <link>https://blog.linyxus.xyz/posts/gat-graphsage-hgcn/</link>
       <pubDate>Thu, 06 Jun 2019 12:09:41 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/gat-graphsage-hgcn/</guid>
+      <guid>https://blog.linyxus.xyz/posts/gat-graphsage-hgcn/</guid>
       <description>概述 在自动化所科创项目选拔中阅读的论文，留下了一些笔记。
 三篇论文分别是：
 Graph Attention Networks Inductive Representation Learning on Large Graphs Hierarchical Graph Convolutional Networks for Semi-supervised Node Classification  分别对应了GAT，GraphSAGE和H-GCN。最后一篇，也就是H-GCN，就是组里师兄做的工作。
@@ -25,10 +25,10 @@ Graph Attention Networks Inductive Representation Learning on Large Graphs Hiera
     
     <item>
       <title>雏雁计划神经网络训练记录</title>
-      <link>https://linyxus.github.io/posts/mental-health-nn-training/</link>
+      <link>https://blog.linyxus.xyz/posts/mental-health-nn-training/</link>
       <pubDate>Tue, 09 Apr 2019 15:40:08 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/mental-health-nn-training/</guid>
+      <guid>https://blog.linyxus.xyz/posts/mental-health-nn-training/</guid>
       <description>思路 使用前20个问题预测剩下11个问题的答案。将经常、有时、很少、从不规范化为[1, 0.33, -0.33, -1]。   训练笔记 Small ReLU 20 -&amp;gt; 18 -&amp;gt; 11
 Result:
 acc \(65.22 \%\) test_acc \(45.45\%\)   Mid Relu 20 -&amp;gt; 30 -&amp;gt; 11

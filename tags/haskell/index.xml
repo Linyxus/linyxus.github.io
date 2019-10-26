@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Haskell on Linro</title>
+    <link>https://blog.linyxus.xyz/tags/haskell/</link>
+    <description>Recent content in Haskell on Linro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 16 Sep 2019 20:47:35 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.linyxus.xyz/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Tasteful Tutorial on State Monads</title>
+      <link>https://blog.linyxus.xyz/posts/state-monad/</link>
+      <pubDate>Mon, 16 Sep 2019 20:47:35 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/posts/state-monad/</guid>
+      <description> 什么是State Monad？ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
+一个很经典的例子是在Haskell中获取随机数，如果不使用State Monad，就可能需要写出这样的代码：
+getThreeRandInt :: (Int, Int, Int) getThreeRandInt = (x1, x2, x3) where gen = mkStdGen (x1, gen&amp;#39;) = random gen (x2, gen&amp;#39;&amp;#39;) = random gen&amp;#39; (x3, _) = random gen&amp;#39;&amp;#39; 这样的代码很丑。
+但借助State Monad，我们可以写出这样的代码。
+getThreeRandInt :: (Int, Int, Int) getThreeRandInt = evalState $ liftA3 (,,) getRandom getRandom getRandom where getRandom = state random</description>
+    </item>
+    
+  </channel>
+</rss>

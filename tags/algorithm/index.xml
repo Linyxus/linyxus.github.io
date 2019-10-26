@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Algorithm on Linro</title>
-    <link>https://linyxus.github.io/tags/algorithm/</link>
+    <link>https://blog.linyxus.xyz/tags/algorithm/</link>
     <description>Recent content in Algorithm on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 30 Jan 2019 19:29:20 +0800</lastBuildDate>
     
-	<atom:link href="https://linyxus.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.linyxus.xyz/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>「算法笔记」欧拉函数、欧拉定理与欧拉降幂公式</title>
-      <link>https://linyxus.github.io/posts/eular-formula/</link>
+      <link>https://blog.linyxus.xyz/posts/eular-formula/</link>
       <pubDate>Wed, 30 Jan 2019 19:29:20 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/eular-formula/</guid>
+      <guid>https://blog.linyxus.xyz/posts/eular-formula/</guid>
       <description>一些算法题里要求一个数的幂次，一般来说可以大整数+快速幂解决。但有时候数据真的很大，纵是快速幂也奈何不了这道题的。比如某道题要求$2^n$，$n \leq 10^{100000} $，十有八九会TLE。
 大多数情况下，这么大的数据都会要求在某个数（通常是$10^9+7$）的模意义下输出答案。事实上，在这样的条件下，题目的用意是使用欧拉降幂公式先降低指数，然后再快速幂求解。
 欧拉降幂公式 定理 $$ a^p \equiv a^{p \bmod \phi(m) + \phi(m)} \pmod m $$
@@ -33,10 +33,10 @@
     
     <item>
       <title>「算法笔记」基础排序算法</title>
-      <link>https://linyxus.github.io/posts/sorting-algorithms/</link>
+      <link>https://blog.linyxus.xyz/posts/sorting-algorithms/</link>
       <pubDate>Sat, 26 Jan 2019 22:19:46 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/sorting-algorithms/</guid>
+      <guid>https://blog.linyxus.xyz/posts/sorting-algorithms/</guid>
       <description>这是这个冬天算法学习留下的第一篇笔记。
 排序算法，是最基础的算法之一了吧。两年前或是三年前，我大概也是这样慢慢熟悉了他们。
 算法是不会变的。
@@ -51,10 +51,10 @@ void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp
     
     <item>
       <title>Algorithm Learning Roadmap</title>
-      <link>https://linyxus.github.io/posts/algorithm-roadmap/</link>
+      <link>https://blog.linyxus.xyz/posts/algorithm-roadmap/</link>
       <pubDate>Fri, 25 Jan 2019 19:38:20 +0800</pubDate>
       
-      <guid>https://linyxus.github.io/posts/algorithm-roadmap/</guid>
+      <guid>https://blog.linyxus.xyz/posts/algorithm-roadmap/</guid>
       <description> 基础  排序  插入排序 归并排序 桶排序 希尔排序 快速排序  搜索  BFS DFS 回溯 迭代加深搜索 A*  暴力枚举 图  DFS BFS 拓扑排序 欧拉回路  二叉树 分而治之 贪心 动态规划  高级  数论 图论 线段树 组合数学  训练路线  重温紫书及配套练习。配合luogu刷题。 进军黑书。 进军训练指南。  </description>
     </item>
     
