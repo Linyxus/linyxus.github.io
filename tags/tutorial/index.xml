@@ -6,10 +6,38 @@
     <description>Recent content in Tutorial on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Sep 2019 20:47:35 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2019 15:14:00 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.linyxus.xyz/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nix on Macos, Made Easy</title>
+      <link>https://blog.linyxus.xyz/posts/nix-on-macos/</link>
+      <pubDate>Mon, 28 Oct 2019 15:14:00 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/posts/nix-on-macos/</guid>
+      <description>What is Nix? 简单来说，Nix是一个纯函数式包管理器。它将函数式的思想应用到了包管理中——每一个package都是一条语句的值，安装、编译包的过程是对表达式求值，而不是借助副作用。一个包一旦编译完成，就是不可变的。所有编译好的包都会被存储于/nix/store/中。
+Nix的思想其实很值得体会，也的确能为实际应用带来莫大的方便与效率，但对这些话题的探讨不在本篇文章的范畴之内。
+本文的主要陈述了怎样在macOS Catalina下，安装使用nix。
+Installation 主要问题 事实上，在macOS Catalina之前，nix的安装都不是一件困难的事情，简简单单，一条指令就能解决：
+$ sh &amp;lt;(curl https://nixos.org/nix/install) 然而在Calalina之后，官方默认的安装脚本便失效了。主要原因是：Apple改变了macOS的文件结构，将系统与用户数据挂载到了两个分区，/变为了只读目录。
+然而，nix的所有文件都需要放到/nix下，/变为只读直接导致nix安装到Catalina上。
+解决方法 解决方法参照了这个issue中的讨论与一个Github repo。
+简单来说，既然安装脚本无法在根目录中创建文件夹，那我们就先为他创建好/nix，再进行安装。
+具体来说，只需要新建一个分区并挂载到/nix即可。
+刚刚提到的repo是针对升级Catalina前已安装nix进行recover用的，稍作修改，可以得到在Catalina上安装nix的解决方案。Install Nix on Catalina
+具体步骤 首先，clone刚刚给出的repo。
+git clone https://github.com/Linyxus/install-nix-on-catalina.git cd install-nix-on-catalina 执行第一个脚本
+./step-1 重启电脑，随后执行第二个脚本
+./step-2 Voila!
+Multi-user installation 使用Proxy的问题 如果在之前的安装中，选择了multi user，也即使用daemon的选项，proxy的使用就会成为一个问题。
+为什么一定要用proxy？因为至少在我的环境下，直连cache.nixos.org下载binary的速度实在是太！慢！了！
+而Proxy的使用为什么会成为问题呢？因为nix multi user的实现中，各项操作事实上都是由daemon完成的，这意味着即使在安装时设置了proxy，事实上daemon还是直连下载的：
+export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087; nix-env -f &amp;#39;&amp;lt;nixpkgs&amp;gt;&amp;#39; -iA cabal-install 这很不友好。
+事实上，关于这个问题，在官方的Nix Mannual中有所提及。
+ The Nix installer has special handling for these proxy-related environment variables: http_proxy, https_proxy, ftp_proxy, no_proxy, HTTP_PROXY, HTTPS_PROXY, FTP_PROXY, NO_PROXY.</description>
+    </item>
     
     <item>
       <title>A Tasteful Tutorial on State Monads</title>
