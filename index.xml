@@ -22,7 +22,7 @@ Nix的思想其实很值得体会，也的确能为实际应用带来莫大的�
 本文的主要陈述了怎样在macOS Catalina下，安装使用nix。
 Installation 主要问题 事实上，在macOS Catalina之前，nix的安装都不是一件困难的事情，简简单单，一条指令就能解决：
 $ sh &amp;lt;(curl https://nixos.org/nix/install) 然而在Calalina之后，官方默认的安装脚本便失效了。主要原因是：Apple改变了macOS的文件结构，将系统与用户数据挂载到了两个分区，/变为了只读目录。
-然而，nix的所有文件都需要放到/nix下，/变为只读直接导致nix安装到Catalina上。
+然而，nix的所有文件都需要放到/nix下，/变为只读直接导致nix无法安装到Catalina上。
 解决方法 解决方法参照了这个issue中的讨论与一个Github repo。
 简单来说，既然安装脚本无法在根目录中创建文件夹，那我们就先为他创建好/nix，再进行安装。
 具体来说，只需要新建一个分区并挂载到/nix即可。

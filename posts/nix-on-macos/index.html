@@ -83,7 +83,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sh &lt;<span style="color:#f92672">(</span>curl https://nixos.org/nix/install<span style="color:#f92672">)</span></code></pre></div>
 <p>然而在Calalina之后，官方默认的安装脚本便失效了。主要原因是：<strong>Apple改变了macOS的文件结构，将系统与用户数据挂载到了两个分区，<code>/</code>变为了只读目录。</strong></p>
 
-<p>然而，<code>nix</code>的所有文件都需要放到<code>/nix</code>下，<code>/</code>变为只读直接导致<code>nix</code>安装到Catalina上。</p>
+<p>然而，<code>nix</code>的所有文件都需要放到<code>/nix</code>下，<code>/</code>变为只读直接导致<code>nix</code>无法安装到Catalina上。</p>
 
 <h2 id="解决方法">解决方法</h2>
 
@@ -125,7 +125,7 @@ nix-env -f <span style="color:#e6db74">&#39;&lt;nixpkgs&gt;&#39;</span> -iA caba
 <p>If any of these variables are set when running the Nix installer, then the installer will create an override file at <code>/etc/systemd/system/nix-daemon.service.d/override.conf</code> so nix-daemon will use them.</p>
 </blockquote>
 
-<p>不幸的是，者并不适用于macOS：<code>launchd</code>没有办法很容易地override服务配置文件中的一些字段。为了解决这一问题，最简单的方法是新建一个service，将原来的daemon service删除。</p>
+<p>不幸的是，这并不适用于macOS：<code>launchd</code>没有办法很容易地override服务配置文件中的一些字段。为了解决这一问题，最简单的方法是新建一个service，将原来的daemon service删除。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XML" data-lang="XML"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 <span style="color:#75715e">&lt;!DOCTYPE plist PUBLIC &#34;-//Apple//DTD PLIST 1.0//EN&#34; &#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&#34;&gt;</span>
 <span style="color:#f92672">&lt;plist</span> <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;1.0&#34;</span><span style="color:#f92672">&gt;</span>
