@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.linyxus.xyz/posts/to-spacemac/</loc>
+    <lastmod>2019-11-06T23:33:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/posts/first-post-org-mode/</loc>
+    <lastmod>2019-11-06T00:37:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/nix-on-macos/</loc>
     <lastmod>2019-10-28T15:14:00+08:00</lastmod>
   </url>
@@ -192,7 +202,7 @@
   
   <url>
     <loc>https://blog.linyxus.xyz/</loc>
-    <lastmod>2019-10-28T15:14:00+08:00</lastmod>
+    <lastmod>2019-11-06T23:33:00+08:00</lastmod>
   </url>
   
   <url>
@@ -258,6 +268,12 @@
   <url>
     <loc>https://blog.linyxus.xyz/tags/</loc>
     <lastmod>2019-01-30T19:29:20+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/tags/test/</loc>
+    <lastmod>2019-11-06T00:37:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
