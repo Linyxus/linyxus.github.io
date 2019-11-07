@@ -6,10 +6,28 @@
     <description>Recent content in Tutorial on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 28 Oct 2019 15:14:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 10:32:00 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.linyxus.xyz/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Switching From Purcell&#39;s Emacs.d to Spacemacs</title>
+      <link>https://blog.linyxus.xyz/posts/to-spacemac/</link>
+      <pubDate>Thu, 07 Nov 2019 10:32:00 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/posts/to-spacemac/</guid>
+      <description>很久以来，我的Emacs配置都基于无比经典的Purcell的 emacs.d。但就在最近，我突然决定切换到 Spacemacs。
+我曾用过一段时间的 Spacemacs，或者，确切的说，贯穿了我高二到高三的大部分时光。但彼时对Emacs了解颇少，对Spacemacs的使用也仅限于 uncomment 几个 layer，或是复制粘贴几句配置到 user-config 中。大一之后，一个偶然的契机，我打算更深入地学习Emacs。那时候开始，我一直使用并轻度定制了Purcell的Emacs配置。 Github repo
+但老实说，不管是配置的方法还是版本管理，我在这段时间里做的真的有些随便。
+切换到 Spacemacs 的理由  Evil! Spacemacs是在emacs中使用evil的最快速的方法之一 系统化的配置，基于 use-package，Purcell的配置方法过于古老不便 Battery included，庞大的社群： Github 上已有18.8k个星星 丰富的文档，相较于 Purcell 的配置基本无可用文档  Migration 事实上，除了一些无关紧要的配置，我几乎可以无痛迁移到 Spacemacs，因为 Spacemacs 的 layer 实在是太齐全丰富了。
+日常使用中，我会使用Emacs编辑的文件类型其实不是很多：
+ C/C++ Org Haskell \( \LaTeX{} \)  平时虽然Python写得也比较多，但是，PyCharm真香！
+上述我要用到的编辑环境，所有在 Spacemacs 中都有现成的 layer 可以用，我要做的只是在 dotspacemacs-configuration-layers 中把他们加上罢了。
+迁移过程 首先，删除原来的emacs.d。
+rm .emacs.d // my .emacs.d is just a symlink 然后
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d 打开Emacs。Voila！</description>
+    </item>
     
     <item>
       <title>Nix on macOS, Made Easy</title>
