@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notes on Linro</title>
+    <title>notes on Linro</title>
     <link>https://blog.linyxus.xyz/tags/notes/</link>
-    <description>Recent content in Notes on Linro</description>
+    <description>Recent content in notes on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 24 Oct 2019 12:00:42 +0800</lastBuildDate>

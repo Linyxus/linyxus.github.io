@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Machine Learning on Linro</title>
+    <title>machine learning on Linro</title>
     <link>https://blog.linyxus.xyz/tags/machine-learning/</link>
-    <description>Recent content in Machine Learning on Linro</description>
+    <description>Recent content in machine learning on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 06 Jun 2019 12:09:41 +0800</lastBuildDate>

@@ -73,17 +73,17 @@
 
 <p>一个很经典的例子是在Haskell中获取随机数，如果不使用State Monad，就可能需要写出这样的代码：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">getThreeRandInt</span> <span style="color:#f92672">::</span> (<span style="color:#66d9ef">Int</span>, <span style="color:#66d9ef">Int</span>, <span style="color:#66d9ef">Int</span>)
-<span style="color:#a6e22e">getThreeRandInt</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">x2</span>, <span style="color:#a6e22e">x3</span>)
-  <span style="color:#66d9ef">where</span> <span style="color:#a6e22e">gen</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mkStdGen</span>
-        (<span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">gen&#39;</span>) <span style="color:#f92672">=</span> <span style="color:#a6e22e">random</span> <span style="color:#a6e22e">gen</span>
-        (<span style="color:#a6e22e">x2</span>, <span style="color:#a6e22e">gen&#39;&#39;</span>) <span style="color:#f92672">=</span> <span style="color:#a6e22e">random</span> <span style="color:#a6e22e">gen&#39;</span>
-        (<span style="color:#a6e22e">x3</span>, <span style="color:#66d9ef">_</span>) <span style="color:#f92672">=</span> <span style="color:#a6e22e">random</span> <span style="color:#a6e22e">gen&#39;&#39;</span></code></pre></div>
+<span style="color:#a6e22e">getThreeRandInt</span> <span style="color:#f92672">=</span> (x1, x2, x3)
+  <span style="color:#66d9ef">where</span> gen <span style="color:#f92672">=</span> mkStdGen
+        (x1, gen&#39;) <span style="color:#f92672">=</span> random gen
+        (x2, gen&#39;&#39;) <span style="color:#f92672">=</span> random gen&#39;
+        (x3, <span style="color:#66d9ef">_</span>) <span style="color:#f92672">=</span> random gen&#39;&#39;</code></pre></div>
 <p>这样的代码很丑。</p>
 
 <p>但借助State Monad，我们可以写出这样的代码。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">getThreeRandInt</span> <span style="color:#f92672">::</span> (<span style="color:#66d9ef">Int</span>, <span style="color:#66d9ef">Int</span>, <span style="color:#66d9ef">Int</span>)
-<span style="color:#a6e22e">getThreeRandInt</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">evalState</span> <span style="color:#f92672">$</span> <span style="color:#a6e22e">liftA3</span> (,,) <span style="color:#a6e22e">getRandom</span> <span style="color:#a6e22e">getRandom</span> <span style="color:#a6e22e">getRandom</span>
-	<span style="color:#66d9ef">where</span> <span style="color:#a6e22e">getRandom</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">state</span> <span style="color:#a6e22e">random</span></code></pre></div>
+<span style="color:#a6e22e">getThreeRandInt</span> <span style="color:#f92672">=</span> evalState <span style="color:#f92672">$</span> liftA3 (,,) getRandom getRandom getRandom
+	<span style="color:#66d9ef">where</span> getRandom <span style="color:#f92672">=</span> state random</code></pre></div>
 </div>
 
 <script src="https://utteranc.es/client.js"

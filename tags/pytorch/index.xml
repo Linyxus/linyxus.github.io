@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pytorch on Linro</title>
+    <title>pytorch on Linro</title>
     <link>https://blog.linyxus.xyz/tags/pytorch/</link>
-    <description>Recent content in Pytorch on Linro</description>
+    <description>Recent content in pytorch on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 04 Apr 2019 22:59:05 +0800</lastBuildDate>

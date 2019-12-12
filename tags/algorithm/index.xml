@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Algorithm on Linro</title>
+    <title>algorithm on Linro</title>
     <link>https://blog.linyxus.xyz/tags/algorithm/</link>
-    <description>Recent content in Algorithm on Linro</description>
+    <description>Recent content in algorithm on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 30 Jan 2019 19:29:20 +0800</lastBuildDate>
@@ -46,7 +46,8 @@ void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp
 而关于变量j的那个循环，所做的事情就是“冒泡”，而这里的冒泡本质上也就是插入。
 时间复杂度为$O(n^2)​$。
 归并排序 归并排序是利用了分治思想的排序算法。
- 分解问题：将要排序的数组分成两部分，将两部分分别排序。 合并：将两部分合并。  void merge_sort(int *begin, int *end) { int l = end - begin; if (l == 0 || l == 1) { return; } int m = l / 2; merge_sort(begin, begin+m); merge_sort(begin+m, end); int p = 0; int q = m; int cnt = 0; while (p &amp;lt; m || q &amp;lt; l) { if (q &amp;gt;= l || (p &amp;lt; m &amp;amp;&amp;amp; *(begin+p) &amp;lt;= *(begin+q))) { tmp[cnt++] = *(begin+p); p++; } else { tmp[cnt++] = *(begin+q); q++; } } for (int i = 0; i &amp;lt; l; i++) { *(begin+i) = tmp[i]; } }  分解问题无甚好说，重要的在于合并。</description>
+ 分解问题：将要排序的数组分成两部分，将两部分分别排序。 合并：将两部分合并。
+void merge_sort(int *begin, int *end) { int l = end - begin; if (l == 0 || l == 1) { return; } int m = l / 2; merge_sort(begin, begin+m); merge_sort(begin+m, end); int p = 0; int q = m; int cnt = 0; while (p &amp;lt; m || q &amp;lt; l) { if (q &amp;gt;= l || (p &amp;lt; m &amp;amp;&amp;amp; *(begin+p) &amp;lt;= *(begin+q))) { tmp[cnt++] = *(begin+p); p++; } else { tmp[cnt++] = *(begin+q); q++; } } for (int i = 0; i &amp;lt; l; i++) { *(begin+i) = tmp[i]; } }   分解问题无甚好说，重要的在于合并。</description>
     </item>
     
     <item>
