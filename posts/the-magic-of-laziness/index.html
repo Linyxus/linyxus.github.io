@@ -46,7 +46,7 @@
 
         
 <div class="section" id="content">
-    Wed Feb 12, 2020 &#183; 329 words
+    Wed Feb 12, 2020 &#183; 330 words
     
     <div class="tag-container">
         
@@ -159,7 +159,9 @@ Fibonacci数列两项之差所构成的数列（这显然也是一个Fibonacci�
 <p>在下一篇博客中，我将介绍一个非常有趣的情景：假设我们正在使用一个非常，非常，非常简单的纯函数语言，不仅没有任何副作用，并且简单到无法定义变量：所有名称的引入都是通过定义匿名函数完成的。而整个程序也仅仅是一个表达式而已。我们用简单的Haskell来模拟这种语言。也即：我们只能使用Haskell中的Lambda函数，不能定义变量。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">(<span style="color:#a6e22e">\</span>x y <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">+</span> y) <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>
 <span style="color:#75715e">-- 3</span></code></pre></div>
-<p>而在这一情景下，我会介绍Y组合子的概念，并指出，是Laziness使Y组合子的定义成为可能。</p>
+<p>而在这一情景下，该如何实现递归呢？也即，如果无法定义一个名称，那函数该如何“引用”自己呢？</p>
+
+<p>为了在这种情况下实现递归，我会介绍Y组合子的概念，并指出，是Laziness使Y组合子的定义成为可能。</p>
 
 </div>
 
