@@ -6,10 +6,28 @@
     <description>Recent content in tutorial on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 12 Dec 2019 17:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 21:17:00 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.linyxus.xyz/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The magic of Laziness: from fibonacci to Y combinator (1)</title>
+      <link>https://blog.linyxus.xyz/posts/the-magic-of-laziness/</link>
+      <pubDate>Wed, 12 Feb 2020 21:17:00 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/posts/the-magic-of-laziness/</guid>
+      <description>在这篇博客中，我将简单地介绍许多函数式编程语言中一个重要的，也是独特的特性：Laziness。
+A first taste of Laziness 所以，什么是Laziness呢？Laziness有一个更加正式的名称：lazy evaluation，也即 惰性求值 。简单来说，惰性求值意味着，表达式的值不会被立即求出，只有当需要的时候才会对其进行求值。
+比如，下面的代码在运行时并不会报错，而可以安全地求出列表的长度。
+length [error &amp;#34;Hey!&amp;#34;, error &amp;#34;Here is an error.&amp;#34;] -- 2 原因是，在 length 的实现中，并不关心列表中每个元素的值是什么。因而他们并不会被求值。
+length :: [a] -&amp;gt; Int length [] = 0 length (_:xs) = 1 + length xs 这是惰性求值这一特性最为直接的展示。
+而在实现上，具有惰性求值特性的代码可以这样被直观地想象：所有的值都被装在一个盒子中，对某个值求值的过程，也就是打开盒子的过程，为了打开这个盒子之后或许我们会发现里面有更多的盒子要打开。而所有的盒子，都会在万不得已的时候才被打开。
+这个比喻很直观，但不那么确切。比较精确的说法应当基于两个定义（至少在Haskell中是如此）：Normal Form与Weak Head Normal Form。
+Normal Form的定义很简单：normal form表示一个被完全求值的值：代表它所有的部分都已经被完全地求值完毕。 1 ， Just &amp;quot;Hello&amp;quot; ，都是normal form，而 1 + 1 则不是。
+Weak Head Normal Formd的定义则要复杂一些。简单来说，所有函数都是WHNF。所有顶层 constructor被求值的表达式也都是WHNF。
+举一些简单的例子： (1, 2 + 2) ， (1 + 1) : undefined ， Just 0 都是WHNF，因为他们的顶层constructor都已求值。</description>
+    </item>
     
     <item>
       <title>Playing with keyboard on macOS with Karabiner</title>

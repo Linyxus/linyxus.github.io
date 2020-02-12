@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="Linro :: blog of Linyxus">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://blog.linyxus.xyz">
+
+<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://blog.linyxus.xyz">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
+
+<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        The magic of Laziness: from fibonacci to Y combinator (1)
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">The magic of Laziness: from fibonacci to Y combinator (1)</div>
+
+        
+<div class="section" id="content">
+    Wed Feb 12, 2020 &#183; 329 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/tutorial">
+                tutorial
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/haskell">
+                haskell
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    
+
+<p>在这篇博客中，我将简单地介绍许多函数式编程语言中一个重要的，也是独特的特性：Laziness。</p>
+
+<h2 id="a-first-taste-of-laziness">A first taste of Laziness</h2>
+
+<p>所以，什么是Laziness呢？Laziness有一个更加正式的名称：lazy evaluation，也即 <em>惰性求值</em> 。简单来说，惰性求值意味着，表达式的值不会被立即求出，只有当需要的时候才会对其进行求值。</p>
+
+<p>比如，下面的代码在运行时并不会报错，而可以安全地求出列表的长度。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">length</span> [<span style="color:#a6e22e">error</span> <span style="color:#e6db74">&#34;Hey!&#34;</span>, <span style="color:#a6e22e">error</span> <span style="color:#e6db74">&#34;Here is an error.&#34;</span>]
+<span style="color:#75715e">-- 2</span></code></pre></div>
+<p>原因是，在 <code>length</code> 的实现中，并不关心列表中每个元素的值是什么。因而他们并不会被求值。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">length</span> <span style="color:#f92672">::</span> [a] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Int</span>
+<span style="color:#a6e22e">length</span> <span style="color:#66d9ef">[]</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+<span style="color:#a6e22e">length</span> (<span style="color:#66d9ef">_</span><span style="color:#66d9ef">:</span>xs) <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> length xs</code></pre></div>
+<p>这是惰性求值这一特性最为直接的展示。</p>
+
+<p>而在实现上，具有惰性求值特性的代码可以这样被直观地想象：所有的值都被装在一个盒子中，对某个值求值的过程，也就是打开盒子的过程，为了打开这个盒子之后或许我们会发现里面有更多的盒子要打开。而所有的盒子，都会在万不得已的时候才被打开。</p>
+
+<p>这个比喻很直观，但不那么确切。比较精确的说法应当基于两个定义（至少在Haskell中是如此）：Normal Form与Weak Head Normal Form。</p>
+
+<p>Normal Form的定义很简单：normal form表示一个被完全求值的值：代表它所有的部分都已经被完全地求值完毕。 <code>1</code> ， <code>Just &quot;Hello&quot;</code> ，都是normal form，而 <code>1 + 1</code> 则不是。</p>
+
+<p>Weak Head Normal Formd的定义则要复杂一些。简单来说，所有函数都是WHNF。所有顶层
+constructor被求值的表达式也都是WHNF。</p>
+
+<p>举一些简单的例子： <code>(1, 2 + 2)</code> ， <code>(1 + 1) : undefined</code> ， <code>Just 0</code> 都是WHNF，因为他们的顶层constructor都已求值。</p>
+
+<p>而一般来说，对某个值进行求值的时候，都只会将它求值为WHNF的形式。</p>
+
+<p>更为详细的介绍，可以在这一篇 <a href="https://alpmestan.com/posts/2013-10-02-oh-my-laziness.html">文章</a> 中找到。</p>
+
+<p>Laziness经常被认为会导致更多的内存占用，大多数时候的确如此：因为Laziness很多时候会导致运算过程被保存，而不是直接求出结果。但有些时候，Laziness可以带来更高的内存使用效率，并做到若没有Laziness则完全不可能做到的事情，举一个简单的例子。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">x</span> <span style="color:#f92672">::</span> [<span style="color:#66d9ef">Int</span>]
+<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">:</span> x</code></pre></div>
+<p>上面的函数定义了一个只包含 \(1\) 的无穷序列。这在非Lazy的语言中是不可能做到的：它会消耗无穷的内存。而在Lazy的语言中，它在内存中的形态不过是一个循环链表。</p>
+
+<h2 id="利用惰性定义无穷序列">利用惰性定义无穷序列</h2>
+
+<p>那么，惰性到底可以做什么有用的事情呢？</p>
+
+<p>下面这段代码定义了所有自然数的序列：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">nat</span> <span style="color:#f92672">::</span> [<span style="color:#66d9ef">Int</span>]
+<span style="color:#a6e22e">nat</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">:</span> map (<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) nat
+
+<span style="color:#75715e">-- &gt;&gt;&gt; take 3 nat</span>
+<span style="color:#75715e">-- [0,1,2]</span></code></pre></div>
+<p>或者，可以类似地定义等比数列 $\{ 2^n \}<sub>n &isin; \mathbb N</sub>$：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">xs</span> <span style="color:#f92672">::</span> [<span style="color:#66d9ef">Int</span>]
+<span style="color:#a6e22e">xs</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">:</span> map (<span style="color:#f92672">^</span><span style="color:#ae81ff">2</span>) nat</code></pre></div>
+<p>正是惰性求值的特性，给予了我们定义无穷数列的能力。考虑下面的代码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">take</span> <span style="color:#ae81ff">3</span> nat
+<span style="color:#75715e">-- take 3 (0 : map (+1) nat)</span>
+<span style="color:#75715e">-- 0 : take 2 (map (+1) nat)</span>
+<span style="color:#75715e">-- 0 : take 2 (map (+1) (0 : map (+1) nat))</span>
+<span style="color:#75715e">-- 0 : take 2 ((0 + 1) : map (+1) (map (+1) nat))</span>
+<span style="color:#75715e">-- 0 : (0 + 1) : take 1 (map (+1) (map (+1) nat))</span>
+<span style="color:#75715e">-- ...</span>
+<span style="color:#75715e">-- 0 : (0 + 1) : (0 + 1 + 1) : []</span>
+<span style="color:#75715e">-- [0,1,2]</span>
+
+<span style="color:#a6e22e">take</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Int</span> <span style="color:#f92672">-&gt;</span> [a] <span style="color:#f92672">-&gt;</span> [a]
+<span style="color:#a6e22e">take</span> n xs <span style="color:#f92672">|</span> n <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">[]</span>
+<span style="color:#a6e22e">take</span> <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">[]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">[]</span>
+<span style="color:#a6e22e">take</span> n (x<span style="color:#66d9ef">:</span>xs) <span style="color:#f92672">=</span> x <span style="color:#66d9ef">:</span> take (n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) xs</code></pre></div>
+<p>这段代码非常简单地解释了惰性求值的过程。值得注意的是：</p>
+
+<ul>
+<li>在上面的代码中，每次对列表求值时，都仅仅求值到WHNF，也即 <code>x : xs</code> 的形式。</li>
+<li><code>take</code> 中的比较 \(n \le 0\) 将会强制将两端都求值到NF。</li>
+</ul>
+
+<p>上面的定义基于了这样一个事实：所有带有符合递推式 $ a<sub>k+1</sub> = f(a_k), $
+且首项 \(a_0\) 为 \(c\) 的无穷序列，都满足这一恒等式：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">xs</span> <span style="color:#f92672">===</span> c <span style="color:#66d9ef">:</span> map f xs</code></pre></div>
+<p>因此我们可以对所有一阶递推序列都在Haskell中非常容易地构造出对应的无穷序列。</p>
+
+<p>而对于二阶递推式也是类似的。因为我们有</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">xs</span> <span style="color:#f92672">===</span> x0 <span style="color:#66d9ef">:</span> x1 <span style="color:#66d9ef">:</span> zipWith f xs (drop <span style="color:#ae81ff">1</span> xs)</code></pre></div>
+<p>其中 <code>f</code> 即为二阶递推关系式。</p>
+
+<p>因而可以很容易地定义出Fibonacci数列：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">fibo</span> <span style="color:#f92672">::</span> [<span style="color:#66d9ef">Int</span>]
+<span style="color:#a6e22e">fibo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">:</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">:</span> zipWith (<span style="color:#f92672">+</span>) fibo (drop <span style="color:#ae81ff">1</span> fibo)</code></pre></div>
+<p>而类似定义的这些函数，在不具备Lazy特性的语言中是没有任何用的。调用他们只会进入死循环。</p>
+
+<p>当然，归功于Laziness，我们也能对无穷序列进行很容易的操作。例如，如果你想求出
+Fibonacci数列两项之差所构成的数列（这显然也是一个Fibonacci数列），可以这样写：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">xs</span> <span style="color:#f92672">=</span> zipWith subtract fibo (drop <span style="color:#ae81ff">1</span> fibo)</code></pre></div>
+<p><code>xs</code> 也将是一个无穷序列。</p>
+
+<p>在下一篇博客中，我将介绍一个非常有趣的情景：假设我们正在使用一个非常，非常，非常简单的纯函数语言，不仅没有任何副作用，并且简单到无法定义变量：所有名称的引入都是通过定义匿名函数完成的。而整个程序也仅仅是一个表达式而已。我们用简单的Haskell来模拟这种语言。也即：我们只能使用Haskell中的Lambda函数，不能定义变量。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">(<span style="color:#a6e22e">\</span>x y <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">+</span> y) <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>
+<span style="color:#75715e">-- 3</span></code></pre></div>
+<p>而在这一情景下，我会介绍Y组合子的概念，并指出，是Laziness使Y组合子的定义成为可能。</p>
+
+</div>
+
+<script src="https://utteranc.es/client.js"
+        repo="linyxus/linro-hugo"
+        issue-term="pathname"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                writings
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/me">
+                me
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                about
+            </a>
+        
+    
+    &#183; 
+    <a href="https://blog.linyxus.xyz">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script>
+<link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
+</div>
+    </div>
+</body>
+
+</html>

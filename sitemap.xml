@@ -3,8 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.linyxus.xyz/tags/haskell/</loc>
+    <lastmod>2020-02-12T21:17:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/</loc>
-    <lastmod>2019-12-12T17:28:00+08:00</lastmod>
+    <lastmod>2020-02-12T21:17:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/tags/</loc>
+    <lastmod>2020-02-12T21:17:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/posts/the-magic-of-laziness/</loc>
+    <lastmod>2020-02-12T21:17:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/tags/tutorial/</loc>
+    <lastmod>2020-02-12T21:17:00+08:00</lastmod>
   </url>
   
   <url>
@@ -14,16 +34,6 @@
   
   <url>
     <loc>https://blog.linyxus.xyz/posts/macos-keyboard-karabiner/</loc>
-    <lastmod>2019-12-12T17:28:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.linyxus.xyz/tags/</loc>
-    <lastmod>2019-12-12T17:28:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.linyxus.xyz/tags/tutorial/</loc>
     <lastmod>2019-12-12T17:28:00+08:00</lastmod>
   </url>
   
@@ -69,11 +79,6 @@
   
   <url>
     <loc>https://blog.linyxus.xyz/posts/state-monad/</loc>
-    <lastmod>2019-09-16T20:47:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.linyxus.xyz/tags/haskell/</loc>
     <lastmod>2019-09-16T20:47:35+08:00</lastmod>
   </url>
   
