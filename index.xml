@@ -6,10 +6,24 @@
     <description>Recent content in Linro :: blog on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 12 Feb 2020 21:17:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 10:35:00 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.linyxus.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The magic of Laziness: from fibonacci to Y combinator (2)</title>
+      <link>https://blog.linyxus.xyz/posts/the-magic-of-laziness-2/</link>
+      <pubDate>Sun, 22 Mar 2020 10:35:00 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/posts/the-magic-of-laziness-2/</guid>
+      <description>这是 The magic of Laziness 的第二篇博客。在本篇文章中，我将展示Laziness的另一个奇妙的应用：创建递归函数。
+创建递归函数自然是一件非常简单的事情，在Python中实现一个计算阶乘的函数，只需寥寥数行：
+def fact(n: int): ret = 1 for i in range(1, n+1): ret *= i return ret 事实上，使用函数式风格的语言来实现它，也非常容易：
+fact n | n &amp;lt;= 0 = 1 | otherwise = n * fact (n-1) 然而，今天我想解决的问题是，如何在一个定义极度简单，甚至无法为自定义的函数绑定“名称”的条件下，实现递归？
+确切来说，我们定义这样的一种简单的玩具语言，其中只有这样的几种简单的元素：
+ 自然数字面值：\(0, 1, 2, \cdots\) 变量：\(x, y, z, a, b, c, \cdots\) 必要的自然数算符：\(x + y, x * 2, 2^{10}, \cdots\) 函数表达式：\(\lambda x. x+1\) 应用函数表达式 (apply function)：\((\lambda x. x+1) 0\) (结果为\(1\))，可以理解为函数的“计算”，等价于将函数参数在函数体中所有的出现替换为对应的值产生的表达式。  更加正确地来说，该语言的文法可以如下定义：</description>
+    </item>
     
     <item>
       <title>The magic of Laziness: from fibonacci to Y combinator (1)</title>

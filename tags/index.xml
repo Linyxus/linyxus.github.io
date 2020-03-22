@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 12 Feb 2020 21:17:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 10:35:00 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.linyxus.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>haskell</title>
       <link>https://blog.linyxus.xyz/tags/haskell/</link>
-      <pubDate>Wed, 12 Feb 2020 21:17:00 +0800</pubDate>
+      <pubDate>Sun, 22 Mar 2020 10:35:00 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/tags/haskell/</guid>
       <description></description>
@@ -23,14 +23,14 @@
     <item>
       <title>tutorial</title>
       <link>https://blog.linyxus.xyz/tags/tutorial/</link>
-      <pubDate>Wed, 12 Feb 2020 21:17:00 +0800</pubDate>
+      <pubDate>Sun, 22 Mar 2020 10:35:00 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>macOS</title>
+      <title>macos</title>
       <link>https://blog.linyxus.xyz/tags/macos/</link>
       <pubDate>Thu, 12 Dec 2019 17:28:00 +0800</pubDate>
       
@@ -129,7 +129,7 @@
     </item>
     
     <item>
-      <title>circuit-analysis</title>
+      <title>circuit analysis</title>
       <link>https://blog.linyxus.xyz/tags/circuit-analysis/</link>
       <pubDate>Mon, 15 Apr 2019 20:34:15 +0800</pubDate>
       
