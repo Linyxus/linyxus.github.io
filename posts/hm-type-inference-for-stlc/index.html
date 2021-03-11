@@ -39,12 +39,12 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hindley-Milner Type Inference for STLC and Its Extensions"/>
-<meta name="twitter:description" content="In this post, we will present the principles of Algorithm W and Algorithm U, which implement the type inference of Hindley-Milner type system.
+<meta name="twitter:description" content="In this post, we will introduce the principles of Algorithm W and Algorithm U, the basis of the type inference in Hindley-Milner type system.
 Firstly, we describe a small calculus, the well-known Simply-Typed Lambda Calculus (STLC).
 Simply-Typed Lambda Calculus&nbsp;¶ t ::= &#39;true&#39; | &#39;false&#39; | numericLiteral | &#39;pred&#39; t | &#39;succ&#39; t | &#39;iszero&#39; t | &#39;if&#39; t &#39;then&#39; t &#39;else&#39; t | x | &#39;\&#39; x [ &#39;:&#39; T ] &#39;."/>
 
 <meta property="og:title" content="Hindley-Milner Type Inference for STLC and Its Extensions" />
-<meta property="og:description" content="In this post, we will present the principles of Algorithm W and Algorithm U, which implement the type inference of Hindley-Milner type system.
+<meta property="og:description" content="In this post, we will introduce the principles of Algorithm W and Algorithm U, the basis of the type inference in Hindley-Milner type system.
 Firstly, we describe a small calculus, the well-known Simply-Typed Lambda Calculus (STLC).
 Simply-Typed Lambda Calculus&nbsp;¶ t ::= &#39;true&#39; | &#39;false&#39; | numericLiteral | &#39;pred&#39; t | &#39;succ&#39; t | &#39;iszero&#39; t | &#39;if&#39; t &#39;then&#39; t &#39;else&#39; t | x | &#39;\&#39; x [ &#39;:&#39; T ] &#39;." />
 <meta property="og:type" content="article" />
@@ -77,7 +77,7 @@ Simply-Typed Lambda Calculus&nbsp;¶ t ::= &#39;true&#39; | &#39;false&#39; | nu
         
 <div class="flex-container">
     <aside role="complementary">
-        Thu Mar 11, 2021 &#183; 2347 words
+        Thu Mar 11, 2021 &#183; 2359 words
         <div class="tag-container">
             
             
@@ -100,8 +100,8 @@ Simply-Typed Lambda Calculus&nbsp;¶ t ::= &#39;true&#39; | &#39;false&#39; | nu
     </aside>
     <hr />
     <article role="article">
-        <p>In this post, we will present the principles of Algorithm W and Algorithm U,
-which implement the type inference of Hindley-Milner type system.</p>
+        <p>In this post, we will introduce the principles of Algorithm W and Algorithm U,
+the basis of the type inference in Hindley-Milner type system.</p>
 <p>Firstly, we describe a small calculus, the well-known Simply-Typed
 Lambda Calculus <em>(STLC)</em>.</p>
 
@@ -181,21 +181,21 @@ X is fresh, C = C1 ∪ C2 ∪ {T1 = T2 -&gt; X}
 ----------------------------------------   (T-App)
         Γ ⊢ t1 t2 : X | C
 </code></pre></div><p>The rules T-True, T-False and T-Zero are simply rules for constants. The rules
-T-Pred, T-Succ and T-IsZero deals with operators on Nat, and they enforce the
-parameter type to be Nat by adding a constraint T = Nat.</p>
+T-Pred, T-Succ and T-IsZero deals with operators on <code>Nat</code>, and they enforce the
+parameter type to be <code>Nat</code> by adding a constraint <code>T = Nat</code>.</p>
 <p>The rule T-If types the If expression, by requiring that the condition is of
-type Bool and the type of the two bodies are the same.</p>
-<p>The rule var reads the type of variable x in the environment.</p>
+type <code>Bool</code> and the type of the two bodies are the same.</p>
+<p>The rule var reads the type of variable <code>x</code> in the environment.</p>
 <p>The rule T-AbsGiven deals with lambda expressions where ascription of the
 parameter is given. The T-AbsInfer rule generate a new type variable for the
 lambda parameter and type the lambda as in T-AbsGiven.</p>
-<p>The T-App types lambda application. It asserts that t1 is of type T2 -&gt; X for
-some fresh type variable X throw constraints.</p>
+<p>The T-App types lambda application. It asserts that <code>t1</code> is of type <code>T2 -&gt; X</code> for
+some fresh type variable <code>X</code>.</p>
 
 <h3 id="algorithm-u-constraint-unification" class="anchor-link"><a href="#algorithm-u-constraint-unification">Algorithm U: Constraint Unification<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>The constraints in our case are simply equations. Algorithm U will unify these
 equations by processing them one by one to produce a substitution. For each
-equation S = T,</p>
+equation <code>S = T</code>,</p>
 <ol>
 <li>
 <p>S equals to T. Do nothing.</p>
@@ -208,7 +208,7 @@ equation S = T,</p>
 type.</p>
 </li>
 <li>
-<p>Otherwise, add a substitution S -&gt; T.</p>
+<p>Otherwise, add a substitution <code>S -&gt; T</code>.</p>
 </li>
 </ol>
 </li>
@@ -217,7 +217,7 @@ type.</p>
 </li>
 <li>
 <p>If both S and T are type constructors, which means they are both function
-types in our simple calculus, i.e. S1 -&gt; S2 = T1 -&gt; T2. We unify S1 and T1,
+types in our simple calculus, i.e. <code>S1 -&gt; S2 = T1 -&gt; T2</code>. We unify S1 and T1,
 S2 and T2 recursively.</p>
 </li>
 <li>
@@ -339,7 +339,7 @@ we type <code>even</code> and <code>odd</code>, we can get the following judgeme
 </ul>
 <p>Therefore, the <code>letrec</code> expression can be typed as <code>Nat -&gt; Bool</code>.</p>
 <p>Note that, to show that <code>letrec</code> and the newly introduced typing rule is just
-some &lsquo;syntax sugars&rsquo;, we can express what have done only with <code>fix</code> with tuple types.</p>
+some &lsquo;syntax sugars&rsquo;, we can express what have done only with <code>fix</code> and tuple types.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#66d9ef">let</span> metaEvenOdd <span style="color:#f92672">=</span> <span style="color:#a6e22e">\</span>(even, odd) <span style="color:#f92672">-&gt;</span>
     ( <span style="color:#a6e22e">\</span>n <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">if</span> iszero n <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">True</span> <span style="color:#66d9ef">else</span> not (odd (succ n))
     , <span style="color:#a6e22e">\</span>n <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">if</span> iszero n <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">False</span> <span style="color:#66d9ef">else</span> not (even (succ n))
@@ -402,7 +402,7 @@ subtyping relations, we can generalize them just as if they are not constrained,
 given that we record the required subtyping constraints into the type scheme. In
 this way, the <code>f</code> will be typed as
 <code>forall X &lt;: { x : Nat, y : Nat } -&gt; Nat</code>,
-which will handle outputs like <code>{ x = 1, y = 1, z = true }</code>.
+This change will enable the function to handle inputs like <code>{ x = 1, y = 1, z = true }</code>, which will fails the type-check without the generalization.
 Such technique can be named as <em>let subtyping polymorphism</em>.</p>
 
 <h2 id="references" class="anchor-link"><a href="#references">References<span class="pilcrow">&nbsp;¶</span></a></h2>
