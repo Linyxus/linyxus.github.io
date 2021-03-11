@@ -6,20 +6,18 @@
     <description>Recent content in circuit analysis on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 15 Apr 2019 20:34:15 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.linyxus.xyz/tags/circuit-analysis/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 15 Apr 2019 20:34:15 +0800</lastBuildDate><atom:link href="https://blog.linyxus.xyz/tags/circuit-analysis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>电路分析笔记 :: 动态电路分析</title>
       <link>https://blog.linyxus.xyz/posts/circuit-analysis-notes-3/</link>
       <pubDate>Mon, 15 Apr 2019 20:34:15 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/circuit-analysis-notes-3/</guid>
-      <description>基本元件 电容 动态特性 \begin{equation*} i = \frac {dq} {dt} = C \frac {dU} {dt} \end{equation*}   记忆特性 \begin{equation*} u_c = \frac {1} {C} \int_{-\infty}^{t_0} i_c dt \end{equation*}  也即电压反映了电流的累积效果。
- 储能特性 \begin{equation*} W = \frac{1}{2} C U^2 \end{equation*}    电感 动态特性 \begin{equation*} u_L = \frac {d \phi} {dt} = L \frac {di}{dt} \end{equation*}   记忆特性 \begin{equation*} i_L = \frac{1}{L} \int_{\infty}^{t_0} u_L dt \end{equation*}  也即电流反映了电压的累积效果。
- 储能特性 \begin{equation*} W = \frac{1}{2} Li^2 \end{equation*}    电容、电感的串并联 电容等同于电导。</description>
+      <description>基本元件 电容 动态特性 i = (dq)/(dt) = C(dU)/(dt)   记忆特性 uc = (1)/(C)t0⌠⌡− ∞icdt  也即电压反映了电流的累积效果。
+ 储能特性 W = (1)/(2)CU2    电感 动态特性 uL = (dφ)/(dt) = L(di)/(dt)   记忆特性 iL = (1)/(L)t0⌠⌡∞uLdt  也即电流反映了电压的累积效果。
+ 储能特性 W = (1)/(2)Li2    电容、电感的串并联 电容等同于电导。
+电感等同于电阻。
+  动态响应分析 一阶零输入响应 y(t) = y(0 + )e − (1)/(τ)  一阶RC电路:τ = RC  一阶RL电路:τ = (L)/(R)    R 也即电容电感两端的等效输入电阻。</description>
     </item>
     
     <item>
@@ -30,14 +28,14 @@
       <guid>https://blog.linyxus.xyz/posts/circuit-analysis-notes-2/</guid>
       <description>变量分析 基尔霍夫定律 KCL 基尔霍夫电流定律
 对任意电路的任意节点，在任意时刻流入该节点的电流代数和为0。
-\begin{equation*} \sum_{k=1}^{b} i_k(t) = 0 \end{equation*}  若规定流入为正，流出即为负。
+b⎲⎳k = 1ik(t) = 0  若规定流入为正，流出即为负。
 推广 广义节点（封闭面）同样成立。
   KVL 对任意集总电路的任意回路，在任意时刻，沿该回路的所有支路的电压降 代数和为0。
-\begin{equation*} \sum_{k=1}^{b} u_k(t) = 0 \end{equation*}  可以从电路中任意一点的电势为一确定值理解。
-  2b法 假设电阻有 \(n\) 个节点， \(b\) 条支路。根据拓扑约束列出 \((n-1)\) 个独立电流方程， \((b-n+1)\) 个独立电压方程。 根据元件约束列出 \((b)\) 个VCR方程。
-共计 \(2b\) 个方程，求解 \(b\) 条支路的 \(2b\) 个未知量。
+b⎲⎳k = 1uk(t) = 0  可以从电路中任意一点的电势为一确定值理解。
+  2b法 假设电阻有 n 个节点， b 条支路。根据拓扑约束列出 (n − 1) 个独立电流方程， (b − n + 1) 个独立电压方程。 根据元件约束列出 (b) 个VCR方程。
+共计 2b 个方程，求解 b 条支路的 2b 个未知量。
  支路电流法 也即代入VCR元件约束，将电压量代换为电流量。
- 节点电压法 形式 \begin{equation*} \begin{cases} G_{11} u_1 + G_{12} u_2 + \cdots + G_{1n} u_n = i_{s11} \\ G_{21} u_1 + G_{22} u_2 + \cdots + G_{2n} u_n = i_{s22} \\ \cdots \\ G_{n1} u_1 + G_{n2} u_2 + \cdots + G_{nn} u_n = i_{snn} \end{cases} \end{equation*}  其中：</description>
+ 节点电压法 形式 ⎧⎪⎪⎨⎪⎪⎩G11u1 + G12u2 + ⋯ + G1nun = is11     G21u1 + G22u2 + ⋯ + G2nun = is22     ⋯     Gn1u1 + Gn2u2 + ⋯ + Gnnun = isnn     其中：</description>
     </item>
     
     <item>
@@ -48,12 +46,13 @@
       <guid>https://blog.linyxus.xyz/posts/circuit-analysis-notes-1/</guid>
       <description>电路模型基本概念 电路模型:从实际电路中抽象出的模型  激励:输入电路的信号  响应:经过电路加工处理后得到的信号  集总参数元件:当实际电路的尺寸远小于其使用时最高工作频率所对应的波长时而抽象出的理想元件  集总电路模型:又集总参数元件组成的电路  分布参数电路:当实际电路的尺寸大于其最高工作频率所对应的波长或两者属于同一数量级时     电路模型基本变量 电流、电压、功率。
 电压与电流的参考方向 由于电路分析中，电压与电流的实际方向很难确定，故可以假设这两个变量的方向，以电流为例。
-假设 \(I\) 从a流向b，若实际电流方向与参考方向相同
-\begin{equation*} I &amp;gt; 0 \end{equation*}  否则
-\begin{equation*} I &amp;lt; 0 \end{equation*}   电压与电流的关联参考方向 若在假定的关联参考方向下，电流 \(I\) 从高电势流向低电势，则是关联参考方向。
+假设 I 从a流向b，若实际电流方向与参考方向相同
+I &amp;gt; 0  否则
+I &amp;lt; 0   电压与电流的关联参考方向 若在假定的关联参考方向下，电流 I 从高电势流向低电势，则是关联参考方向。
 否则为非关联参考方向。
- 电压 \begin{equation*} p = \frac {dW} {dt} = \frac {dW}{dq} \cdot \frac {dq}{dt} = u \cdot i \end{equation*}  若在非关联参考方向下
-\begin{equation*} p = - u \cdot i \end{equation*}  p &amp;gt; 0:吸收功率  p &amp;lt; 0:供出功率      电路模型基本原件 电阻 如果一个元件的端电压u和通过的电流i是关联参考方向，其伏安关系是通过原点的曲线，这个元件就是电阻元件。</description>
+ 电压 p = (dW)/(dt) = (dW)/(dq)⋅(dq)/(dt) = u⋅i  若在非关联参考方向下
+p = − u⋅i  p &amp;gt; 0:吸收功率  p &amp;lt; 0:供出功率      电路模型基本原件 电阻 如果一个元件的端电压u和通过的电流i是关联参考方向，其伏安关系是通过原点的曲线，这个元件就是电阻元件。
+u, i 为关联参考方向时</description>
     </item>
     
   </channel>

@@ -6,11 +6,7 @@
     <description>Recent content in machine learning on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 06 Jun 2019 12:09:41 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.linyxus.xyz/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 06 Jun 2019 12:09:41 +0800</lastBuildDate><atom:link href="https://blog.linyxus.xyz/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Graph Networks 学习笔记 :: [GAT, GraphSAGE, H-GCN]</title>
       <link>https://blog.linyxus.xyz/posts/gat-graphsage-hgcn/</link>
@@ -31,7 +27,7 @@ Graph Attention Networks Inductive Representation Learning on Large Graphs Hiera
       <guid>https://blog.linyxus.xyz/posts/mental-health-nn-training/</guid>
       <description>思路 使用前20个问题预测剩下11个问题的答案。将经常、有时、很少、从不规范化为[1, 0.33, -0.33, -1]。   训练笔记 Small ReLU 20 -&amp;gt; 18 -&amp;gt; 11
 Result:
-acc \(65.22 \%\) test_acc \(45.45\%\)   Mid Relu 20 -&amp;gt; 30 -&amp;gt; 11
+acc 65.22% test_acc 45.45%   Mid Relu 20 -&amp;gt; 30 -&amp;gt; 11
 Result:
 acc: 0.7521 test_acc: 0.4727 test_acc_l: 0.6636   Tiny Relu 20 -&amp;gt; 10 -&amp;gt; 11
 Result:

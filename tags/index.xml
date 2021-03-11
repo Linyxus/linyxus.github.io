@@ -6,11 +6,7 @@
     <description>Recent content in Tags on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 11 Mar 2021 16:01:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.linyxus.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 11 Mar 2021 16:01:00 +0800</lastBuildDate><atom:link href="https://blog.linyxus.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>test</title>
       <link>https://blog.linyxus.xyz/tags/test/</link>
@@ -75,15 +71,6 @@
     </item>
     
     <item>
-      <title>note</title>
-      <link>https://blog.linyxus.xyz/tags/note/</link>
-      <pubDate>Thu, 24 Oct 2019 12:00:42 +0800</pubDate>
-      
-      <guid>https://blog.linyxus.xyz/tags/note/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>notes</title>
       <link>https://blog.linyxus.xyz/tags/notes/</link>
       <pubDate>Thu, 24 Oct 2019 12:00:42 +0800</pubDate>
@@ -107,6 +94,15 @@
       <pubDate>Thu, 06 Jun 2019 12:09:41 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>note</title>
+      <link>https://blog.linyxus.xyz/tags/note/</link>
+      <pubDate>Fri, 10 May 2019 13:12:24 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/tags/note/</guid>
       <description></description>
     </item>
     

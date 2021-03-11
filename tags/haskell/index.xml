@@ -6,11 +6,7 @@
     <description>Recent content in haskell on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Mar 2020 10:35:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.linyxus.xyz/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 22 Mar 2020 10:35:00 +0800</lastBuildDate><atom:link href="https://blog.linyxus.xyz/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The magic of Laziness: from fibonacci to Y combinator (2)</title>
       <link>https://blog.linyxus.xyz/posts/the-magic-of-laziness-2/</link>
@@ -32,7 +28,7 @@ fact n | n &amp;lt;= 0 = 1 | otherwise = n * fact (n-1) 然而，今天我想解
       
       <guid>https://blog.linyxus.xyz/posts/the-magic-of-laziness/</guid>
       <description>在这篇博客中，我将简单地介绍许多函数式编程语言中一个重要的，也是独特的特性：Laziness。
-A first taste of Laziness 所以，什么是Laziness呢？Laziness有一个更加正式的名称：lazy evaluation，也即 惰 性求值 。简单来说，惰性求值意味着，表达式的值不会被立即求出，只有当需要的时候才 会对其进行求值。
+A first taste of Laziness&amp;nbsp;¶ 所以，什么是Laziness呢？Laziness有一个更加正式的名称：lazy evaluation，也即 惰 性求值 。简单来说，惰性求值意味着，表达式的值不会被立即求出，只有当需要的时候才 会对其进行求值。
 比如，下面的代码在运行时并不会报错，而可以安全地求出列表的长度。
 length [error &amp;#34;Hey!&amp;#34;, error &amp;#34;Here is an error.&amp;#34;] -- 2 原因是，在 length 的实现中，并不关心列表中每个元素的值是什么。因而他们并不会被 求值。
 length :: [a] -&amp;gt; Int length [] = 0 length (_:xs) = 1 + length xs 这是惰性求值这一特性最为直接的展示。
@@ -48,7 +44,7 @@ Weak Head Normal Formd的定义则要复杂一些。简单来说，所有函数�
       <pubDate>Mon, 16 Sep 2019 20:47:35 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/state-monad/</guid>
-      <description>什么是State Monad？ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
+      <description> 什么是State Monad？&amp;nbsp;¶ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
 一个很经典的例子是在Haskell中获取随机数，如果不使用State Monad，就可能需要写出这样的代码：
 getThreeRandInt :: (Int, Int, Int) getThreeRandInt = (x1, x2, x3) where gen = mkStdGen (x1, gen&amp;#39;) = random gen (x2, gen&amp;#39;&amp;#39;) = random gen&amp;#39; (x3, _) = random gen&amp;#39;&amp;#39; 这样的代码很丑。
 但借助State Monad，我们可以写出这样的代码。

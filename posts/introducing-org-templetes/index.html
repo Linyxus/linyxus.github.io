@@ -11,21 +11,77 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
+<title>
+    org-mode规划笔记 - Linro
+</title>
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
-<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
-<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
-<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
-<meta name="og:type" content="website">
-<meta name="og:url" content="https://blog.linyxus.xyz">
-<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
-<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
+
+
+
+
+  
+
+
+
+
+
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="org-mode规划笔记"/>
+<meta name="twitter:description" content="org-mode可能是Emacs最有名的一部分。作为一个瑞士军刀般的笔记系统，org-mode真的可以渗入你生活的每个角落。
+之前我也在学校社团里做过一个有关org-mode的讲座。关于org-mode，记忆深刻的是某知乎用户的一句话：
+ 我的生活就是在org-mode掌控之下的好吗
+ 那么，直接给出我使用org-mode的一些规划和设计吧。
+.org&nbsp;¶ gtd.org&nbsp;¶ 在这个文件里放入日常事务，要完成的事情。
+比如：打印四级准考证、整理行李、去开会、做推送等等。
+idea.org&nbsp;¶ 冒出来的想法，但不一定要实现。如果要实现，归档到gtd.org中完成。
+比如：写一篇博客介绍我的org-mode使用方法、用Clojure写一个小游戏等等。
+learning.org&nbsp;¶ 学习规划。
+比如学习Python，学习Haskell，学习各种算法等等。
+book.org&nbsp;¶ 书籍归档。
+project-specific org file&nbsp;¶ 各个project专用的.org文件，放在project根目录内。
+Capture templates&nbsp;¶ journal&nbsp;¶ 小总结，小感想。
+总结今天做了什么。（对抗焦虑症）
+todo&nbsp;¶ 要做的事情。
+idea&nbsp;¶ 突然冒出来的想法。
+Source code&nbsp;¶ 列一下org template配置的elisp代码：
+(setq org-capture-templates &#39;((&#34;j&#34; &#34;journal&#34; entry (file&#43;datetree &#34;~/org/journal.org&#34;) &#34;* %?\n%U\n&#34;) (&#34;t&#34; &#34;todo&#34; entry (file&#43;headline &#34;~/org/gtd.org&#34; &#34;Inbox&#34;) &#34;* TODO %?\n%U\n&#34;) (&#34;i&#34; &#34;idea&#34; entry (file&#43;headline &#34;~/org/idea.org&#34; &#34;Inbox&#34;) &#34;* TODO %?\n&#34;))) "/>
+
+<meta property="og:title" content="org-mode规划笔记" />
+<meta property="og:description" content="org-mode可能是Emacs最有名的一部分。作为一个瑞士军刀般的笔记系统，org-mode真的可以渗入你生活的每个角落。
+之前我也在学校社团里做过一个有关org-mode的讲座。关于org-mode，记忆深刻的是某知乎用户的一句话：
+ 我的生活就是在org-mode掌控之下的好吗
+ 那么，直接给出我使用org-mode的一些规划和设计吧。
+.org&nbsp;¶ gtd.org&nbsp;¶ 在这个文件里放入日常事务，要完成的事情。
+比如：打印四级准考证、整理行李、去开会、做推送等等。
+idea.org&nbsp;¶ 冒出来的想法，但不一定要实现。如果要实现，归档到gtd.org中完成。
+比如：写一篇博客介绍我的org-mode使用方法、用Clojure写一个小游戏等等。
+learning.org&nbsp;¶ 学习规划。
+比如学习Python，学习Haskell，学习各种算法等等。
+book.org&nbsp;¶ 书籍归档。
+project-specific org file&nbsp;¶ 各个project专用的.org文件，放在project根目录内。
+Capture templates&nbsp;¶ journal&nbsp;¶ 小总结，小感想。
+总结今天做了什么。（对抗焦虑症）
+todo&nbsp;¶ 要做的事情。
+idea&nbsp;¶ 突然冒出来的想法。
+Source code&nbsp;¶ 列一下org template配置的elisp代码：
+(setq org-capture-templates &#39;((&#34;j&#34; &#34;journal&#34; entry (file&#43;datetree &#34;~/org/journal.org&#34;) &#34;* %?\n%U\n&#34;) (&#34;t&#34; &#34;todo&#34; entry (file&#43;headline &#34;~/org/gtd.org&#34; &#34;Inbox&#34;) &#34;* TODO %?\n%U\n&#34;) (&#34;i&#34; &#34;idea&#34; entry (file&#43;headline &#34;~/org/idea.org&#34; &#34;Inbox&#34;) &#34;* TODO %?\n&#34;))) " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.linyxus.xyz/posts/introducing-org-templetes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-02-13T12:05:39&#43;08:00" />
+<meta property="article:modified_time" content="2019-02-13T12:05:39&#43;08:00" />
+
 
 
     
@@ -41,59 +97,79 @@
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="section" id="title">org-mode规划笔记</div>
-
-        
-<div class="section" id="content">
-    Wed Feb 13, 2019 &#183; 60 words
     
-    <div class="tag-container">
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/emacs">
-                emacs
-            </a>
-        </span>
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/note">
-                note
-            </a>
-        </span>
-        
-    </div>
     
-    <hr/>
-    <p>org-mode可能是Emacs最有名的一部分。作为一个瑞士军刀般的笔记系统，org-mode真的可以渗入你生活的每个角落。</p>
+    <header class="wrap flex-container">
+        <h1>org-mode规划笔记</h1>
+    </header>
+    
+    <main class="wrap">
+        
+<div class="flex-container">
+    <aside role="complementary">
+        Wed Feb 13, 2019 &#183; 60 words
+        <div class="tag-container">
+            
+            
+            <span class="tag">
+                <a href="/tags/emacs/">
+                    emacs
+                </a>
+            </span>
+            
+            
+            
+            <span class="tag">
+                <a href="/tags/note/">
+                    note
+                </a>
+            </span>
+            
+            
+        </div>
+    </aside>
+    <hr />
+    <article role="article">
+        <p>org-mode可能是Emacs最有名的一部分。作为一个瑞士军刀般的笔记系统，org-mode真的可以渗入你生活的每个角落。</p>
 <p>之前我也在学校社团里做过一个有关org-mode的讲座。关于org-mode，记忆深刻的是某知乎用户的一句话：</p>
 <blockquote>
 <p>我的生活就是在org-mode掌控之下的好吗</p>
 </blockquote>
 <p>那么，直接给出我使用org-mode的一些规划和设计吧。</p>
-<h2 id="org">.org</h2>
-<h3 id="gtdorg">gtd.org</h3>
+
+<h2 id="org" class="anchor-link"><a href="#org">.org<span class="pilcrow">&nbsp;¶</span></a></h2>
+
+<h3 id="gtdorg" class="anchor-link"><a href="#gtdorg">gtd.org<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>在这个文件里放入日常事务，要完成的事情。</p>
 <p>比如：打印四级准考证、整理行李、去开会、做推送等等。</p>
-<h3 id="ideaorg">idea.org</h3>
+
+<h3 id="ideaorg" class="anchor-link"><a href="#ideaorg">idea.org<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>冒出来的想法，但不一定要实现。如果要实现，归档到gtd.org中完成。</p>
 <p>比如：写一篇博客介绍我的org-mode使用方法、用Clojure写一个小游戏等等。</p>
-<h3 id="learningorg">learning.org</h3>
+
+<h3 id="learningorg" class="anchor-link"><a href="#learningorg">learning.org<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>学习规划。</p>
 <p>比如学习Python，学习Haskell，学习各种算法等等。</p>
-<h3 id="bookorg">book.org</h3>
+
+<h3 id="bookorg" class="anchor-link"><a href="#bookorg">book.org<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>书籍归档。</p>
-<h3 id="project-specific-org-file">project-specific org file</h3>
+
+<h3 id="project-specific-org-file" class="anchor-link"><a href="#project-specific-org-file">project-specific org file<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>各个project专用的.org文件，放在project根目录内。</p>
-<h2 id="capture-templates">Capture templates</h2>
-<h3 id="journal">journal</h3>
+
+<h2 id="capture-templates" class="anchor-link"><a href="#capture-templates">Capture templates<span class="pilcrow">&nbsp;¶</span></a></h2>
+
+<h3 id="journal" class="anchor-link"><a href="#journal">journal<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>小总结，小感想。</p>
 <p>总结今天做了什么。（对抗焦虑症）</p>
-<h3 id="todo">todo</h3>
+
+<h3 id="todo" class="anchor-link"><a href="#todo">todo<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>要做的事情。</p>
-<h3 id="idea">idea</h3>
+
+<h3 id="idea" class="anchor-link"><a href="#idea">idea<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>突然冒出来的想法。</p>
-<h3 id="source-code">Source code</h3>
+
+<h3 id="source-code" class="anchor-link"><a href="#source-code">Source code<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>列一下org template配置的elisp代码：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(<span style="color:#66d9ef">setq</span> org-capture-templates
       <span style="color:#f92672">&#39;</span>((<span style="color:#e6db74">&#34;j&#34;</span> <span style="color:#e6db74">&#34;journal&#34;</span> entry (file+datetree <span style="color:#e6db74">&#34;~/org/journal.org&#34;</span>)
@@ -103,20 +179,12 @@
         (<span style="color:#e6db74">&#34;i&#34;</span> <span style="color:#e6db74">&#34;idea&#34;</span> entry (file+headline <span style="color:#e6db74">&#34;~/org/idea.org&#34;</span> <span style="color:#e6db74">&#34;Inbox&#34;</span>)
          <span style="color:#e6db74">&#34;* TODO %?\n&#34;</span>)))
 </code></pre></div>
+    </article>
 </div>
-
-<script src="https://utteranc.es/client.js"
-        repo="linyxus/linro-hugo"
-        issue-term="pathname"
-        theme="dark-blue"
-        crossorigin="anonymous"
-        async>
-</script>
-
 
 
         
-<div class="section bottom-menu">
+<nav role="navigation" class="flex-container bottom-menu">
     
 <hr />
 <p>
@@ -131,34 +199,32 @@
 
     
         
-            <a href="/posts">
-                writings
-            </a>
+            <a href="/posts">writings</a>
         
     
     
         
             &#183; 
-            <a href="/me">
-                me
-            </a>
+            <a href="/me">me</a>
         
             &#183; 
-            <a href="/about">
-                about
-            </a>
+            <a href="/about">about</a>
         
     
-    &#183; 
-    <a href="https://blog.linyxus.xyz">
-        main
-    </a>
+    
+    
+        &#183; 
+        <a href="/">
+            main
+        </a>
+    
 
 </p>
-</div>
+</nav>
 
-
-        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </main>
+    
+    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -174,8 +240,9 @@
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</div>
-    </div>
+</footer>
+    
+    
 </body>
 
 </html>

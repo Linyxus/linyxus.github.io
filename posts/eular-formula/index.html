@@ -11,21 +11,67 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
+<title>
+    「算法笔记」欧拉函数、欧拉定理与欧拉降幂公式 - Linro
+</title>
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
-<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
-<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
-<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
-<meta name="og:type" content="website">
-<meta name="og:url" content="https://blog.linyxus.xyz">
-<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
-<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
+
+
+
+
+  
+
+
+
+
+
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="「算法笔记」欧拉函数、欧拉定理与欧拉降幂公式"/>
+<meta name="twitter:description" content="一些算法题里要求一个数的幂次，一般来说可以大整数&#43;快速幂解决。但有时候数据真的很大，纵是快速幂也奈何不了这道题的。比如某道题要求$2^n$，$n \leq 10^{100000} $，十有八九会TLE。
+大多数情况下，这么大的数据都会要求在某个数（通常是$10^9&#43;7$）的模意义下输出答案。事实上，在这样的条件下，题目的用意是使用欧拉降幂公式先降低指数，然后再快速幂求解。
+欧拉降幂公式&nbsp;¶ 定理&nbsp;¶ $$ a^p \equiv a^{p \bmod \phi(m) &#43; \phi(m)} \pmod m $$
+由于应用为主，证明从略。但显见上式等价于 $$ a^{2\phi(m)} \equiv a^{\phi(m)} \pmod m $$ 其中，$\phi(m)$为欧拉函数。
+应用&nbsp;¶ 所以，如果题设要求我们求出$a^p$在模$m$意义下的值，当$p$很大的时候，我们只需先求出$\phi(m)$，然后用快速幂求出$a^{p \bmod \phi(m)}$即可。
+下面，假定$m=10^9&#43;7$。
+那么，下面的任务就是求出$\phi(m)$。
+欧拉函数&nbsp;¶ 对$\forall n \in N^*$，欧拉函数$\phi(n)$的值为小于$n$的正整数中与$n$互质的数的数目。
+而欧拉函数存在解析式： $$ \phi(n) = n \prod_{p}(1 - \frac 1 p) $$ 其中，$p$为$n$的质因子。
+证明从略，会用就行。
+但还是简单说一说，显然有： $$ \phi(p^k) = p^k - p ^ {k-1} $$ 其中，$p$为素数。因为$p^k$与所有除$p$的倍数之外的数都互质。故只需从总数中减去$p$的倍数的个数即可。
+而由中国剩余定理又可证出： $$ \phi(ab) = \phi(a)\phi(b) $$ 对$n$进行素因子分解即可。
+所以，可以这样实现欧拉函数："/>
+
+<meta property="og:title" content="「算法笔记」欧拉函数、欧拉定理与欧拉降幂公式" />
+<meta property="og:description" content="一些算法题里要求一个数的幂次，一般来说可以大整数&#43;快速幂解决。但有时候数据真的很大，纵是快速幂也奈何不了这道题的。比如某道题要求$2^n$，$n \leq 10^{100000} $，十有八九会TLE。
+大多数情况下，这么大的数据都会要求在某个数（通常是$10^9&#43;7$）的模意义下输出答案。事实上，在这样的条件下，题目的用意是使用欧拉降幂公式先降低指数，然后再快速幂求解。
+欧拉降幂公式&nbsp;¶ 定理&nbsp;¶ $$ a^p \equiv a^{p \bmod \phi(m) &#43; \phi(m)} \pmod m $$
+由于应用为主，证明从略。但显见上式等价于 $$ a^{2\phi(m)} \equiv a^{\phi(m)} \pmod m $$ 其中，$\phi(m)$为欧拉函数。
+应用&nbsp;¶ 所以，如果题设要求我们求出$a^p$在模$m$意义下的值，当$p$很大的时候，我们只需先求出$\phi(m)$，然后用快速幂求出$a^{p \bmod \phi(m)}$即可。
+下面，假定$m=10^9&#43;7$。
+那么，下面的任务就是求出$\phi(m)$。
+欧拉函数&nbsp;¶ 对$\forall n \in N^*$，欧拉函数$\phi(n)$的值为小于$n$的正整数中与$n$互质的数的数目。
+而欧拉函数存在解析式： $$ \phi(n) = n \prod_{p}(1 - \frac 1 p) $$ 其中，$p$为$n$的质因子。
+证明从略，会用就行。
+但还是简单说一说，显然有： $$ \phi(p^k) = p^k - p ^ {k-1} $$ 其中，$p$为素数。因为$p^k$与所有除$p$的倍数之外的数都互质。故只需从总数中减去$p$的倍数的个数即可。
+而由中国剩余定理又可证出： $$ \phi(ab) = \phi(a)\phi(b) $$ 对$n$进行素因子分解即可。
+所以，可以这样实现欧拉函数：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.linyxus.xyz/posts/eular-formula/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-01-30T19:29:20&#43;08:00" />
+<meta property="article:modified_time" content="2019-01-30T19:29:20&#43;08:00" />
+
 
 
     
@@ -41,34 +87,45 @@
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="section" id="title">「算法笔记」欧拉函数、欧拉定理与欧拉降幂公式</div>
-
-        
-<div class="section" id="content">
-    Wed Jan 30, 2019 &#183; 191 words
     
-    <div class="tag-container">
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/algorithm">
-                algorithm
-            </a>
-        </span>
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/note">
-                note
-            </a>
-        </span>
-        
-    </div>
     
-    <hr/>
-    <p>一些算法题里要求一个数的幂次，一般来说可以大整数+快速幂解决。但有时候数据真的很大，纵是快速幂也奈何不了这道题的。比如某道题要求$2^n$，$n \leq 10^{100000} $，十有八九会TLE。</p>
+    <header class="wrap flex-container">
+        <h1>「算法笔记」欧拉函数、欧拉定理与欧拉降幂公式</h1>
+    </header>
+    
+    <main class="wrap">
+        
+<div class="flex-container">
+    <aside role="complementary">
+        Wed Jan 30, 2019 &#183; 191 words
+        <div class="tag-container">
+            
+            
+            <span class="tag">
+                <a href="/tags/algorithm/">
+                    algorithm
+                </a>
+            </span>
+            
+            
+            
+            <span class="tag">
+                <a href="/tags/note/">
+                    note
+                </a>
+            </span>
+            
+            
+        </div>
+    </aside>
+    <hr />
+    <article role="article">
+        <p>一些算法题里要求一个数的幂次，一般来说可以大整数+快速幂解决。但有时候数据真的很大，纵是快速幂也奈何不了这道题的。比如某道题要求$2^n$，$n \leq 10^{100000} $，十有八九会TLE。</p>
 <p>大多数情况下，这么大的数据都会要求在某个数（通常是$10^9+7$）的模意义下输出答案。事实上，在这样的条件下，题目的用意是使用欧拉降幂公式先降低指数，然后再快速幂求解。</p>
-<h2 id="欧拉降幂公式">欧拉降幂公式</h2>
-<h3 id="定理">定理</h3>
+
+<h2 id="欧拉降幂公式" class="anchor-link"><a href="#%e6%ac%a7%e6%8b%89%e9%99%8d%e5%b9%82%e5%85%ac%e5%bc%8f">欧拉降幂公式<span class="pilcrow">&nbsp;¶</span></a></h2>
+
+<h3 id="定理" class="anchor-link"><a href="#%e5%ae%9a%e7%90%86">定理<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>$$
 a^p \equiv a^{p \bmod \phi(m) + \phi(m)} \pmod m
 $$</p>
@@ -77,11 +134,13 @@ $$
 a^{2\phi(m)} \equiv a^{\phi(m)} \pmod m
 $$
 其中，$\phi(m)$为欧拉函数。</p>
-<h3 id="应用">应用</h3>
+
+<h3 id="应用" class="anchor-link"><a href="#%e5%ba%94%e7%94%a8">应用<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>所以，如果题设要求我们求出$a^p$在模$m$意义下的值，当$p$很大的时候，我们只需先求出$\phi(m)$，然后用快速幂求出$a^{p \bmod \phi(m)}$即可。</p>
 <p>下面，假定$m=10^9+7$。</p>
 <p>那么，下面的任务就是求出$\phi(m)$。</p>
-<h3 id="欧拉函数">欧拉函数</h3>
+
+<h3 id="欧拉函数" class="anchor-link"><a href="#%e6%ac%a7%e6%8b%89%e5%87%bd%e6%95%b0">欧拉函数<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>对$\forall n \in N^*$，欧拉函数$\phi(n)$的值为小于$n$的正整数中与$n$互质的数的数目。</p>
 <p>而欧拉函数存在解析式：
 $$
@@ -118,7 +177,8 @@ $$
 <p>但是，<strong>这样真的有必要吗？</strong></p>
 <p>如果你尝试了一下，会发现在上述假设条件下（也即$m=10^9+7$）时，$a^{\phi(m)} \bmod m = 1$。</p>
 <p>而事实上，我们有<strong>欧拉定理</strong>。</p>
-<h3 id="欧拉定理">欧拉定理</h3>
+
+<h3 id="欧拉定理" class="anchor-link"><a href="#%e6%ac%a7%e6%8b%89%e5%ae%9a%e7%90%86">欧拉定理<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>若$a, p \in N^*$，$(a, p) = 1$，则有：
 $$
 a^{\phi(p)} \equiv 1 \pmod p
@@ -132,20 +192,12 @@ $$
 故事实上，只需用快速幂求出$a^{p \bmod \phi(m)}$在模$m$意义下的值即可。</p>
 <p>顺带一提，$\phi(10^9+7) = 10^9+6​$。</p>
 
+    </article>
 </div>
-
-<script src="https://utteranc.es/client.js"
-        repo="linyxus/linro-hugo"
-        issue-term="pathname"
-        theme="dark-blue"
-        crossorigin="anonymous"
-        async>
-</script>
-
 
 
         
-<div class="section bottom-menu">
+<nav role="navigation" class="flex-container bottom-menu">
     
 <hr />
 <p>
@@ -160,34 +212,32 @@ $$
 
     
         
-            <a href="/posts">
-                writings
-            </a>
+            <a href="/posts">writings</a>
         
     
     
         
             &#183; 
-            <a href="/me">
-                me
-            </a>
+            <a href="/me">me</a>
         
             &#183; 
-            <a href="/about">
-                about
-            </a>
+            <a href="/about">about</a>
         
     
-    &#183; 
-    <a href="https://blog.linyxus.xyz">
-        main
-    </a>
+    
+    
+        &#183; 
+        <a href="/">
+            main
+        </a>
+    
 
 </p>
-</div>
+</nav>
 
-
-        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </main>
+    
+    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -203,8 +253,9 @@ $$
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</div>
-    </div>
+</footer>
+    
+    
 </body>
 
 </html>

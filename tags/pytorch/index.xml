@@ -6,11 +6,7 @@
     <description>Recent content in pytorch on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 04 Apr 2019 22:59:05 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.linyxus.xyz/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 04 Apr 2019 22:59:05 +0800</lastBuildDate><atom:link href="https://blog.linyxus.xyz/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Note on Pytorch 60-min Blitz</title>
       <link>https://blog.linyxus.xyz/posts/note-on-pytorch-60min-blitz/</link>

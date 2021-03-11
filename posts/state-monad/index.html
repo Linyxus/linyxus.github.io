@@ -11,21 +11,51 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
+<title>
+    A Tasteful Tutorial on State Monads - Linro
+</title>
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
-<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
-<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
-<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
-<meta name="og:type" content="website">
-<meta name="og:url" content="https://blog.linyxus.xyz">
-<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
-<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
+
+
+
+
+  
+
+
+
+
+
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A Tasteful Tutorial on State Monads"/>
+<meta name="twitter:description" content=" 什么是State Monad？&nbsp;¶ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
+一个很经典的例子是在Haskell中获取随机数，如果不使用State Monad，就可能需要写出这样的代码：
+getThreeRandInt :: (Int, Int, Int) getThreeRandInt = (x1, x2, x3) where gen = mkStdGen (x1, gen&#39;) = random gen (x2, gen&#39;&#39;) = random gen&#39; (x3, _) = random gen&#39;&#39; 这样的代码很丑。
+但借助State Monad，我们可以写出这样的代码。
+getThreeRandInt :: (Int, Int, Int) getThreeRandInt = evalState $ liftA3 (,,) getRandom getRandom getRandom where getRandom = state random "/>
+
+<meta property="og:title" content="A Tasteful Tutorial on State Monads" />
+<meta property="og:description" content=" 什么是State Monad？&nbsp;¶ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
+一个很经典的例子是在Haskell中获取随机数，如果不使用State Monad，就可能需要写出这样的代码：
+getThreeRandInt :: (Int, Int, Int) getThreeRandInt = (x1, x2, x3) where gen = mkStdGen (x1, gen&#39;) = random gen (x2, gen&#39;&#39;) = random gen&#39; (x3, _) = random gen&#39;&#39; 这样的代码很丑。
+但借助State Monad，我们可以写出这样的代码。
+getThreeRandInt :: (Int, Int, Int) getThreeRandInt = evalState $ liftA3 (,,) getRandom getRandom getRandom where getRandom = state random " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.linyxus.xyz/posts/state-monad/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-09-16T20:47:35&#43;08:00" />
+<meta property="article:modified_time" content="2019-09-16T20:47:35&#43;08:00" />
+
 
 
     
@@ -41,31 +71,41 @@
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="section" id="title">A Tasteful Tutorial on State Monads</div>
-
-        
-<div class="section" id="content">
-    Mon Sep 16, 2019 &#183; 57 words
     
-    <div class="tag-container">
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/tutorial">
-                tutorial
-            </a>
-        </span>
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/haskell">
-                haskell
-            </a>
-        </span>
-        
-    </div>
     
-    <hr/>
-    <h1 id="什么是state-monad">什么是State Monad？</h1>
+    <header class="wrap flex-container">
+        <h1>A Tasteful Tutorial on State Monads</h1>
+    </header>
+    
+    <main class="wrap">
+        
+<div class="flex-container">
+    <aside role="complementary">
+        Mon Sep 16, 2019 &#183; 57 words
+        <div class="tag-container">
+            
+            
+            <span class="tag">
+                <a href="/tags/tutorial/">
+                    tutorial
+                </a>
+            </span>
+            
+            
+            
+            <span class="tag">
+                <a href="/tags/haskell/">
+                    haskell
+                </a>
+            </span>
+            
+            
+        </div>
+    </aside>
+    <hr />
+    <article role="article">
+        
+<h1 id="什么是state-monad" class="anchor-link"><a href="#%e4%bb%80%e4%b9%88%e6%98%afstate-monad">什么是State Monad？<span class="pilcrow">&nbsp;¶</span></a></h1>
 <p>简单来说，State Monad能够帮助我们描述涉及状态的计算过程。</p>
 <p>一个很经典的例子是在Haskell中获取随机数，如果不使用State Monad，就可能需要写出这样的代码：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">getThreeRandInt</span> <span style="color:#f92672">::</span> (<span style="color:#66d9ef">Int</span>, <span style="color:#66d9ef">Int</span>, <span style="color:#66d9ef">Int</span>)
@@ -80,20 +120,12 @@
 <span style="color:#a6e22e">getThreeRandInt</span> <span style="color:#f92672">=</span> evalState <span style="color:#f92672">$</span> liftA3 (,,) getRandom getRandom getRandom
 	<span style="color:#66d9ef">where</span> getRandom <span style="color:#f92672">=</span> state random
 </code></pre></div>
+    </article>
 </div>
-
-<script src="https://utteranc.es/client.js"
-        repo="linyxus/linro-hugo"
-        issue-term="pathname"
-        theme="dark-blue"
-        crossorigin="anonymous"
-        async>
-</script>
-
 
 
         
-<div class="section bottom-menu">
+<nav role="navigation" class="flex-container bottom-menu">
     
 <hr />
 <p>
@@ -108,34 +140,32 @@
 
     
         
-            <a href="/posts">
-                writings
-            </a>
+            <a href="/posts">writings</a>
         
     
     
         
             &#183; 
-            <a href="/me">
-                me
-            </a>
+            <a href="/me">me</a>
         
             &#183; 
-            <a href="/about">
-                about
-            </a>
+            <a href="/about">about</a>
         
     
-    &#183; 
-    <a href="https://blog.linyxus.xyz">
-        main
-    </a>
+    
+    
+        &#183; 
+        <a href="/">
+            main
+        </a>
+    
 
 </p>
-</div>
+</nav>
 
-
-        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </main>
+    
+    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -151,8 +181,9 @@
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</div>
-    </div>
+</footer>
+    
+    
 </body>
 
 </html>

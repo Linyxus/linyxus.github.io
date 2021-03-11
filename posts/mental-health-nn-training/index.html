@@ -11,21 +11,59 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
+<title>
+    雏雁计划神经网络训练记录 - Linro
+</title>
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
-<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
-<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
-<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
-<meta name="og:type" content="website">
-<meta name="og:url" content="https://blog.linyxus.xyz">
-<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
-<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
+
+
+
+
+  
+
+
+
+
+
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="雏雁计划神经网络训练记录"/>
+<meta name="twitter:description" content="思路 使用前20个问题预测剩下11个问题的答案。将经常、有时、很少、从不规范化为[1, 0.33, -0.33, -1]。   训练笔记 Small ReLU 20 -&gt; 18 -&gt; 11
+Result:
+acc 65.22% test_acc 45.45%   Mid Relu 20 -&gt; 30 -&gt; 11
+Result:
+acc: 0.7521 test_acc: 0.4727 test_acc_l: 0.6636   Tiny Relu 20 -&gt; 10 -&gt; 11
+Result:
+acc: 0.5513 test_acc: 0.5091 test_acc_l: 0.5509   Smaller Relu 20 -&gt; 15 -&gt; 11
+Result:
+acc: 0.5853 test_acc: 0.5236 test_acc_l: 0.7909   Smaller Relu V2 Difference: change batch_size to 32, shuffle data."/>
+
+<meta property="og:title" content="雏雁计划神经网络训练记录" />
+<meta property="og:description" content="思路 使用前20个问题预测剩下11个问题的答案。将经常、有时、很少、从不规范化为[1, 0.33, -0.33, -1]。   训练笔记 Small ReLU 20 -&gt; 18 -&gt; 11
+Result:
+acc 65.22% test_acc 45.45%   Mid Relu 20 -&gt; 30 -&gt; 11
+Result:
+acc: 0.7521 test_acc: 0.4727 test_acc_l: 0.6636   Tiny Relu 20 -&gt; 10 -&gt; 11
+Result:
+acc: 0.5513 test_acc: 0.5091 test_acc_l: 0.5509   Smaller Relu 20 -&gt; 15 -&gt; 11
+Result:
+acc: 0.5853 test_acc: 0.5236 test_acc_l: 0.7909   Smaller Relu V2 Difference: change batch_size to 32, shuffle data." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.linyxus.xyz/posts/mental-health-nn-training/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-04-09T15:40:08&#43;08:00" />
+<meta property="article:modified_time" content="2019-04-09T15:40:08&#43;08:00" />
+
 
 
     
@@ -41,31 +79,40 @@
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="section" id="title">雏雁计划神经网络训练记录</div>
-
-        
-<div class="section" id="content">
-    Tue Apr 09, 2019 &#183; 92 words
     
-    <div class="tag-container">
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/machine-learning">
-                machine learning
-            </a>
-        </span>
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/note">
-                note
-            </a>
-        </span>
-        
-    </div>
     
-    <hr/>
-    <div class="document">
+    <header class="wrap flex-container">
+        <h1>雏雁计划神经网络训练记录</h1>
+    </header>
+    
+    <main class="wrap">
+        
+<div class="flex-container">
+    <aside role="complementary">
+        Tue Apr 09, 2019 &#183; 91 words
+        <div class="tag-container">
+            
+            
+            <span class="tag">
+                <a href="/tags/machine-learning/">
+                    machine learning
+                </a>
+            </span>
+            
+            
+            
+            <span class="tag">
+                <a href="/tags/note/">
+                    note
+                </a>
+            </span>
+            
+            
+        </div>
+    </aside>
+    <hr />
+    <article role="article">
+        <div class="document">
 
 
 <div class="section" id="id1">
@@ -81,8 +128,8 @@
 <p>20 -&gt; 18 -&gt; 11</p>
 <p><em>Result:</em></p>
 <ul class="simple">
-<li>acc <span class="math">\(65.22 \%\)</span></li>
-<li>test_acc <span class="math">\(45.45\%\)</span></li>
+<li>acc <span class="formula">65.22%</span></li>
+<li>test_acc <span class="formula">45.45%</span></li>
 </ul>
 </div>
 <div class="section" id="mid-relu">
@@ -133,20 +180,12 @@
 </div>
 </div>
 </div>
+    </article>
 </div>
-
-<script src="https://utteranc.es/client.js"
-        repo="linyxus/linro-hugo"
-        issue-term="pathname"
-        theme="dark-blue"
-        crossorigin="anonymous"
-        async>
-</script>
-
 
 
         
-<div class="section bottom-menu">
+<nav role="navigation" class="flex-container bottom-menu">
     
 <hr />
 <p>
@@ -161,34 +200,32 @@
 
     
         
-            <a href="/posts">
-                writings
-            </a>
+            <a href="/posts">writings</a>
         
     
     
         
             &#183; 
-            <a href="/me">
-                me
-            </a>
+            <a href="/me">me</a>
         
             &#183; 
-            <a href="/about">
-                about
-            </a>
+            <a href="/about">about</a>
         
     
-    &#183; 
-    <a href="https://blog.linyxus.xyz">
-        main
-    </a>
+    
+    
+        &#183; 
+        <a href="/">
+            main
+        </a>
+    
 
 </p>
-</div>
+</nav>
 
-
-        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </main>
+    
+    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -204,8 +241,9 @@
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</div>
-    </div>
+</footer>
+    
+    
 </body>
 
 </html>

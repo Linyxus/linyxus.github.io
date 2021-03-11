@@ -6,11 +6,7 @@
     <description>Recent content in emacs on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 07 Nov 2019 10:32:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.linyxus.xyz/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 07 Nov 2019 10:32:00 +0800</lastBuildDate><atom:link href="https://blog.linyxus.xyz/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Switching From Purcell&#39;s Emacs.d to Spacemacs</title>
       <link>https://blog.linyxus.xyz/posts/to-spacemac/</link>
@@ -20,11 +16,11 @@
       <description>很久以来，我的Emacs配置都基于无比经典的Purcell的 emacs.d。但就在最近，我突然决定切换到 Spacemacs。
 我曾用过一段时间的 Spacemacs，或者，确切的说，贯穿了我高二到高三的大部分时光。但 彼时对Emacs了解颇少，对Spacemacs的使用也仅限于 uncomment 几个 layer，或是复制粘 贴几句配置到 user-config 中。大一之后，一个偶然的契机，我打算更深入地学习Emacs。 那时候开始，我一直使用并轻度定制了Purcell的Emacs配置。 Github repo
 但老实说，不管是配置的方法还是版本管理，我在这段时间里做的真的有些随便。
-切换到 Spacemacs 的理由  Evil! Spacemacs是在emacs中使用evil的最快速的方法之一 系统化的配置，基于 use-package，Purcell的配置方法过于古老不便 Battery included，庞大的社群： Github 上已有18.8k个星星 丰富的文档，相较于 Purcell 的配置基本无可用文档  Migration 事实上，除了一些无关紧要的配置，我几乎可以无痛迁移到 Spacemacs，因为 Spacemacs 的 layer 实在是太齐全丰富了。
+切换到 Spacemacs 的理由&amp;nbsp;¶  Evil! Spacemacs是在emacs中使用evil的最快速的方法之一 系统化的配置，基于 use-package，Purcell的配置方法过于古老不便 Battery included，庞大的社群： Github 上已有18.8k个星星 丰富的文档，相较于 Purcell 的配置基本无可用文档  Migration&amp;nbsp;¶ 事实上，除了一些无关紧要的配置，我几乎可以无痛迁移到 Spacemacs，因为 Spacemacs 的 layer 实在是太齐全丰富了。
 日常使用中，我会使用Emacs编辑的文件类型其实不是很多：
  C/C++ Org Haskell \( \LaTeX{} \)  平时虽然Python写得也比较多，但是，PyCharm真香！
 上述我要用到的编辑环境，所有在 Spacemacs 中都有现成的 layer 可以用，我要做的只是 在 dotspacemacs-configuration-layers 中把他们加上罢了。
-迁移过程 首先，删除原来的emacs.d。
+迁移过程&amp;nbsp;¶ 首先，删除原来的emacs.d。
 rm .emacs.d // my .emacs.d is just a symlink 然后
 git clone https://github.</description>
     </item>
@@ -39,19 +35,19 @@ git clone https://github.</description>
 之前我也在学校社团里做过一个有关org-mode的讲座。关于org-mode，记忆深刻的是某知乎用户的一句话：
  我的生活就是在org-mode掌控之下的好吗
  那么，直接给出我使用org-mode的一些规划和设计吧。
-.org gtd.org 在这个文件里放入日常事务，要完成的事情。
+.org&amp;nbsp;¶ gtd.org&amp;nbsp;¶ 在这个文件里放入日常事务，要完成的事情。
 比如：打印四级准考证、整理行李、去开会、做推送等等。
-idea.org 冒出来的想法，但不一定要实现。如果要实现，归档到gtd.org中完成。
+idea.org&amp;nbsp;¶ 冒出来的想法，但不一定要实现。如果要实现，归档到gtd.org中完成。
 比如：写一篇博客介绍我的org-mode使用方法、用Clojure写一个小游戏等等。
-learning.org 学习规划。
+learning.org&amp;nbsp;¶ 学习规划。
 比如学习Python，学习Haskell，学习各种算法等等。
-book.org 书籍归档。
-project-specific org file 各个project专用的.org文件，放在project根目录内。
-Capture templates journal 小总结，小感想。
+book.org&amp;nbsp;¶ 书籍归档。
+project-specific org file&amp;nbsp;¶ 各个project专用的.org文件，放在project根目录内。
+Capture templates&amp;nbsp;¶ journal&amp;nbsp;¶ 小总结，小感想。
 总结今天做了什么。（对抗焦虑症）
-todo 要做的事情。
-idea 突然冒出来的想法。
-Source code 列一下org template配置的elisp代码：
+todo&amp;nbsp;¶ 要做的事情。
+idea&amp;nbsp;¶ 突然冒出来的想法。
+Source code&amp;nbsp;¶ 列一下org template配置的elisp代码：
 (setq org-capture-templates &amp;#39;((&amp;#34;j&amp;#34; &amp;#34;journal&amp;#34; entry (file+datetree &amp;#34;~/org/journal.org&amp;#34;) &amp;#34;* %?\n%U\n&amp;#34;) (&amp;#34;t&amp;#34; &amp;#34;todo&amp;#34; entry (file+headline &amp;#34;~/org/gtd.org&amp;#34; &amp;#34;Inbox&amp;#34;) &amp;#34;* TODO %?\n%U\n&amp;#34;) (&amp;#34;i&amp;#34; &amp;#34;idea&amp;#34; entry (file+headline &amp;#34;~/org/idea.org&amp;#34; &amp;#34;Inbox&amp;#34;) &amp;#34;* TODO %?\n&amp;#34;))) </description>
     </item>
     

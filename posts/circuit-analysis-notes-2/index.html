@@ -11,21 +11,61 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
+<title>
+    电路分析笔记 :: 基本分析方法 - Linro
+</title>
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
-<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
-<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
-<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
-<meta name="og:type" content="website">
-<meta name="og:url" content="https://blog.linyxus.xyz">
-<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
-<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
+
+
+
+
+  
+
+
+
+
+
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="电路分析笔记 :: 基本分析方法"/>
+<meta name="twitter:description" content="变量分析 基尔霍夫定律 KCL 基尔霍夫电流定律
+对任意电路的任意节点，在任意时刻流入该节点的电流代数和为0。
+b⎲⎳k = 1ik(t) = 0  若规定流入为正，流出即为负。
+推广 广义节点（封闭面）同样成立。
+  KVL 对任意集总电路的任意回路，在任意时刻，沿该回路的所有支路的电压降 代数和为0。
+b⎲⎳k = 1uk(t) = 0  可以从电路中任意一点的电势为一确定值理解。
+  2b法 假设电阻有 n 个节点， b 条支路。根据拓扑约束列出 (n − 1) 个独立电流方程， (b − n &#43; 1) 个独立电压方程。 根据元件约束列出 (b) 个VCR方程。
+共计 2b 个方程，求解 b 条支路的 2b 个未知量。
+ 支路电流法 也即代入VCR元件约束，将电压量代换为电流量。
+ 节点电压法 形式 ⎧⎪⎪⎨⎪⎪⎩G11u1 &#43; G12u2 &#43; ⋯ &#43; G1nun = is11     G21u1 &#43; G22u2 &#43; ⋯ &#43; G2nun = is22     ⋯     Gn1u1 &#43; Gn2u2 &#43; ⋯ &#43; Gnnun = isnn     其中："/>
+
+<meta property="og:title" content="电路分析笔记 :: 基本分析方法" />
+<meta property="og:description" content="变量分析 基尔霍夫定律 KCL 基尔霍夫电流定律
+对任意电路的任意节点，在任意时刻流入该节点的电流代数和为0。
+b⎲⎳k = 1ik(t) = 0  若规定流入为正，流出即为负。
+推广 广义节点（封闭面）同样成立。
+  KVL 对任意集总电路的任意回路，在任意时刻，沿该回路的所有支路的电压降 代数和为0。
+b⎲⎳k = 1uk(t) = 0  可以从电路中任意一点的电势为一确定值理解。
+  2b法 假设电阻有 n 个节点， b 条支路。根据拓扑约束列出 (n − 1) 个独立电流方程， (b − n &#43; 1) 个独立电压方程。 根据元件约束列出 (b) 个VCR方程。
+共计 2b 个方程，求解 b 条支路的 2b 个未知量。
+ 支路电流法 也即代入VCR元件约束，将电压量代换为电流量。
+ 节点电压法 形式 ⎧⎪⎪⎨⎪⎪⎩G11u1 &#43; G12u2 &#43; ⋯ &#43; G1nun = is11     G21u1 &#43; G22u2 &#43; ⋯ &#43; G2nun = is22     ⋯     Gn1u1 &#43; Gn2u2 &#43; ⋯ &#43; Gnnun = isnn     其中：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.linyxus.xyz/posts/circuit-analysis-notes-2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-04-14T21:42:06&#43;08:00" />
+<meta property="article:modified_time" content="2019-04-14T21:42:06&#43;08:00" />
+
 
 
     
@@ -41,31 +81,40 @@
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="section" id="title">电路分析笔记 :: 基本分析方法</div>
-
-        
-<div class="section" id="content">
-    Sun Apr 14, 2019 &#183; 279 words
     
-    <div class="tag-container">
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/note">
-                note
-            </a>
-        </span>
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/circuit-analysis">
-                circuit-analysis
-            </a>
-        </span>
-        
-    </div>
     
-    <hr/>
-    <div class="document">
+    <header class="wrap flex-container">
+        <h1>电路分析笔记 :: 基本分析方法</h1>
+    </header>
+    
+    <main class="wrap">
+        
+<div class="flex-container">
+    <aside role="complementary">
+        Sun Apr 14, 2019 &#183; 249 words
+        <div class="tag-container">
+            
+            
+            <span class="tag">
+                <a href="/tags/note/">
+                    note
+                </a>
+            </span>
+            
+            
+            
+            <span class="tag">
+                <a href="/tags/circuit-analysis/">
+                    circuit-analysis
+                </a>
+            </span>
+            
+            
+        </div>
+    </aside>
+    <hr />
+    <article role="article">
+        <div class="document">
 
 
 <div class="section" id="id1">
@@ -76,10 +125,8 @@
 <h4>KCL</h4>
 <p>基尔霍夫电流定律</p>
 <p>对任意电路的任意节点，在任意时刻流入该节点的电流代数和为0。</p>
-<div class="math">
-\begin{equation*}
-\sum_{k=1}^{b} i_k(t) = 0
-\end{equation*}
+<div class="formula">
+<span class="limits"><sup class="limit"><i>b</i></sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>k</i> = 1</sub></span><i>i</i><sub><i>k</i></sub>(<i>t</i>) = 0
 </div>
 <p>若规定流入为正，流出即为负。</p>
 <div class="section" id="id3">
@@ -91,20 +138,18 @@
 <h4>KVL</h4>
 <p>对任意集总电路的任意回路，在任意时刻，沿该回路的所有支路的电压降
 代数和为0。</p>
-<div class="math">
-\begin{equation*}
-\sum_{k=1}^{b} u_k(t) = 0
-\end{equation*}
+<div class="formula">
+<span class="limits"><sup class="limit"><i>b</i></sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>k</i> = 1</sub></span><i>u</i><sub><i>k</i></sub>(<i>t</i>) = 0
 </div>
 <p>可以从电路中任意一点的电势为一确定值理解。</p>
 </div>
 </div>
 <div class="section" id="b">
 <h3>2b法</h3>
-<p>假设电阻有 <span class="math">\(n\)</span> 个节点， <span class="math">\(b\)</span> 条支路。根据拓扑约束列出
-<span class="math">\((n-1)\)</span> 个独立电流方程， <span class="math">\((b-n+1)\)</span> 个独立电压方程。
-根据元件约束列出 <span class="math">\((b)\)</span> 个VCR方程。</p>
-<p>共计 <span class="math">\(2b\)</span> 个方程，求解 <span class="math">\(b\)</span> 条支路的 <span class="math">\(2b\)</span> 个未知量。</p>
+<p>假设电阻有 <span class="formula"><i>n</i></span> 个节点， <span class="formula"><i>b</i></span> 条支路。根据拓扑约束列出
+<span class="formula">(<i>n</i> − 1)</span> 个独立电流方程， <span class="formula">(<i>b</i> − <i>n</i> + 1)</span> 个独立电压方程。
+根据元件约束列出 <span class="formula">(<i>b</i>)</span> 个VCR方程。</p>
+<p>共计 <span class="formula">2<i>b</i></span> 个方程，求解 <span class="formula"><i>b</i></span> 条支路的 <span class="formula">2<i>b</i></span> 个未知量。</p>
 </div>
 <div class="section" id="id4">
 <h3>支路电流法</h3>
@@ -114,22 +159,60 @@
 <h3>节点电压法</h3>
 <div class="section" id="id6">
 <h4>形式</h4>
-<div class="math">
-\begin{equation*}
-\begin{cases}
-  G_{11} u_1 + G_{12} u_2 + \cdots + G_{1n} u_n = i_{s11} \\
-  G_{21} u_1 + G_{22} u_2 + \cdots + G_{2n} u_n = i_{s22} \\
-  \cdots \\
-  G_{n1} u_1 + G_{n2} u_2 + \cdots + G_{nn} u_n = i_{snn}
-\end{cases}
-\end{equation*}
+<div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-l">⎧</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎨</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎩</span></span></span><span class="bracketcases">
+<span class="arrayrow">
+<span class="case align-l">
+<i>G</i><sub>11</sub><i>u</i><sub>1</sub> + <i>G</i><sub>12</sub><i>u</i><sub>2</sub> + ⋯ + <i>G</i><sub>1<i>n</i></sub><i>u</i><sub><i>n</i></sub> = <i>i</i><sub><i>s</i>11</sub> 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+<i>G</i><sub>21</sub><i>u</i><sub>1</sub> + <i>G</i><sub>22</sub><i>u</i><sub>2</sub> + ⋯ + <i>G</i><sub>2<i>n</i></sub><i>u</i><sub><i>n</i></sub> = <i>i</i><sub><i>s</i>22</sub> 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+⋯ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+<i>G</i><sub><i>n</i>1</sub><i>u</i><sub>1</sub> + <i>G</i><sub><i>n</i>2</sub><i>u</i><sub>2</sub> + ⋯ + <i>G</i><sub><i>nn</i></sub><i>u</i><sub><i>n</i></sub> = <i>i</i><sub><i>snn</i></sub> 
+</span>
+
+</span>
+
+</span>
+
 </div>
 <p>其中：</p>
 <ul class="simple">
-<li><span class="math">\(G_{ii}\)</span> 为自电导。为连接该节点所有支路的电导之和。</li>
-<li><span class="math">\(G_{ij}\)</span> 为互电导。为 <span class="math">\(i, j\)</span> 两节点间所有公共支路电导之和。
+<li><span class="formula"><i>G</i><sub><i>ii</i></sub></span> 为自电导。为连接该节点所有支路的电导之和。</li>
+<li><span class="formula"><i>G</i><sub><i>ij</i></sub></span> 为互电导。为 <span class="formula"><i>i</i>, <i>j</i></span> 两节点间所有公共支路电导之和。
 <strong>恒为负</strong> 。</li>
-<li><span class="math">\(i_{sii}\)</span> 为注入该节点的电流代数和。也即注入为正，流出为负。</li>
+<li><span class="formula"><i>i</i><sub><i>sii</i></sub></span> 为注入该节点的电流代数和。也即注入为正，流出为负。</li>
 </ul>
 </div>
 <div class="section" id="id7">
@@ -137,13 +220,11 @@
 <ol class="arabic simple">
 <li>含有电压源与电阻串联的支路，转化为电流源与电阻并联。</li>
 <li>含有电流源与电阻串联的支路，忽略电阻。</li>
-<li>含有理想电压源的支路。设支路电流 <span class="math">\(i\)</span> 为未知量，并增加一个方程。
-假设理想电流源位于节点 <span class="math">\(i, j\)</span> 之间，则增加的方程为</li>
+<li>含有理想电压源的支路。设支路电流 <span class="formula"><i>i</i></span> 为未知量，并增加一个方程。
+假设理想电流源位于节点 <span class="formula"><i>i</i>, <i>j</i></span> 之间，则增加的方程为</li>
 </ol>
-<div class="math">
-\begin{equation*}
-u_i - u_j = u_s
-\end{equation*}
+<div class="formula">
+<i>u</i><sub><i>i</i></sub> − <i>u</i><sub><i>j</i></sub> = <i>u</i><sub><i>s</i></sub>
 </div>
 <ol class="arabic simple" start="4">
 <li>电路中含有受控源。用节点电压表示控制量。</li>
@@ -153,11 +234,9 @@ u_i - u_j = u_s
 <div class="section" id="id8">
 <h3>叠加定理</h3>
 <p>叠加定理基于一个基本事实：对于一个线性网络，响应与激励存在线性关系。</p>
-<p>假设激励为 <span class="math">\(x\)</span> ， 响应为 <span class="math">\(f(x)\)</span> ，则线性网络满足</p>
-<div class="math">
-\begin{equation*}
-f(\alpha x_1 + \beta x_2) = \alpha f(x_1) + \beta f(x_2)
-\end{equation*}
+<p>假设激励为 <span class="formula"><i>x</i></span> ， 响应为 <span class="formula"><i>f</i>(<i>x</i>)</span> ，则线性网络满足</p>
+<div class="formula">
+<i>f</i>(<i>α</i><i>x</i><sub>1</sub> + <i>β</i><i>x</i><sub>2</sub>) = <i>α</i><i>f</i>(<i>x</i><sub>1</sub>) + <i>β</i><i>f</i>(<i>x</i><sub>2</sub>)
 </div>
 <p>故有叠加定理：</p>
 <p>在线性电路中，任意元件的电流和电压可视为电路中每一个激励单独作用与电路时，在该元件产生的电压与电流的
@@ -188,9 +267,9 @@ f(\alpha x_1 + \beta x_2) = \alpha f(x_1) + \beta f(x_2)
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">电阻串联:</th><td class="field-body"><span class="math">\(R_{eq} = R_1 + R_2 + \cdots + R_n\)</span></td>
+<tr class="field"><th class="field-name">电阻串联:</th><td class="field-body"><span class="formula"><i>R</i><sub><i>eq</i></sub> = <i>R</i><sub>1</sub> + <i>R</i><sub>2</sub> + ⋯ + <i>R</i><sub><i>n</i></sub></span></td>
 </tr>
-<tr class="field"><th class="field-name">电阻并联:</th><td class="field-body"><span class="math">\(\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n}\)</span></td>
+<tr class="field"><th class="field-name">电阻并联:</th><td class="field-body"><span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>R</i><sub><i>eq</i></sub></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>R</i><sub>1</sub></span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>R</i><sub>2</sub></span><span class="ignored">)</span></span> + ⋯ + <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>R</i><sub><i>n</i></sub></span><span class="ignored">)</span></span></span></td>
 </tr>
 </tbody>
 </table>
@@ -205,43 +284,37 @@ f(\alpha x_1 + \beta x_2) = \alpha f(x_1) + \beta f(x_2)
 <ol class="arabic simple">
 <li>电压源串联</li>
 </ol>
-<div class="math">
-\begin{equation*}
-u = u_1 + u_2 + \cdots + u_n
-\end{equation*}
+<div class="formula">
+<i>u</i> = <i>u</i><sub>1</sub> + <i>u</i><sub>2</sub> + ⋯ + <i>u</i><sub><i>n</i></sub>
 </div>
 <p>等效电压源电压为串联电压源电压代数和。</p>
 <p>只有大小方向相同的电压源才能并联，否则会产生无限大的电流。</p>
 <ol class="arabic simple" start="2">
 <li>电流源并联</li>
 </ol>
-<div class="math">
-\begin{equation*}
-i = i_1 + i_2 + \cdots + i_n
-\end{equation*}
+<div class="formula">
+<i>i</i> = <i>i</i><sub>1</sub> + <i>i</i><sub>2</sub> + ⋯ + <i>i</i><sub><i>n</i></sub>
 </div>
 <p>只有大小方向相同的电流源才能串联，否则会产生无穷大的电压。</p>
 <ol class="arabic simple" start="3">
 <li>电压源与二端网络并联</li>
 </ol>
-<p>只要二端网络 <span class="math">\(N\)</span> 不是与电压源大小方向不同的电压源，对外等效。</p>
+<p>只要二端网络 <span class="formula"><i>N</i></span> 不是与电压源大小方向不同的电压源，对外等效。</p>
 <ol class="arabic simple" start="4">
 <li>电流源与二段网络串联</li>
 </ol>
-<p>只要二端网络 <span class="math">\(N\)</span> 不是与电流源大小方向不同的电流源，对外等效。</p>
+<p>只要二端网络 <span class="formula"><i>N</i></span> 不是与电流源大小方向不同的电流源，对外等效。</p>
 <ol class="arabic simple" start="5">
 <li>电流源与电压源的等效转化</li>
 </ol>
-<div class="math">
-\begin{equation*}
-U_s, R_s \Leftrightarrow \frac {U_s} {R_s}, R_s
-\end{equation*}
+<div class="formula">
+<i>U</i><sub><i>s</i></sub>, <i>R</i><sub><i>s</i></sub> ⇔ <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>U</i><sub><i>s</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>R</i><sub><i>s</i></sub></span><span class="ignored">)</span></span>, <i>R</i><sub><i>s</i></sub>
 </div>
 </div>
 <div class="section" id="id12">
 <h3>替代定理</h3>
-<p>在有唯一解的任意线性或者非线性网络中，若某一支路的电压为 <span class="math">\(u_k\)</span> ，电流为 <span class="math">\(i_k\)</span> ，
-则该支路用电压为 <span class="math">\(u_k\)</span> 的独立电压源或是电流为 <span class="math">\(i_k\)</span> 的独立电流源替代，替代后
+<p>在有唯一解的任意线性或者非线性网络中，若某一支路的电压为 <span class="formula"><i>u</i><sub><i>k</i></sub></span> ，电流为 <span class="formula"><i>i</i><sub><i>k</i></sub></span> ，
+则该支路用电压为 <span class="formula"><i>u</i><sub><i>k</i></sub></span> 的独立电压源或是电流为 <span class="formula"><i>i</i><sub><i>k</i></sub></span> 的独立电流源替代，替代后
 电路其他支路的电压、电流保持不变。</p>
 <ol class="arabic simple">
 <li>被替代电路必须有唯一解</li>
@@ -250,11 +323,11 @@ U_s, R_s \Leftrightarrow \frac {U_s} {R_s}, R_s
 </div>
 <div class="section" id="id13">
 <h3>戴维南定理</h3>
-<p>任意线性二端网络 <span class="math">\(N\)</span> 都可被等效为一个独立电压源 <span class="math">\(U_s\)</span> 与电阻 <span class="math">\(R\)</span> 的串联。</p>
-<p>其中，电压 <span class="math">\(U_s\)</span> 即为网络 <span class="math">\(N\)</span> 的开路电压 <span class="math">\(U_oc\)</span>。</p>
-<p>电阻 <span class="math">\(R\)</span> 为该网络除源后所得网络的等效输出电阻 <span class="math">\(R_{eq}\)</span> 。</p>
+<p>任意线性二端网络 <span class="formula"><i>N</i></span> 都可被等效为一个独立电压源 <span class="formula"><i>U</i><sub><i>s</i></sub></span> 与电阻 <span class="formula"><i>R</i></span> 的串联。</p>
+<p>其中，电压 <span class="formula"><i>U</i><sub><i>s</i></sub></span> 即为网络 <span class="formula"><i>N</i></span> 的开路电压 <span class="formula"><i>U</i><sub><i>oc</i></sub></span>。</p>
+<p>电阻 <span class="formula"><i>R</i></span> 为该网络除源后所得网络的等效输出电阻 <span class="formula"><i>R</i><sub><i>eq</i></sub></span> 。</p>
 <div class="section" id="r-eq">
-<h4>含受控源时 <span class="math">\(R_{eq}\)</span> 的计算方法</h4>
+<h4>含受控源时 <span class="formula"><i>R</i><sub><i>eq</i></sub></span> 的计算方法</h4>
 <ol class="arabic simple">
 <li>外加电压法
 对 <strong>除源</strong> 网络外加电流。</li>
@@ -265,29 +338,19 @@ U_s, R_s \Leftrightarrow \frac {U_s} {R_s}, R_s
 </div>
 <div class="section" id="id14">
 <h3>最大功率传输定理</h3>
-<p>对于二端网络 <span class="math">\(N\)</span> ，当负载电阻 <span class="math">\(R=R_{eq}\)</span> 时，负载电阻功率达到最大值</p>
-<div class="math">
-\begin{equation*}
-P_{max} = \frac {u_{oc}^2} {4R_{eq}}
-\end{equation*}
+<p>对于二端网络 <span class="formula"><i>N</i></span> ，当负载电阻 <span class="formula"><i>R</i> = <i>R</i><sub><i>eq</i></sub></span> 时，负载电阻功率达到最大值</p>
+<div class="formula">
+<i>P</i><sub><i>max</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>u</i><span class="scripts"><sup class="script">2</sup><sub class="script"><i>oc</i></sub></span></span><span class="ignored">)/(</span><span class="denominator">4<i>R</i><sub><i>eq</i></sub></span><span class="ignored">)</span></span>
 </div>
 </div>
 </div>
 </div>
+    </article>
 </div>
-
-<script src="https://utteranc.es/client.js"
-        repo="linyxus/linro-hugo"
-        issue-term="pathname"
-        theme="dark-blue"
-        crossorigin="anonymous"
-        async>
-</script>
-
 
 
         
-<div class="section bottom-menu">
+<nav role="navigation" class="flex-container bottom-menu">
     
 <hr />
 <p>
@@ -302,34 +365,32 @@ P_{max} = \frac {u_{oc}^2} {4R_{eq}}
 
     
         
-            <a href="/posts">
-                writings
-            </a>
+            <a href="/posts">writings</a>
         
     
     
         
             &#183; 
-            <a href="/me">
-                me
-            </a>
+            <a href="/me">me</a>
         
             &#183; 
-            <a href="/about">
-                about
-            </a>
+            <a href="/about">about</a>
         
     
-    &#183; 
-    <a href="https://blog.linyxus.xyz">
-        main
-    </a>
+    
+    
+        &#183; 
+        <a href="/">
+            main
+        </a>
+    
 
 </p>
-</div>
+</nav>
 
-
-        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </main>
+    
+    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -345,8 +406,9 @@ P_{max} = \frac {u_{oc}^2} {4R_{eq}}
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</div>
-    </div>
+</footer>
+    
+    
 </body>
 
 </html>

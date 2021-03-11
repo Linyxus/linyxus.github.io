@@ -6,11 +6,7 @@
     <description>Recent content in calculus on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 02 May 2019 19:09:04 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.linyxus.xyz/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 02 May 2019 19:09:04 +0800</lastBuildDate><atom:link href="https://blog.linyxus.xyz/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Calculus Cheatsheets :: 级数</title>
       <link>https://blog.linyxus.xyz/posts/calculus-cheatsheet-series/</link>
@@ -18,11 +14,11 @@
       
       <guid>https://blog.linyxus.xyz/posts/calculus-cheatsheet-series/</guid>
       <description>常数项级数 概念 定义 各项均为常数的级数
- 部分和 \begin{equation*} \sigma (n) = \sum_{k=0}^{n} a_k \end{equation*}   敛散性 若
-\begin{equation*} lim_{n \rightarrow \infty} \sigma (n) = A 存在 \end{equation*}  则称级数收敛于 \(A\) 。
+ 部分和 σ(n) = n⎲⎳k = 0ak   敛散性 若
+limn → ∞σ(n) = A存在  则称级数收敛于 A 。
 否则称级数发散。
-  收敛级数性质 线性性质 归并性质   正项级数审敛法 比较审敛法 \begin{align*} y_n \le x_n \wedge x_n收敛 \Rightarrow y_n 收敛 \\ y_n \ge x_n \wedge x_n发散 \Rightarrow y_n 发散 \end{align*}  极限形式：
-\begin{align*} \lim_{n \rightarrow \infty} \frac {a_n} {b_n} = +\infty \Rightarrow b_n 发散则 a_n 发散 \\ \lim_{n \rightarrow \infty} \frac {a_n} {b_n} = 0 \Rightarrow a_n 收敛则 b_n 收敛 \\ \lim_{n \rightarrow \infty} \frac {a_n} {b_n} = k (k &amp;gt; 0) \Rightarrow a_n, b_n 同时敛散 \end{align*}   比值审敛法 \begin{equation*} \lim_{n \rightarrow \infty} \frac {a_{n+1}} {a_n} = K \end{equation*}  若 \(K &amp;lt; 1\) 则 \(a_n\) 收敛 若 \(K &amp;gt; 1\) 则 \(a_n\) 发散 若 \(K = 1\) 则 \(a_n\) 敛散性未知   根式审敛法 \begin{equation*} \lim_{n \rightarrow \infty} \sqrt[n]{a_n} = \lambda \end{equation*}  情况可类比比值审敛法。</description>
+  收敛级数性质 线性性质 归并性质   正项级数审敛法 比较审敛法 yn ≤ xn∧xn收敛 ⇒ yn收敛     yn ≥ xn∧xn发散 ⇒ yn发散     极限形式：
+limn → ∞(an)/(bn) = + ∞ ⇒ bn发散则an发散     limn → ∞(an)/(bn) = 0 ⇒ an收敛则bn收敛     limn → ∞(an)/(bn) = k(k &amp;gt; 0) ⇒ an, bn同时敛散      比值审敛法 limn → ∞(an + 1)/(an) = K  若 K &amp;lt; 1 则 an 收敛 若 K &amp;gt; 1 则 an 发散 若 K = 1 则 an 敛散性未知   根式审敛法 limn → ∞n√(an) = λ  情况可类比比值审敛法。</description>
     </item>
     
   </channel>

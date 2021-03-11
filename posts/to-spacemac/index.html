@@ -11,21 +11,61 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
+<title>
+    Switching From Purcell&rsquo;s Emacs.d to Spacemacs - Linro
+</title>
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
-<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
-<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
-<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
-<meta name="og:type" content="website">
-<meta name="og:url" content="https://blog.linyxus.xyz">
-<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
-<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
+
+
+
+
+  
+
+
+
+
+
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Switching From Purcell&#39;s Emacs.d to Spacemacs"/>
+<meta name="twitter:description" content="很久以来，我的Emacs配置都基于无比经典的Purcell的 emacs.d。但就在最近，我突然决定切换到 Spacemacs。
+我曾用过一段时间的 Spacemacs，或者，确切的说，贯穿了我高二到高三的大部分时光。但 彼时对Emacs了解颇少，对Spacemacs的使用也仅限于 uncomment 几个 layer，或是复制粘 贴几句配置到 user-config 中。大一之后，一个偶然的契机，我打算更深入地学习Emacs。 那时候开始，我一直使用并轻度定制了Purcell的Emacs配置。 Github repo
+但老实说，不管是配置的方法还是版本管理，我在这段时间里做的真的有些随便。
+切换到 Spacemacs 的理由&nbsp;¶  Evil! Spacemacs是在emacs中使用evil的最快速的方法之一 系统化的配置，基于 use-package，Purcell的配置方法过于古老不便 Battery included，庞大的社群： Github 上已有18.8k个星星 丰富的文档，相较于 Purcell 的配置基本无可用文档  Migration&nbsp;¶ 事实上，除了一些无关紧要的配置，我几乎可以无痛迁移到 Spacemacs，因为 Spacemacs 的 layer 实在是太齐全丰富了。
+日常使用中，我会使用Emacs编辑的文件类型其实不是很多：
+ C/C&#43;&#43; Org Haskell \( \LaTeX{} \)  平时虽然Python写得也比较多，但是，PyCharm真香！
+上述我要用到的编辑环境，所有在 Spacemacs 中都有现成的 layer 可以用，我要做的只是 在 dotspacemacs-configuration-layers 中把他们加上罢了。
+迁移过程&nbsp;¶ 首先，删除原来的emacs.d。
+rm .emacs.d // my .emacs.d is just a symlink 然后
+git clone https://github."/>
+
+<meta property="og:title" content="Switching From Purcell&#39;s Emacs.d to Spacemacs" />
+<meta property="og:description" content="很久以来，我的Emacs配置都基于无比经典的Purcell的 emacs.d。但就在最近，我突然决定切换到 Spacemacs。
+我曾用过一段时间的 Spacemacs，或者，确切的说，贯穿了我高二到高三的大部分时光。但 彼时对Emacs了解颇少，对Spacemacs的使用也仅限于 uncomment 几个 layer，或是复制粘 贴几句配置到 user-config 中。大一之后，一个偶然的契机，我打算更深入地学习Emacs。 那时候开始，我一直使用并轻度定制了Purcell的Emacs配置。 Github repo
+但老实说，不管是配置的方法还是版本管理，我在这段时间里做的真的有些随便。
+切换到 Spacemacs 的理由&nbsp;¶  Evil! Spacemacs是在emacs中使用evil的最快速的方法之一 系统化的配置，基于 use-package，Purcell的配置方法过于古老不便 Battery included，庞大的社群： Github 上已有18.8k个星星 丰富的文档，相较于 Purcell 的配置基本无可用文档  Migration&nbsp;¶ 事实上，除了一些无关紧要的配置，我几乎可以无痛迁移到 Spacemacs，因为 Spacemacs 的 layer 实在是太齐全丰富了。
+日常使用中，我会使用Emacs编辑的文件类型其实不是很多：
+ C/C&#43;&#43; Org Haskell \( \LaTeX{} \)  平时虽然Python写得也比较多，但是，PyCharm真香！
+上述我要用到的编辑环境，所有在 Spacemacs 中都有现成的 layer 可以用，我要做的只是 在 dotspacemacs-configuration-layers 中把他们加上罢了。
+迁移过程&nbsp;¶ 首先，删除原来的emacs.d。
+rm .emacs.d // my .emacs.d is just a symlink 然后
+git clone https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.linyxus.xyz/posts/to-spacemac/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-11-07T10:32:00&#43;08:00" />
+<meta property="article:modified_time" content="2019-11-07T10:32:00&#43;08:00" />
+
 
 
     
@@ -35,51 +75,62 @@
     
     <title>
         
-        Switching From Purcell&#39;s Emacs.d to Spacemacs
+        Switching From Purcell&rsquo;s Emacs.d to Spacemacs
         
     </title>
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="section" id="title">Switching From Purcell&#39;s Emacs.d to Spacemacs</div>
-
-        
-<div class="section" id="content">
-    Thu Nov 07, 2019 &#183; 134 words
     
-    <div class="tag-container">
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/tutorial">
-                tutorial
-            </a>
-        </span>
-        
-        <span class="tag">
-            <a href="https://blog.linyxus.xyz/tags/emacs">
-                emacs
-            </a>
-        </span>
-        
-    </div>
     
-    <hr/>
-    <p>很久以来，我的Emacs配置都基于无比经典的Purcell的 <a href="https://github.com/purcell/emacs.d">emacs.d</a>。但就在最近，我突然决定切换到 Spacemacs。</p>
+    <header class="wrap flex-container">
+        <h1>Switching From Purcell&rsquo;s Emacs.d to Spacemacs</h1>
+    </header>
+    
+    <main class="wrap">
+        
+<div class="flex-container">
+    <aside role="complementary">
+        Thu Nov 07, 2019 &#183; 134 words
+        <div class="tag-container">
+            
+            
+            <span class="tag">
+                <a href="/tags/tutorial/">
+                    tutorial
+                </a>
+            </span>
+            
+            
+            
+            <span class="tag">
+                <a href="/tags/emacs/">
+                    emacs
+                </a>
+            </span>
+            
+            
+        </div>
+    </aside>
+    <hr />
+    <article role="article">
+        <p>很久以来，我的Emacs配置都基于无比经典的Purcell的 <a href="https://github.com/purcell/emacs.d">emacs.d</a>。但就在最近，我突然决定切换到 Spacemacs。</p>
 <p>我曾用过一段时间的 Spacemacs，或者，确切的说，贯穿了我高二到高三的大部分时光。但
 彼时对Emacs了解颇少，对Spacemacs的使用也仅限于 uncomment 几个 layer，或是复制粘
 贴几句配置到 user-config 中。大一之后，一个偶然的契机，我打算更深入地学习Emacs。
 那时候开始，我一直使用并轻度定制了Purcell的Emacs配置。
 <a href="https://github.com/Linyxus/emacs.d/commits/master">Github repo</a></p>
 <p>但老实说，不管是配置的方法还是版本管理，我在这段时间里做的真的有些随便。</p>
-<h2 id="切换到-spacemacs-的理由">切换到 Spacemacs 的理由</h2>
+
+<h2 id="切换到-spacemacs-的理由" class="anchor-link"><a href="#%e5%88%87%e6%8d%a2%e5%88%b0-spacemacs-%e7%9a%84%e7%90%86%e7%94%b1">切换到 Spacemacs 的理由<span class="pilcrow">&nbsp;¶</span></a></h2>
 <ol>
 <li>Evil! Spacemacs是在emacs中使用evil的最快速的方法之一</li>
 <li>系统化的配置，基于 use-package，Purcell的配置方法过于古老不便</li>
 <li>Battery included，庞大的社群： <a href="https://github.com/syl20bnr/spacemacs">Github</a> 上已有18.8k个星星</li>
 <li>丰富的文档，相较于 Purcell 的配置基本无可用文档</li>
 </ol>
-<h2 id="migration">Migration</h2>
+
+<h2 id="migration" class="anchor-link"><a href="#migration">Migration<span class="pilcrow">&nbsp;¶</span></a></h2>
 <p>事实上，除了一些无关紧要的配置，我几乎可以无痛迁移到 Spacemacs，因为 Spacemacs 的 layer 实在是太齐全丰富了。</p>
 <p>日常使用中，我会使用Emacs编辑的文件类型其实不是很多：</p>
 <ul>
@@ -91,13 +142,15 @@
 <p>平时虽然Python写得也比较多，但是，PyCharm真香！</p>
 <p>上述我要用到的编辑环境，所有在 Spacemacs 中都有现成的 layer 可以用，我要做的只是
 在 <code>dotspacemacs-configuration-layers</code> 中把他们加上罢了。</p>
-<h2 id="迁移过程">迁移过程</h2>
+
+<h2 id="迁移过程" class="anchor-link"><a href="#%e8%bf%81%e7%a7%bb%e8%bf%87%e7%a8%8b">迁移过程<span class="pilcrow">&nbsp;¶</span></a></h2>
 <p>首先，删除原来的emacs.d。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm .emacs.d // my .emacs.d is just a symlink
 </code></pre></div><p>然后</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 </code></pre></div><p>打开Emacs。Voila！</p>
-<h2 id="一些常用layer与基本配置">一些常用Layer与基本配置</h2>
+
+<h2 id="一些常用layer与基本配置" class="anchor-link"><a href="#%e4%b8%80%e4%ba%9b%e5%b8%b8%e7%94%a8layer%e4%b8%8e%e5%9f%ba%e6%9c%ac%e9%85%8d%e7%bd%ae">一些常用Layer与基本配置<span class="pilcrow">&nbsp;¶</span></a></h2>
 <ul>
 <li>auto-completion，编辑器必备，看着舒服</li>
 <li>helm，也可以选ivy，个人觉得的确是ivy简洁好看一些，但helm是默认之选，官方文档中
@@ -107,14 +160,18 @@
 <p>除此以外，因为看惯了Purcell用的Tomorrow系列theme，对spacemacs自带的theme系列有些
 不习惯。而且spacemacs-dark在org下实在是太难看了些，故而还是配了一下tomorrow系列
 的theme，看起来很习惯。
-<img src="/ox-hugo/spacemacs.png" alt=""></p>
+<p style="text-align:center;">
+    <img src="/ox-hugo/spacemacs.png" alt=""  />
+</p>
+</p>
 <p>只需要把tomorrow theme对应的package加到dotfile的additional-packages中即可。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">dotspacemacs-additional-packages <span style="color:#f92672">&#39;</span>(color-theme-sanityinc-tomorrow)
 </code></pre></div><p>别忘了选一个color theme作为默认。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">dotspacemacs-themes <span style="color:#f92672">&#39;</span>(sanityinc-tomorrow-eighties
                       spacemacs-dark
                       spacemacs-light)
-</code></pre></div><h2 id="version-control">Version Control</h2>
+</code></pre></div>
+<h2 id="version-control" class="anchor-link"><a href="#version-control">Version Control<span class="pilcrow">&nbsp;¶</span></a></h2>
 <p>Spacemacs的版本控制有很多种方式。简单来说，Spacemacs的配置文件分为以下部分</p>
 <ol>
 <li>Spacemacs主体，也就是 <code>.emacs.d</code> 中的大部分内容。这一部分至少对我而言并不需要
@@ -141,20 +198,12 @@ Spacemacs也可以像Emacs一样，把一个文件夹作为配置来源。具体
 
 2 directories, 3 files
 </code></pre>
+    </article>
 </div>
-
-<script src="https://utteranc.es/client.js"
-        repo="linyxus/linro-hugo"
-        issue-term="pathname"
-        theme="dark-blue"
-        crossorigin="anonymous"
-        async>
-</script>
-
 
 
         
-<div class="section bottom-menu">
+<nav role="navigation" class="flex-container bottom-menu">
     
 <hr />
 <p>
@@ -169,34 +218,32 @@ Spacemacs也可以像Emacs一样，把一个文件夹作为配置来源。具体
 
     
         
-            <a href="/posts">
-                writings
-            </a>
+            <a href="/posts">writings</a>
         
     
     
         
             &#183; 
-            <a href="/me">
-                me
-            </a>
+            <a href="/me">me</a>
         
             &#183; 
-            <a href="/about">
-                about
-            </a>
+            <a href="/about">about</a>
         
     
-    &#183; 
-    <a href="https://blog.linyxus.xyz">
-        main
-    </a>
+    
+    
+        &#183; 
+        <a href="/">
+            main
+        </a>
+    
 
 </p>
-</div>
+</nav>
 
-
-        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </main>
+    
+    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -212,8 +259,9 @@ Spacemacs也可以像Emacs一样，把一个文件夹作为配置来源。具体
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</div>
-    </div>
+</footer>
+    
+    
 </body>
 
 </html>
