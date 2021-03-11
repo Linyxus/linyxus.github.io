@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>haskell on Linro</title>
@@ -17,12 +17,12 @@
       <pubDate>Sun, 22 Mar 2020 10:35:00 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/the-magic-of-laziness-2/</guid>
-      <description>这是 The magic of Laziness 的第二篇博客。在本篇文章中，我将展示Laziness的另一个奇妙的应用：创建递归函数。
-创建递归函数自然是一件非常简单的事情，在Python中实现一个计算阶乘的函数，只需寥寥数行：
+      <description>这是 The magic of Laziness 的第二篇博客。在本篇文章中，我将展示Laziness的另一个 奇妙的应用：创建递归函数。
+创建递归函数自然是一件非常简单的事情，在Python中实现一个计算阶乘的函数，只需寥寥 数行：
 def fact(n: int): ret = 1 for i in range(1, n+1): ret *= i return ret 事实上，使用函数式风格的语言来实现它，也非常容易：
-fact n | n &amp;lt;= 0 = 1 | otherwise = n * fact (n-1) 然而，今天我想解决的问题是，如何在一个定义极度简单，甚至无法为自定义的函数绑定“名称”的条件下，实现递归？
+fact n | n &amp;lt;= 0 = 1 | otherwise = n * fact (n-1) 然而，今天我想解决的问题是，如何在一个定义极度简单，甚至无法为自定义的函数绑定 “名称”的条件下，实现递归？
 确切来说，我们定义这样的一种简单的玩具语言，其中只有这样的几种简单的元素：
- 自然数字面值：\(0, 1, 2, \cdots\) 变量：\(x, y, z, a, b, c, \cdots\) 必要的自然数算符：\(x + y, x * 2, 2^{10}, \cdots\) 函数表达式：\(\lambda x. x+1\) 应用函数表达式 (apply function)：\((\lambda x. x+1) 0\) (结果为\(1\))，可以理解为函数的“计算”，等价于将函数参数在函数体中所有的出现替换为对应的值产生的表达式。  更加正确地来说，该语言的文法可以如下定义：</description>
+ 自然数字面值：\(0, 1, 2, \cdots\) 变量：\(x, y, z, a, b, c, \cdots\) 必要的自然数算符：\(x + y, x * 2, 2^{10}, \cdots\) 函数表达式：\(\lambda x. x+1\) 应用函数表达式 (apply function)：\((\lambda x.</description>
     </item>
     
     <item>
@@ -32,15 +32,14 @@ fact n | n &amp;lt;= 0 = 1 | otherwise = n * fact (n-1) 然而，今天我想解
       
       <guid>https://blog.linyxus.xyz/posts/the-magic-of-laziness/</guid>
       <description>在这篇博客中，我将简单地介绍许多函数式编程语言中一个重要的，也是独特的特性：Laziness。
-A first taste of Laziness 所以，什么是Laziness呢？Laziness有一个更加正式的名称：lazy evaluation，也即 惰性求值 。简单来说，惰性求值意味着，表达式的值不会被立即求出，只有当需要的时候才会对其进行求值。
+A first taste of Laziness 所以，什么是Laziness呢？Laziness有一个更加正式的名称：lazy evaluation，也即 惰 性求值 。简单来说，惰性求值意味着，表达式的值不会被立即求出，只有当需要的时候才 会对其进行求值。
 比如，下面的代码在运行时并不会报错，而可以安全地求出列表的长度。
-length [error &amp;#34;Hey!&amp;#34;, error &amp;#34;Here is an error.&amp;#34;] -- 2 原因是，在 length 的实现中，并不关心列表中每个元素的值是什么。因而他们并不会被求值。
+length [error &amp;#34;Hey!&amp;#34;, error &amp;#34;Here is an error.&amp;#34;] -- 2 原因是，在 length 的实现中，并不关心列表中每个元素的值是什么。因而他们并不会被 求值。
 length :: [a] -&amp;gt; Int length [] = 0 length (_:xs) = 1 + length xs 这是惰性求值这一特性最为直接的展示。
-而在实现上，具有惰性求值特性的代码可以这样被直观地想象：所有的值都被装在一个盒子中，对某个值求值的过程，也就是打开盒子的过程，为了打开这个盒子之后或许我们会发现里面有更多的盒子要打开。而所有的盒子，都会在万不得已的时候才被打开。
-这个比喻很直观，但不那么确切。比较精确的说法应当基于两个定义（至少在Haskell中是如此）：Normal Form与Weak Head Normal Form。
-Normal Form的定义很简单：normal form表示一个被完全求值的值：代表它所有的部分都已经被完全地求值完毕。 1 ， Just &amp;quot;Hello&amp;quot; ，都是normal form，而 1 + 1 则不是。
-Weak Head Normal Formd的定义则要复杂一些。简单来说，所有函数都是WHNF。所有顶层 constructor被求值的表达式也都是WHNF。
-举一些简单的例子： (1, 2 + 2) ， (1 + 1) : undefined ， Just 0 都是WHNF，因为他们的顶层constructor都已求值。</description>
+而在实现上，具有惰性求值特性的代码可以这样被直观地想象：所有的值都被装在一个盒子 中，对某个值求值的过程，也就是打开盒子的过程，为了打开这个盒子之后或许我们会发现 里面有更多的盒子要打开。而所有的盒子，都会在万不得已的时候才被打开。
+这个比喻很直观，但不那么确切。比较精确的说法应当基于两个定义（至少在Haskell中是 如此）：Normal Form与Weak Head Normal Form。
+Normal Form的定义很简单：normal form表示一个被完全求值的值：代表它所有的部分都已 经被完全地求值完毕。 1 ， Just &amp;quot;Hello&amp;quot; ，都是normal form，而 1 + 1 则不是。
+Weak Head Normal Formd的定义则要复杂一些。简单来说，所有函数都是WHNF。所有顶层 constructor被求值的表达式也都是WHNF。</description>
     </item>
     
     <item>
@@ -49,11 +48,11 @@ Weak Head Normal Formd的定义则要复杂一些。简单来说，所有函数�
       <pubDate>Mon, 16 Sep 2019 20:47:35 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/state-monad/</guid>
-      <description> 什么是State Monad？ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
+      <description>什么是State Monad？ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
 一个很经典的例子是在Haskell中获取随机数，如果不使用State Monad，就可能需要写出这样的代码：
 getThreeRandInt :: (Int, Int, Int) getThreeRandInt = (x1, x2, x3) where gen = mkStdGen (x1, gen&amp;#39;) = random gen (x2, gen&amp;#39;&amp;#39;) = random gen&amp;#39; (x3, _) = random gen&amp;#39;&amp;#39; 这样的代码很丑。
 但借助State Monad，我们可以写出这样的代码。
-getThreeRandInt :: (Int, Int, Int) getThreeRandInt = evalState $ liftA3 (,,) getRandom getRandom getRandom where getRandom = state random</description>
+getThreeRandInt :: (Int, Int, Int) getThreeRandInt = evalState $ liftA3 (,,) getRandom getRandom getRandom where getRandom = state random </description>
     </item>
     
   </channel>

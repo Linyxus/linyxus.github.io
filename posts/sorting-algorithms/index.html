@@ -65,18 +65,11 @@
     </div>
     
     <hr/>
-    
-
-<p>这是这个冬天算法学习留下的第一篇笔记。</p>
-
+    <p>这是这个冬天算法学习留下的第一篇笔记。</p>
 <p>排序算法，是最基础的算法之一了吧。两年前或是三年前，我大概也是这样慢慢熟悉了他们。</p>
-
 <p>算法是不会变的。</p>
-
 <p>那么，就从这里开始吧。</p>
-
 <h2 id="插入排序">插入排序</h2>
-
 <p>插入排序算不上高效的排序算法，从时间复杂度来说，和冒泡排序是相抵的。其实本质上，插入排序和冒泡排序相似甚至相同，只是“冒泡”的方向不同。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert_sort</span>()
 {
@@ -91,94 +84,74 @@
   }
   <span style="color:#66d9ef">return</span>;
 }
-</code></pre></div>
-<p>在算法实现<code>insert_sort</code>执行的过程中，有这件事情得以保证：0..i-1这些元素已经排好序。</p>
-
+</code></pre></div><p>在算法实现<code>insert_sort</code>执行的过程中，有这件事情得以保证：0..i-1这些元素已经排好序。</p>
 <p>而关于变量<code>j</code>的那个循环，所做的事情就是“冒泡”，而这里的冒泡本质上也就是插入。</p>
-
 <p>时间复杂度为$O(n^2)​$。</p>
-
 <h2 id="归并排序">归并排序</h2>
-
 <p>归并排序是利用了分治思想的排序算法。</p>
-
 <ul>
 <li>分解问题：将要排序的数组分成两部分，将两部分分别排序。</li>
-
-<li><p>合并：将两部分合并。</p>
+<li>合并：将两部分合并。</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge_sort</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>begin, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>end)
 {
-<span style="color:#66d9ef">int</span> l <span style="color:#f92672">=</span> end <span style="color:#f92672">-</span> begin;
-<span style="color:#66d9ef">if</span> (l <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> l <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
-<span style="color:#66d9ef">return</span>;
+  <span style="color:#66d9ef">int</span> l <span style="color:#f92672">=</span> end <span style="color:#f92672">-</span> begin;
+  <span style="color:#66d9ef">if</span> (l <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> l <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+    <span style="color:#66d9ef">return</span>;
+  }
+  <span style="color:#66d9ef">int</span> m <span style="color:#f92672">=</span> l <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+  merge_sort(begin, begin<span style="color:#f92672">+</span>m);
+  merge_sort(begin<span style="color:#f92672">+</span>m, end);
+  <span style="color:#66d9ef">int</span> p <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">int</span> q <span style="color:#f92672">=</span> m;
+  <span style="color:#66d9ef">int</span> cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">while</span> (p <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">||</span> q <span style="color:#f92672">&lt;</span> l) {
+    <span style="color:#66d9ef">if</span> (q <span style="color:#f92672">&gt;=</span> l <span style="color:#f92672">||</span> (p <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">*</span>(begin<span style="color:#f92672">+</span>p) <span style="color:#f92672">&lt;=</span> <span style="color:#f92672">*</span>(begin<span style="color:#f92672">+</span>q))) {
+      tmp[cnt<span style="color:#f92672">++</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>(begin<span style="color:#f92672">+</span>p);
+      p<span style="color:#f92672">++</span>;
+    } <span style="color:#66d9ef">else</span> {
+      tmp[cnt<span style="color:#f92672">++</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>(begin<span style="color:#f92672">+</span>q);
+      q<span style="color:#f92672">++</span>;
+    }
+  }
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> l; i<span style="color:#f92672">++</span>) {
+    <span style="color:#f92672">*</span>(begin<span style="color:#f92672">+</span>i) <span style="color:#f92672">=</span> tmp[i];
+  }
 }
-<span style="color:#66d9ef">int</span> m <span style="color:#f92672">=</span> l <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-merge_sort(begin, begin<span style="color:#f92672">+</span>m);
-merge_sort(begin<span style="color:#f92672">+</span>m, end);
-<span style="color:#66d9ef">int</span> p <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#66d9ef">int</span> q <span style="color:#f92672">=</span> m;
-<span style="color:#66d9ef">int</span> cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#66d9ef">while</span> (p <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">||</span> q <span style="color:#f92672">&lt;</span> l) {
-<span style="color:#66d9ef">if</span> (q <span style="color:#f92672">&gt;=</span> l <span style="color:#f92672">||</span> (p <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">*</span>(begin<span style="color:#f92672">+</span>p) <span style="color:#f92672">&lt;=</span> <span style="color:#f92672">*</span>(begin<span style="color:#f92672">+</span>q))) {
-  tmp[cnt<span style="color:#f92672">++</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>(begin<span style="color:#f92672">+</span>p);
-  p<span style="color:#f92672">++</span>;
-} <span style="color:#66d9ef">else</span> {
-  tmp[cnt<span style="color:#f92672">++</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>(begin<span style="color:#f92672">+</span>q);
-  q<span style="color:#f92672">++</span>;
-}
-}
-<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> l; i<span style="color:#f92672">++</span>) {
-<span style="color:#f92672">*</span>(begin<span style="color:#f92672">+</span>i) <span style="color:#f92672">=</span> tmp[i];
-}
-}
-</code></pre></div></li>
-</ul>
-
-<p>分解问题无甚好说，重要的在于合并。</p>
-
+</code></pre></div><p>分解问题无甚好说，重要的在于合并。</p>
 <p>合并的思想有个很棒的类比：你有两堆牌，它们都是排好序的，将它们合并成一堆排好序的牌的方法是比较它们最上面的那张牌，将更小的放入合并的牌堆。当某一堆牌放完，直接把另一堆牌全部放入合并的牌堆即可。</p>
-
 <p>这里用到了临时的额外空间。</p>
-
 <p>时间复杂度为$O(nlogn)$。</p>
-
 <h2 id="快速排序">快速排序</h2>
-
 <p>快速排序也是利用了分治思想的排序算法。只是求解问题的方法与归并排序有所不同。</p>
-
 <ul>
 <li>分解问题：将数组分成两个部分，满足：左半部分任意一个数都小于等于右半部分。再将这两个部分划分，直到不能再划分。</li>
-
-<li><p>合并：不必合并，此时数组已有序。</p>
+<li>合并：不必合并，此时数组已有序。</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">quick_sort</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>begin, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>end)
 {
-<span style="color:#66d9ef">if</span> (begin <span style="color:#f92672">==</span> end) {
-<span style="color:#66d9ef">return</span>;
+  <span style="color:#66d9ef">if</span> (begin <span style="color:#f92672">==</span> end) {
+    <span style="color:#66d9ef">return</span>;
+  }
+  <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>l <span style="color:#f92672">=</span> begin;
+  <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>r <span style="color:#f92672">=</span> end<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>l;
+  <span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r) {
+    <span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">*</span>r <span style="color:#f92672">&gt;=</span> t) {
+      r<span style="color:#f92672">--</span>;
+    }
+    <span style="color:#f92672">*</span>l <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>r;
+    <span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">*</span>l <span style="color:#f92672">&lt;=</span> t) {
+      l<span style="color:#f92672">++</span>;
+    }
+    <span style="color:#f92672">*</span>r <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>l;
+  }
+  <span style="color:#f92672">*</span>l <span style="color:#f92672">=</span> t;
+  quick_sort(begin, l);
+  quick_sort(l<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, end);
 }
-<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>l <span style="color:#f92672">=</span> begin;
-<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>r <span style="color:#f92672">=</span> end<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>l;
-<span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r) {
-<span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">*</span>r <span style="color:#f92672">&gt;=</span> t) {
-  r<span style="color:#f92672">--</span>;
-}
-<span style="color:#f92672">*</span>l <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>r;
-<span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">*</span>l <span style="color:#f92672">&lt;=</span> t) {
-  l<span style="color:#f92672">++</span>;
-}
-<span style="color:#f92672">*</span>r <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>l;
-}
-<span style="color:#f92672">*</span>l <span style="color:#f92672">=</span> t;
-quick_sort(begin, l);
-quick_sort(l<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, end);
-}
-</code></pre></div></li>
-</ul>
-
-<p>快速排序实现的关键在于划分的方法。上面这个方法算得上主流的一个，不必额外空间，可以理解成一次长长的交换。</p>
-
+</code></pre></div><p>快速排序实现的关键在于划分的方法。上面这个方法算得上主流的一个，不必额外空间，可以理解成一次长长的交换。</p>
 <p>在循环的过程中，这些事情得以保证：</p>
-
 <ol>
 <li>无论何时，都有一个空位可以放入数字。</li>
 <li>循环开始时，这个空位是<code>l</code>。</li>
@@ -188,13 +161,9 @@ quick_sort(l<span style="color:#f92672">+</span><span style="color:#ae81ff">1</s
 <li>begin…l之间的数都小于等于t</li>
 <li>r…end-1之间的数都大于等于t</li>
 </ol>
-
 <p>值得一提的是，如此实现的快速排序是不稳定的。</p>
-
 <p>快速排序的时间复杂度在最好情况下是$O(nlogn)$，最坏情况下与插入排序及冒泡排序比肩，到达$O(n^2)$。</p>
-
 <p>但大多数情况下，快速排序的效率远高于插入排序，也快于归并排序。</p>
-
 <p>第一篇笔记，就写到这里。</p>
 
 </div>

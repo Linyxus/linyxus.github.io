@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>emacs on Linro</title>
@@ -18,15 +18,15 @@
       
       <guid>https://blog.linyxus.xyz/posts/to-spacemac/</guid>
       <description>很久以来，我的Emacs配置都基于无比经典的Purcell的 emacs.d。但就在最近，我突然决定切换到 Spacemacs。
-我曾用过一段时间的 Spacemacs，或者，确切的说，贯穿了我高二到高三的大部分时光。但彼时对Emacs了解颇少，对Spacemacs的使用也仅限于 uncomment 几个 layer，或是复制粘贴几句配置到 user-config 中。大一之后，一个偶然的契机，我打算更深入地学习Emacs。那时候开始，我一直使用并轻度定制了Purcell的Emacs配置。 Github repo
+我曾用过一段时间的 Spacemacs，或者，确切的说，贯穿了我高二到高三的大部分时光。但 彼时对Emacs了解颇少，对Spacemacs的使用也仅限于 uncomment 几个 layer，或是复制粘 贴几句配置到 user-config 中。大一之后，一个偶然的契机，我打算更深入地学习Emacs。 那时候开始，我一直使用并轻度定制了Purcell的Emacs配置。 Github repo
 但老实说，不管是配置的方法还是版本管理，我在这段时间里做的真的有些随便。
 切换到 Spacemacs 的理由  Evil! Spacemacs是在emacs中使用evil的最快速的方法之一 系统化的配置，基于 use-package，Purcell的配置方法过于古老不便 Battery included，庞大的社群： Github 上已有18.8k个星星 丰富的文档，相较于 Purcell 的配置基本无可用文档  Migration 事实上，除了一些无关紧要的配置，我几乎可以无痛迁移到 Spacemacs，因为 Spacemacs 的 layer 实在是太齐全丰富了。
 日常使用中，我会使用Emacs编辑的文件类型其实不是很多：
  C/C++ Org Haskell \( \LaTeX{} \)  平时虽然Python写得也比较多，但是，PyCharm真香！
-上述我要用到的编辑环境，所有在 Spacemacs 中都有现成的 layer 可以用，我要做的只是在 dotspacemacs-configuration-layers 中把他们加上罢了。
+上述我要用到的编辑环境，所有在 Spacemacs 中都有现成的 layer 可以用，我要做的只是 在 dotspacemacs-configuration-layers 中把他们加上罢了。
 迁移过程 首先，删除原来的emacs.d。
 rm .emacs.d // my .emacs.d is just a symlink 然后
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d 打开Emacs。Voila！</description>
+git clone https://github.</description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@ Capture templates journal 小总结，小感想。
 todo 要做的事情。
 idea 突然冒出来的想法。
 Source code 列一下org template配置的elisp代码：
-(setq org-capture-templates &amp;#39;((&amp;#34;j&amp;#34; &amp;#34;journal&amp;#34; entry (file+datetree &amp;#34;~/org/journal.org&amp;#34;) &amp;#34;* %?\n%U\n&amp;#34;) (&amp;#34;t&amp;#34; &amp;#34;todo&amp;#34; entry (file+headline &amp;#34;~/org/gtd.org&amp;#34; &amp;#34;Inbox&amp;#34;) &amp;#34;* TODO %?\n%U\n&amp;#34;) (&amp;#34;i&amp;#34; &amp;#34;idea&amp;#34; entry (file+headline &amp;#34;~/org/idea.org&amp;#34; &amp;#34;Inbox&amp;#34;) &amp;#34;* TODO %?</description>
+(setq org-capture-templates &amp;#39;((&amp;#34;j&amp;#34; &amp;#34;journal&amp;#34; entry (file+datetree &amp;#34;~/org/journal.org&amp;#34;) &amp;#34;* %?\n%U\n&amp;#34;) (&amp;#34;t&amp;#34; &amp;#34;todo&amp;#34; entry (file+headline &amp;#34;~/org/gtd.org&amp;#34; &amp;#34;Inbox&amp;#34;) &amp;#34;* TODO %?\n%U\n&amp;#34;) (&amp;#34;i&amp;#34; &amp;#34;idea&amp;#34; entry (file+headline &amp;#34;~/org/idea.org&amp;#34; &amp;#34;Inbox&amp;#34;) &amp;#34;* TODO %?\n&amp;#34;))) </description>
     </item>
     
   </channel>

@@ -59,20 +59,14 @@
     </div>
     
     <hr/>
-    
-
-<h2 id="编译">编译</h2>
-
+    <h2 id="编译">编译</h2>
 <p>为了使代码能够被gdb调试，需要在编译时加入<code>-g</code>选项，也即</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gcc -g main.c -o main</code></pre></div>
-<p>使用<code>-g</code>选项后，gcc会为生成的程序加载调试符号，供给gdb载入。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gcc -g main.c -o main
+</code></pre></div><p>使用<code>-g</code>选项后，gcc会为生成的程序加载调试符号，供给gdb载入。</p>
 <p>对编译完成的文件，使用gdb载入：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gdb main</code></pre></div>
-<h2 id="基本执行控制指令">基本执行控制指令</h2>
-
-<h3 id="run-break-print"><code>run</code>，<code>break</code>，<code>print</code></h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gdb main
+</code></pre></div><h2 id="基本执行控制指令">基本执行控制指令</h2>
+<h3 id="runbreakprint"><code>run</code>，<code>break</code>，<code>print</code></h3>
 <p>三个指令的使用示例：</p>
 
 </div>

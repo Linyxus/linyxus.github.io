@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Linro</title>
@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Mar 2020 10:35:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Mar 2021 16:01:00 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.linyxus.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>test</title>
+      <link>https://blog.linyxus.xyz/tags/test/</link>
+      <pubDate>Thu, 11 Mar 2021 16:01:00 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/tags/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>type-system</title>
+      <link>https://blog.linyxus.xyz/tags/type-system/</link>
+      <pubDate>Thu, 11 Mar 2021 16:01:00 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/tags/type-system/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>haskell</title>
@@ -30,7 +48,7 @@
     </item>
     
     <item>
-      <title>macos</title>
+      <title>macOS</title>
       <link>https://blog.linyxus.xyz/tags/macos/</link>
       <pubDate>Thu, 12 Dec 2019 17:28:00 +0800</pubDate>
       
@@ -48,20 +66,20 @@
     </item>
     
     <item>
-      <title>test</title>
-      <link>https://blog.linyxus.xyz/tags/test/</link>
-      <pubDate>Wed, 06 Nov 2019 00:37:00 +0800</pubDate>
-      
-      <guid>https://blog.linyxus.xyz/tags/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>nix</title>
       <link>https://blog.linyxus.xyz/tags/nix/</link>
       <pubDate>Mon, 28 Oct 2019 15:14:00 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/tags/nix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>note</title>
+      <link>https://blog.linyxus.xyz/tags/note/</link>
+      <pubDate>Thu, 24 Oct 2019 12:00:42 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/tags/note/</guid>
       <description></description>
     </item>
     
@@ -89,15 +107,6 @@
       <pubDate>Thu, 06 Jun 2019 12:09:41 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>note</title>
-      <link>https://blog.linyxus.xyz/tags/note/</link>
-      <pubDate>Fri, 10 May 2019 13:12:24 +0800</pubDate>
-      
-      <guid>https://blog.linyxus.xyz/tags/note/</guid>
       <description></description>
     </item>
     

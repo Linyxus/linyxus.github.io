@@ -65,21 +65,14 @@
     </div>
     
     <hr/>
-    
-
-<h2 id="效果">效果</h2>
-
+    <h2 id="效果">效果</h2>
 <figure>
     <img src="p1.png"/> 
 </figure>
 
-
 <p>每天在固定的时间，只要电脑开着，自动commit发生在org文件夹内的改动，并且push到Github上。</p>
-
 <p>如图，设定的是在所有的整点都会自动更新。</p>
-
 <h2 id="步骤">步骤</h2>
-
 <h3 id="1-编写自动同步shell">#1 编写自动同步shell</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
@@ -93,25 +86,19 @@ git commit -m <span style="color:#e6db74">&#34;Auto update : `date`&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\033[0;32mPushing to GitHub...\033[0m&#34;</span>
 
-git push origin master</code></pre></div>
-<p>在<code>echo</code>的文本里奇奇怪怪的内容都是<code>escape character</code>s，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）</p>
-
+git push origin master
+</code></pre></div><p>在<code>echo</code>的文本里奇奇怪怪的内容都是<code>escape character</code>s，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）</p>
 <h3 id="2-增加cron-task">#2 增加cron task</h3>
-
 <p>在命令行中输入：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ EDITOR<span style="color:#f92672">=</span>nano cron -e</code></pre></div>
-<p>增加这一行：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cron" data-lang="cron">0 * * * * cd ~/org &amp;&amp; ./update.sh</code></pre></div>
-<p>保存退出即可。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ EDITOR<span style="color:#f92672">=</span>nano cron -e
+</code></pre></div><p>增加这一行：</p>
+<pre><code class="language-cron" data-lang="cron">0 * * * * cd ~/org &amp;&amp; ./update.sh
+</code></pre><p>保存退出即可。</p>
 <blockquote>
 <p><em>注意！注意！注意！</em></p>
-
 <p>macOS下由于一些奇怪的权限原因，只能使用Terminal.app进行编辑。</p>
-
 <p>iTerm2是不行的。</p>
 </blockquote>
-
 <h3 id="3-enjoy-it">#3 Enjoy it!</h3>
 
 </div>

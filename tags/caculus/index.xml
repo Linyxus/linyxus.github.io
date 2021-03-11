@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>caculus on Linro</title>
@@ -21,7 +21,8 @@
 $$ X_0点的去心\delta邻域：B(X_0, \delta) = {X \in R^n : 0 &amp;lt; ||X-X_0|| &amp;lt; \delta} $$
 点与集 内点： $$ I(x) : x为\Omega的内点 $$
 $$ I(x) \Leftrightarrow \exists \delta &amp;gt; 0, B(x,\delta) \subset \Omega $$
-边界点： $$ S(x) \Leftrightarrow \forall \delta &amp;gt; 0 (B(x,\delta) \cap \Omega \neq \emptyset \wedge B(x,\delta) \cap R^n /\Omega \neq \emptyset) $$ 说明点$x$的任意一个邻域都横跨了集合$\Omega$的边界，很漂亮的定义。</description>
+边界点： $$ S(x) \Leftrightarrow \forall \delta &amp;gt; 0 (B(x,\delta) \cap \Omega \neq \emptyset \wedge B(x,\delta) \cap R^n /\Omega \neq \emptyset) $$ 说明点$x$的任意一个邻域都横跨了集合$\Omega$的边界，很漂亮的定义。
+开集：所有点都为内点</description>
     </item>
     
   </channel>

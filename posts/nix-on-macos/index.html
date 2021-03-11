@@ -65,66 +65,44 @@
     </div>
     
     <hr/>
-    
-
-<h1 id="what-is-nix">What is Nix?</h1>
-
+    <h1 id="what-is-nix">What is Nix?</h1>
 <p>简单来说，Nix是一个纯函数式包管理器。它将函数式的思想应用到了包管理中——每一个package都是一条语句的值，安装、编译包的过程是对表达式求值，而不是借助副作用。一个包一旦编译完成，就是不可变的。所有编译好的包都会被存储于<code>/nix/store/</code>中。</p>
-
 <p>Nix的思想其实很值得体会，也的确能为实际应用带来莫大的方便与效率，但对这些话题的探讨不在本篇文章的范畴之内。</p>
-
 <p>本文的主要陈述了怎样在macOS Catalina下，安装使用<code>nix</code>。</p>
-
 <h1 id="installation">Installation</h1>
-
 <h2 id="主要问题">主要问题</h2>
-
 <p>事实上，在macOS Catalina之前，<code>nix</code>的安装都不是一件困难的事情，简简单单，一条指令就能解决：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sh &lt;<span style="color:#f92672">(</span>curl https://nixos.org/nix/install<span style="color:#f92672">)</span></code></pre></div>
-<p>然而在Calalina之后，官方默认的安装脚本便失效了。主要原因是：<strong>Apple改变了macOS的文件结构，将系统与用户数据挂载到了两个分区，<code>/</code>变为了只读目录。</strong></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sh &lt;<span style="color:#f92672">(</span>curl https://nixos.org/nix/install<span style="color:#f92672">)</span>
+</code></pre></div><p>然而在Calalina之后，官方默认的安装脚本便失效了。主要原因是：<strong>Apple改变了macOS的文件结构，将系统与用户数据挂载到了两个分区，<code>/</code>变为了只读目录。</strong></p>
 <p>然而，<code>nix</code>的所有文件都需要放到<code>/nix</code>下，<code>/</code>变为只读直接导致<code>nix</code>无法安装到Catalina上。</p>
-
 <h2 id="解决方法">解决方法</h2>
-
 <p>解决方法参照了<a href="https://github.com/NixOS/nix/issues/2925">这个issue</a>中的讨论与一个<a href="https://github.com/steshaw/catalina-nix-upgrade">Github repo</a>。</p>
-
 <p>简单来说，既然安装脚本无法在根目录中创建文件夹，那我们就先为他创建好<code>/nix</code>，再进行安装。</p>
-
 <p>具体来说，只需要新建一个分区并挂载到<code>/nix</code>即可。</p>
-
 <p>刚刚提到的repo是针对升级Catalina前已安装<code>nix</code>进行recover用的，稍作修改，可以得到在Catalina上安装<code>nix</code>的解决方案。<a href="https://github.com/Linyxus/install-nix-on-catalina">Install Nix on Catalina</a></p>
-
 <h2 id="具体步骤">具体步骤</h2>
-
 <p>首先，clone刚刚给出的<a href="https://github.com/Linyxus/install-nix-on-catalina">repo</a>。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/Linyxus/install-nix-on-catalina.git
-cd install-nix-on-catalina</code></pre></div>
-<p>执行第一个脚本</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./step-1</code></pre></div>
-<p>重启电脑，随后执行第二个脚本</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./step-2</code></pre></div>
-<p>Voila!</p>
-
+cd install-nix-on-catalina
+</code></pre></div><p>执行第一个脚本</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./step-1
+</code></pre></div><p>重启电脑，随后执行第二个脚本</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./step-2
+</code></pre></div><p>Voila!</p>
 <h1 id="multi-user-installation-使用proxy的问题">Multi-user installation 使用Proxy的问题</h1>
-
 <p>如果在之前的安装中，选择了multi user，也即使用daemon的选项，proxy的使用就会成为一个问题。</p>
-
 <p>为什么一定要用proxy？因为至少在我的环境下，直连cache.nixos.org下载binary的速度实在是太！慢！了！</p>
-
 <p>而Proxy的使用为什么会成为问题呢？因为nix multi user的实现中，各项操作事实上都是由daemon完成的，这意味着即使在安装时设置了proxy，事实上daemon还是直连下载的：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export http_proxy<span style="color:#f92672">=</span>http://127.0.0.1:1087;export https_proxy<span style="color:#f92672">=</span>http://127.0.0.1:1087;
-nix-env -f <span style="color:#e6db74">&#39;&lt;nixpkgs&gt;&#39;</span> -iA cabal-install</code></pre></div>
-<p>这很不友好。</p>
-
+nix-env -f <span style="color:#e6db74">&#39;&lt;nixpkgs&gt;&#39;</span> -iA cabal-install
+</code></pre></div><p>这很不友好。</p>
 <p>事实上，关于这个问题，在官方的<a href="https://nixos.org/nix/manual/#sec-installer-proxy-settings">Nix Mannual</a>中有所提及。</p>
-
 <blockquote>
 <p>The Nix installer has special handling for these proxy-related environment variables: <code>http_proxy, https_proxy, ftp_proxy, no_proxy, HTTP_PROXY, HTTPS_PROXY, FTP_PROXY, NO_PROXY</code>.</p>
-
+</blockquote>
+<blockquote>
 <p>If any of these variables are set when running the Nix installer, then the installer will create an override file at <code>/etc/systemd/system/nix-daemon.service.d/override.conf</code> so nix-daemon will use them.</p>
 </blockquote>
-
 <p>不幸的是，这并不适用于macOS：<code>launchd</code>没有办法很容易地override服务配置文件中的一些字段。为了解决这一问题，最简单的方法是新建一个service，将原来的daemon service删除。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XML" data-lang="XML"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 <span style="color:#75715e">&lt;!DOCTYPE plist PUBLIC &#34;-//Apple//DTD PLIST 1.0//EN&#34; &#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&#34;&gt;</span>
@@ -156,15 +134,13 @@ nix-env -f <span style="color:#e6db74">&#39;&lt;nixpkgs&gt;&#39;</span> -iA caba
     <span style="color:#f92672">&lt;key&gt;</span>StandardOutPath<span style="color:#f92672">&lt;/key&gt;</span>
     <span style="color:#f92672">&lt;string&gt;</span>/dev/null<span style="color:#f92672">&lt;/string&gt;</span>
   <span style="color:#f92672">&lt;/dict&gt;</span>
-<span style="color:#f92672">&lt;/plist&gt;</span></code></pre></div>
-<p>修改的配置文件在相比于原来的配置，唯一的区别是在 <code>EnvironmentVariables</code> 下增加了两个字段：<code>http_proxy</code>与<code>https_proxy</code>。将这个文件保存为<code>org.nixos.nix-daemon-proxy.plist</code>，然后执行</p>
+<span style="color:#f92672">&lt;/plist&gt;</span>
+</code></pre></div><p>修改的配置文件在相比于原来的配置，唯一的区别是在 <code>EnvironmentVariables</code> 下增加了两个字段：<code>http_proxy</code>与<code>https_proxy</code>。将这个文件保存为<code>org.nixos.nix-daemon-proxy.plist</code>，然后执行</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo launchctl unload org.nixos.nix-daemon.plist
 sudo launchctl load org.nixos.nix-daemon-proxy.plist
-rm org.nixos.nix-daemon.plist</code></pre></div>
-<p>至此，<code>nix-env -i</code>应该可以通过proxy下载binary了。</p>
-
+rm org.nixos.nix-daemon.plist
+</code></pre></div><p>至此，<code>nix-env -i</code>应该可以通过proxy下载binary了。</p>
 <p>这个方案最大的问题在于，每一次<code>nix</code>更新时，理应都要重新修改一次配置。配置文件中有hard-coded的，包含hash与版本好的路径。产生这样问题的主要原因是，我们把impure引入到了一个pure的系统中。</p>
-
 <p>但：能用就行。</p>
 
 </div>

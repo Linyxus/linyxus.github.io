@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>algorithm on Linro</title>
@@ -28,7 +28,8 @@
 而欧拉函数存在解析式： $$ \phi(n) = n \prod_{p}(1 - \frac 1 p) $$ 其中，$p$为$n$的质因子。
 证明从略，会用就行。
 但还是简单说一说，显然有： $$ \phi(p^k) = p^k - p ^ {k-1} $$ 其中，$p$为素数。因为$p^k$与所有除$p$的倍数之外的数都互质。故只需从总数中减去$p$的倍数的个数即可。
-而由中国剩余定理又可证出： $$ \phi(ab) = \phi(a)\phi(b) $$ 对$n$进行素因子分解即可。</description>
+而由中国剩余定理又可证出： $$ \phi(ab) = \phi(a)\phi(b) $$ 对$n$进行素因子分解即可。
+所以，可以这样实现欧拉函数：</description>
     </item>
     
     <item>
@@ -42,12 +43,11 @@
 算法是不会变的。
 那么，就从这里开始吧。
 插入排序 插入排序算不上高效的排序算法，从时间复杂度来说，和冒泡排序是相抵的。其实本质上，插入排序和冒泡排序相似甚至相同，只是“冒泡”的方向不同。
-void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp;gt; 0; j--) { if (arr[j] &amp;lt; arr[j-1]) { int temp = arr[j]; arr[j] = arr[j-1]; arr[j-1] = temp; } } } return; }  在算法实现insert_sort执行的过程中，有这件事情得以保证：0..i-1这些元素已经排好序。
+void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp;gt; 0; j--) { if (arr[j] &amp;lt; arr[j-1]) { int temp = arr[j]; arr[j] = arr[j-1]; arr[j-1] = temp; } } } return; } 在算法实现insert_sort执行的过程中，有这件事情得以保证：0..i-1这些元素已经排好序。
 而关于变量j的那个循环，所做的事情就是“冒泡”，而这里的冒泡本质上也就是插入。
 时间复杂度为$O(n^2)​$。
 归并排序 归并排序是利用了分治思想的排序算法。
- 分解问题：将要排序的数组分成两部分，将两部分分别排序。 合并：将两部分合并。
-void merge_sort(int *begin, int *end) { int l = end - begin; if (l == 0 || l == 1) { return; } int m = l / 2; merge_sort(begin, begin+m); merge_sort(begin+m, end); int p = 0; int q = m; int cnt = 0; while (p &amp;lt; m || q &amp;lt; l) { if (q &amp;gt;= l || (p &amp;lt; m &amp;amp;&amp;amp; *(begin+p) &amp;lt;= *(begin+q))) { tmp[cnt++] = *(begin+p); p++; } else { tmp[cnt++] = *(begin+q); q++; } } for (int i = 0; i &amp;lt; l; i++) { *(begin+i) = tmp[i]; } }   分解问题无甚好说，重要的在于合并。</description>
+ 分解问题：将要排序的数组分成两部分，将两部分分别排序。 合并：将两部分合并。  void merge_sort(int *begin, int *end) { int l = end - begin; if (l == 0 || l == 1) { return; } int m = l / 2; merge_sort(begin, begin+m); merge_sort(begin+m, end); int p = 0; int q = m; int cnt = 0; while (p &amp;lt; m || q &amp;lt; l) { if (q &amp;gt;= l || (p &amp;lt; m &amp;amp;&amp;amp; *(begin+p) &amp;lt;= *(begin+q))) { tmp[cnt++] = *(begin+p); p++; } else { tmp[cnt++] = *(begin+q); q++; } } for (int i = 0; i &amp;lt; l; i++) { *(begin+i) = tmp[i]; } } 分解问题无甚好说，重要的在于合并。</description>
     </item>
     
     <item>
@@ -56,7 +56,7 @@ void merge_sort(int *begin, int *end) { int l = end - begin; if (l == 0 || l == 
       <pubDate>Fri, 25 Jan 2019 19:38:20 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/algorithm-roadmap/</guid>
-      <description> 基础  排序  插入排序 归并排序 桶排序 希尔排序 快速排序  搜索  BFS DFS 回溯 迭代加深搜索 A*  暴力枚举 图  DFS BFS 拓扑排序 欧拉回路  二叉树 分而治之 贪心 动态规划  高级  数论 图论 线段树 组合数学  训练路线  重温紫书及配套练习。配合luogu刷题。 进军黑书。 进军训练指南。  </description>
+      <description>基础  排序  插入排序 归并排序 桶排序 希尔排序 快速排序   搜索  BFS DFS 回溯 迭代加深搜索 A*   暴力枚举 图  DFS BFS 拓扑排序 欧拉回路   二叉树 分而治之 贪心 动态规划  高级  数论 图论 线段树 组合数学  训练路线  重温紫书及配套练习。配合luogu刷题。 进军黑书。 进军训练指南。  </description>
     </item>
     
   </channel>
