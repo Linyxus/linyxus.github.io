@@ -77,7 +77,7 @@ Simply-Typed Lambda Calculus&nbsp;¶ t ::= &#39;true&#39; | &#39;false&#39; | nu
         
 <div class="flex-container">
     <aside role="complementary">
-        Thu Mar 11, 2021 &#183; 2359 words
+        Thu Mar 11, 2021 &#183; 2434 words
         <div class="tag-container">
             
             
@@ -191,6 +191,12 @@ parameter is given. The T-AbsInfer rule generate a new type variable for the
 lambda parameter and type the lambda as in T-AbsGiven.</p>
 <p>The T-App types lambda application. It asserts that <code>t1</code> is of type <code>T2 -&gt; X</code> for
 some fresh type variable <code>X</code>.</p>
+<p>Note that we do not specify the rule for <code>let</code>, since it can be easily
+transformed into a combination of lambda abstraction and application. For any
+let expression <code>let x : T = t1 in t2</code>, we can transform it into
+<code>(\x: T. t2) t1</code> and type it with existing rules.</p>
+<p>We can add additional power to <code>let</code> forms to make things more interesting. We
+will discuss it in the following section on let polymorphism.</p>
 
 <h3 id="algorithm-u-constraint-unification" class="anchor-link"><a href="#algorithm-u-constraint-unification">Algorithm U: Constraint Unification<span class="pilcrow">&nbsp;¶</span></a></h3>
 <p>The constraints in our case are simply equations. Algorithm U will unify these
