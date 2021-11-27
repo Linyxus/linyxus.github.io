@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blog on Linro</title>
-    <link>https://blog.linyxus.xyz/tags/blog/</link>
+    <link>https://linyxus.github.io/tags/blog/</link>
     <description>Recent content in blog on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 09 Aug 2019 20:19:22 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.linyxus.xyz/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linyxus.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在博客中启用Utterances评论系统</title>
-      <link>https://blog.linyxus.xyz/posts/enable-utterances/</link>
+      <link>https://linyxus.github.io/posts/enable-utterances/</link>
       <pubDate>Fri, 09 Aug 2019 20:19:22 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/enable-utterances/</guid>
+      <guid>https://linyxus.github.io/posts/enable-utterances/</guid>
       <description>What&amp;rsquo;s Utterance? Utteranc.es是一个基于Github Issues的评论系统。
 先前一直苦于为博客找一个合适的评论系统，Disqus很好，但因为众所周知的原因，国内用起来颇多不便。也想过要自己造一个轮子，但迟迟没有开始。
 Utterances几乎是无可挑剔的一个选择：基于Github Issues，便捷无阻。长得也看得过去。

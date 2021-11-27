@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>emacs on Linro</title>
-    <link>https://blog.linyxus.xyz/tags/emacs/</link>
+    <link>https://linyxus.github.io/tags/emacs/</link>
     <description>Recent content in emacs on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 07 Nov 2019 10:32:00 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.linyxus.xyz/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linyxus.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Switching From Purcell&#39;s Emacs.d to Spacemacs</title>
-      <link>https://blog.linyxus.xyz/posts/to-spacemac/</link>
+      <link>https://linyxus.github.io/posts/to-spacemac/</link>
       <pubDate>Thu, 07 Nov 2019 10:32:00 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/to-spacemac/</guid>
+      <guid>https://linyxus.github.io/posts/to-spacemac/</guid>
       <description>很久以来，我的Emacs配置都基于无比经典的Purcell的 emacs.d。但就在最近，我突然决定切换到 Spacemacs。
 我曾用过一段时间的 Spacemacs，或者，确切的说，贯穿了我高二到高三的大部分时光。但 彼时对Emacs了解颇少，对Spacemacs的使用也仅限于 uncomment 几个 layer，或是复制粘 贴几句配置到 user-config 中。大一之后，一个偶然的契机，我打算更深入地学习Emacs。 那时候开始，我一直使用并轻度定制了Purcell的Emacs配置。 Github repo
 但老实说，不管是配置的方法还是版本管理，我在这段时间里做的真的有些随便。
@@ -31,10 +31,10 @@ git clone https://github.</description>
     
     <item>
       <title>org-mode规划笔记</title>
-      <link>https://blog.linyxus.xyz/posts/introducing-org-templetes/</link>
+      <link>https://linyxus.github.io/posts/introducing-org-templetes/</link>
       <pubDate>Wed, 13 Feb 2019 12:05:39 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/introducing-org-templetes/</guid>
+      <guid>https://linyxus.github.io/posts/introducing-org-templetes/</guid>
       <description>org-mode可能是Emacs最有名的一部分。作为一个瑞士军刀般的笔记系统，org-mode真的可以渗入你生活的每个角落。
 之前我也在学校社团里做过一个有关org-mode的讲座。关于org-mode，记忆深刻的是某知乎用户的一句话：
  我的生活就是在org-mode掌控之下的好吗

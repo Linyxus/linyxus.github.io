@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nix on Linro</title>
-    <link>https://blog.linyxus.xyz/tags/nix/</link>
+    <link>https://linyxus.github.io/tags/nix/</link>
     <description>Recent content in nix on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 28 Oct 2019 15:14:00 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.linyxus.xyz/tags/nix/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linyxus.github.io/tags/nix/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Nix on macOS, Made Easy</title>
-      <link>https://blog.linyxus.xyz/posts/nix-on-macos/</link>
+      <link>https://linyxus.github.io/posts/nix-on-macos/</link>
       <pubDate>Mon, 28 Oct 2019 15:14:00 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/nix-on-macos/</guid>
+      <guid>https://linyxus.github.io/posts/nix-on-macos/</guid>
       <description>What is Nix? 简单来说，Nix是一个纯函数式包管理器。它将函数式的思想应用到了包管理中——每一个package都是一条语句的值，安装、编译包的过程是对表达式求值，而不是借助副作用。一个包一旦编译完成，就是不可变的。所有编译好的包都会被存储于/nix/store/中。
 Nix的思想其实很值得体会，也的确能为实际应用带来莫大的方便与效率，但对这些话题的探讨不在本篇文章的范畴之内。
 本文的主要陈述了怎样在macOS Catalina下，安装使用nix。

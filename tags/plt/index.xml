@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>plt on Linro</title>
-    <link>https://blog.linyxus.xyz/tags/plt/</link>
+    <link>https://linyxus.github.io/tags/plt/</link>
     <description>Recent content in plt on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 23 Oct 2021 00:30:00 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.linyxus.xyz/tags/plt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linyxus.github.io/tags/plt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>论文笔记: A Simple Soundness Proof for Dependent Object Types</title>
-      <link>https://blog.linyxus.xyz/posts/simple-dot-proof-notes/</link>
+      <link>https://linyxus.github.io/posts/simple-dot-proof-notes/</link>
       <pubDate>Sat, 23 Oct 2021 00:30:00 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/simple-dot-proof-notes/</guid>
+      <guid>https://linyxus.github.io/posts/simple-dot-proof-notes/</guid>
       <description>依赖对象类型 (Dependent Object Types, DOT) 是一种用来建模 Scala 语言核心特性的演 算。形式化方法让我们从复杂系统中发现朴素而强大的规律，也让无序变得有序。因而，一 个形式化演算的诞生无疑让 Scala 语言的研究和设计得到了许多便利。
 然而，不同于其他演算，DOT 的健全性 (soundness) 很证明。多年来，很多人在证明 DOT 的健全性上付出了许多努力，最终才艰难地完成。其困难主要来源于两个方面。
  首先，DOT是一门依赖类型 (dependently-typed) 的语言。对其性质进行推理需要同时考 虑到值和类型。这是复杂的。 其次，DOT，或者说 Scala 的类型成员 (type member) 允许用户自行定义子类型关系。 这样的灵活性带来了诸多便利，让 Scala 能够建模许多复杂的模型，让用户能自己定义 一套子类型体系。但一切便利自有其代价，在类型系统层面上，这样的灵活性允许用户在 类型系统中定义不合理的子类型关系，例如，用户可能会令函数类型成为对象类型的子类。 在这样的类型体系里，证明类型系统的健全性是不可能的。如何妥善处理此类不安全的自 定义子类关系，成为了一个巨大的、需要好好解决的问题。这也是DOT的健全性证明不同 于其他任何一门语言独有的复杂之处。  在这篇文章中，作者给出了一个简单、模块化的DOT类型安全证明。在此之前，DOT的安全证 明复杂、晦涩难懂，并且难于扩展。这样的复杂性对于一门核心演算显然是不合理的。

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>macOS on Linro</title>
-    <link>https://blog.linyxus.xyz/tags/macos/</link>
+    <link>https://linyxus.github.io/tags/macos/</link>
     <description>Recent content in macOS on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 12 Dec 2019 17:28:00 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.linyxus.xyz/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linyxus.github.io/tags/macos/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Playing with keyboard on macOS with Karabiner</title>
-      <link>https://blog.linyxus.xyz/posts/macos-keyboard-karabiner/</link>
+      <link>https://linyxus.github.io/posts/macos-keyboard-karabiner/</link>
       <pubDate>Thu, 12 Dec 2019 17:28:00 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/macos-keyboard-karabiner/</guid>
+      <guid>https://linyxus.github.io/posts/macos-keyboard-karabiner/</guid>
       <description>本文会简单地介绍 macOS 上的键盘修改工具 Karabiner，并且简单介绍我配置的修改方式。
 引子 关于 macOS 的输入法 在macOS上，一直让我很头疼的一件事情是自带的输入法对中文输入不是非常友好。由于对 中文输入者而言，在中英文之间切换是相对常见的操作，大多数人习惯使用Shift切换，因 为绝大多数中文输入法都默认这一点。但macOS上默认使用Capslock。
 这并不是关键之处，让我完全不能好好使用macOS自带输入法的根本原因会在下面提到：我 需要把Capslock用作他用。
@@ -37,10 +37,10 @@ Modification I: 使用Shift切换中英文 利用 Shift 切换中英文有一个
     
     <item>
       <title>Dozer: 用两个小点管理你的macOS状态栏</title>
-      <link>https://blog.linyxus.xyz/posts/introduction-to-dozer/</link>
+      <link>https://linyxus.github.io/posts/introduction-to-dozer/</link>
       <pubDate>Mon, 11 Feb 2019 13:20:02 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/introduction-to-dozer/</guid>
+      <guid>https://linyxus.github.io/posts/introduction-to-dozer/</guid>
       <description>macOS的状态栏设计是个饱受诟病的地方。因为从系统层面上，并不存在管理状态栏的功能（除了排序）。
   由于没有隐藏图标的功能，所以很多从来用不着也不想看的图标总是占着位置。比如Spotlight的放大镜，比如Siri的圆圈。
 对于这个问题有不少流行的解决方案，Bartender是主流，也有Vanilla之流紧随其后。

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>haskell on Linro</title>
-    <link>https://blog.linyxus.xyz/tags/haskell/</link>
+    <link>https://linyxus.github.io/tags/haskell/</link>
     <description>Recent content in haskell on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 22 Mar 2020 10:35:00 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.linyxus.xyz/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linyxus.github.io/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The magic of Laziness: from fibonacci to Y combinator (2)</title>
-      <link>https://blog.linyxus.xyz/posts/the-magic-of-laziness-2/</link>
+      <link>https://linyxus.github.io/posts/the-magic-of-laziness-2/</link>
       <pubDate>Sun, 22 Mar 2020 10:35:00 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/the-magic-of-laziness-2/</guid>
+      <guid>https://linyxus.github.io/posts/the-magic-of-laziness-2/</guid>
       <description>这是 The magic of Laziness 的第二篇博客。在本篇文章中，我将展示Laziness的另一个 奇妙的应用：创建递归函数。
 创建递归函数自然是一件非常简单的事情，在Python中实现一个计算阶乘的函数，只需寥寥 数行：
 def fact(n: int): ret = 1 for i in range(1, n+1): ret *= i return ret 事实上，使用函数式风格的语言来实现它，也非常容易：
@@ -27,10 +27,10 @@ fact n | n &amp;lt;= 0 = 1 | otherwise = n * fact (n-1) 然而，今天我想解
     
     <item>
       <title>The magic of Laziness: from fibonacci to Y combinator (1)</title>
-      <link>https://blog.linyxus.xyz/posts/the-magic-of-laziness/</link>
+      <link>https://linyxus.github.io/posts/the-magic-of-laziness/</link>
       <pubDate>Wed, 12 Feb 2020 21:17:00 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/the-magic-of-laziness/</guid>
+      <guid>https://linyxus.github.io/posts/the-magic-of-laziness/</guid>
       <description>在这篇博客中，我将简单地介绍许多函数式编程语言中一个重要的，也是独特的特性：Laziness。
 A first taste of Laziness 所以，什么是Laziness呢？Laziness有一个更加正式的名称：lazy evaluation，也即 惰 性求值 。简单来说，惰性求值意味着，表达式的值不会被立即求出，只有当需要的时候才 会对其进行求值。
 比如，下面的代码在运行时并不会报错，而可以安全地求出列表的长度。
@@ -44,10 +44,10 @@ Weak Head Normal Formd的定义则要复杂一些。简单来说，所有函数�
     
     <item>
       <title>A Tasteful Tutorial on State Monads</title>
-      <link>https://blog.linyxus.xyz/posts/state-monad/</link>
+      <link>https://linyxus.github.io/posts/state-monad/</link>
       <pubDate>Mon, 16 Sep 2019 20:47:35 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/state-monad/</guid>
+      <guid>https://linyxus.github.io/posts/state-monad/</guid>
       <description>什么是State Monad？ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
 一个很经典的例子是在Haskell中获取随机数，如果不使用State Monad，就可能需要写出这样的代码：
 getThreeRandInt :: (Int, Int, Int) getThreeRandInt = (x1, x2, x3) where gen = mkStdGen (x1, gen&amp;#39;) = random gen (x2, gen&amp;#39;&amp;#39;) = random gen&amp;#39; (x3, _) = random gen&amp;#39;&amp;#39; 这样的代码很丑。

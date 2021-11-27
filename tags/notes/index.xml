@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>notes on Linro</title>
-    <link>https://blog.linyxus.xyz/tags/notes/</link>
+    <link>https://linyxus.github.io/tags/notes/</link>
     <description>Recent content in notes on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 24 Oct 2019 12:00:42 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.linyxus.xyz/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linyxus.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>简短的gdb使用手册</title>
-      <link>https://blog.linyxus.xyz/posts/using-gdb/</link>
+      <link>https://linyxus.github.io/posts/using-gdb/</link>
       <pubDate>Thu, 24 Oct 2019 12:00:42 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/using-gdb/</guid>
+      <guid>https://linyxus.github.io/posts/using-gdb/</guid>
       <description>编译 为了使代码能够被gdb调试，需要在编译时加入-g选项，也即
 gcc -g main.c -o main 使用-g选项后，gcc会为生成的程序加载调试符号，供给gdb载入。
 对编译完成的文件，使用gdb载入：
@@ -25,10 +25,10 @@ gdb main 基本执行控制指令 run，break，print 三个指令的使用示�
     
     <item>
       <title>Graph Networks 学习笔记 :: [GAT, GraphSAGE, H-GCN]</title>
-      <link>https://blog.linyxus.xyz/posts/gat-graphsage-hgcn/</link>
+      <link>https://linyxus.github.io/posts/gat-graphsage-hgcn/</link>
       <pubDate>Thu, 06 Jun 2019 12:09:41 +0800</pubDate>
       
-      <guid>https://blog.linyxus.xyz/posts/gat-graphsage-hgcn/</guid>
+      <guid>https://linyxus.github.io/posts/gat-graphsage-hgcn/</guid>
       <description>概述 在自动化所科创项目选拔中阅读的论文，留下了一些笔记。
 三篇论文分别是：
 Graph Attention Networks Inductive Representation Learning on Large Graphs Hierarchical Graph Convolutional Networks for Semi-supervised Node Classification  分别对应了GAT，GraphSAGE和H-GCN。最后一篇，也就是H-GCN，就是组里师兄做的工作。
