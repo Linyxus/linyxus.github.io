@@ -11,61 +11,21 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
-<title>
-    利用cron自动同步org到Github - Linro
-</title>
 
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
+<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://blog.linyxus.xyz">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
-
-
-
-
-  
-
-
-
-
-
+<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="利用cron自动同步org到Github"/>
-<meta name="twitter:description" content=" 效果&nbsp;¶   每天在固定的时间，只要电脑开着，自动commit发生在org文件夹内的改动，并且push到Github上。
-如图，设定的是在所有的整点都会自动更新。
-步骤&nbsp;¶ #1 编写自动同步shell&nbsp;¶ #!/bin/bash  echo -e &#34;\033[0;32mPulling from GitHub...\033[0m&#34; git pull git add . git commit -m &#34;Auto update : `date`&#34; echo -e &#34;\033[0;32mPushing to GitHub...\033[0m&#34; git push origin master 在echo的文本里奇奇怪怪的内容都是escape characters，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）
-#2 增加cron task&nbsp;¶ 在命令行中输入：
-$ EDITOR=nano cron -e 增加这一行：
-0 * * * * cd ~/org &amp;&amp; ./update.sh 保存退出即可。
- 注意！注意！注意！
-macOS下由于一些奇怪的权限原因，只能使用Terminal.app进行编辑。
-iTerm2是不行的。
- #3 Enjoy it!&nbsp;¶ "/>
-
-<meta property="og:title" content="利用cron自动同步org到Github" />
-<meta property="og:description" content=" 效果&nbsp;¶   每天在固定的时间，只要电脑开着，自动commit发生在org文件夹内的改动，并且push到Github上。
-如图，设定的是在所有的整点都会自动更新。
-步骤&nbsp;¶ #1 编写自动同步shell&nbsp;¶ #!/bin/bash  echo -e &#34;\033[0;32mPulling from GitHub...\033[0m&#34; git pull git add . git commit -m &#34;Auto update : `date`&#34; echo -e &#34;\033[0;32mPushing to GitHub...\033[0m&#34; git push origin master 在echo的文本里奇奇怪怪的内容都是escape characters，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）
-#2 增加cron task&nbsp;¶ 在命令行中输入：
-$ EDITOR=nano cron -e 增加这一行：
-0 * * * * cd ~/org &amp;&amp; ./update.sh 保存退出即可。
- 注意！注意！注意！
-macOS下由于一些奇怪的权限原因，只能使用Terminal.app进行编辑。
-iTerm2是不行的。
- #3 Enjoy it!&nbsp;¶ " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.linyxus.xyz/posts/sync-org-files/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-02-26T22:58:41&#43;08:00" />
-<meta property="article:modified_time" content="2019-02-26T22:58:41&#43;08:00" />
-
 
 
     
@@ -81,51 +41,39 @@ iTerm2是不行的。
 </head>
 
 <body>
-    
-    
-    <header class="wrap flex-container">
-        <h1>利用cron自动同步org到Github</h1>
-    </header>
-    
-    <main class="wrap">
+    <div class="wrap">
+        <div class="section" id="title">利用cron自动同步org到Github</div>
+
         
-<div class="flex-container">
-    <aside role="complementary">
-        Tue Feb 26, 2019 &#183; 60 words
-        <div class="tag-container">
-            
-            
-            <span class="tag">
-                <a href="/tags/note/">
-                    note
-                </a>
-            </span>
-            
-            
-            
-            <span class="tag">
-                <a href="/tags/org/">
-                    org
-                </a>
-            </span>
-            
-            
-        </div>
-    </aside>
-    <hr />
-    <article role="article">
+<div class="section" id="content">
+    Tue Feb 26, 2019 &#183; 60 words
+    
+    <div class="tag-container">
         
-<h2 id="效果" class="anchor-link"><a href="#%e6%95%88%e6%9e%9c">效果<span class="pilcrow">&nbsp;¶</span></a></h2>
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/note">
+                note
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/org">
+                org
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <h2 id="效果">效果</h2>
 <figure>
     <img src="p1.png"/> 
 </figure>
 
 <p>每天在固定的时间，只要电脑开着，自动commit发生在org文件夹内的改动，并且push到Github上。</p>
 <p>如图，设定的是在所有的整点都会自动更新。</p>
-
-<h2 id="步骤" class="anchor-link"><a href="#%e6%ad%a5%e9%aa%a4">步骤<span class="pilcrow">&nbsp;¶</span></a></h2>
-
-<h3 id="1-编写自动同步shell" class="anchor-link"><a href="#1-%e7%bc%96%e5%86%99%e8%87%aa%e5%8a%a8%e5%90%8c%e6%ad%a5shell">#1 编写自动同步shell<span class="pilcrow">&nbsp;¶</span></a></h3>
+<h2 id="步骤">步骤</h2>
+<h3 id="1-编写自动同步shell">#1 编写自动同步shell</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 echo -e <span style="color:#e6db74">&#34;\033[0;32mPulling from GitHub...\033[0m&#34;</span>
@@ -140,8 +88,7 @@ echo -e <span style="color:#e6db74">&#34;\033[0;32mPushing to GitHub...\033[0m&#
 
 git push origin master
 </code></pre></div><p>在<code>echo</code>的文本里奇奇怪怪的内容都是<code>escape character</code>s，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）</p>
-
-<h3 id="2-增加cron-task" class="anchor-link"><a href="#2-%e5%a2%9e%e5%8a%a0cron-task">#2 增加cron task<span class="pilcrow">&nbsp;¶</span></a></h3>
+<h3 id="2-增加cron-task">#2 增加cron task</h3>
 <p>在命令行中输入：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ EDITOR<span style="color:#f92672">=</span>nano cron -e
 </code></pre></div><p>增加这一行：</p>
@@ -152,15 +99,22 @@ git push origin master
 <p>macOS下由于一些奇怪的权限原因，只能使用Terminal.app进行编辑。</p>
 <p>iTerm2是不行的。</p>
 </blockquote>
+<h3 id="3-enjoy-it">#3 Enjoy it!</h3>
 
-<h3 id="3-enjoy-it" class="anchor-link"><a href="#3-enjoy-it">#3 Enjoy it!<span class="pilcrow">&nbsp;¶</span></a></h3>
-
-    </article>
 </div>
+
+<script src="https://utteranc.es/client.js"
+        repo="linyxus/linro-hugo"
+        issue-term="pathname"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+
 
 
         
-<nav role="navigation" class="flex-container bottom-menu">
+<div class="section bottom-menu">
     
 <hr />
 <p>
@@ -175,32 +129,34 @@ git push origin master
 
     
         
-            <a href="/posts">writings</a>
+            <a href="/posts">
+                writings
+            </a>
         
     
     
         
             &#183; 
-            <a href="/me">me</a>
+            <a href="/me">
+                me
+            </a>
         
             &#183; 
-            <a href="/about">about</a>
+            <a href="/about">
+                about
+            </a>
         
     
-    
-    
-        &#183; 
-        <a href="/">
-            main
-        </a>
-    
+    &#183; 
+    <a href="https://blog.linyxus.xyz">
+        main
+    </a>
 
 </p>
-</nav>
+</div>
 
-    </main>
-    
-    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -216,9 +172,8 @@ git push origin master
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</footer>
-    
-    
+</div>
+    </div>
 </body>
 
 </html>

@@ -1,180 +1,313 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/tags/plt/</loc>
+    <lastmod>2021-10-23T00:30:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/tags/scala/</loc>
+    <lastmod>2021-10-23T00:30:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/tags/</loc>
+    <lastmod>2021-10-23T00:30:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/tags/type-system/</loc>
+    <lastmod>2021-10-23T00:30:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/posts/simple-dot-proof-notes/</loc>
+    <lastmod>2021-10-23T00:30:00+08:00</lastmod>
+  </url>
+  
   <url>
     <loc>https://blog.linyxus.xyz/posts/hm-type-inference-for-stlc/</loc>
     <lastmod>2021-03-11T16:01:00+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.linyxus.xyz/</loc>
-    <lastmod>2021-03-11T16:01:00+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.linyxus.xyz/tags/</loc>
-    <lastmod>2021-03-11T16:01:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/test/</loc>
     <lastmod>2021-03-11T16:01:00+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.linyxus.xyz/tags/type-system/</loc>
-    <lastmod>2021-03-11T16:01:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/haskell/</loc>
     <lastmod>2020-03-22T10:35:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/the-magic-of-laziness-2/</loc>
     <lastmod>2020-03-22T10:35:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/tutorial/</loc>
     <lastmod>2020-03-22T10:35:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/the-magic-of-laziness/</loc>
     <lastmod>2020-02-12T21:17:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/macos/</loc>
     <lastmod>2019-12-12T17:28:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/macos-keyboard-karabiner/</loc>
     <lastmod>2019-12-12T17:28:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/emacs/</loc>
     <lastmod>2019-11-07T10:32:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/to-spacemac/</loc>
     <lastmod>2019-11-07T10:32:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/first-post-org-mode/</loc>
     <lastmod>2019-11-06T00:37:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/nix/</loc>
     <lastmod>2019-10-28T15:14:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/nix-on-macos/</loc>
     <lastmod>2019-10-28T15:14:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/tags/note/</loc>
+    <lastmod>2019-10-24T12:00:42+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/notes/</loc>
     <lastmod>2019-10-24T12:00:42+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/using-gdb/</loc>
     <lastmod>2019-10-24T12:00:42+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/state-monad/</loc>
     <lastmod>2019-09-16T20:47:35+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/blog/</loc>
     <lastmod>2019-08-09T20:19:22+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/enable-utterances/</loc>
     <lastmod>2019-08-09T20:19:22+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/gat-graphsage-hgcn/</loc>
     <lastmod>2019-06-06T12:09:41+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/machine-learning/</loc>
     <lastmod>2019-06-06T12:09:41+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.linyxus.xyz/tags/note/</loc>
-    <lastmod>2019-05-10T13:12:24+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/physics/</loc>
     <lastmod>2019-05-10T13:12:24+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/physics-experiements-formula/</loc>
     <lastmod>2019-05-10T13:12:24+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/calculus/</loc>
     <lastmod>2019-05-02T19:09:04+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/calculus-cheatsheet-series/</loc>
     <lastmod>2019-05-02T19:09:04+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/discrete-math/</loc>
     <lastmod>2019-04-22T19:09:35+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/discrete-math-notes-logic/</loc>
     <lastmod>2019-04-22T19:09:35+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/physics-lifesaving-notes-1/</loc>
     <lastmod>2019-04-18T20:37:30+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/circuit-analysis/</loc>
     <lastmod>2019-04-15T20:34:15+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/circuit-analysis-notes-3/</loc>
     <lastmod>2019-04-15T20:34:15+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/circuit-analysis-notes-2/</loc>
     <lastmod>2019-04-14T21:42:06+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/circuit-analysis-notes-1/</loc>
     <lastmod>2019-04-12T20:17:12+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/mental-health-nn-training/</loc>
     <lastmod>2019-04-09T15:40:08+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/physics-lifesaving-notes-0/</loc>
     <lastmod>2019-04-08T19:46:14+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/note-on-pytorch-60min-blitz/</loc>
     <lastmod>2019-04-04T22:59:05+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/pytorch/</loc>
     <lastmod>2019-04-04T22:59:05+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/rst/</loc>
     <lastmod>2019-04-04T20:37:33+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/use-rst-with-hugo/</loc>
     <lastmod>2019-04-04T20:37:33+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/caculus/</loc>
     <lastmod>2019-04-01T16:28:15+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/caculas-1/</loc>
     <lastmod>2019-04-01T16:28:15+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/org/</loc>
     <lastmod>2019-02-26T22:58:41+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/sync-org-files/</loc>
     <lastmod>2019-02-26T22:58:41+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/introducing-org-templetes/</loc>
     <lastmod>2019-02-13T12:05:39+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/introduction-to-dozer/</loc>
     <lastmod>2019-02-11T13:20:02+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/algorithm/</loc>
     <lastmod>2019-01-30T19:29:20+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/eular-formula/</loc>
     <lastmod>2019-01-30T19:29:20+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/hugo-and-mathjax/</loc>
     <lastmod>2019-01-29T22:07:57+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/text/</loc>
     <lastmod>2019-01-29T22:07:57+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/sorting-algorithms/</loc>
     <lastmod>2019-01-26T22:19:46+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/algorithm-roadmap/</loc>
     <lastmod>2019-01-25T19:38:20+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/tags/plan/</loc>
     <lastmod>2019-01-25T19:38:20+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
+    <loc>https://blog.linyxus.xyz/</loc>
+    <lastmod>2019-01-24T16:18:08+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/me/</loc>
     <lastmod>2019-01-24T16:18:08+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/hello/</loc>
     <lastmod>2019-01-23T19:44:21+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/posts/</loc>
     <lastmod>2019-01-22T19:47:50+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/about/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://blog.linyxus.xyz/categories/</loc>
   </url>
+  
 </urlset>

@@ -6,7 +6,11 @@
     <description>Recent content in algorithm on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 30 Jan 2019 19:29:20 +0800</lastBuildDate><atom:link href="https://blog.linyxus.xyz/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jan 2019 19:29:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.linyxus.xyz/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>「算法笔记」欧拉函数、欧拉定理与欧拉降幂公式</title>
       <link>https://blog.linyxus.xyz/posts/eular-formula/</link>
@@ -15,12 +19,12 @@
       <guid>https://blog.linyxus.xyz/posts/eular-formula/</guid>
       <description>一些算法题里要求一个数的幂次，一般来说可以大整数+快速幂解决。但有时候数据真的很大，纵是快速幂也奈何不了这道题的。比如某道题要求$2^n$，$n \leq 10^{100000} $，十有八九会TLE。
 大多数情况下，这么大的数据都会要求在某个数（通常是$10^9+7$）的模意义下输出答案。事实上，在这样的条件下，题目的用意是使用欧拉降幂公式先降低指数，然后再快速幂求解。
-欧拉降幂公式&amp;nbsp;¶ 定理&amp;nbsp;¶ $$ a^p \equiv a^{p \bmod \phi(m) + \phi(m)} \pmod m $$
+欧拉降幂公式 定理 $$ a^p \equiv a^{p \bmod \phi(m) + \phi(m)} \pmod m $$
 由于应用为主，证明从略。但显见上式等价于 $$ a^{2\phi(m)} \equiv a^{\phi(m)} \pmod m $$ 其中，$\phi(m)$为欧拉函数。
-应用&amp;nbsp;¶ 所以，如果题设要求我们求出$a^p$在模$m$意义下的值，当$p$很大的时候，我们只需先求出$\phi(m)$，然后用快速幂求出$a^{p \bmod \phi(m)}$即可。
+应用 所以，如果题设要求我们求出$a^p$在模$m$意义下的值，当$p$很大的时候，我们只需先求出$\phi(m)$，然后用快速幂求出$a^{p \bmod \phi(m)}$即可。
 下面，假定$m=10^9+7$。
 那么，下面的任务就是求出$\phi(m)$。
-欧拉函数&amp;nbsp;¶ 对$\forall n \in N^*$，欧拉函数$\phi(n)$的值为小于$n$的正整数中与$n$互质的数的数目。
+欧拉函数 对$\forall n \in N^*$，欧拉函数$\phi(n)$的值为小于$n$的正整数中与$n$互质的数的数目。
 而欧拉函数存在解析式： $$ \phi(n) = n \prod_{p}(1 - \frac 1 p) $$ 其中，$p$为$n$的质因子。
 证明从略，会用就行。
 但还是简单说一说，显然有： $$ \phi(p^k) = p^k - p ^ {k-1} $$ 其中，$p$为素数。因为$p^k$与所有除$p$的倍数之外的数都互质。故只需从总数中减去$p$的倍数的个数即可。
@@ -38,11 +42,11 @@
 排序算法，是最基础的算法之一了吧。两年前或是三年前，我大概也是这样慢慢熟悉了他们。
 算法是不会变的。
 那么，就从这里开始吧。
-插入排序&amp;nbsp;¶ 插入排序算不上高效的排序算法，从时间复杂度来说，和冒泡排序是相抵的。其实本质上，插入排序和冒泡排序相似甚至相同，只是“冒泡”的方向不同。
+插入排序 插入排序算不上高效的排序算法，从时间复杂度来说，和冒泡排序是相抵的。其实本质上，插入排序和冒泡排序相似甚至相同，只是“冒泡”的方向不同。
 void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp;gt; 0; j--) { if (arr[j] &amp;lt; arr[j-1]) { int temp = arr[j]; arr[j] = arr[j-1]; arr[j-1] = temp; } } } return; } 在算法实现insert_sort执行的过程中，有这件事情得以保证：0..i-1这些元素已经排好序。
 而关于变量j的那个循环，所做的事情就是“冒泡”，而这里的冒泡本质上也就是插入。
 时间复杂度为$O(n^2)​$。
-归并排序&amp;nbsp;¶ 归并排序是利用了分治思想的排序算法。
+归并排序 归并排序是利用了分治思想的排序算法。
  分解问题：将要排序的数组分成两部分，将两部分分别排序。 合并：将两部分合并。  void merge_sort(int *begin, int *end) { int l = end - begin; if (l == 0 || l == 1) { return; } int m = l / 2; merge_sort(begin, begin+m); merge_sort(begin+m, end); int p = 0; int q = m; int cnt = 0; while (p &amp;lt; m || q &amp;lt; l) { if (q &amp;gt;= l || (p &amp;lt; m &amp;amp;&amp;amp; *(begin+p) &amp;lt;= *(begin+q))) { tmp[cnt++] = *(begin+p); p++; } else { tmp[cnt++] = *(begin+q); q++; } } for (int i = 0; i &amp;lt; l; i++) { *(begin+i) = tmp[i]; } } 分解问题无甚好说，重要的在于合并。</description>
     </item>
     
@@ -52,7 +56,7 @@ void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp
       <pubDate>Fri, 25 Jan 2019 19:38:20 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/algorithm-roadmap/</guid>
-      <description> 基础&amp;nbsp;¶  排序  插入排序 归并排序 桶排序 希尔排序 快速排序   搜索  BFS DFS 回溯 迭代加深搜索 A*   暴力枚举 图  DFS BFS 拓扑排序 欧拉回路   二叉树 分而治之 贪心 动态规划  高级&amp;nbsp;¶  数论 图论 线段树 组合数学  训练路线&amp;nbsp;¶  重温紫书及配套练习。配合luogu刷题。 进军黑书。 进军训练指南。  </description>
+      <description>基础  排序  插入排序 归并排序 桶排序 希尔排序 快速排序   搜索  BFS DFS 回溯 迭代加深搜索 A*   暴力枚举 图  DFS BFS 拓扑排序 欧拉回路   二叉树 分而治之 贪心 动态规划  高级  数论 图论 线段树 组合数学  训练路线  重温紫书及配套练习。配合luogu刷题。 进军黑书。 进军训练指南。  </description>
     </item>
     
   </channel>

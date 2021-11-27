@@ -11,59 +11,21 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
-<title>
-    电路分析笔记 :: 电路分析基础模型 - Linro
-</title>
 
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
+<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://blog.linyxus.xyz">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
-
-
-
-
-  
-
-
-
-
-
+<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="电路分析笔记 :: 电路分析基础模型"/>
-<meta name="twitter:description" content="电路模型基本概念 电路模型:从实际电路中抽象出的模型  激励:输入电路的信号  响应:经过电路加工处理后得到的信号  集总参数元件:当实际电路的尺寸远小于其使用时最高工作频率所对应的波长时而抽象出的理想元件  集总电路模型:又集总参数元件组成的电路  分布参数电路:当实际电路的尺寸大于其最高工作频率所对应的波长或两者属于同一数量级时     电路模型基本变量 电流、电压、功率。
-电压与电流的参考方向 由于电路分析中，电压与电流的实际方向很难确定，故可以假设这两个变量的方向，以电流为例。
-假设 I 从a流向b，若实际电流方向与参考方向相同
-I &gt; 0  否则
-I &lt; 0   电压与电流的关联参考方向 若在假定的关联参考方向下，电流 I 从高电势流向低电势，则是关联参考方向。
-否则为非关联参考方向。
- 电压 p = (dW)/(dt) = (dW)/(dq)⋅(dq)/(dt) = u⋅i  若在非关联参考方向下
-p = − u⋅i  p &gt; 0:吸收功率  p &lt; 0:供出功率      电路模型基本原件 电阻 如果一个元件的端电压u和通过的电流i是关联参考方向，其伏安关系是通过原点的曲线，这个元件就是电阻元件。
-u, i 为关联参考方向时"/>
-
-<meta property="og:title" content="电路分析笔记 :: 电路分析基础模型" />
-<meta property="og:description" content="电路模型基本概念 电路模型:从实际电路中抽象出的模型  激励:输入电路的信号  响应:经过电路加工处理后得到的信号  集总参数元件:当实际电路的尺寸远小于其使用时最高工作频率所对应的波长时而抽象出的理想元件  集总电路模型:又集总参数元件组成的电路  分布参数电路:当实际电路的尺寸大于其最高工作频率所对应的波长或两者属于同一数量级时     电路模型基本变量 电流、电压、功率。
-电压与电流的参考方向 由于电路分析中，电压与电流的实际方向很难确定，故可以假设这两个变量的方向，以电流为例。
-假设 I 从a流向b，若实际电流方向与参考方向相同
-I &gt; 0  否则
-I &lt; 0   电压与电流的关联参考方向 若在假定的关联参考方向下，电流 I 从高电势流向低电势，则是关联参考方向。
-否则为非关联参考方向。
- 电压 p = (dW)/(dt) = (dW)/(dq)⋅(dq)/(dt) = u⋅i  若在非关联参考方向下
-p = − u⋅i  p &gt; 0:吸收功率  p &lt; 0:供出功率      电路模型基本原件 电阻 如果一个元件的端电压u和通过的电流i是关联参考方向，其伏安关系是通过原点的曲线，这个元件就是电阻元件。
-u, i 为关联参考方向时" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.linyxus.xyz/posts/circuit-analysis-notes-1/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-04-12T20:17:12&#43;08:00" />
-<meta property="article:modified_time" content="2019-04-12T20:17:12&#43;08:00" />
-
 
 
     
@@ -79,40 +41,31 @@ u, i 为关联参考方向时" />
 </head>
 
 <body>
-    
-    
-    <header class="wrap flex-container">
-        <h1>电路分析笔记 :: 电路分析基础模型</h1>
-    </header>
-    
-    <main class="wrap">
+    <div class="wrap">
+        <div class="section" id="title">电路分析笔记 :: 电路分析基础模型</div>
+
         
-<div class="flex-container">
-    <aside role="complementary">
-        Fri Apr 12, 2019 &#183; 131 words
-        <div class="tag-container">
-            
-            
-            <span class="tag">
-                <a href="/tags/note/">
-                    note
-                </a>
-            </span>
-            
-            
-            
-            <span class="tag">
-                <a href="/tags/circuit-analysis/">
-                    circuit analysis
-                </a>
-            </span>
-            
-            
-        </div>
-    </aside>
-    <hr />
-    <article role="article">
-        <div class="document">
+<div class="section" id="content">
+    Fri Apr 12, 2019 &#183; 181 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/note">
+                note
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/circuit-analysis">
+                circuit analysis
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <div class="document">
 
 
 <div class="section" id="id1">
@@ -142,28 +95,36 @@ u, i 为关联参考方向时" />
 <div class="section" id="id3">
 <h3>电压与电流的参考方向</h3>
 <p>由于电路分析中，电压与电流的实际方向很难确定，故可以假设这两个变量的方向，以电流为例。</p>
-<p>假设 <span class="formula"><i>I</i></span> 从a流向b，若实际电流方向与参考方向相同</p>
-<div class="formula">
-<i>I</i> &gt; 0
+<p>假设 <span class="math">\(I\)</span> 从a流向b，若实际电流方向与参考方向相同</p>
+<div class="math">
+\begin{equation*}
+I &gt; 0
+\end{equation*}
 </div>
 <p>否则</p>
-<div class="formula">
-<i>I</i> &lt; 0
+<div class="math">
+\begin{equation*}
+I &lt; 0
+\end{equation*}
 </div>
 </div>
 <div class="section" id="id4">
 <h3>电压与电流的关联参考方向</h3>
-<p>若在假定的关联参考方向下，电流 <span class="formula"><i>I</i></span> 从高电势流向低电势，则是关联参考方向。</p>
+<p>若在假定的关联参考方向下，电流 <span class="math">\(I\)</span> 从高电势流向低电势，则是关联参考方向。</p>
 <p>否则为非关联参考方向。</p>
 </div>
 <div class="section" id="id5">
 <h3>电压</h3>
-<div class="formula">
-<i>p</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dW</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dW</i></span><span class="ignored">)/(</span><span class="denominator"><i>dq</i></span><span class="ignored">)</span></span>⋅<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dq</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> = <i>u</i>⋅<i>i</i>
+<div class="math">
+\begin{equation*}
+p = \frac {dW} {dt} = \frac {dW}{dq} \cdot \frac {dq}{dt} = u \cdot i
+\end{equation*}
 </div>
 <p>若在非关联参考方向下</p>
-<div class="formula">
-<i>p</i> =  − <i>u</i>⋅<i>i</i>
+<div class="math">
+\begin{equation*}
+p = - u \cdot i
+\end{equation*}
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -182,23 +143,31 @@ u, i 为关联参考方向时" />
 <div class="section" id="id7">
 <h3>电阻</h3>
 <p>如果一个元件的端电压u和通过的电流i是关联参考方向，其伏安关系是通过原点的曲线，这个元件就是电阻元件。</p>
-<p><span class="formula"><i>u</i>, <i>i</i></span> 为关联参考方向时</p>
-<div class="formula">
-<i>R</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>u</i>(<i>t</i>)</span><span class="ignored">)/(</span><span class="denominator"><i>i</i>(<i>t</i>)</span><span class="ignored">)</span></span>
+<p><span class="math">\(u, i\)</span> 为关联参考方向时</p>
+<div class="math">
+\begin{equation*}
+R = \frac {u(t)} {i(t)}
+\end{equation*}
 </div>
 <p>否则</p>
-<div class="formula">
-<i>R</i> =  − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>u</i>(<i>t</i>)</span><span class="ignored">)/(</span><span class="denominator"><i>i</i>(<i>t</i>)</span><span class="ignored">)</span></span>
+<div class="math">
+\begin{equation*}
+R = -\frac {u(t)} {i(t)}
+\end{equation*}
 </div>
 <p>定义电导</p>
-<div class="formula">
-<i>G</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>R</i></span><span class="ignored">)</span></span>
+<div class="math">
+\begin{equation*}
+G = \frac {1} {R}
+\end{equation*}
 </div>
 <p>于是</p>
-<div class="formula">
-<i>i</i> = <i>G</i>⋅<i>u</i>
+<div class="math">
+\begin{equation*}
+i = G \cdot u
+\end{equation*}
 </div>
-<p>单位 <span class="formula"><i>S</i></span> (西门子)</p>
+<p>单位 <span class="math">\(S\)</span> (西门子)</p>
 </div>
 <div class="section" id="id8">
 <h3>独立电源</h3>
@@ -212,16 +181,22 @@ u, i 为关联参考方向时" />
 <li>可以吸收也可以供出功率</li>
 </ol>
 <p>理想电压源在实际中不存在。实际电压源为理想电压源与电阻的串联。</p>
-<div class="formula">
-<i>u</i> = <i>U</i><sub><i>s</i></sub> − <i>iR</i><sub><i>s</i></sub>
+<div class="math">
+\begin{equation*}
+u = U_s - iR_s
+\end{equation*}
 </div>
 <p>开路电压</p>
-<div class="formula">
-<i>i</i> = 0 ⇒ <i>u</i> = <i>U</i><sub><i>s</i></sub>
+<div class="math">
+\begin{equation*}
+i = 0 \Rightarrow u = U_s
+\end{equation*}
 </div>
 <p>短路电流</p>
-<div class="formula">
-<i>u</i> = 0 ⇒ <i>i</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>U</i><sub><i>s</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>R</i><sub><i>s</i></sub></span><span class="ignored">)</span></span>
+<div class="math">
+\begin{equation*}
+u = 0 \Rightarrow i = \frac {U_s} {R_s}
+\end{equation*}
 </div>
 </div>
 <div class="section" id="id10">
@@ -234,16 +209,22 @@ u, i 为关联参考方向时" />
 <li>能吸收也能提供功率</li>
 </ol>
 <p>理想电流源同样不存在。实际电流源是理想电流源与电阻的并联。</p>
-<div class="formula">
-<i>i</i> = <i>i</i><sub><i>s</i></sub> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>u</i></span><span class="ignored">)/(</span><span class="denominator"><i>R</i><sub><i>s</i></sub></span><span class="ignored">)</span></span>
+<div class="math">
+\begin{equation*}
+i = i_s - \frac {u} {R_s}
+\end{equation*}
 </div>
 <p>开路电压</p>
-<div class="formula">
-<i>i</i> = 0 ⇒ <i>u</i> = <i>i</i><sub><i>s</i></sub><i>R</i><sub><i>s</i></sub>
+<div class="math">
+\begin{equation*}
+i = 0 \Rightarrow u = i_s R_s
+\end{equation*}
 </div>
 <p>短路电流</p>
-<div class="formula">
-<i>u</i> = 0 ⇒ <i>i</i> = <i>i</i><sub><i>s</i></sub>
+<div class="math">
+\begin{equation*}
+u = 0 \Rightarrow i = i_s
+\end{equation*}
 </div>
 </div>
 </div>
@@ -257,12 +238,20 @@ u, i 为关联参考方向时" />
 </div>
 </div>
 </div>
-    </article>
 </div>
+
+<script src="https://utteranc.es/client.js"
+        repo="linyxus/linro-hugo"
+        issue-term="pathname"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+
 
 
         
-<nav role="navigation" class="flex-container bottom-menu">
+<div class="section bottom-menu">
     
 <hr />
 <p>
@@ -277,32 +266,34 @@ u, i 为关联参考方向时" />
 
     
         
-            <a href="/posts">writings</a>
+            <a href="/posts">
+                writings
+            </a>
         
     
     
         
             &#183; 
-            <a href="/me">me</a>
+            <a href="/me">
+                me
+            </a>
         
             &#183; 
-            <a href="/about">about</a>
+            <a href="/about">
+                about
+            </a>
         
     
-    
-    
-        &#183; 
-        <a href="/">
-            main
-        </a>
-    
+    &#183; 
+    <a href="https://blog.linyxus.xyz">
+        main
+    </a>
 
 </p>
-</nav>
+</div>
 
-    </main>
-    
-    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -318,9 +309,8 @@ u, i 为关联参考方向时" />
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</footer>
-    
-    
+</div>
+    </div>
 </body>
 
 </html>

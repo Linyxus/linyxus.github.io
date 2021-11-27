@@ -11,53 +11,21 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
-<title>
-    The magic of Laziness: from fibonacci to Y combinator (2) - Linro
-</title>
 
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
+<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://blog.linyxus.xyz">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
-
-
-
-
-  
-
-
-
-
-
+<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="The magic of Laziness: from fibonacci to Y combinator (2)"/>
-<meta name="twitter:description" content="这是 The magic of Laziness 的第二篇博客。在本篇文章中，我将展示Laziness的另一个 奇妙的应用：创建递归函数。
-创建递归函数自然是一件非常简单的事情，在Python中实现一个计算阶乘的函数，只需寥寥 数行：
-def fact(n: int): ret = 1 for i in range(1, n&#43;1): ret *= i return ret 事实上，使用函数式风格的语言来实现它，也非常容易：
-fact n | n &lt;= 0 = 1 | otherwise = n * fact (n-1) 然而，今天我想解决的问题是，如何在一个定义极度简单，甚至无法为自定义的函数绑定 “名称”的条件下，实现递归？
-确切来说，我们定义这样的一种简单的玩具语言，其中只有这样的几种简单的元素：
- 自然数字面值：\(0, 1, 2, \cdots\) 变量：\(x, y, z, a, b, c, \cdots\) 必要的自然数算符：\(x &#43; y, x * 2, 2^{10}, \cdots\) 函数表达式：\(\lambda x. x&#43;1\) 应用函数表达式 (apply function)：\((\lambda x."/>
-
-<meta property="og:title" content="The magic of Laziness: from fibonacci to Y combinator (2)" />
-<meta property="og:description" content="这是 The magic of Laziness 的第二篇博客。在本篇文章中，我将展示Laziness的另一个 奇妙的应用：创建递归函数。
-创建递归函数自然是一件非常简单的事情，在Python中实现一个计算阶乘的函数，只需寥寥 数行：
-def fact(n: int): ret = 1 for i in range(1, n&#43;1): ret *= i return ret 事实上，使用函数式风格的语言来实现它，也非常容易：
-fact n | n &lt;= 0 = 1 | otherwise = n * fact (n-1) 然而，今天我想解决的问题是，如何在一个定义极度简单，甚至无法为自定义的函数绑定 “名称”的条件下，实现递归？
-确切来说，我们定义这样的一种简单的玩具语言，其中只有这样的几种简单的元素：
- 自然数字面值：\(0, 1, 2, \cdots\) 变量：\(x, y, z, a, b, c, \cdots\) 必要的自然数算符：\(x &#43; y, x * 2, 2^{10}, \cdots\) 函数表达式：\(\lambda x. x&#43;1\) 应用函数表达式 (apply function)：\((\lambda x." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.linyxus.xyz/posts/the-magic-of-laziness-2/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-03-22T10:35:00&#43;08:00" />
-<meta property="article:modified_time" content="2020-03-22T10:35:00&#43;08:00" />
-
 
 
     
@@ -73,40 +41,31 @@ fact n | n &lt;= 0 = 1 | otherwise = n * fact (n-1) 然而，今天我想解决�
 </head>
 
 <body>
-    
-    
-    <header class="wrap flex-container">
-        <h1>The magic of Laziness: from fibonacci to Y combinator (2)</h1>
-    </header>
-    
-    <main class="wrap">
+    <div class="wrap">
+        <div class="section" id="title">The magic of Laziness: from fibonacci to Y combinator (2)</div>
+
         
-<div class="flex-container">
-    <aside role="complementary">
-        Sun Mar 22, 2020 &#183; 831 words
-        <div class="tag-container">
-            
-            
-            <span class="tag">
-                <a href="/tags/tutorial/">
-                    tutorial
-                </a>
-            </span>
-            
-            
-            
-            <span class="tag">
-                <a href="/tags/haskell/">
-                    haskell
-                </a>
-            </span>
-            
-            
-        </div>
-    </aside>
-    <hr />
-    <article role="article">
-        <p>这是 The magic of Laziness 的第二篇博客。在本篇文章中，我将展示Laziness的另一个
+<div class="section" id="content">
+    Sun Mar 22, 2020 &#183; 831 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/tutorial">
+                tutorial
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/haskell">
+                haskell
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>这是 The magic of Laziness 的第二篇博客。在本篇文章中，我将展示Laziness的另一个
 奇妙的应用：创建递归函数。</p>
 <p>创建递归函数自然是一件非常简单的事情，在Python中实现一个计算阶乘的函数，只需寥寥
 数行：</p>
@@ -275,12 +234,20 @@ $f$的不动点！</strong></p>
 <li>分析了例子2：Laziness, Y组合子, 递归函数之间的联系</li>
 </ul>
 
-    </article>
 </div>
+
+<script src="https://utteranc.es/client.js"
+        repo="linyxus/linro-hugo"
+        issue-term="pathname"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+
 
 
         
-<nav role="navigation" class="flex-container bottom-menu">
+<div class="section bottom-menu">
     
 <hr />
 <p>
@@ -295,32 +262,34 @@ $f$的不动点！</strong></p>
 
     
         
-            <a href="/posts">writings</a>
+            <a href="/posts">
+                writings
+            </a>
         
     
     
         
             &#183; 
-            <a href="/me">me</a>
+            <a href="/me">
+                me
+            </a>
         
             &#183; 
-            <a href="/about">about</a>
+            <a href="/about">
+                about
+            </a>
         
     
-    
-    
-        &#183; 
-        <a href="/">
-            main
-        </a>
-    
+    &#183; 
+    <a href="https://blog.linyxus.xyz">
+        main
+    </a>
 
 </p>
-</nav>
+</div>
 
-    </main>
-    
-    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -336,9 +305,8 @@ $f$的不动点！</strong></p>
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</footer>
-    
-    
+</div>
+    </div>
 </body>
 
 </html>

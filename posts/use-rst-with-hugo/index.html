@@ -11,43 +11,21 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
-<title>
-    让Hugo和reStucturedText和睦相处 - Linro
-</title>
 
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
+<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://blog.linyxus.xyz">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
-
-
-
-
-  
-
-
-
-
-
+<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="让Hugo和reStucturedText和睦相处"/>
-<meta name="twitter:description" content="起因 在写完 这一篇博客 之后，我对Markdown彻底失望了， 尽管它有可爱的Typora和GFM，尽管我已用它写下了无数篇博客。  没错，还是数学公式渲染问题。  Markdown和LaTeX似乎总是两对冤家，因为Markdown滥用的 _ 语法，并且并没有原生的数学公式支持，大部分 Markdown编译器永远无法完善的解决下标和斜体的恩怨情仇。  Hugo家的BlackFriday，也不例外。  我曾在 这篇博客 中自信的以为Hugo官方给出 的Workaround并无必要，天真的以为Hugo的Markdown编译器不存在这样的问题。现在，我知道我错了。  在之前提到的，一篇数学笔记博客中，下面的LaTeX代码在渲染时还是中了 &lt;em&gt; 的枪。  1 $$2 \lim_{k \to&#43;\infty} X_k =A \Leftrightarrow\lim_{k \to&#43;\infty} x_k^{(i)} =a(i), i=1,2,…,n. 3 $$  所以，我打算转移到更健全的rST。至少rST有专门的Math模块，比如上面出错的LaTeX代码在rST中可以毫无问题的展现：  limk → &#43; ∞Xk = A ⇔ limk → &#43; ∞x(i)k = a(i), i = 1, 2, …, n.  和Markdown相比，rST几乎没有什么弱点。Markdown能做到的事情，rST也无所不能。而很多能力，例如完备无冲突的公式 显示，是过于单薄的Markdown无法企及的。  很幸运的，虽然Hugo内置支持的是Markdown， 但是也能通过调用外部程序支持rST 。 但毕竟rST不是亲儿子，一开始还是会有些小问题：   小问题 LaTeX显示 因为 rst2html 对于数学文本块默认是会进行编译的，转成pdf倒还好，但如果转成HTML，显示的效果就非常难看 （众所周知，HTML对公式的支持非常差）。所以这种任务还是交给MathJax为好，需要修改docutils的配置文件：  1 [html4css1 writer] 2 math-output: mathjax 3  https://cdnjs."/>
-
-<meta property="og:title" content="让Hugo和reStucturedText和睦相处" />
-<meta property="og:description" content="起因 在写完 这一篇博客 之后，我对Markdown彻底失望了， 尽管它有可爱的Typora和GFM，尽管我已用它写下了无数篇博客。  没错，还是数学公式渲染问题。  Markdown和LaTeX似乎总是两对冤家，因为Markdown滥用的 _ 语法，并且并没有原生的数学公式支持，大部分 Markdown编译器永远无法完善的解决下标和斜体的恩怨情仇。  Hugo家的BlackFriday，也不例外。  我曾在 这篇博客 中自信的以为Hugo官方给出 的Workaround并无必要，天真的以为Hugo的Markdown编译器不存在这样的问题。现在，我知道我错了。  在之前提到的，一篇数学笔记博客中，下面的LaTeX代码在渲染时还是中了 &lt;em&gt; 的枪。  1 $$2 \lim_{k \to&#43;\infty} X_k =A \Leftrightarrow\lim_{k \to&#43;\infty} x_k^{(i)} =a(i), i=1,2,…,n. 3 $$  所以，我打算转移到更健全的rST。至少rST有专门的Math模块，比如上面出错的LaTeX代码在rST中可以毫无问题的展现：  limk → &#43; ∞Xk = A ⇔ limk → &#43; ∞x(i)k = a(i), i = 1, 2, …, n.  和Markdown相比，rST几乎没有什么弱点。Markdown能做到的事情，rST也无所不能。而很多能力，例如完备无冲突的公式 显示，是过于单薄的Markdown无法企及的。  很幸运的，虽然Hugo内置支持的是Markdown， 但是也能通过调用外部程序支持rST 。 但毕竟rST不是亲儿子，一开始还是会有些小问题：   小问题 LaTeX显示 因为 rst2html 对于数学文本块默认是会进行编译的，转成pdf倒还好，但如果转成HTML，显示的效果就非常难看 （众所周知，HTML对公式的支持非常差）。所以这种任务还是交给MathJax为好，需要修改docutils的配置文件：  1 [html4css1 writer] 2 math-output: mathjax 3  https://cdnjs." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.linyxus.xyz/posts/use-rst-with-hugo/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-04-04T20:37:33&#43;08:00" />
-<meta property="article:modified_time" content="2019-04-04T20:37:33&#43;08:00" />
-
 
 
     
@@ -63,40 +41,31 @@
 </head>
 
 <body>
-    
-    
-    <header class="wrap flex-container">
-        <h1>让Hugo和reStucturedText和睦相处</h1>
-    </header>
-    
-    <main class="wrap">
+    <div class="wrap">
+        <div class="section" id="title">让Hugo和reStucturedText和睦相处</div>
+
         
-<div class="flex-container">
-    <aside role="complementary">
-        Thu Apr 04, 2019 &#183; 130 words
-        <div class="tag-container">
-            
-            
-            <span class="tag">
-                <a href="/tags/rst/">
-                    rst
-                </a>
-            </span>
-            
-            
-            
-            <span class="tag">
-                <a href="/tags/tutorial/">
-                    tutorial
-                </a>
-            </span>
-            
-            
-        </div>
-    </aside>
-    <hr />
-    <article role="article">
-        <div class="document">
+<div class="section" id="content">
+    Thu Apr 04, 2019 &#183; 128 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/rst">
+                rst
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/tutorial">
+                tutorial
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <div class="document">
 
 
 <div class="section" id="id1">
@@ -123,15 +92,17 @@ Markdown编译器永远无法完善的解决下标和斜体的恩怨情仇。</d
 <div class="line">在之前提到的，一篇数学笔记博客中，下面的LaTeX代码在渲染时还是中了 <tt class="docutils literal">&lt;em&gt;</tt> 的枪。</div>
 </div>
 <pre class="code latex literal-block">
-<span class="ln">1 </span><span class="literal string backtick">$$</span><span class="name builtin">
-</span><span class="ln">2 </span><span class="name builtin">  </span><span class="name variable">\lim</span><span class="name builtin">_{k </span><span class="name variable">\to</span><span class="name builtin"> </span><span class="operator">+</span><span class="name variable">\infty</span><span class="name builtin">} X_k </span><span class="operator">=</span><span class="name builtin"> A </span><span class="name variable">\Leftrightarrow</span><span class="name builtin"> </span><span class="name variable">\lim</span><span class="name builtin">_{k </span><span class="name variable">\to</span><span class="name builtin"> </span><span class="operator">+</span><span class="name variable">\infty</span><span class="name builtin">} x_k^{</span><span class="operator">(</span><span class="name builtin">i</span><span class="operator">)</span><span class="name builtin">} </span><span class="operator">=</span><span class="name builtin"> a</span><span class="operator">(</span><span class="name builtin">i</span><span class="operator">)</span><span class="name builtin">, i</span><span class="operator">=</span><span class="literal number">1</span><span class="name builtin">,</span><span class="literal number">2</span><span class="name builtin">,…,n.
-</span><span class="ln">3 </span><span class="name builtin"></span><span class="literal string">$$</span>
+<span class="ln">1 </span><span class="sb">$$</span><span class="nb">
+</span><span class="ln">2 </span><span class="nb">  </span><span class="nv">\lim</span><span class="nb">_{k </span><span class="nv">\to</span><span class="nb"> </span><span class="o">+</span><span class="nv">\infty</span><span class="nb">} X_k </span><span class="o">=</span><span class="nb"> A </span><span class="nv">\Leftrightarrow</span><span class="nb"> </span><span class="nv">\lim</span><span class="nb">_{k </span><span class="nv">\to</span><span class="nb"> </span><span class="o">+</span><span class="nv">\infty</span><span class="nb">} x_k^{</span><span class="o">(</span><span class="nb">i</span><span class="o">)</span><span class="nb">} </span><span class="o">=</span><span class="nb"> a</span><span class="o">(</span><span class="nb">i</span><span class="o">)</span><span class="nb">, i</span><span class="o">=</span><span class="m">1</span><span class="nb">,</span><span class="m">2</span><span class="nb">,…,n.
+</span><span class="ln">3 </span><span class="nb"></span><span class="s">$$</span>
 </pre>
 <div class="line-block">
 <div class="line">所以，我打算转移到更健全的rST。至少rST有专门的Math模块，比如上面出错的LaTeX代码在rST中可以毫无问题的展现：</div>
 </div>
-<div class="formula">
-<span class="limits"><sup class="limit"> </sup><span class="limit">lim</span><sub class="limit"><i>k</i> →  + ∞</sub></span><i>X</i><sub><i>k</i></sub> = <i>A</i> ⇔ <span class="limits"><sup class="limit"> </sup><span class="limit">lim</span><sub class="limit"><i>k</i> →  + ∞</sub></span><i>x</i><span class="scripts"><sup class="script">(<i>i</i>)</sup><sub class="script"><i>k</i></sub></span> = <i>a</i>(<i>i</i>), <i>i</i> = 1, 2, …, <i>n</i>.
+<div class="math">
+\begin{equation*}
+\lim_{k \to +\infty} X_k = A \Leftrightarrow \lim_{k \to +\infty} x_k^{(i)} = a(i), i=1,2,\ldots ,n.
+\end{equation*}
 </div>
 <div class="line-block">
 <div class="line">和Markdown相比，rST几乎没有什么弱点。Markdown能做到的事情，rST也无所不能。而很多能力，例如完备无冲突的公式
@@ -151,9 +122,9 @@ Markdown编译器永远无法完善的解决下标和斜体的恩怨情仇。</d
 （众所周知，HTML对公式的支持非常差）。所以这种任务还是交给MathJax为好，需要修改docutils的配置文件：</div>
 </div>
 <pre class="code ini literal-block">
-<span class="ln">1 </span><span class="keyword">[html4css1 writer]</span>
-<span class="ln">2 </span><span class="name attribute">math-output: mathjax</span>
-<span class="ln">3 </span>             <span class="name attribute">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js</span>
+<span class="ln">1 </span><span class="k">[html4css1 writer]</span>
+<span class="ln">2 </span><span class="na">math-output: mathjax</span>
+<span class="ln">3 </span>             <span class="na">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js</span>
 </pre>
 <div class="line-block">
 <div class="line">值得一提的是，虽然配置里会需要写上MathJax的URL，但是从最终生成出来的HTML来看，<strong>并没有任何的JS引用。</strong>
@@ -181,8 +152,8 @@ classes的阶段。</div>
 <div class="line">首先用下面的代码配置一下rST中的Pygments，采用短classname。（由于使用的CSS中是short classname）</div>
 </div>
 <pre class="code ini literal-block">
-<span class="ln">1 </span><span class="keyword">[restructuredtext parser]</span>
-<span class="ln">2 </span>   <span class="name attribute">syntax_highlight: short</span>
+<span class="ln">1 </span><span class="k">[restructuredtext parser]</span>
+<span class="ln">2 </span>   <span class="na">syntax_highlight: short</span>
 </pre>
 <div class="line-block">
 <div class="line">Hugo的官方文档中也有关于生成 pygments <tt class="docutils literal">style.css</tt> 的 <a class="reference external" href="https://gohugo.io/content-management/syntax-highlighting/#generate-syntax-highlighter-css">叙述</a> 。
@@ -218,12 +189,20 @@ classes的阶段。</div>
 <p>rst示例： <a class="reference external" href="https://linyxus.github.io/posts/hugo-loves-rst/">Hugo Loves rST</a></p>
 </div>
 </div>
-    </article>
 </div>
+
+<script src="https://utteranc.es/client.js"
+        repo="linyxus/linro-hugo"
+        issue-term="pathname"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+
 
 
         
-<nav role="navigation" class="flex-container bottom-menu">
+<div class="section bottom-menu">
     
 <hr />
 <p>
@@ -238,32 +217,34 @@ classes的阶段。</div>
 
     
         
-            <a href="/posts">writings</a>
+            <a href="/posts">
+                writings
+            </a>
         
     
     
         
             &#183; 
-            <a href="/me">me</a>
+            <a href="/me">
+                me
+            </a>
         
             &#183; 
-            <a href="/about">about</a>
+            <a href="/about">
+                about
+            </a>
         
     
-    
-    
-        &#183; 
-        <a href="/">
-            main
-        </a>
-    
+    &#183; 
+    <a href="https://blog.linyxus.xyz">
+        main
+    </a>
 
 </p>
-</nav>
+</div>
 
-    </main>
-    
-    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -279,9 +260,8 @@ classes的阶段。</div>
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</footer>
-    
-    
+</div>
+    </div>
 </body>
 
 </html>

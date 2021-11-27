@@ -6,7 +6,24 @@
     <description>Recent content in Linro :: blog on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 11 Mar 2021 16:01:00 +0800</lastBuildDate><atom:link href="https://blog.linyxus.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Jan 2019 16:18:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.linyxus.xyz/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>论文笔记: A Simple Soundness Proof for Dependent Object Types</title>
+      <link>https://blog.linyxus.xyz/posts/simple-dot-proof-notes/</link>
+      <pubDate>Sat, 23 Oct 2021 00:30:00 +0800</pubDate>
+      
+      <guid>https://blog.linyxus.xyz/posts/simple-dot-proof-notes/</guid>
+      <description>依赖对象类型 (Dependent Object Types, DOT) 是一种用来建模 Scala 语言核心特性的演 算。形式化方法让我们从复杂系统中发现朴素而强大的规律，也让无序变得有序。因而，一 个形式化演算的诞生无疑让 Scala 语言的研究和设计得到了许多便利。
+然而，不同于其他演算，DOT 的健全性 (soundness) 很证明。多年来，很多人在证明 DOT 的健全性上付出了许多努力，最终才艰难地完成。其困难主要来源于两个方面。
+ 首先，DOT是一门依赖类型 (dependently-typed) 的语言。对其性质进行推理需要同时考 虑到值和类型。这是复杂的。 其次，DOT，或者说 Scala 的类型成员 (type member) 允许用户自行定义子类型关系。 这样的灵活性带来了诸多便利，让 Scala 能够建模许多复杂的模型，让用户能自己定义 一套子类型体系。但一切便利自有其代价，在类型系统层面上，这样的灵活性允许用户在 类型系统中定义不合理的子类型关系，例如，用户可能会令函数类型成为对象类型的子类。 在这样的类型体系里，证明类型系统的健全性是不可能的。如何妥善处理此类不安全的自 定义子类关系，成为了一个巨大的、需要好好解决的问题。这也是DOT的健全性证明不同 于其他任何一门语言独有的复杂之处。  在这篇文章中，作者给出了一个简单、模块化的DOT类型安全证明。在此之前，DOT的安全证 明复杂、晦涩难懂，并且难于扩展。这样的复杂性对于一门核心演算显然是不合理的。
+当我们证明类型安全时我们在证明什么 当我们证明某个演算或类型系统的类型安全时，我们希望证明如下性质：对于任意一个能通 过类型检查的项，也即 \( \cdot \vdash t: T \)，我们希望它要么已经是一个无法继续 计算的值，要么在经过一步的计算之后，它仍然具有之前的类型，也即 \( t \rightarrow t^\prime \) 且 \( \cdot \vdash t^\prime : T \)。
+为了证明这一点，一般的方法是从项 \(t\) 的类型 \(T\) 推断出 \(t\) 的形式，随后， 我们要么指出 \(t\) 已经成为一个值，要么应用某个计算规则，得出 \(t^\prime\) 的形 式，并且证明其类型仍然是 \(T\)。</description>
+    </item>
+    
     <item>
       <title>Hindley-Milner Type Inference for STLC and Its Extensions</title>
       <link>https://blog.linyxus.xyz/posts/hm-type-inference-for-stlc/</link>
@@ -15,7 +32,7 @@
       <guid>https://blog.linyxus.xyz/posts/hm-type-inference-for-stlc/</guid>
       <description>In this post, we will introduce the principles of Algorithm W and Algorithm U, the basis of the type inference in Hindley-Milner type system.
 Firstly, we describe a small calculus, the well-known Simply-Typed Lambda Calculus (STLC).
-Simply-Typed Lambda Calculus&amp;nbsp;¶ t ::= &amp;#39;true&amp;#39; | &amp;#39;false&amp;#39; | numericLiteral | &amp;#39;pred&amp;#39; t | &amp;#39;succ&amp;#39; t | &amp;#39;iszero&amp;#39; t | &amp;#39;if&amp;#39; t &amp;#39;then&amp;#39; t &amp;#39;else&amp;#39; t | x | &amp;#39;\&amp;#39; x [ &amp;#39;:&amp;#39; T ] &amp;#39;.</description>
+Simply-Typed Lambda Calculus t ::= &amp;#39;true&amp;#39; | &amp;#39;false&amp;#39; | numericLiteral | &amp;#39;pred&amp;#39; t | &amp;#39;succ&amp;#39; t | &amp;#39;iszero&amp;#39; t | &amp;#39;if&amp;#39; t &amp;#39;then&amp;#39; t &amp;#39;else&amp;#39; t | x | &amp;#39;\&amp;#39; x [ &amp;#39;:&amp;#39; T ] &amp;#39;.</description>
     </item>
     
     <item>
@@ -39,7 +56,7 @@ fact n | n &amp;lt;= 0 = 1 | otherwise = n * fact (n-1) 然而，今天我想解
       
       <guid>https://blog.linyxus.xyz/posts/the-magic-of-laziness/</guid>
       <description>在这篇博客中，我将简单地介绍许多函数式编程语言中一个重要的，也是独特的特性：Laziness。
-A first taste of Laziness&amp;nbsp;¶ 所以，什么是Laziness呢？Laziness有一个更加正式的名称：lazy evaluation，也即 惰 性求值 。简单来说，惰性求值意味着，表达式的值不会被立即求出，只有当需要的时候才 会对其进行求值。
+A first taste of Laziness 所以，什么是Laziness呢？Laziness有一个更加正式的名称：lazy evaluation，也即 惰 性求值 。简单来说，惰性求值意味着，表达式的值不会被立即求出，只有当需要的时候才 会对其进行求值。
 比如，下面的代码在运行时并不会报错，而可以安全地求出列表的长度。
 length [error &amp;#34;Hey!&amp;#34;, error &amp;#34;Here is an error.&amp;#34;] -- 2 原因是，在 length 的实现中，并不关心列表中每个元素的值是什么。因而他们并不会被 求值。
 length :: [a] -&amp;gt; Int length [] = 0 length (_:xs) = 1 + length xs 这是惰性求值这一特性最为直接的展示。
@@ -56,19 +73,19 @@ Weak Head Normal Formd的定义则要复杂一些。简单来说，所有函数�
       
       <guid>https://blog.linyxus.xyz/posts/macos-keyboard-karabiner/</guid>
       <description>本文会简单地介绍 macOS 上的键盘修改工具 Karabiner，并且简单介绍我配置的修改方式。
-引子&amp;nbsp;¶ 关于 macOS 的输入法&amp;nbsp;¶ 在macOS上，一直让我很头疼的一件事情是自带的输入法对中文输入不是非常友好。由于对 中文输入者而言，在中英文之间切换是相对常见的操作，大多数人习惯使用Shift切换，因 为绝大多数中文输入法都默认这一点。但macOS上默认使用Capslock。
+引子 关于 macOS 的输入法 在macOS上，一直让我很头疼的一件事情是自带的输入法对中文输入不是非常友好。由于对 中文输入者而言，在中英文之间切换是相对常见的操作，大多数人习惯使用Shift切换，因 为绝大多数中文输入法都默认这一点。但macOS上默认使用Capslock。
 这并不是关键之处，让我完全不能好好使用macOS自带输入法的根本原因会在下面提到：我 需要把Capslock用作他用。
 事实上，第三方输入法我也尝试过，从国产经典的搜狗，到较为小众的落格。搜狗的毛病在 于有广告，界面也未免太花里胡哨，而落格的致命之处在于词库实在太难用，有时候首选词 叫人完全无法理解，不仅如此，落格最主要的卖点：双拼，也对使用全拼的我毫无吸引力。
 通过 Karabiner，可以把Shift配置为我想要的样子。
-关于修改CapsLock&amp;nbsp;¶ 修改CapsLock应该是很多程序员的必备操作了。Capslock的位置处于整张键盘上最容易按到 的地方之一，却基本是最少使用到的按键，这很不合理。
+关于修改CapsLock 修改CapsLock应该是很多程序员的必备操作了。Capslock的位置处于整张键盘上最容易按到 的地方之一，却基本是最少使用到的按键，这很不合理。
 我们可以把Capslock转而映射到Control（对于Emacs用户）或Escape（对于Vim用户）来很 大地提高键盘的使用效率。
 之前发现了一个很棒的工具，名为Xcape，能够 同时 把Capslock映射到Control与Escape， 这很容易实现——Escape和Control的使用事实上是不重合的，使用场景有明显的差异： Control是修饰键，与其他按键一起按下，而Escape常常是独立按下的。也可以通过按下的 时间来区分他们。
 很遗憾的是，Xcape 并不支持macOS 。
 但 Karabiner 弥补了这一遗憾。
-Karabiner的安装&amp;nbsp;¶ Karabiner
+Karabiner的安装 Karabiner
 Karabiner 的安装非常简单，直接在官网上下载dmg，双击安装即可。
 值得一提的是，Karabiner的官网上也有一个官方整理的 Complex modifications 集合，大 多数常用的修改方式只需要 import 这上面的修改即可，修改的定义方式是json，语法也颇 为直观，必要时可以修改。
-Modification I: 使用Shift切换中英文&amp;nbsp;¶ 利用 Shift 切换中英文有一个很直观的实现：单独按下时，发送Capslock，否则仍然发送 Shift。这个实现在上面提到的集合中就有 现成的。
+Modification I: 使用Shift切换中英文 利用 Shift 切换中英文有一个很直观的实现：单独按下时，发送Capslock，否则仍然发送 Shift。这个实现在上面提到的集合中就有 现成的。
 然而，在使用过程中，我发现了一些问题：在一些情况下，如Chrome和PyCharm，这样的实 现会产生一些非常奇怪的Bug：输入的英文皆为大写。尝试解决无果，我转向了第二种方案： 类似实现，只不过直接发送切换输入法的快捷键，而不是Capslock。
 { &amp;#34;description&amp;#34;: &amp;#34;Change left_shift to control+option+space if pressed alone (rev 2)&amp;#34;, &amp;#34;manipulators&amp;#34;: [ { &amp;#34;from&amp;#34;: { &amp;#34;key_code&amp;#34;: &amp;#34;left_shift&amp;#34;, &amp;#34;modifiers&amp;#34;: { &amp;#34;optional&amp;#34;: [ &amp;#34;any&amp;#34; ] } }, &amp;#34;to&amp;#34;: [ { &amp;#34;key_code&amp;#34;: &amp;#34;left_shift&amp;#34; } ], &amp;#34;to_if_alone&amp;#34;: [ { &amp;#34;hold_down_milliseconds&amp;#34;: 100, &amp;#34;key_code&amp;#34;: &amp;#34;spacebar&amp;#34;, &amp;#34;modifiers&amp;#34;: [ &amp;#34;left_control&amp;#34;, &amp;#34;left_option&amp;#34; ] } ], &amp;#34;type&amp;#34;: &amp;#34;basic&amp;#34; } ] } 我切换输入法的快捷键是 control + option + space，这样的实现到目前为止完全符合预 期，毫无问题。</description>
     </item>
@@ -82,11 +99,11 @@ Modification I: 使用Shift切换中英文&amp;nbsp;¶ 利用 Shift 切换中英
       <description>很久以来，我的Emacs配置都基于无比经典的Purcell的 emacs.d。但就在最近，我突然决定切换到 Spacemacs。
 我曾用过一段时间的 Spacemacs，或者，确切的说，贯穿了我高二到高三的大部分时光。但 彼时对Emacs了解颇少，对Spacemacs的使用也仅限于 uncomment 几个 layer，或是复制粘 贴几句配置到 user-config 中。大一之后，一个偶然的契机，我打算更深入地学习Emacs。 那时候开始，我一直使用并轻度定制了Purcell的Emacs配置。 Github repo
 但老实说，不管是配置的方法还是版本管理，我在这段时间里做的真的有些随便。
-切换到 Spacemacs 的理由&amp;nbsp;¶  Evil! Spacemacs是在emacs中使用evil的最快速的方法之一 系统化的配置，基于 use-package，Purcell的配置方法过于古老不便 Battery included，庞大的社群： Github 上已有18.8k个星星 丰富的文档，相较于 Purcell 的配置基本无可用文档  Migration&amp;nbsp;¶ 事实上，除了一些无关紧要的配置，我几乎可以无痛迁移到 Spacemacs，因为 Spacemacs 的 layer 实在是太齐全丰富了。
+切换到 Spacemacs 的理由  Evil! Spacemacs是在emacs中使用evil的最快速的方法之一 系统化的配置，基于 use-package，Purcell的配置方法过于古老不便 Battery included，庞大的社群： Github 上已有18.8k个星星 丰富的文档，相较于 Purcell 的配置基本无可用文档  Migration 事实上，除了一些无关紧要的配置，我几乎可以无痛迁移到 Spacemacs，因为 Spacemacs 的 layer 实在是太齐全丰富了。
 日常使用中，我会使用Emacs编辑的文件类型其实不是很多：
  C/C++ Org Haskell \( \LaTeX{} \)  平时虽然Python写得也比较多，但是，PyCharm真香！
 上述我要用到的编辑环境，所有在 Spacemacs 中都有现成的 layer 可以用，我要做的只是 在 dotspacemacs-configuration-layers 中把他们加上罢了。
-迁移过程&amp;nbsp;¶ 首先，删除原来的emacs.d。
+迁移过程 首先，删除原来的emacs.d。
 rm .emacs.d // my .emacs.d is just a symlink 然后
 git clone https://github.</description>
     </item>
@@ -106,21 +123,21 @@ git clone https://github.</description>
       <pubDate>Mon, 28 Oct 2019 15:14:00 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/nix-on-macos/</guid>
-      <description>What is Nix?&amp;nbsp;¶ 简单来说，Nix是一个纯函数式包管理器。它将函数式的思想应用到了包管理中——每一个package都是一条语句的值，安装、编译包的过程是对表达式求值，而不是借助副作用。一个包一旦编译完成，就是不可变的。所有编译好的包都会被存储于/nix/store/中。
+      <description>What is Nix? 简单来说，Nix是一个纯函数式包管理器。它将函数式的思想应用到了包管理中——每一个package都是一条语句的值，安装、编译包的过程是对表达式求值，而不是借助副作用。一个包一旦编译完成，就是不可变的。所有编译好的包都会被存储于/nix/store/中。
 Nix的思想其实很值得体会，也的确能为实际应用带来莫大的方便与效率，但对这些话题的探讨不在本篇文章的范畴之内。
 本文的主要陈述了怎样在macOS Catalina下，安装使用nix。
-Installation&amp;nbsp;¶ 主要问题&amp;nbsp;¶ 事实上，在macOS Catalina之前，nix的安装都不是一件困难的事情，简简单单，一条指令就能解决：
+Installation 主要问题 事实上，在macOS Catalina之前，nix的安装都不是一件困难的事情，简简单单，一条指令就能解决：
 $ sh &amp;lt;(curl https://nixos.org/nix/install) 然而在Calalina之后，官方默认的安装脚本便失效了。主要原因是：Apple改变了macOS的文件结构，将系统与用户数据挂载到了两个分区，/变为了只读目录。
 然而，nix的所有文件都需要放到/nix下，/变为只读直接导致nix无法安装到Catalina上。
-解决方法&amp;nbsp;¶ 解决方法参照了这个issue中的讨论与一个Github repo。
+解决方法 解决方法参照了这个issue中的讨论与一个Github repo。
 简单来说，既然安装脚本无法在根目录中创建文件夹，那我们就先为他创建好/nix，再进行安装。
 具体来说，只需要新建一个分区并挂载到/nix即可。
 刚刚提到的repo是针对升级Catalina前已安装nix进行recover用的，稍作修改，可以得到在Catalina上安装nix的解决方案。Install Nix on Catalina
-具体步骤&amp;nbsp;¶ 首先，clone刚刚给出的repo。
+具体步骤 首先，clone刚刚给出的repo。
 git clone https://github.com/Linyxus/install-nix-on-catalina.git cd install-nix-on-catalina 执行第一个脚本
 ./step-1 重启电脑，随后执行第二个脚本
 ./step-2 Voila!
-Multi-user installation 使用Proxy的问题&amp;nbsp;¶ 如果在之前的安装中，选择了multi user，也即使用daemon的选项，proxy的使用就会成为一个问题。
+Multi-user installation 使用Proxy的问题 如果在之前的安装中，选择了multi user，也即使用daemon的选项，proxy的使用就会成为一个问题。
 为什么一定要用proxy？因为至少在我的环境下，直连cache.nixos.org下载binary的速度实在是太！慢！了！
 而Proxy的使用为什么会成为问题呢？因为nix multi user的实现中，各项操作事实上都是由daemon完成的，这意味着即使在安装时设置了proxy，事实上daemon还是直连下载的：
 export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087; nix-env -f &amp;#39;&amp;lt;nixpkgs&amp;gt;&amp;#39; -iA cabal-install 这很不友好。
@@ -134,10 +151,10 @@ export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087
       <pubDate>Thu, 24 Oct 2019 12:00:42 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/using-gdb/</guid>
-      <description>编译&amp;nbsp;¶ 为了使代码能够被gdb调试，需要在编译时加入-g选项，也即
+      <description>编译 为了使代码能够被gdb调试，需要在编译时加入-g选项，也即
 gcc -g main.c -o main 使用-g选项后，gcc会为生成的程序加载调试符号，供给gdb载入。
 对编译完成的文件，使用gdb载入：
-gdb main  基本执行控制指令&amp;nbsp;¶ run，break，print&amp;nbsp;¶ 三个指令的使用示例：</description>
+gdb main 基本执行控制指令 run，break，print 三个指令的使用示例：</description>
     </item>
     
     <item>
@@ -146,7 +163,7 @@ gdb main  基本执行控制指令&amp;nbsp;¶ run，break，print&amp;nbsp;¶ �
       <pubDate>Mon, 16 Sep 2019 20:47:35 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/state-monad/</guid>
-      <description> 什么是State Monad？&amp;nbsp;¶ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
+      <description>什么是State Monad？ 简单来说，State Monad能够帮助我们描述涉及状态的计算过程。
 一个很经典的例子是在Haskell中获取随机数，如果不使用State Monad，就可能需要写出这样的代码：
 getThreeRandInt :: (Int, Int, Int) getThreeRandInt = (x1, x2, x3) where gen = mkStdGen (x1, gen&amp;#39;) = random gen (x2, gen&amp;#39;&amp;#39;) = random gen&amp;#39; (x3, _) = random gen&amp;#39;&amp;#39; 这样的代码很丑。
 但借助State Monad，我们可以写出这样的代码。
@@ -159,10 +176,10 @@ getThreeRandInt :: (Int, Int, Int) getThreeRandInt = evalState $ liftA3 (,,) get
       <pubDate>Fri, 09 Aug 2019 20:19:22 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/enable-utterances/</guid>
-      <description>What&amp;rsquo;s Utterance?&amp;nbsp;¶ Utteranc.es是一个基于Github Issues的评论系统。
+      <description>What&amp;rsquo;s Utterance? Utteranc.es是一个基于Github Issues的评论系统。
 先前一直苦于为博客找一个合适的评论系统，Disqus很好，但因为众所周知的原因，国内用起来颇多不便。也想过要自己造一个轮子，但迟迟没有开始。
 Utterances几乎是无可挑剔的一个选择：基于Github Issues，便捷无阻。长得也看得过去。
-部署到Hugo中&amp;nbsp;¶ 部署方法很简单，可能也就是几分钟的事情，把官网上的HTML复制到模板中就行啦。
+部署到Hugo中 部署方法很简单，可能也就是几分钟的事情，把官网上的HTML复制到模板中就行啦。
 &amp;lt;script src=&amp;#34;https://utteranc.es/client.js&amp;#34; repo=&amp;#34;[ENTER REPO HERE]&amp;#34; issue-term=&amp;#34;pathname&amp;#34; theme=&amp;#34;github-light&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; async&amp;gt; &amp;lt;/script&amp;gt; 值得一提的是，需要为你选中的Github repo安装Utterances的App才能正常工作。</description>
     </item>
     
@@ -184,13 +201,10 @@ Graph Attention Networks Inductive Representation Learning on Large Graphs Hiera
       <pubDate>Fri, 10 May 2019 13:12:24 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/physics-experiements-formula/</guid>
-      <description>贝塞尔公式 s(x) = √((⎲⎳(xi − x)2)/(n − 1))  s(x) = (s(x))/(√(n)) = √((⎲⎳(xi − x)2)/(n(n − 1)))   直接测量量不确定度 当 n = 6 时，
-ua(x) = tps(x) = s(x)  且有
-ub(x) = Δ仪  合成不确定度：
-u(x) = √(u2a(x) + u2b(x))   间接测量量不确定度 全微分 -&amp;gt; 绝对 取对数后全微分 -&amp;gt; 相对   误差等分配原则 也即合成不确定度中各平方项相等。
- 最小二乘法 如果设：
-y = kx + b  可以求解出：
-k  = (xy − xy)/(x2 − x2)      b  = y − kx     相关系数：</description>
+      <description>贝塞尔公式 \begin{equation*} s(x) = \sqrt {\frac{\sum (x_i - \bar{x})^2} {n-1}} \end{equation*}  \begin{equation*} s(\bar{x}) = \frac {s(x)} {\sqrt{n}} = \sqrt {\frac{\sum (x_i - \bar{x})^2} {n(n-1)}} \end{equation*}   直接测量量不确定度 当 \(n=6\) 时，
+\begin{equation*} u_a(x) = t_ps(\bar{x}) = s(x) \end{equation*}  且有
+\begin{equation*} u_b(x) = \Delta_{仪} \end{equation*}  合成不确定度：
+\begin{equation*} u(x) = \sqrt{u_a^2(x) + u_b^2(x)} \end{equation*}   间接测量量不确定度 全微分 -&amp;gt; 绝对 取对数后全微分 -&amp;gt; 相对   误差等分配原则 也即合成不确定度中各平方项相等。</description>
     </item>
     
     <item>
@@ -200,11 +214,11 @@ k  = (xy − xy)/(x2 − x2)      b  = y − kx     相关系数
       
       <guid>https://blog.linyxus.xyz/posts/calculus-cheatsheet-series/</guid>
       <description>常数项级数 概念 定义 各项均为常数的级数
- 部分和 σ(n) = n⎲⎳k = 0ak   敛散性 若
-limn → ∞σ(n) = A存在  则称级数收敛于 A 。
+ 部分和 \begin{equation*} \sigma (n) = \sum_{k=0}^{n} a_k \end{equation*}   敛散性 若
+\begin{equation*} lim_{n \rightarrow \infty} \sigma (n) = A 存在 \end{equation*}  则称级数收敛于 \(A\) 。
 否则称级数发散。
-  收敛级数性质 线性性质 归并性质   正项级数审敛法 比较审敛法 yn ≤ xn∧xn收敛 ⇒ yn收敛     yn ≥ xn∧xn发散 ⇒ yn发散     极限形式：
-limn → ∞(an)/(bn) = + ∞ ⇒ bn发散则an发散     limn → ∞(an)/(bn) = 0 ⇒ an收敛则bn收敛     limn → ∞(an)/(bn) = k(k &amp;gt; 0) ⇒ an, bn同时敛散      比值审敛法 limn → ∞(an + 1)/(an) = K  若 K &amp;lt; 1 则 an 收敛 若 K &amp;gt; 1 则 an 发散 若 K = 1 则 an 敛散性未知   根式审敛法 limn → ∞n√(an) = λ  情况可类比比值审敛法。</description>
+  收敛级数性质 线性性质 归并性质   正项级数审敛法 比较审敛法 \begin{align*} y_n \le x_n \wedge x_n收敛 \Rightarrow y_n 收敛 \\ y_n \ge x_n \wedge x_n发散 \Rightarrow y_n 发散 \end{align*}  极限形式：
+\begin{align*} \lim_{n \rightarrow \infty} \frac {a_n} {b_n} = +\infty \Rightarrow b_n 发散则 a_n 发散 \\ \lim_{n \rightarrow \infty} \frac {a_n} {b_n} = 0 \Rightarrow a_n 收敛则 b_n 收敛 \\ \lim_{n \rightarrow \infty} \frac {a_n} {b_n} = k (k &amp;gt; 0) \Rightarrow a_n, b_n 同时敛散 \end{align*}   比值审敛法 \begin{equation*} \lim_{n \rightarrow \infty} \frac {a_{n+1}} {a_n} = K \end{equation*}  若 \(K &amp;lt; 1\) 则 \(a_n\) 收敛 若 \(K &amp;gt; 1\) 则 \(a_n\) 发散 若 \(K = 1\) 则 \(a_n\) 敛散性未知   根式审敛法 \begin{equation*} \lim_{n \rightarrow \infty} \sqrt[n]{a_n} = \lambda \end{equation*}  情况可类比比值审敛法。</description>
     </item>
     
     <item>
@@ -214,8 +228,8 @@ limn → ∞(an)/(bn) = + ∞ ⇒ bn发散则an发散     limn �
       
       <guid>https://blog.linyxus.xyz/posts/discrete-math-notes-logic/</guid>
       <description>Proposition Logic Basics What is a proposition A statement of proposition is a declarative sentence that is either true or false, but not both.
-The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a proposition  What time is it?: &amp;nbsp;not a proposition     Build up a proposition propostional variables logical connectives   Kinds of logical connectives Negation &#39;NOT&#39; :: ¬
- Conjunction &#39;AND&#39; :: ∧</description>
+The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a proposition  What time is it?: &amp;nbsp;not a proposition     Build up a proposition propostional variables logical connectives   Kinds of logical connectives Negation &#39;NOT&#39; :: \(\neg\)
+ Conjunction &#39;AND&#39; :: \(\wedge\)</description>
     </item>
     
     <item>
@@ -224,11 +238,10 @@ The moon is made of green cheese: &amp;nbsp;a proposition  Go to town!:not a pro
       <pubDate>Thu, 18 Apr 2019 20:37:30 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/physics-lifesaving-notes-1/</guid>
-      <description>基本概念 质点:大小、形状可以忽略的物体  质点系:多个质点的组合     基本参数 位置矢量 r⃗ = xi⃗ + yj⃗ + zk⃗   运动方程 r⃗ = r⃗(t)   轨迹方程 将运动方程中的 t 消去即得到轨迹方程。
+      <description>基本概念 质点:大小、形状可以忽略的物体  质点系:多个质点的组合     基本参数 位置矢量 \begin{equation*} \vec{r} = x \vec{i} + y \vec{j} + z \vec{k} \end{equation*}   运动方程 \begin{equation*} \vec{r} = \vec{r}(t) \end{equation*}   轨迹方程 将运动方程中的 \(t\) 消去即得到轨迹方程。
  位移与路程 位移为始末位置矢量的改变量。
-Δr⃗ = r⃗2 − r⃗1  路程为运动轨迹的长度。
-位移与路程的关系 位移不等于路程：位移是矢量，路程是标量 limΔt → 0|Δr⃗| = Δs ，也即 |dr| = ds    速度 v⃗ = (dr⃗)/(dt)   加速度 a⃗ = (dv⃗)/(dt)    自然坐标系 已知质点运动的轨迹：
-e⃗n 法向单位矢量，指向轨迹曲线 内侧</description>
+\begin{equation*} \Delta \vec{r} = \vec{r}_2 - \vec{r}_1 \end{equation*}  路程为运动轨迹的长度。
+位移与路程的关系 位移不等于路程：位移是矢量，路程是标量 \(\lim_{\Delta{t} \rightarrow 0} |\Delta \vec r| = \Delta s\) ，也即 \(|dr| = ds\)    速度 \begin{equation*} \vec{v} = \frac{d \vec{r}}{dt} \end{equation*}   加速度 \begin{equation*} \vec{a} = \frac{d \vec{v}} {dt} \end{equation*}    自然坐标系 已知质点运动的轨迹：</description>
     </item>
     
     <item>
@@ -237,11 +250,9 @@ e⃗n 法向单位矢量，指向轨迹曲线 内侧</description>
       <pubDate>Mon, 15 Apr 2019 20:34:15 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/circuit-analysis-notes-3/</guid>
-      <description>基本元件 电容 动态特性 i = (dq)/(dt) = C(dU)/(dt)   记忆特性 uc = (1)/(C)t0⌠⌡− ∞icdt  也即电压反映了电流的累积效果。
- 储能特性 W = (1)/(2)CU2    电感 动态特性 uL = (dφ)/(dt) = L(di)/(dt)   记忆特性 iL = (1)/(L)t0⌠⌡∞uLdt  也即电流反映了电压的累积效果。
- 储能特性 W = (1)/(2)Li2    电容、电感的串并联 电容等同于电导。
-电感等同于电阻。
-  动态响应分析 一阶零输入响应 y(t) = y(0 + )e − (1)/(τ)  一阶RC电路:τ = RC  一阶RL电路:τ = (L)/(R)    R 也即电容电感两端的等效输入电阻。</description>
+      <description>基本元件 电容 动态特性 \begin{equation*} i = \frac {dq} {dt} = C \frac {dU} {dt} \end{equation*}   记忆特性 \begin{equation*} u_c = \frac {1} {C} \int_{-\infty}^{t_0} i_c dt \end{equation*}  也即电压反映了电流的累积效果。
+ 储能特性 \begin{equation*} W = \frac{1}{2} C U^2 \end{equation*}    电感 动态特性 \begin{equation*} u_L = \frac {d \phi} {dt} = L \frac {di}{dt} \end{equation*}   记忆特性 \begin{equation*} i_L = \frac{1}{L} \int_{\infty}^{t_0} u_L dt \end{equation*}  也即电流反映了电压的累积效果。
+ 储能特性 \begin{equation*} W = \frac{1}{2} Li^2 \end{equation*}    电容、电感的串并联 电容等同于电导。</description>
     </item>
     
     <item>
@@ -252,14 +263,14 @@ e⃗n 法向单位矢量，指向轨迹曲线 内侧</description>
       <guid>https://blog.linyxus.xyz/posts/circuit-analysis-notes-2/</guid>
       <description>变量分析 基尔霍夫定律 KCL 基尔霍夫电流定律
 对任意电路的任意节点，在任意时刻流入该节点的电流代数和为0。
-b⎲⎳k = 1ik(t) = 0  若规定流入为正，流出即为负。
+\begin{equation*} \sum_{k=1}^{b} i_k(t) = 0 \end{equation*}  若规定流入为正，流出即为负。
 推广 广义节点（封闭面）同样成立。
   KVL 对任意集总电路的任意回路，在任意时刻，沿该回路的所有支路的电压降 代数和为0。
-b⎲⎳k = 1uk(t) = 0  可以从电路中任意一点的电势为一确定值理解。
-  2b法 假设电阻有 n 个节点， b 条支路。根据拓扑约束列出 (n − 1) 个独立电流方程， (b − n + 1) 个独立电压方程。 根据元件约束列出 (b) 个VCR方程。
-共计 2b 个方程，求解 b 条支路的 2b 个未知量。
+\begin{equation*} \sum_{k=1}^{b} u_k(t) = 0 \end{equation*}  可以从电路中任意一点的电势为一确定值理解。
+  2b法 假设电阻有 \(n\) 个节点， \(b\) 条支路。根据拓扑约束列出 \((n-1)\) 个独立电流方程， \((b-n+1)\) 个独立电压方程。 根据元件约束列出 \((b)\) 个VCR方程。
+共计 \(2b\) 个方程，求解 \(b\) 条支路的 \(2b\) 个未知量。
  支路电流法 也即代入VCR元件约束，将电压量代换为电流量。
- 节点电压法 形式 ⎧⎪⎪⎨⎪⎪⎩G11u1 + G12u2 + ⋯ + G1nun = is11     G21u1 + G22u2 + ⋯ + G2nun = is22     ⋯     Gn1u1 + Gn2u2 + ⋯ + Gnnun = isnn     其中：</description>
+ 节点电压法 形式 \begin{equation*} \begin{cases} G_{11} u_1 + G_{12} u_2 + \cdots + G_{1n} u_n = i_{s11} \\ G_{21} u_1 + G_{22} u_2 + \cdots + G_{2n} u_n = i_{s22} \\ \cdots \\ G_{n1} u_1 + G_{n2} u_2 + \cdots + G_{nn} u_n = i_{snn} \end{cases} \end{equation*}  其中：</description>
     </item>
     
     <item>
@@ -270,13 +281,12 @@ b⎲⎳k = 1uk(t) = 0  可以从电路中任意一点的电势为一确�
       <guid>https://blog.linyxus.xyz/posts/circuit-analysis-notes-1/</guid>
       <description>电路模型基本概念 电路模型:从实际电路中抽象出的模型  激励:输入电路的信号  响应:经过电路加工处理后得到的信号  集总参数元件:当实际电路的尺寸远小于其使用时最高工作频率所对应的波长时而抽象出的理想元件  集总电路模型:又集总参数元件组成的电路  分布参数电路:当实际电路的尺寸大于其最高工作频率所对应的波长或两者属于同一数量级时     电路模型基本变量 电流、电压、功率。
 电压与电流的参考方向 由于电路分析中，电压与电流的实际方向很难确定，故可以假设这两个变量的方向，以电流为例。
-假设 I 从a流向b，若实际电流方向与参考方向相同
-I &amp;gt; 0  否则
-I &amp;lt; 0   电压与电流的关联参考方向 若在假定的关联参考方向下，电流 I 从高电势流向低电势，则是关联参考方向。
+假设 \(I\) 从a流向b，若实际电流方向与参考方向相同
+\begin{equation*} I &amp;gt; 0 \end{equation*}  否则
+\begin{equation*} I &amp;lt; 0 \end{equation*}   电压与电流的关联参考方向 若在假定的关联参考方向下，电流 \(I\) 从高电势流向低电势，则是关联参考方向。
 否则为非关联参考方向。
- 电压 p = (dW)/(dt) = (dW)/(dq)⋅(dq)/(dt) = u⋅i  若在非关联参考方向下
-p = − u⋅i  p &amp;gt; 0:吸收功率  p &amp;lt; 0:供出功率      电路模型基本原件 电阻 如果一个元件的端电压u和通过的电流i是关联参考方向，其伏安关系是通过原点的曲线，这个元件就是电阻元件。
-u, i 为关联参考方向时</description>
+ 电压 \begin{equation*} p = \frac {dW} {dt} = \frac {dW}{dq} \cdot \frac {dq}{dt} = u \cdot i \end{equation*}  若在非关联参考方向下
+\begin{equation*} p = - u \cdot i \end{equation*}  p &amp;gt; 0:吸收功率  p &amp;lt; 0:供出功率      电路模型基本原件 电阻 如果一个元件的端电压u和通过的电流i是关联参考方向，其伏安关系是通过原点的曲线，这个元件就是电阻元件。</description>
     </item>
     
     <item>
@@ -287,7 +297,7 @@ u, i 为关联参考方向时</description>
       <guid>https://blog.linyxus.xyz/posts/mental-health-nn-training/</guid>
       <description>思路 使用前20个问题预测剩下11个问题的答案。将经常、有时、很少、从不规范化为[1, 0.33, -0.33, -1]。   训练笔记 Small ReLU 20 -&amp;gt; 18 -&amp;gt; 11
 Result:
-acc 65.22% test_acc 45.45%   Mid Relu 20 -&amp;gt; 30 -&amp;gt; 11
+acc \(65.22 \%\) test_acc \(45.45\%\)   Mid Relu 20 -&amp;gt; 30 -&amp;gt; 11
 Result:
 acc: 0.7521 test_acc: 0.4727 test_acc_l: 0.6636   Tiny Relu 20 -&amp;gt; 10 -&amp;gt; 11
 Result:
@@ -303,7 +313,7 @@ acc: 0.5853 test_acc: 0.5236 test_acc_l: 0.7909   Smaller Relu V2 Difference: ch
       
       <guid>https://blog.linyxus.xyz/posts/physics-lifesaving-notes-0/</guid>
       <description>静电平衡 导体的定义 具有大量能够自由移动的电子 在外电场的作用下，能够很好的传导电流  的物质。
- 静电平衡的条件与特征 条件：  导体内部任意一点的电场强度都为0 导体表面上任意一点的电场强度方向垂直于该出导体表面  除此以外，由于导体内部电场处处为0，由于  E = − (∂V)/(∂l)  因而电势处处相等，导体成为等势体。   静电平衡的理解 与 霍尔效应 有几分类似。导体内部的自由电荷会均衡它收到的电场，内部电荷产生的电场与外加电场抵消， 内部电场处处为0，导体达到静电平衡。   静电平衡时的电荷分布 电荷分布 处于静电平衡状态的导体，内部处处没有净电荷存在，电荷只分布在导体表面上。  证明方法很简单，用高斯定理。  当到体内有空腔时，空腔表面也无电荷。证明如下：  取包围空腔的高斯面，由于电场强度 E 处处为 0，故空腔表面净电荷也为零。假设空腔表面一部分 正电荷，一部分带负电荷，则空腔内存在电场。故而电势沿电场线方向有上升或降落，而静电场为保守场切导体内部处处 等电势，故而矛盾。故不存在电荷。   贴近表面处的电场强度 E = (σ)/(ϵ0)  使用高斯定理证明即可。  值得一提的是，面积元 ΔS 事实上可以等效为无限大带点平面，它对靠近表面的点 P 产生的 场强事实上为  E1 = (σ)/(2ϵ0)  而余下所有电荷在此处产生的场强和为  E2 = (σ)/(2ϵ0)  才有  E = E1 + E2 = (σ)/(ϵ0)  因而导体表面场强事实上为  E’ = E2 = (σ)/(2ϵ0)    静电感应与静电屏蔽 静电感应 导体在外加电场 E0 的影响下，被感应出感应电荷，达到静电平衡状态。  原理为：在电场 E0 的作用下，导体内的电子产生移动，在导体的一面积累而呈现带负电荷，另一面由于 缺少电子而呈现正电荷。  于是导体内产生感应电场 E’ ，当感应电场与外加电场抵消也即 E0 + E’ = 0 时，达到 静电平衡。   静电屏蔽 因此空腔导体具有静电屏蔽作用。  空腔导体内无电荷。 空腔导体内有电荷。  空腔内壁上会被感应出等量异号电荷，因此表面也会产生等量同号电荷。这时将导体外壁接地，则被导体包裹的电荷将不能 对外界产生任何影响。  例题 两块等面积金属板，分别带电荷 qA 和 qB ，平板面积为 S ，两板间距为 d 。且面积线度远大于间距。试求静电平衡时两板各表面上的电荷面密度。 解析 根据电荷守恒与板内电场强度为0列出方程即可求解。</description>
+ 静电平衡的条件与特征 条件：  导体内部任意一点的电场强度都为0 导体表面上任意一点的电场强度方向垂直于该出导体表面  除此以外，由于导体内部电场处处为0，由于  \begin{equation*} E = - \frac{\partial V}{\partial l} \end{equation*}  因而电势处处相等，导体成为等势体。   静电平衡的理解 与 霍尔效应 有几分类似。导体内部的自由电荷会均衡它收到的电场，内部电荷产生的电场与外加电场抵消， 内部电场处处为0，导体达到静电平衡。   静电平衡时的电荷分布 电荷分布 处于静电平衡状态的导体，内部处处没有净电荷存在，电荷只分布在导体表面上。  证明方法很简单，用高斯定理。  当到体内有空腔时，空腔表面也无电荷。证明如下：  取包围空腔的高斯面，由于电场强度 \(E\) 处处为 \(0\)，故空腔表面净电荷也为零。假设空腔表面一部分 正电荷，一部分带负电荷，则空腔内存在电场。故而电势沿电场线方向有上升或降落，而静电场为保守场切导体内部处处 等电势，故而矛盾。故不存在电荷。   贴近表面处的电场强度 \begin{equation*} E = \frac{\sigma}{\epsilon_0} \end{equation*}  使用高斯定理证明即可。  值得一提的是，面积元 \(\Delta S\) 事实上可以等效为无限大带点平面，它对靠近表面的点 \(P\) 产生的 场强事实上为  \begin{equation*} E_1 = \frac{\sigma}{2\epsilon_0} \end{equation*}  而余下所有电荷在此处产生的场强和为  \begin{equation*} E_2 = \frac{\sigma}{2\epsilon_0} \end{equation*}  才有  \begin{equation*} E = E_1 + E_2 = \frac{\sigma}{\epsilon_0} \end{equation*}  因而导体表面场强事实上为  \begin{equation*} E^{&#39;} = E_2 = \frac{\sigma}{2\epsilon_0} \end{equation*}    静电感应与静电屏蔽 静电感应 导体在外加电场 \(E_0\) 的影响下，被感应出感应电荷，达到静电平衡状态。  原理为：在电场 \(E_0\) 的作用下，导体内的电子产生移动，在导体的一面积累而呈现带负电荷，另一面由于 缺少电子而呈现正电荷。  于是导体内产生感应电场 \(E^{&#39;}\) ，当感应电场与外加电场抵消也即 \(E_0 + E^{&#39;} = 0\) 时，达到 静电平衡。   静电屏蔽 因此空腔导体具有静电屏蔽作用。  空腔导体内无电荷。 空腔导体内有电荷。  空腔内壁上会被感应出等量异号电荷，因此表面也会产生等量同号电荷。这时将导体外壁接地，则被导体包裹的电荷将不能 对外界产生任何影响。  例题 两块等面积金属板，分别带电荷 \(q_A\) 和 \(q_B\) ，平板面积为 \(S\) ，两板间距为 \(d\) 。且面积线度远大于间距。试求静电平衡时两板各表面上的电荷面密度。 解析 根据电荷守恒与板内电场强度为0列出方程即可求解。</description>
     </item>
     
     <item>
@@ -321,7 +331,7 @@ acc: 0.5853 test_acc: 0.5236 test_acc_l: 0.7909   Smaller Relu V2 Difference: ch
       <pubDate>Thu, 04 Apr 2019 20:37:33 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/use-rst-with-hugo/</guid>
-      <description>起因 在写完 这一篇博客 之后，我对Markdown彻底失望了， 尽管它有可爱的Typora和GFM，尽管我已用它写下了无数篇博客。  没错，还是数学公式渲染问题。  Markdown和LaTeX似乎总是两对冤家，因为Markdown滥用的 _ 语法，并且并没有原生的数学公式支持，大部分 Markdown编译器永远无法完善的解决下标和斜体的恩怨情仇。  Hugo家的BlackFriday，也不例外。  我曾在 这篇博客 中自信的以为Hugo官方给出 的Workaround并无必要，天真的以为Hugo的Markdown编译器不存在这样的问题。现在，我知道我错了。  在之前提到的，一篇数学笔记博客中，下面的LaTeX代码在渲染时还是中了 &amp;lt;em&amp;gt; 的枪。  1 $$2 \lim_{k \to+\infty} X_k =A \Leftrightarrow\lim_{k \to+\infty} x_k^{(i)} =a(i), i=1,2,…,n. 3 $$  所以，我打算转移到更健全的rST。至少rST有专门的Math模块，比如上面出错的LaTeX代码在rST中可以毫无问题的展现：  limk → + ∞Xk = A ⇔ limk → + ∞x(i)k = a(i), i = 1, 2, …, n.  和Markdown相比，rST几乎没有什么弱点。Markdown能做到的事情，rST也无所不能。而很多能力，例如完备无冲突的公式 显示，是过于单薄的Markdown无法企及的。  很幸运的，虽然Hugo内置支持的是Markdown， 但是也能通过调用外部程序支持rST 。 但毕竟rST不是亲儿子，一开始还是会有些小问题：   小问题 LaTeX显示 因为 rst2html 对于数学文本块默认是会进行编译的，转成pdf倒还好，但如果转成HTML，显示的效果就非常难看 （众所周知，HTML对公式的支持非常差）。所以这种任务还是交给MathJax为好，需要修改docutils的配置文件：  1 [html4css1 writer] 2 math-output: mathjax 3  https://cdnjs.</description>
+      <description>起因 在写完 这一篇博客 之后，我对Markdown彻底失望了， 尽管它有可爱的Typora和GFM，尽管我已用它写下了无数篇博客。  没错，还是数学公式渲染问题。  Markdown和LaTeX似乎总是两对冤家，因为Markdown滥用的 _ 语法，并且并没有原生的数学公式支持，大部分 Markdown编译器永远无法完善的解决下标和斜体的恩怨情仇。  Hugo家的BlackFriday，也不例外。  我曾在 这篇博客 中自信的以为Hugo官方给出 的Workaround并无必要，天真的以为Hugo的Markdown编译器不存在这样的问题。现在，我知道我错了。  在之前提到的，一篇数学笔记博客中，下面的LaTeX代码在渲染时还是中了 &amp;lt;em&amp;gt; 的枪。  1 $$2 \lim_{k \to+\infty} X_k =A \Leftrightarrow\lim_{k \to+\infty} x_k^{(i)} =a(i), i=1,2,…,n. 3 $$  所以，我打算转移到更健全的rST。至少rST有专门的Math模块，比如上面出错的LaTeX代码在rST中可以毫无问题的展现：  \begin{equation*} \lim_{k \to +\infty} X_k = A \Leftrightarrow \lim_{k \to +\infty} x_k^{(i)} = a(i), i=1,2,\ldots ,n. \end{equation*}  和Markdown相比，rST几乎没有什么弱点。Markdown能做到的事情，rST也无所不能。而很多能力，例如完备无冲突的公式 显示，是过于单薄的Markdown无法企及的。  很幸运的，虽然Hugo内置支持的是Markdown， 但是也能通过调用外部程序支持rST 。 但毕竟rST不是亲儿子，一开始还是会有些小问题：   小问题 LaTeX显示 因为 rst2html 对于数学文本块默认是会进行编译的，转成pdf倒还好，但如果转成HTML，显示的效果就非常难看 （众所周知，HTML对公式的支持非常差）。所以这种任务还是交给MathJax为好，需要修改docutils的配置文件：  1 [html4css1 writer] 2 math-output: mathjax 3  https://cdnjs.</description>
     </item>
     
     <item>
@@ -330,11 +340,12 @@ acc: 0.5853 test_acc: 0.5236 test_acc_l: 0.7909   Smaller Relu V2 Difference: ch
       <pubDate>Mon, 01 Apr 2019 16:28:15 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/caculas-1/</guid>
-      <description>n-dimension Euclid Space $R^n$&amp;nbsp;¶ 邻域&amp;nbsp;¶ $$ X_0点的\delta邻域：B(X_0, \delta) = {X \in R^n : ||X-X_0&amp;lt;\delta||} $$
+      <description>n-dimension Euclid Space $R^n$ 邻域 $$ X_0点的\delta邻域：B(X_0, \delta) = {X \in R^n : ||X-X_0&amp;lt;\delta||} $$
 $$ X_0点的去心\delta邻域：B(X_0, \delta) = {X \in R^n : 0 &amp;lt; ||X-X_0|| &amp;lt; \delta} $$
-点与集&amp;nbsp;¶ 内点： $$ I(x) : x为\Omega的内点 $$
+点与集 内点： $$ I(x) : x为\Omega的内点 $$
 $$ I(x) \Leftrightarrow \exists \delta &amp;gt; 0, B(x,\delta) \subset \Omega $$
-边界点： $$ S(x) \Leftrightarrow \forall \delta &amp;gt; 0 (B(x,\delta) \cap \Omega \neq \emptyset \wedge B(x,\delta) \cap R^n /\Omega \neq \emptyset) $$ 说明点$x$的任意一个邻域都横跨了集合$\Omega$的边界，很漂亮的定义。</description>
+边界点： $$ S(x) \Leftrightarrow \forall \delta &amp;gt; 0 (B(x,\delta) \cap \Omega \neq \emptyset \wedge B(x,\delta) \cap R^n /\Omega \neq \emptyset) $$ 说明点$x$的任意一个邻域都横跨了集合$\Omega$的边界，很漂亮的定义。
+开集：所有点都为内点</description>
     </item>
     
     <item>
@@ -343,16 +354,16 @@ $$ I(x) \Leftrightarrow \exists \delta &amp;gt; 0, B(x,\delta) \subset \Omega $$
       <pubDate>Tue, 26 Feb 2019 22:58:41 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/sync-org-files/</guid>
-      <description> 效果&amp;nbsp;¶   每天在固定的时间，只要电脑开着，自动commit发生在org文件夹内的改动，并且push到Github上。
+      <description>效果   每天在固定的时间，只要电脑开着，自动commit发生在org文件夹内的改动，并且push到Github上。
 如图，设定的是在所有的整点都会自动更新。
-步骤&amp;nbsp;¶ #1 编写自动同步shell&amp;nbsp;¶ #!/bin/bash  echo -e &amp;#34;\033[0;32mPulling from GitHub...\033[0m&amp;#34; git pull git add . git commit -m &amp;#34;Auto update : `date`&amp;#34; echo -e &amp;#34;\033[0;32mPushing to GitHub...\033[0m&amp;#34; git push origin master 在echo的文本里奇奇怪怪的内容都是escape characters，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）
-#2 增加cron task&amp;nbsp;¶ 在命令行中输入：
+步骤 #1 编写自动同步shell #!/bin/bash  echo -e &amp;#34;\033[0;32mPulling from GitHub...\033[0m&amp;#34; git pull git add . git commit -m &amp;#34;Auto update : `date`&amp;#34; echo -e &amp;#34;\033[0;32mPushing to GitHub...\033[0m&amp;#34; git push origin master 在echo的文本里奇奇怪怪的内容都是escape characters，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）
+#2 增加cron task 在命令行中输入：
 $ EDITOR=nano cron -e 增加这一行：
 0 * * * * cd ~/org &amp;amp;&amp;amp; ./update.sh 保存退出即可。
  注意！注意！注意！
 macOS下由于一些奇怪的权限原因，只能使用Terminal.app进行编辑。
 iTerm2是不行的。
- #3 Enjoy it!&amp;nbsp;¶ </description>
+ #3 Enjoy it! </description>
     </item>
     
     <item>
@@ -365,19 +376,19 @@ iTerm2是不行的。
 之前我也在学校社团里做过一个有关org-mode的讲座。关于org-mode，记忆深刻的是某知乎用户的一句话：
  我的生活就是在org-mode掌控之下的好吗
  那么，直接给出我使用org-mode的一些规划和设计吧。
-.org&amp;nbsp;¶ gtd.org&amp;nbsp;¶ 在这个文件里放入日常事务，要完成的事情。
+.org gtd.org 在这个文件里放入日常事务，要完成的事情。
 比如：打印四级准考证、整理行李、去开会、做推送等等。
-idea.org&amp;nbsp;¶ 冒出来的想法，但不一定要实现。如果要实现，归档到gtd.org中完成。
+idea.org 冒出来的想法，但不一定要实现。如果要实现，归档到gtd.org中完成。
 比如：写一篇博客介绍我的org-mode使用方法、用Clojure写一个小游戏等等。
-learning.org&amp;nbsp;¶ 学习规划。
+learning.org 学习规划。
 比如学习Python，学习Haskell，学习各种算法等等。
-book.org&amp;nbsp;¶ 书籍归档。
-project-specific org file&amp;nbsp;¶ 各个project专用的.org文件，放在project根目录内。
-Capture templates&amp;nbsp;¶ journal&amp;nbsp;¶ 小总结，小感想。
+book.org 书籍归档。
+project-specific org file 各个project专用的.org文件，放在project根目录内。
+Capture templates journal 小总结，小感想。
 总结今天做了什么。（对抗焦虑症）
-todo&amp;nbsp;¶ 要做的事情。
-idea&amp;nbsp;¶ 突然冒出来的想法。
-Source code&amp;nbsp;¶ 列一下org template配置的elisp代码：
+todo 要做的事情。
+idea 突然冒出来的想法。
+Source code 列一下org template配置的elisp代码：
 (setq org-capture-templates &amp;#39;((&amp;#34;j&amp;#34; &amp;#34;journal&amp;#34; entry (file+datetree &amp;#34;~/org/journal.org&amp;#34;) &amp;#34;* %?\n%U\n&amp;#34;) (&amp;#34;t&amp;#34; &amp;#34;todo&amp;#34; entry (file+headline &amp;#34;~/org/gtd.org&amp;#34; &amp;#34;Inbox&amp;#34;) &amp;#34;* TODO %?\n%U\n&amp;#34;) (&amp;#34;i&amp;#34; &amp;#34;idea&amp;#34; entry (file+headline &amp;#34;~/org/idea.org&amp;#34; &amp;#34;Inbox&amp;#34;) &amp;#34;* TODO %?\n&amp;#34;))) </description>
     </item>
     
@@ -394,9 +405,9 @@ Source code&amp;nbsp;¶ 列一下org template配置的elisp代码：
  由于不同应用程序的菜单栏长度不同，切换应用程序后遮盖菜单栏是家常便饭 切换到Mission Control时用于遮盖的窗口会原形毕露 变色壁纸变色时遮盖窗口来不及变色  而最重要的是，这两个家伙都要钱，价钱算不上贵，但由于他们一个长得丑，一个缺胳膊少腿，为了这种货色花钱心里总不那么舒服。
 当然，也可以去一些网站上找hack过的免费解锁版本，这也是种选择。
 但前些日子，我在万能的知乎上找到了几乎无可挑剔的另一个选择：
-Dozer&amp;nbsp;¶ Dozer是完全开源的，Github主页在此。
+Dozer Dozer是完全开源的，Github主页在此。
 具体的安装&amp;amp;使用方法在Github上都有，这里小小一提：
-Install&amp;nbsp;¶ brew cask install dozer  Usage&amp;nbsp;¶ 略
+Install brew cask install dozer Usage 略
 Github上的演示：</description>
     </item>
     
@@ -408,12 +419,12 @@ Github上的演示：</description>
       <guid>https://blog.linyxus.xyz/posts/eular-formula/</guid>
       <description>一些算法题里要求一个数的幂次，一般来说可以大整数+快速幂解决。但有时候数据真的很大，纵是快速幂也奈何不了这道题的。比如某道题要求$2^n$，$n \leq 10^{100000} $，十有八九会TLE。
 大多数情况下，这么大的数据都会要求在某个数（通常是$10^9+7$）的模意义下输出答案。事实上，在这样的条件下，题目的用意是使用欧拉降幂公式先降低指数，然后再快速幂求解。
-欧拉降幂公式&amp;nbsp;¶ 定理&amp;nbsp;¶ $$ a^p \equiv a^{p \bmod \phi(m) + \phi(m)} \pmod m $$
+欧拉降幂公式 定理 $$ a^p \equiv a^{p \bmod \phi(m) + \phi(m)} \pmod m $$
 由于应用为主，证明从略。但显见上式等价于 $$ a^{2\phi(m)} \equiv a^{\phi(m)} \pmod m $$ 其中，$\phi(m)$为欧拉函数。
-应用&amp;nbsp;¶ 所以，如果题设要求我们求出$a^p$在模$m$意义下的值，当$p$很大的时候，我们只需先求出$\phi(m)$，然后用快速幂求出$a^{p \bmod \phi(m)}$即可。
+应用 所以，如果题设要求我们求出$a^p$在模$m$意义下的值，当$p$很大的时候，我们只需先求出$\phi(m)$，然后用快速幂求出$a^{p \bmod \phi(m)}$即可。
 下面，假定$m=10^9+7$。
 那么，下面的任务就是求出$\phi(m)$。
-欧拉函数&amp;nbsp;¶ 对$\forall n \in N^*$，欧拉函数$\phi(n)$的值为小于$n$的正整数中与$n$互质的数的数目。
+欧拉函数 对$\forall n \in N^*$，欧拉函数$\phi(n)$的值为小于$n$的正整数中与$n$互质的数的数目。
 而欧拉函数存在解析式： $$ \phi(n) = n \prod_{p}(1 - \frac 1 p) $$ 其中，$p$为$n$的质因子。
 证明从略，会用就行。
 但还是简单说一说，显然有： $$ \phi(p^k) = p^k - p ^ {k-1} $$ 其中，$p$为素数。因为$p^k$与所有除$p$的倍数之外的数都互质。故只需从总数中减去$p$的倍数的个数即可。
@@ -440,11 +451,11 @@ Github上的演示：</description>
 排序算法，是最基础的算法之一了吧。两年前或是三年前，我大概也是这样慢慢熟悉了他们。
 算法是不会变的。
 那么，就从这里开始吧。
-插入排序&amp;nbsp;¶ 插入排序算不上高效的排序算法，从时间复杂度来说，和冒泡排序是相抵的。其实本质上，插入排序和冒泡排序相似甚至相同，只是“冒泡”的方向不同。
+插入排序 插入排序算不上高效的排序算法，从时间复杂度来说，和冒泡排序是相抵的。其实本质上，插入排序和冒泡排序相似甚至相同，只是“冒泡”的方向不同。
 void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp;gt; 0; j--) { if (arr[j] &amp;lt; arr[j-1]) { int temp = arr[j]; arr[j] = arr[j-1]; arr[j-1] = temp; } } } return; } 在算法实现insert_sort执行的过程中，有这件事情得以保证：0..i-1这些元素已经排好序。
 而关于变量j的那个循环，所做的事情就是“冒泡”，而这里的冒泡本质上也就是插入。
 时间复杂度为$O(n^2)​$。
-归并排序&amp;nbsp;¶ 归并排序是利用了分治思想的排序算法。
+归并排序 归并排序是利用了分治思想的排序算法。
  分解问题：将要排序的数组分成两部分，将两部分分别排序。 合并：将两部分合并。  void merge_sort(int *begin, int *end) { int l = end - begin; if (l == 0 || l == 1) { return; } int m = l / 2; merge_sort(begin, begin+m); merge_sort(begin+m, end); int p = 0; int q = m; int cnt = 0; while (p &amp;lt; m || q &amp;lt; l) { if (q &amp;gt;= l || (p &amp;lt; m &amp;amp;&amp;amp; *(begin+p) &amp;lt;= *(begin+q))) { tmp[cnt++] = *(begin+p); p++; } else { tmp[cnt++] = *(begin+q); q++; } } for (int i = 0; i &amp;lt; l; i++) { *(begin+i) = tmp[i]; } } 分解问题无甚好说，重要的在于合并。</description>
     </item>
     
@@ -454,7 +465,7 @@ void insert_sort() { for (int i = 1; i &amp;lt; n; i++) { for (int j = i; j &amp
       <pubDate>Fri, 25 Jan 2019 19:38:20 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/algorithm-roadmap/</guid>
-      <description> 基础&amp;nbsp;¶  排序  插入排序 归并排序 桶排序 希尔排序 快速排序   搜索  BFS DFS 回溯 迭代加深搜索 A*   暴力枚举 图  DFS BFS 拓扑排序 欧拉回路   二叉树 分而治之 贪心 动态规划  高级&amp;nbsp;¶  数论 图论 线段树 组合数学  训练路线&amp;nbsp;¶  重温紫书及配套练习。配合luogu刷题。 进军黑书。 进军训练指南。  </description>
+      <description>基础  排序  插入排序 归并排序 桶排序 希尔排序 快速排序   搜索  BFS DFS 回溯 迭代加深搜索 A*   暴力枚举 图  DFS BFS 拓扑排序 欧拉回路   二叉树 分而治之 贪心 动态规划  高级  数论 图论 线段树 组合数学  训练路线  重温紫书及配套练习。配合luogu刷题。 进军黑书。 进军训练指南。  </description>
     </item>
     
     <item>

@@ -11,49 +11,21 @@
 <meta name="referrer" content="no-referrer">
 
 <meta name="description" content="Linro :: blog of Linyxus">
-<title>
-    简短的gdb使用手册 - Linro
-</title>
 
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://blog.linyxus.xyz">
 
+<meta name="twitter:image" content="https://blog.linyxus.xyz/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Linro">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Linro :: blog of Linyxus">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://blog.linyxus.xyz">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://blog.linyxus.xyz/tn.png">
 
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.min.8022aa4b53ce57ff6f9cc4594360bfc15f2baeb5a018d0c68826f12da49a51e0.css" integrity="sha256-gCKqS1POV/9vnMRZQ2C/wV8rrrWgGNDGiCbxLaSaUeA=" crossorigin="anonymous" media="screen">
-
-
-
-
-  
-
-
-
-
-
+<link rel="shortcut icon" href="https://blog.linyxus.xyz/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://blog.linyxus.xyz/css/style.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="简短的gdb使用手册"/>
-<meta name="twitter:description" content="编译&nbsp;¶ 为了使代码能够被gdb调试，需要在编译时加入-g选项，也即
-gcc -g main.c -o main 使用-g选项后，gcc会为生成的程序加载调试符号，供给gdb载入。
-对编译完成的文件，使用gdb载入：
-gdb main  基本执行控制指令&nbsp;¶ run，break，print&nbsp;¶ 三个指令的使用示例："/>
-
-<meta property="og:title" content="简短的gdb使用手册" />
-<meta property="og:description" content="编译&nbsp;¶ 为了使代码能够被gdb调试，需要在编译时加入-g选项，也即
-gcc -g main.c -o main 使用-g选项后，gcc会为生成的程序加载调试符号，供给gdb载入。
-对编译完成的文件，使用gdb载入：
-gdb main  基本执行控制指令&nbsp;¶ run，break，print&nbsp;¶ 三个指令的使用示例：" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.linyxus.xyz/posts/using-gdb/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-10-24T12:00:42&#43;08:00" />
-<meta property="article:modified_time" content="2019-10-24T12:00:42&#43;08:00" />
-
 
 
     
@@ -69,50 +41,48 @@ gdb main  基本执行控制指令&nbsp;¶ run，break，print&nbsp;¶ 三个指
 </head>
 
 <body>
-    
-    
-    <header class="wrap flex-container">
-        <h1>简短的gdb使用手册</h1>
-    </header>
-    
-    <main class="wrap">
+    <div class="wrap">
+        <div class="section" id="title">简短的gdb使用手册</div>
+
         
-<div class="flex-container">
-    <aside role="complementary">
-        Thu Oct 24, 2019 &#183; 14 words
-        <div class="tag-container">
-            
-            
-            <span class="tag">
-                <a href="/tags/notes/">
-                    notes
-                </a>
-            </span>
-            
-            
-        </div>
-    </aside>
-    <hr />
-    <article role="article">
+<div class="section" id="content">
+    Thu Oct 24, 2019 &#183; 14 words
+    
+    <div class="tag-container">
         
-<h2 id="编译" class="anchor-link"><a href="#%e7%bc%96%e8%af%91">编译<span class="pilcrow">&nbsp;¶</span></a></h2>
+        <span class="tag">
+            <a href="https://blog.linyxus.xyz/tags/notes">
+                notes
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <h2 id="编译">编译</h2>
 <p>为了使代码能够被gdb调试，需要在编译时加入<code>-g</code>选项，也即</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gcc -g main.c -o main
 </code></pre></div><p>使用<code>-g</code>选项后，gcc会为生成的程序加载调试符号，供给gdb载入。</p>
 <p>对编译完成的文件，使用gdb载入：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gdb main
-</code></pre></div>
-<h2 id="基本执行控制指令" class="anchor-link"><a href="#%e5%9f%ba%e6%9c%ac%e6%89%a7%e8%a1%8c%e6%8e%a7%e5%88%b6%e6%8c%87%e4%bb%a4">基本执行控制指令<span class="pilcrow">&nbsp;¶</span></a></h2>
-
-<h3 id="runbreakprint" class="anchor-link"><a href="#runbreakprint"><code>run</code>，<code>break</code>，<code>print</code><span class="pilcrow">&nbsp;¶</span></a></h3>
+</code></pre></div><h2 id="基本执行控制指令">基本执行控制指令</h2>
+<h3 id="runbreakprint"><code>run</code>，<code>break</code>，<code>print</code></h3>
 <p>三个指令的使用示例：</p>
 
-    </article>
 </div>
+
+<script src="https://utteranc.es/client.js"
+        repo="linyxus/linro-hugo"
+        issue-term="pathname"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+
 
 
         
-<nav role="navigation" class="flex-container bottom-menu">
+<div class="section bottom-menu">
     
 <hr />
 <p>
@@ -127,32 +97,34 @@ gdb main  基本执行控制指令&nbsp;¶ run，break，print&nbsp;¶ 三个指
 
     
         
-            <a href="/posts">writings</a>
+            <a href="/posts">
+                writings
+            </a>
         
     
     
         
             &#183; 
-            <a href="/me">me</a>
+            <a href="/me">
+                me
+            </a>
         
             &#183; 
-            <a href="/about">about</a>
+            <a href="/about">
+                about
+            </a>
         
     
-    
-    
-        &#183; 
-        <a href="/">
-            main
-        </a>
-    
+    &#183; 
+    <a href="https://blog.linyxus.xyz">
+        main
+    </a>
 
 </p>
-</nav>
+</div>
 
-    </main>
-    
-    <footer class="flex-container footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+        <div class="section footer"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -168,9 +140,8 @@ gdb main  基本执行控制指令&nbsp;¶ run，break，print&nbsp;¶ 三个指
     });
 </script>
 <link rel="stylesheet" href="https://blog.linyxus.xyz/css/syntax.css">
-</footer>
-    
-    
+</div>
+    </div>
 </body>
 
 </html>

@@ -5,6 +5,10 @@
     <link>https://blog.linyxus.xyz/about/</link>
     <description>Recent content in about on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language><atom:link href="https://blog.linyxus.xyz/about/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    
+	<atom:link href="https://blog.linyxus.xyz/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

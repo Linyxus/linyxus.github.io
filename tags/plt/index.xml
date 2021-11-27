@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>type-system on Linro</title>
-    <link>https://blog.linyxus.xyz/tags/type-system/</link>
-    <description>Recent content in type-system on Linro</description>
+    <title>plt on Linro</title>
+    <link>https://blog.linyxus.xyz/tags/plt/</link>
+    <description>Recent content in plt on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 23 Oct 2021 00:30:00 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.linyxus.xyz/tags/type-system/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.linyxus.xyz/tags/plt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,17 +22,6 @@
  首先，DOT是一门依赖类型 (dependently-typed) 的语言。对其性质进行推理需要同时考 虑到值和类型。这是复杂的。 其次，DOT，或者说 Scala 的类型成员 (type member) 允许用户自行定义子类型关系。 这样的灵活性带来了诸多便利，让 Scala 能够建模许多复杂的模型，让用户能自己定义 一套子类型体系。但一切便利自有其代价，在类型系统层面上，这样的灵活性允许用户在 类型系统中定义不合理的子类型关系，例如，用户可能会令函数类型成为对象类型的子类。 在这样的类型体系里，证明类型系统的健全性是不可能的。如何妥善处理此类不安全的自 定义子类关系，成为了一个巨大的、需要好好解决的问题。这也是DOT的健全性证明不同 于其他任何一门语言独有的复杂之处。  在这篇文章中，作者给出了一个简单、模块化的DOT类型安全证明。在此之前，DOT的安全证 明复杂、晦涩难懂，并且难于扩展。这样的复杂性对于一门核心演算显然是不合理的。
 当我们证明类型安全时我们在证明什么 当我们证明某个演算或类型系统的类型安全时，我们希望证明如下性质：对于任意一个能通 过类型检查的项，也即 \( \cdot \vdash t: T \)，我们希望它要么已经是一个无法继续 计算的值，要么在经过一步的计算之后，它仍然具有之前的类型，也即 \( t \rightarrow t^\prime \) 且 \( \cdot \vdash t^\prime : T \)。
 为了证明这一点，一般的方法是从项 \(t\) 的类型 \(T\) 推断出 \(t\) 的形式，随后， 我们要么指出 \(t\) 已经成为一个值，要么应用某个计算规则，得出 \(t^\prime\) 的形 式，并且证明其类型仍然是 \(T\)。</description>
-    </item>
-    
-    <item>
-      <title>Hindley-Milner Type Inference for STLC and Its Extensions</title>
-      <link>https://blog.linyxus.xyz/posts/hm-type-inference-for-stlc/</link>
-      <pubDate>Thu, 11 Mar 2021 16:01:00 +0800</pubDate>
-      
-      <guid>https://blog.linyxus.xyz/posts/hm-type-inference-for-stlc/</guid>
-      <description>In this post, we will introduce the principles of Algorithm W and Algorithm U, the basis of the type inference in Hindley-Milner type system.
-Firstly, we describe a small calculus, the well-known Simply-Typed Lambda Calculus (STLC).
-Simply-Typed Lambda Calculus t ::= &amp;#39;true&amp;#39; | &amp;#39;false&amp;#39; | numericLiteral | &amp;#39;pred&amp;#39; t | &amp;#39;succ&amp;#39; t | &amp;#39;iszero&amp;#39; t | &amp;#39;if&amp;#39; t &amp;#39;then&amp;#39; t &amp;#39;else&amp;#39; t | x | &amp;#39;\&amp;#39; x [ &amp;#39;:&amp;#39; T ] &amp;#39;.</description>
     </item>
     
   </channel>

@@ -6,23 +6,27 @@
     <description>Recent content in org on Linro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 26 Feb 2019 22:58:41 +0800</lastBuildDate><atom:link href="https://blog.linyxus.xyz/tags/org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Feb 2019 22:58:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.linyxus.xyz/tags/org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>利用cron自动同步org到Github</title>
       <link>https://blog.linyxus.xyz/posts/sync-org-files/</link>
       <pubDate>Tue, 26 Feb 2019 22:58:41 +0800</pubDate>
       
       <guid>https://blog.linyxus.xyz/posts/sync-org-files/</guid>
-      <description> 效果&amp;nbsp;¶   每天在固定的时间，只要电脑开着，自动commit发生在org文件夹内的改动，并且push到Github上。
+      <description>效果   每天在固定的时间，只要电脑开着，自动commit发生在org文件夹内的改动，并且push到Github上。
 如图，设定的是在所有的整点都会自动更新。
-步骤&amp;nbsp;¶ #1 编写自动同步shell&amp;nbsp;¶ #!/bin/bash  echo -e &amp;#34;\033[0;32mPulling from GitHub...\033[0m&amp;#34; git pull git add . git commit -m &amp;#34;Auto update : `date`&amp;#34; echo -e &amp;#34;\033[0;32mPushing to GitHub...\033[0m&amp;#34; git push origin master 在echo的文本里奇奇怪怪的内容都是escape characters，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）
-#2 增加cron task&amp;nbsp;¶ 在命令行中输入：
+步骤 #1 编写自动同步shell #!/bin/bash  echo -e &amp;#34;\033[0;32mPulling from GitHub...\033[0m&amp;#34; git pull git add . git commit -m &amp;#34;Auto update : `date`&amp;#34; echo -e &amp;#34;\033[0;32mPushing to GitHub...\033[0m&amp;#34; git push origin master 在echo的文本里奇奇怪怪的内容都是escape characters，目的是更更改文本的颜色（为绿色）。目的是看起来更加舒服。（可是自动运行的时候你根本看不见啊喂）
+#2 增加cron task 在命令行中输入：
 $ EDITOR=nano cron -e 增加这一行：
 0 * * * * cd ~/org &amp;amp;&amp;amp; ./update.sh 保存退出即可。
  注意！注意！注意！
 macOS下由于一些奇怪的权限原因，只能使用Terminal.app进行编辑。
 iTerm2是不行的。
- #3 Enjoy it!&amp;nbsp;¶ </description>
+ #3 Enjoy it! </description>
     </item>
     
   </channel>
